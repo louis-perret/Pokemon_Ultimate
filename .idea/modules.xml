@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/projet_perret_wissocq.iml" filepath="$PROJECT_DIR$/projet_perret_wissocq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wissocq_perret.iml" filepath="$PROJECT_DIR$/wissocq_perret.iml" />
     </modules>
   </component>
 </project>
