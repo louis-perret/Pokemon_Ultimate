@@ -11,8 +11,9 @@ public class Pokemon {
     private int vitesse;
     private Position position;
     private Type type;
+    private Mouvement[] mouvements;
 
-    public Pokemon(String nom, Image image, int pv, int attaque, int defense, int vitesse, Position position,Type type) {
+    public Pokemon(String nom, Image image, int pv, int attaque, int defense, int vitesse, Position position,Type type,Mouvement[] tabMouvements) {
         this.nom = nom;
         this.image = image;
         this.pv = pv;
@@ -21,6 +22,7 @@ public class Pokemon {
         this.vitesse = vitesse;
         this.position = position;
         this.type = type;
+        this.mouvements=tabMouvements;
     }
 
     public String getNom() {
@@ -77,5 +79,20 @@ public class Pokemon {
 
     public void setPosition(Position position) {
         this.position = position;
+    }
+
+    public Type getType(){ return type; }
+
+    public Mouvement[] getMouvements(){
+        return this.mouvements;
+    }
+
+    @Override
+    public String toString(){
+        String res = "Pokemon : " + this.getNom() + " de type " + this.getType()  + ". A comme technique : ";
+        for (Mouvement m : mouvements){
+            res  += m.getNom();
+        }
+        return res;
     }
 }
