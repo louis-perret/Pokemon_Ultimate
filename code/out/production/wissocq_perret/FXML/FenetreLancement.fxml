@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FenetreLancement">
+
+        <top>
+            <VBox fx:id="vbox" alignment="CENTER" minHeight="100">
+                <Text fx:id="t1" fill="RED" smooth="false" stroke="#ffffff00" strokeWidth="0.0" text="Pokemon Ultimate">
+                    <font>
+                       <Font name="DejaVu Serif Bold" size="23.0" />
+                    </font>
+                </Text>
+            </VBox>
+
+        </top>
+
+        <center>
+            <Button minHeight="50" minWidth="150" textFill="indigo">Jouer</Button>
+        </center>
+</BorderPane>

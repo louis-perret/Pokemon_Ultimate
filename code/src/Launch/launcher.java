@@ -21,11 +21,13 @@ public class launcher extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         URL url = getClass().getResource("../FXML/Fenetre.fxml");
+
         URL bulbURL= getClass().getResource("../bulbasaur-sprite.png");
         Image bulbasaurimg = new Image(bulbURL.toExternalForm());
 
         FXMLLoader fxmlloader = new FXMLLoader(url);
         Canvas racine = (Canvas) fxmlloader.load(); //On charge la fenêtre
+
         VBox content = new VBox();
         Scene scene = new Scene(content,500,500);
         GraphicsContext gc = racine.getGraphicsContext2D(); //Récupère le contexte graphic du canvas
@@ -33,9 +35,9 @@ public class launcher extends Application {
 
         stage.setScene(scene);
         stage.setTitle("C'est la fenêtre du jeu!");
+
         Position position = new Position(0,0);
         Type type = plante;
-
         Mouvement m1 = new Mouvement(10,"flammèche",Type.feu);
         Mouvement m2 = new Mouvement(10,"fouet-liane",Type.plante);
         Mouvement[] tabMouvements=new Mouvement[]{m2};
@@ -53,10 +55,17 @@ public class launcher extends Application {
 
         System.out.println(p.toString());
 
-        System.out.println("Le pokemon " + p.getNom() + "attaque "+ pokemon.getNom() + "avec " + m1);
+        System.out.println("Le pokemon " + p.getNom() + " attaque "+ pokemon.getNom() + " avec " + m1.getNom());
         Attaqueur attaqueur = new AttaqueurPokemon();
         attaqueur.attaquer(p,pokemon,m1);
         System.out.println("PV de "  + pokemon.getNom() + " = " + pokemon.getPv());
+
+
+        URL url2 = getClass().getResource("../FXML/FenetreLancement.fxml");
+        fxmlloader = new FXMLLoader(url2);
+        Parent parent = fxmlloader.load();
+        Scene scene2=new Scene(parent);
+        stage.setScene(scene2);
         stage.show();
     }
 }
