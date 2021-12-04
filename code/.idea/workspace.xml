@@ -2,40 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ressources/FXML/Fenetre.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ressources/bulbasaur-sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../documentation/diag-classe.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/../documentation/diag-classe.mdj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/wissocq_perret/Controller/Control.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/wissocq_perret/FXML/Fenetre.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/wissocq_perret/Launch/launcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/wissocq_perret/Modele/Afficheur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/wissocq_perret/Modele/AfficheurPokemon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/wissocq_perret/Modele/DeplacerPokemon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/wissocq_perret/Modele/Deplaceur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/wissocq_perret/Modele/Jeu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/wissocq_perret/Modele/Mouvement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/wissocq_perret/Modele/Pokemon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/wissocq_perret/Modele/Position.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/wissocq_perret/Modele/Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/wissocq_perret/bulbasaur-sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../projet_perret_wissocq.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Controller/Control.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Launch/launcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Modele/Afficheur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Modele/AfficheurPokemon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Modele/DeplacerPokemon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Modele/Deplaceur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Modele/Jeu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Modele/Mouvement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Modele/Pokemon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Modele/Position.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Modele/Type.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wissocq_perret.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wissocq_perret/Launch/launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wissocq_perret/Launch/launcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Launch/launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../documentation/MaquettesJeu.bmpr" beforeDir="false" afterPath="$PROJECT_DIR$/../documentation/MaquettesJeu.bmpr" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +16,26 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Launch/launcher.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21lkHFp6FJ8j70Nq9eqiPbYdFSn" />
   <component name="ProjectViewState">
