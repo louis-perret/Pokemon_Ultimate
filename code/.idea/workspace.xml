@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/wissocq_perret/Launch/launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wissocq_perret/Launch/launcher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Launch/launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../documentation/MaquettesJeu.bmpr" beforeDir="false" afterPath="$PROJECT_DIR$/../documentation/MaquettesJeu.bmpr" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +33,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/Launch/launcher.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21lkHFp6FJ8j70Nq9eqiPbYdFSn" />
   <component name="ProjectViewState">
@@ -54,7 +53,7 @@
     <configuration name="projet_perret_wissocq" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Launch.launcher" />
       <module name="wissocq_perret" />
-      <option name="VM_PARAMETERS" value="--module-path /usr/share/openjfx/lib --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\Portable\.jdks\javafx-sdk-17.0.1\lib --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

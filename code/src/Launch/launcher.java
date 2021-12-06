@@ -61,7 +61,7 @@ public class launcher extends Application {
         System.out.println("PV de "  + pokemon.getNom() + " = " + pokemon.getPv());
 
 
-        URL url2 = getClass().getResource("../FXML/FenetreLancement.fxml");
+        URL url2 = getClass().getResource("../FXML/FenetreSelection.fxml");
         fxmlloader = new FXMLLoader(url2);
         Parent parent = fxmlloader.load();
         Scene scene2=new Scene(parent);
