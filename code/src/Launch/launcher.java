@@ -39,7 +39,7 @@ public class launcher extends Application {
         //Canvas racine = (Canvas) fxmlloader.load(); //On charge la fenêtre
         Group racine = new Group();
         Canvas canvas = new Canvas(1000,800);
-        VBox content = new VBox();
+        VBox content = new VBox();                                  //SCENE DE JEU
         Scene scene = new Scene(content,500,500);
         Scene scene3 = new Scene(racine);
         GraphicsContext gc = canvas.getGraphicsContext2D(); //Récupère le contexte graphic du canvas
@@ -83,7 +83,7 @@ public class launcher extends Application {
         /*
         fxmlloader = new FXMLLoader(url2);
         Parent parent = fxmlloader.load();
-        Scene scene2=new Scene(parent);
+        Scene scene2=new Scene(parent);             //SCENE DE LA SELECTION
         stage.setScene(scene2);
         */
         affich.affiche(pokemon, pokemon.getPosition(), gc);
