@@ -11,9 +11,18 @@
 
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Font?>
 <BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FenetreSelection">
    <top>
-      <GridPane hgap="20.0" prefHeight="56.0" prefWidth="572.0" BorderPane.alignment="CENTER">
+      <GridPane hgap="20.0" prefHeight="56.0" prefWidth="572.0">
+              <VBox fx:id="vbox" alignment="CENTER" minHeight="100">
+                  <Text fx:id="t1" fill="BLACK" smooth="false" stroke="#ffffff00" strokeWidth="0.0" text="Choix du starter!" textAlignment="CENTER">
+                      <font>
+                          <Font name="DejaVu Serif Bold" size="23.0" />
+                      </font>
+                  </Text>
+              </VBox>
+
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" prefWidth="400" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100" />
@@ -21,15 +30,6 @@
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
-         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Choisissez" />
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Victoires : " />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="20" />
-               </children>
-            </HBox>
-         </children>
          <padding>
             <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
          </padding>
@@ -39,18 +39,39 @@
        <HBox fx:id="hbox" alignment="CENTER" spacing="20">
            <VBox alignment="CENTER">
                 <ImageView fx:id="Image" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER"/>
-                <Button text="Choisir"></Button>
+               <Text text="Bulbizarre" fill="green">
+                   <font>
+                       <Font name="DejaVu Serif Bold" size="15.0"></Font>
+                   </font>
+               </Text>
+                <Button text="Choisir" textFill="green"></Button>
            </VBox>
            <VBox alignment="CENTER">
                <ImageView fx:id="Image2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER"/>
-               <Button text="Choisir"></Button>
+
+               <Text text="Salamèche" fill="red">
+                   <font>
+                       <Font name="DejaVu Serif Bold" size="15.0"></Font>
+                   </font>
+               </Text>
+               <Button text="Choisir" textFill="red"></Button>
            </VBox>
            <VBox alignment="CENTER">
                <ImageView fx:id="Image3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER"/>
-               <Button text="Choisir"></Button>
+               <Text text="Carapuce" fill="blue">
+                   <font>
+                       <Font name="DejaVu Serif Bold" size="15.0"></Font>
+                   </font>
+               </Text>
+               <Button text="Choisir" textFill="blue"></Button>
            </VBox>
        </HBox>
    </center>
+    <VBox>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Victoires : "/>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="20"/>
+    </VBox>
+
 
 
 </BorderPane>

@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/FXML/FenetreSelection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/FenetreSelection.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/bulbasaur-sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/charmender-sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/squirtle-sprite.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/wissocq_perret/Launch/launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wissocq_perret/Launch/launcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FenetreSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FenetreSelection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Launch/launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Afficheur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Afficheur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/AfficheurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/AfficheurPokemon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +39,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/Launch/launcher.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Launch/launcher.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21lkHFp6FJ8j70Nq9eqiPbYdFSn" />
   <component name="ProjectViewState">
@@ -44,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../PROJET/source/src" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />

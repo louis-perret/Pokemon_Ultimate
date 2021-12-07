@@ -20,13 +20,15 @@ public class FenetreSelection {
     @FXML
     private ImageView Image3;
 
-    private Image i = new Image(getClass().getResource("../bulbasaur-sprite.png").toExternalForm());
+    private Image b = new Image(getClass().getResource("../Sprite_bulbi/bulbasaur-sprite.png").toExternalForm());
+    private Image c = new Image(getClass().getResource("../Sprite_salam/charmender-sprite.png").toExternalForm());
+    private Image s = new Image(getClass().getResource("../Sprite_carap/squirtle-sprite.png").toExternalForm());
 
     public void initialize(){
         hbox.setPadding(new Insets(20));
-        Image.setImage(i);
-        Image2.setImage(i);
-        Image3.setImage(i);
+        Image.setImage(b);
+        Image2.setImage(c);
+        Image3.setImage(s);
 
     }
 }
