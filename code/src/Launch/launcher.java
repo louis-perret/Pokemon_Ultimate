@@ -80,12 +80,12 @@ public class launcher extends Application {
 
 
         URL url2 = getClass().getResource("../FXML/FenetreSelection.fxml");
-        /*
+
         fxmlloader = new FXMLLoader(url2);
         Parent parent = fxmlloader.load();
         Scene scene2=new Scene(parent);             //SCENE DE LA SELECTION
         stage.setScene(scene2);
-        */
+
         affich.affiche(pokemon, pokemon.getPosition(), gc);
         //gc.drawImage(bulbasaurimg,0,0);
         stage.show();
