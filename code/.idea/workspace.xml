@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Modele/BoucleJeu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wissocq_perret/FXML/FenetreSelection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wissocq_perret/FXML/FenetreSelection.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wissocq_perret/Launch/launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wissocq_perret/Launch/launcher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_perret_wissocq.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Launch/launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../documentation/UserCase.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/../documentation/UserCase.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Jeu.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +33,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/Launch/launcher.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Launch/launcher.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21lkHFp6FJ8j70Nq9eqiPbYdFSn" />
   <component name="ProjectViewState">
@@ -51,12 +49,13 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RunManager">
     <configuration name="projet_perret_wissocq" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Launch.launcher" />
       <module name="wissocq_perret" />
-      <option name="VM_PARAMETERS" value="--module-path /usr/share/openjfx/lib --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\Portable\.jdks\javafx-sdk-17.0.1\lib --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -72,5 +71,16 @@
       <updated>1638522971616</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

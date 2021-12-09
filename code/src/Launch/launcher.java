@@ -88,6 +88,9 @@ public class launcher extends Application {
 
         affich.affiche(pokemon, pokemon.getPosition(), gc);
         //gc.drawImage(bulbasaurimg,0,0);
+        BoucleJeu boucle = new BoucleJeu();
         stage.show();
+        //boucle.run();
+
     }
 }
