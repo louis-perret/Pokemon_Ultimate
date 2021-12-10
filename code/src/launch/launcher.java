@@ -23,16 +23,16 @@ public class launcher extends Application {
     public void start(Stage stage) throws Exception {
         URL url = getClass().getResource("../FXML/Fenetre.fxml");
 
-        URL bulbURL= getClass().getResource("../Sprite_bulbi/bulbasaur-sprite.png");
+        URL bulbURL= getClass().getResource("../Sprite/Sprite_bulbi/bulbasaur-sprite.png");
         Image bulbasaurimg = new Image(bulbURL.toExternalForm());
 
-        URL bulbfURL= getClass().getResource("../Sprite_bulbi/bulb_1.png");
+        URL bulbfURL= getClass().getResource("../Sprite/Sprite_bulbi/bulb_1.png");
         Image bulbasaurfimg = new Image(bulbfURL.toExternalForm());
 
-        URL charmURL= getClass().getResource("../Sprite_salam/charmender-sprite.png");
+        URL charmURL= getClass().getResource("../Sprite/Sprite_salam/charmender-sprite.png");
         Image charmimg = new Image(charmURL.toExternalForm());
 
-        URL squirURL= getClass().getResource("../Sprite_carap/squirtle-sprite.png");
+        URL squirURL= getClass().getResource("../Sprite/Sprite_carap/squirtle-sprite.png");
         Image squirimg = new Image(squirURL.toExternalForm());
 
         FXMLLoader fxmlloader = new FXMLLoader(url);
@@ -80,13 +80,13 @@ public class launcher extends Application {
 
 
         URL url2 = getClass().getResource("../FXML/FenetreSelection.fxml");
-
+/*
         fxmlloader = new FXMLLoader(url2);
         Parent parent = fxmlloader.load();
         Scene scene2=new Scene(parent);             //SCENE DE LA SELECTION
         stage.setScene(scene2);
-
-        affich.affiche(pokemon, pokemon.getPosition(), gc);
+*/
+        //affich.affiche(pokemon, pokemon.getPosition(), gc);
         //gc.drawImage(bulbasaurimg,0,0);
         BoucleJeu boucle = new BoucleJeu();
         stage.show();
