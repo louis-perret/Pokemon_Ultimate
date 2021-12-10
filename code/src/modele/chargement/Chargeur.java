@@ -1,4 +1,4 @@
-package Modele.Chargement;
+package modele.chargement;
 
 public interface Chargeur {
 

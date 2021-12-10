@@ -1,4 +1,4 @@
-package Modele;
+package modele;
 
 public class DeplacerPokemon implements Deplaceur{
     public void deplacer(Pokemon p, double x, double y){

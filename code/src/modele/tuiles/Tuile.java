@@ -1,4 +1,4 @@
-package Modele.Tuiles;
+package modele.tuiles;
 
 import javafx.scene.image.Image;
 

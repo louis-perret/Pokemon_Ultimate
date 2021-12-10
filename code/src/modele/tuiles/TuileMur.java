@@ -1,4 +1,4 @@
-package Modele.Tuiles;
+package modele.tuiles;
 
 public class TuileMur extends Tuile{
     public TuileMur(int id){

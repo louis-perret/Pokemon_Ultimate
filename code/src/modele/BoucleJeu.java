@@ -1,4 +1,4 @@
-package Modele;
+package modele;
 
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 
-import static Modele.Type.plante;
+//import static Modele.Type.plante;
 
 public class BoucleJeu implements Runnable{
 
@@ -37,7 +37,7 @@ public class BoucleJeu implements Runnable{
         URL squirURL= getClass().getResource("../Sprite/Sprite_carap/squirtle-sprite.png");
         Image squirimg = new Image(squirURL.toExternalForm());
         Position position = new Position(0,0);
-        Type type = plante;
+        Type type = Type.plante;
         Mouvement m1 = new Mouvement(10,"flammèche",Type.feu);
         Mouvement m2 = new Mouvement(10,"fouet-liane",Type.plante);
         Mouvement[] tabMouvements=new Mouvement[]{m2};
@@ -89,7 +89,7 @@ public class BoucleJeu implements Runnable{
 
     @Override
     public void run() {     //Boucle qui tick une fois par sec (normalement)
-        init();
+        //init();
 
         int fps = 60;
         double tempsTick = 1000000000 / fps;

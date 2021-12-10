@@ -1,6 +1,6 @@
-package Modele;
+package modele;
 
-import Modele.Tuiles.Tuile;
+import modele.tuiles.Tuile;
 
 import java.util.SortedMap;
 import java.util.SortedSet;

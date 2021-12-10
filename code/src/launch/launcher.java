@@ -1,6 +1,7 @@
-package Launch;
+package launch;
 
-import Modele.*;
+import tests.*;
+import modele.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
@@ -14,7 +15,7 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 
-import static Modele.Type.plante;
+//import static Modele.Type.plante;
 
 public class launcher extends Application {
 
@@ -52,7 +53,7 @@ public class launcher extends Application {
 
 
         Position position = new Position(0,0);
-        Type type = plante;
+        Type type = Type.plante;
         Mouvement m1 = new Mouvement(10,"flammèche",Type.feu);
         Mouvement m2 = new Mouvement(10,"fouet-liane",Type.plante);
         Mouvement[] tabMouvements=new Mouvement[]{m2};
@@ -62,22 +63,7 @@ public class launcher extends Application {
         AfficheurPokemon affich = new AfficheurPokemon();
 
 
-
-        DeplacerPokemon dp = new DeplacerPokemon();
-        System.out.println(pokemon.getPosition());
-        dp.deplacer(pokemon,10,10);
-        System.out.println(pokemon.getPosition());
-        dp.deplacer(pokemon,20,20);
-        System.out.println(pokemon.getPosition());
-
-
         System.out.println(p.toString());
-
-        System.out.println("Le pokemon " + p.getNom() + " attaque "+ pokemon.getNom() + " avec " + m1.getNom());
-        Attaqueur attaqueur = new AttaqueurPokemon();
-        attaqueur.attaquer(p,pokemon,m1);
-        System.out.println("PV de "  + pokemon.getNom() + " = " + pokemon.getPv());
-
 
         URL url2 = getClass().getResource("../FXML/FenetreSelection.fxml");
 /*
@@ -88,9 +74,13 @@ public class launcher extends Application {
 */
         //affich.affiche(pokemon, pokemon.getPosition(), gc);
         //gc.drawImage(bulbasaurimg,0,0);
-        BoucleJeu boucle = new BoucleJeu();
-        stage.show();
+        //BoucleJeu boucle = new BoucleJeu();
+        //stage.show();
         //boucle.run();
 
+
+        /* Appel des tests */
+        Test.testAttaque();
+        Test.testDeplacer();
     }
 }
