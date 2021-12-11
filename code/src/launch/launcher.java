@@ -1,5 +1,7 @@
 package launch;
 
+import modele.tuiles.Tuile;
+import modele.tuiles.TuileHerbe;
 import tests.*;
 import modele.*;
 import javafx.application.Application;
@@ -18,6 +20,7 @@ import java.net.URL;
 //import static Modele.Type.plante;
 
 public class launcher extends Application {
+
 
 
     @Override
@@ -52,7 +55,7 @@ public class launcher extends Application {
 
 
 
-        Position position = new Position(0,0);
+        Position position = new Position(64,64);
         Type type = Type.plante;
         Mouvement m1 = new Mouvement(10,"flammèche",Type.feu);
         Mouvement m2 = new Mouvement(10,"fouet-liane",Type.plante);
@@ -61,6 +64,7 @@ public class launcher extends Application {
         tabMouvements[0]=m1;
         Pokemon p = new Pokemon("Salamèche",bulbasaurimg,10,10,10,10,position, Type.feu,tabMouvements);
         AfficheurPokemon affich = new AfficheurPokemon();
+        AfficheurTuile affichT = new AfficheurTuile();
 
 
         System.out.println(p.toString());
@@ -72,10 +76,21 @@ public class launcher extends Application {
         Scene scene2=new Scene(parent);             //SCENE DE LA SELECTION
         stage.setScene(scene2);
 */
-        //affich.affiche(pokemon, pokemon.getPosition(), gc);
-        //gc.drawImage(bulbasaurimg,0,0);
+        affichT.affiche(Tuile.tuileHerbe ,new Position(0,0),gc);
+        affichT.affiche(Tuile.tuileHerbe ,new Position(0,32),gc);
+        affichT.affiche(Tuile.tuileHerbe ,new Position(64,64),gc);
+        affichT.affiche(Tuile.tuilePbg ,new Position(32,32),gc);
+        affichT.affiche(Tuile.tuilePbd ,new Position(0,32),gc);
+        affichT.affiche(Tuile.tuilePhg ,new Position(32,0),gc);
+        affichT.affiche(Tuile.tuilePhd ,new Position(0,0),gc);
+
+
+        affich.affiche(pokemon, pokemon.getPosition(), gc);
+
         //BoucleJeu boucle = new BoucleJeu();
-        //stage.show();
+        //gc.drawImage(a,0,0);
+
+        stage.show();
         //boucle.run();
 
 

@@ -8,16 +8,21 @@ public abstract class Tuile {
     public static final int TuileLargeur = 32;
 
     private int id;
-    private String image;
+    private Image image;
     public static Tuile[] lesTuiles = new Tuile[30];
     public static Tuile tuileHerbe = new TuileHerbe(0);
-    public static Tuile tuileMur = new TuileMur(1);
+    public static Tuile tuilePbg = new TuilePortail_bas_gauche(1);
+    public static Tuile tuilePbd = new TuilePortail_bas_droite(2);
+    public static Tuile tuilePhg = new TuilePortail_haut_gauche(3);
+    public static Tuile tuilePhd = new TuilePortail_haut_droite(4);
 
-    public Tuile(int id, String image){
+
+    public Tuile(int id, Image image){
         this.id = id;
         this.image = image;
         lesTuiles[id] = this;
     }
+
 
     public boolean isTraversable() {
         return true;
@@ -31,11 +36,11 @@ public abstract class Tuile {
         this.id = id;
     }
 
-    public String getImage() {
+    public Image getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(Image image) {
         this.image = image;
     }
 }
