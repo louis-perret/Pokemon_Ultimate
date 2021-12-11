@@ -2,6 +2,7 @@ package modele.tuiles;
 
 import javafx.scene.image.Image;
 
+//Identifie une tuile
 public abstract class Tuile {
 
     public static final int TuileHauteur = 32;

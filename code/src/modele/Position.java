@@ -1,5 +1,6 @@
 package modele;
 
+//Coordonées d'un pokemon
 public class Position {
     private double positionX;
     private double positionY;

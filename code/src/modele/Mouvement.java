@@ -1,16 +1,24 @@
 package modele;
 
+//Identifie les attaques
 public class Mouvement {
-    private int degats;
-    private String nom;
-    private Type type;
+    private int degats; //ses points de dégâts
+    private String nom; //son nom
+    private Type type; //son type
 
+    /**
+     * Constructeur
+     * @param degats ses points de dégats
+     * @param nom son nom
+     * @param type son type
+     */
     public Mouvement(int degats, String nom, Type type) {
         this.degats = degats;
         this.nom = nom;
         this.type = type;
     }
 
+    /* Getter et setter */
     public int getDegats() {
         return degats;
     }

@@ -41,9 +41,9 @@ public class BoucleJeu implements Runnable{
         Mouvement m1 = new Mouvement(10,"flammèche",Type.feu);
         Mouvement m2 = new Mouvement(10,"fouet-liane",Type.plante);
         Mouvement[] tabMouvements=new Mouvement[]{m2};
-        Pokemon pokemon = new Pokemon("Bulbizarre",bulbasaurfimg,50,10,10,10,position,type,tabMouvements);
+        Pokemon pokemon = new Pokemon("Bulbizarre",bulbasaurfimg,50,10,10,10,position,type,tabMouvements,1,0,null);
         tabMouvements[0]=m1;
-        Pokemon p = new Pokemon("Salamèche",bulbasaurimg,10,10,10,10,position, Type.feu,tabMouvements);
+        Pokemon p = new Pokemon("Salamèche",bulbasaurimg,10,10,10,10,position, Type.feu,tabMouvements,1,0,null);
 
         AfficheurPokemon affich = new AfficheurPokemon();
         affich.affiche(pokemon, pokemon.getPosition(), gc);

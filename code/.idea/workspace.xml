@@ -2,18 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/modele/AfficheurTuile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modele/tuiles/TuilePortail_bas_droite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modele/tuiles/TuilePortail_haut_droite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modele/tuiles/TuilePortail_haut_gauche.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/launch/launcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/Afficheur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Afficheur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/AfficheurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/AfficheurPokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/AfficheurTuile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/AfficheurTuile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Attaqueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Attaqueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/AttaqueurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/AttaqueurPokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/BoucleJeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/BoucleJeu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Collisionneur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Collisionneur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/ControleurNiveau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/ControleurNiveau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/DeplacerPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/DeplacerPokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Deplaceur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Deplaceur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Monde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Monde.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Mouvement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Mouvement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Pokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/chargement/Chargeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/chargement/Chargeur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/chargement/Stub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/chargement/Stub.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/tuiles/Tuile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/tuiles/Tuile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/tuiles/TuileHerbe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/tuiles/TuileHerbe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/tuiles/TuileMur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/tuiles/TuilePortail_bas_gauche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +51,18 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/modele/AttaqueurPokemon.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/ControleurNiveau.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/tests/Test.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/launch/launcher.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/Pokemon.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/Attaqueur.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/CollectionPokemon.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/chargement/Chargeur.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/chargement/Stub.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/Manager.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21lkHFp6FJ8j70Nq9eqiPbYdFSn" />
   <component name="ProjectViewState">
@@ -67,7 +87,7 @@
     <configuration name="projet_perret_wissocq" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="launch.launcher" />
       <module name="wissocq_perret" />
-      <option name="VM_PARAMETERS" value="--module-path C:\Users\Portable\.jdks\javafx-sdk-17.0.1\lib --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path /usr/share/openjfx/lib --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
