@@ -51,7 +51,7 @@ public class Position {
      * Setter de la position Y
      *
      * @param positionY Nouvelle position Y de l'objet
-     * @author Tremblay Jeremy, Vignon Ugo, Viton Antoine, Wissocq Maxime, Coudour Adrien
+     * @author
      */
     public void setPositionY(double positionY) {
         this.positionY = positionY;

@@ -9,7 +9,7 @@
 <?import javafx.scene.canvas.Canvas?>
 <Canvas fx:id = "flowPane" xmlns="http://javafx.com/javafx"
         xmlns:fx="http://javafx.com/fxml"
-        fx:controller="Controller.Control">
+        fx:controller="controller.Control">
 
 
 
