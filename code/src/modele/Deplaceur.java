@@ -6,9 +6,10 @@ public interface Deplaceur {
     /**
      * Effectue le déplacement d'un pokemon
      * @param p : pokeon a déplacé
-     * @param x : sa nouvelle position x
-     * @param y : sa nouvelle position y
+     * @param position : la position à laqulle déplacer le pokemon
+
+
      */
-    public void deplacer(Pokemon p,double x, double y);
+    public void deplacer(Pokemon p,Position position);
 
 }

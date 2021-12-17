@@ -5,12 +5,11 @@ public class DeplacerPokemon implements Deplaceur{
     /**
      * Effectue le déplacement d'un pokemon
      * @param p : pokeon a déplacé
-     * @param x : sa nouvelle position x
-     * @param y : sa nouvelle position y
+     * @param position : la position à laqulle déplacer le pokemon
      */
-    public void deplacer(Pokemon p, double x, double y){
-        p.getPosition().setPositionX(x);
-        p.getPosition().setPositionY(y);
+    public void deplacer(Pokemon p, Position position){
+        p.getPosition().setPositionX(position.getPositionX());
+        p.getPosition().setPositionY(position.getPositionY());
 
     }
 }

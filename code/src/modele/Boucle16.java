@@ -1,4 +1,5 @@
 package modele;
 
-public class Boucle16$ {
+public class Boucle16 {
+
 }

@@ -46,7 +46,7 @@ public class launcher extends Application {
         VBox content = new VBox();                                  //SCENE DE JEU
         Scene scene = new Scene(content,500,500);
         Scene scene3 = new Scene(racine);
-        GraphicsContext gc = canvas.getGraphicsContext2D(); //Récupère le contexte graphic du canvas
+        //GraphicsContext gc = canvas.getGraphicsContext2D(); //Récupère le contexte graphic du canvas
         content.getChildren().add( canvas ); //On ajoute le canvas dans la  Vbox
         racine.getChildren().add(canvas);
 
@@ -65,6 +65,7 @@ public class launcher extends Application {
         Pokemon p = new Pokemon("Salamèche",bulbasaurimg,10,10,10,10,position, Type.feu,tabMouvements,1,0,null);
         AfficheurPokemon affich = new AfficheurPokemon();
         AfficheurTuile affichT = new AfficheurTuile();
+        DeplacerPokemon dp = new DeplacerPokemon();
 
 
         System.out.println(p.toString());
@@ -76,21 +77,29 @@ public class launcher extends Application {
         Scene scene2=new Scene(parent);             //SCENE DE LA SELECTION
         stage.setScene(scene2);
 */
-        affichT.affiche(Tuile.tuileHerbe ,new Position(0,0),gc);
+
+        //affichT.affiche(Tuile.tuileHerbe ,new Position(0,0));
+        /*
         affichT.affiche(Tuile.tuileHerbe ,new Position(0,32),gc);
         affichT.affiche(Tuile.tuileHerbe ,new Position(64,64),gc);
         affichT.affiche(Tuile.tuilePbg ,new Position(32,32),gc);
         affichT.affiche(Tuile.tuilePbd ,new Position(0,32),gc);
         affichT.affiche(Tuile.tuilePhg ,new Position(32,0),gc);
         affichT.affiche(Tuile.tuilePhd ,new Position(0,0),gc);
+*/
 
-
-        affich.affiche(pokemon, pokemon.getPosition(), gc);
+        Monde monde = new Monde("");
+        racine.getChildren().addAll(affich.affiche(pokemon, pokemon.getPosition()),
+                affichT.affiche(Tuile.tuileHerbe ,new Position(0,0)));    //Méthode d'affichage sans graphic contexts (pas sur que ce soit bien)
 
         //BoucleJeu boucle = new BoucleJeu();
         //gc.drawImage(a,0,0);
+        Touches t = new Touches();
+        System.out.println(t.lecture(scene));
 
-        //stage.show();
+        //Thread b = new Thread(new BoucleJeu());
+        //b.start();
+        stage.show();
         //boucle.run();
 
 

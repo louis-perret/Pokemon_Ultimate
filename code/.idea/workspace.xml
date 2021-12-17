@@ -3,8 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Monde.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Monde.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wissocq_perret/FXML/Fenetre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wissocq_perret/FXML/Fenetre.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/launch/launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Afficheur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Afficheur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/AfficheurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/AfficheurPokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/AfficheurTuile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/AfficheurTuile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Boucle16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Boucle16.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/BoucleJeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/BoucleJeu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/DeplacerPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/DeplacerPokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Deplaceur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Deplaceur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Monde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Monde.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Touches.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Touches.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../documentation/diag-classe.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/../documentation/diag-classe.mdj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,18 +46,18 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/modele/Manager.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/ControleurNiveau.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/tests/Test.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/CollectionPokemon.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/modele/AttaqueurPokemon.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/CollectionPokemon.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/modele/chargement/Chargeur.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/Pokemon.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/chargement/Stub.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/Attaqueur.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/ControleurNiveau.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/Manager.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/tests/Test.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/launch/launcher.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/chargement/Stub.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/Pokemon.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/Attaqueur.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21lkHFp6FJ8j70Nq9eqiPbYdFSn" />
   <component name="ProjectViewState">
@@ -53,7 +67,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PROJET/mauja-adventures/source" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />

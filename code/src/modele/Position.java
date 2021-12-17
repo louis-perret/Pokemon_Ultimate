@@ -10,7 +10,7 @@ public class Position {
      *
      * @param positionX Position de l'objet en X
      * @param positionY Position de l'obejt en Y
-     * @author Tremblay Jeremy, Vignon Ugo, Viton Antoine, Wissocq Maxime, Coudour Adrien
+     * @author Wissocq Maxime, Perret Louis
      */
     public Position(double positionX, double positionY) {
         this.positionX = positionX;
@@ -21,7 +21,7 @@ public class Position {
      * Getter position X
      *
      * @return La position X de l'objet
-     * @author Tremblay Jeremy, Vignon Ugo, Viton Antoine, Wissocq Maxime, Coudour Adrien
+     * @author Wissocq Maxime, Perret Louis
      */
     public double getPositionX() {
         return positionX;
@@ -31,7 +31,7 @@ public class Position {
      * Setter de la position X
      *
      * @param positionX Nouvelle position X de l'objet
-     * @author Tremblay Jeremy, Vignon Ugo, Viton Antoine, Wissocq Maxime, Coudour Adrien
+     * @author Wissocq Maxime, Perret Louis
      */
     public void setPositionX(double positionX) {
         this.positionX = positionX;
@@ -41,7 +41,7 @@ public class Position {
      * Getter de position Y
      *
      * @return Position Y de l'objet
-     * @author Tremblay Jeremy, Vignon Ugo, Viton Antoine, Wissocq Maxime, Coudour Adrien
+     * @author Wissocq Maxime, Perret Louis
      */
     public double getPositionY() {
         return positionY;
@@ -51,7 +51,7 @@ public class Position {
      * Setter de la position Y
      *
      * @param positionY Nouvelle position Y de l'objet
-     * @author
+     * @author Wissocq Maxime, Perret Louis
      */
     public void setPositionY(double positionY) {
         this.positionY = positionY;

@@ -42,8 +42,8 @@ public class Manager {
      * @param x : sa nouvelle position x
      * @param y : sa nouvelle position y
      */
-    public void deplacerPokemon(Pokemon pokemon,double x,double y){
+    public void deplacerPokemon(Pokemon pokemon,Position position){
         //Penser à prendre en compte le collisionneur avant de déplacer
-        deplaceur.deplacer(pokemon,x,y);
+        deplaceur.deplacer(pokemon,new Position(position.getPositionX(),position.getPositionY()));
     }
 }
