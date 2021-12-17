@@ -8,6 +8,7 @@ public class Manager {
     private Deplaceur deplaceur;
     private ControleurNiveau controleurNiveau;
     private Pokemon pokemonCourant;
+    private int compteur=0;
 
     //private CollectionPokemon collectionPokemon=null;
     //private Collisionneur collisionneur;
@@ -45,5 +46,13 @@ public class Manager {
     public void deplacerPokemon(Pokemon pokemon,Position position){
         //Penser à prendre en compte le collisionneur avant de déplacer
         deplaceur.deplacer(pokemon,new Position(position.getPositionX(),position.getPositionY()));
+    }
+
+    public int getCompteur() {
+        return compteur;
+    }
+
+    public void setCompteur(int compteur) {
+        this.compteur = compteur;
     }
 }
