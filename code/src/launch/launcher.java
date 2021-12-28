@@ -106,6 +106,6 @@ public class launcher extends Application {
         /* Appel des tests */
         //Test.testAttaque();
         //Test.testDeplacer();
-        //TestBoucle.testBoucleJeu();
+        TestBoucle.testBoucleJeu();
     }
 }
