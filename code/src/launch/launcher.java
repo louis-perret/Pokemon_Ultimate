@@ -1,7 +1,15 @@
 package launch;
 
+import controller.Fenetre;
+import javafx.event.EventHandler;
+import javafx.scene.input.KeyEvent;
+import modele.boucle.BoucleJeu;
+import modele.boucle.BoucleJeu16;
+import modele.chargement.Stub;
 import modele.tuiles.Tuile;
 import modele.tuiles.TuileHerbe;
+import observateurs.Observateur;
+import observateurs.ObservateurBoucle;
 import tests.*;
 import modele.*;
 import javafx.application.Application;
@@ -16,12 +24,22 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.util.LinkedList;
+import java.util.List;
 
 //import static Modele.Type.plante;
 
 public class launcher extends Application {
 
+    private static Manager manager = new Stub().charger();
 
+    public static Manager getManager() {
+        return manager;
+    }
+
+    public static void setManager(Manager m) {
+        launcher.manager = m;
+    }
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -62,50 +80,59 @@ public class launcher extends Application {
         Mouvement[] tabMouvements=new Mouvement[]{m2};
         Pokemon pokemon = new Pokemon("Bulbizarre",bulbasaurfimg,50,10,10,10,position,type,tabMouvements,1,0,null);
         tabMouvements[0]=m1;
-        Pokemon p = new Pokemon("Salamèche",bulbasaurimg,10,10,10,10,position, Type.feu,tabMouvements,1,0,null);
+        Pokemon p2 = new Pokemon("Salamèche",bulbasaurimg,10,10,10,10,position, Type.feu,tabMouvements,1,0,null);
         AfficheurPokemon affich = new AfficheurPokemon();
         AfficheurTuile affichT = new AfficheurTuile();
         DeplacerPokemon dp = new DeplacerPokemon();
 
 
-        System.out.println(p.toString());
-
-        URL url2 = getClass().getResource("../FXML/FenetreSelection.fxml");
-/*
-        fxmlloader = new FXMLLoader(url2);
-        Parent parent = fxmlloader.load();
-        Scene scene2=new Scene(parent);             //SCENE DE LA SELECTION
-        stage.setScene(scene2);
-*/
-
-        //affichT.affiche(Tuile.tuileHerbe ,new Position(0,0));
-        /*
-        affichT.affiche(Tuile.tuileHerbe ,new Position(0,32),gc);
-        affichT.affiche(Tuile.tuileHerbe ,new Position(64,64),gc);
-        affichT.affiche(Tuile.tuilePbg ,new Position(32,32),gc);
-        affichT.affiche(Tuile.tuilePbd ,new Position(0,32),gc);
-        affichT.affiche(Tuile.tuilePhg ,new Position(32,0),gc);
-        affichT.affiche(Tuile.tuilePhd ,new Position(0,0),gc);
-*/
+        System.out.println(pokemon.toString());
 
         Monde monde = new Monde("");
         racine.getChildren().addAll(affich.affiche(pokemon, pokemon.getPosition()),
                 affichT.affiche(Tuile.tuileHerbe ,new Position(0,0)));    //Méthode d'affichage sans graphic contexts (pas sur que ce soit bien)
 
-        //BoucleJeu boucle = new BoucleJeu();
-        //gc.drawImage(a,0,0);
-        Touches t = new Touches();
-        System.out.println(t.lecture(scene));
 
-        //Thread b = new Thread(new BoucleJeu());
-        //b.start();
+        //Test du déplacement
+        Parent parent = FXMLLoader.load(this.getClass().getResource("../FXML/Fenetre.fxml"));
+        Scene scene1 = new Scene(parent);
+        //On ajoute un filtre d'évènement pour le déplacement du pokemon
+        scene1.addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
+            Pokemon p = manager.getPokemonCourant();
+            Position positionPokemon = p.getPosition();
+            switch (keyEvent.getCode()){
+                case Z :
+                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX(),positionPokemon.getPositionY()+10));
+                    System.out.println("en haut : " + manager.getPokemonCourant().getPosition());
+                    break;
+                case D :
+                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX()+10,positionPokemon.getPositionY()));
+                    System.out.println("à droite" + manager.getPokemonCourant().getPosition());
+                    break;
+                case S :
+                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX(),positionPokemon.getPositionY()-10));
+                    System.out.println("en bas" + manager.getPokemonCourant().getPosition());
+                    break;
+                case Q :
+                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX()-10,positionPokemon.getPositionY()));
+                    System.out.println("à gauche" + manager.getPokemonCourant().getPosition());
+                    break;
+            }
+        });
+        stage.setScene(scene1);
+
+        manager.setCompteur(0);
+        manager.setPokemonCourant(pokemon);
+        List<Observateur> listeOb = new LinkedList<>();
+        Observateur o = new ObservateurBoucle(manager);
+        listeOb.add(o);
+        BoucleJeu b = new BoucleJeu16(listeOb);
+        Thread thread = new Thread(b);
+        thread.start();
         stage.show();
-        //boucle.run();
-
-
         /* Appel des tests */
         //Test.testAttaque();
         //Test.testDeplacer();
-        TestBoucle.testBoucleJeu();
+        //TestBoucle.testBoucleJeu();
     }
 }

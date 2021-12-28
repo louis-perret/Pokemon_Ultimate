@@ -1,5 +1,8 @@
 package modele;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+
 //Permet de gérer nos différentes fonctionnalités
 public class Manager {
 
@@ -8,7 +11,13 @@ public class Manager {
     private Deplaceur deplaceur;
     private ControleurNiveau controleurNiveau;
     private Pokemon pokemonCourant;
-    private int compteur=0;
+    //private int compteur2=0;
+
+    //Propriété compteur
+    private IntegerProperty compteur = new SimpleIntegerProperty(); //On déclare la propriété
+    public int getCompteur() { return compteur.get();} //getter
+    public void setCompteur(int nombre) { compteur.set(nombre);} //setter
+    public IntegerProperty compteurProperty() { return compteur;} //Renvoie la propriété
 
     //private CollectionPokemon collectionPokemon=null;
     //private Collisionneur collisionneur;
@@ -40,19 +49,19 @@ public class Manager {
     /**
      * Gère le déplacement d'un pokemon
      * @param pokemon : pokemon qui se déplace
-     * @param x : sa nouvelle position x
-     * @param y : sa nouvelle position y
+     * @param  : sa nouvelle position x
+     * @param : sa nouvelle position y
      */
     public void deplacerPokemon(Pokemon pokemon,Position position){
         //Penser à prendre en compte le collisionneur avant de déplacer
         deplaceur.deplacer(pokemon,new Position(position.getPositionX(),position.getPositionY()));
     }
 
-    public int getCompteur() {
-        return compteur;
+    public Pokemon getPokemonCourant() {
+        return pokemonCourant;
     }
 
-    public void setCompteur(int compteur) {
-        this.compteur = compteur;
+    public void setPokemonCourant(Pokemon pokemonCourant) {
+        this.pokemonCourant = pokemonCourant;
     }
 }

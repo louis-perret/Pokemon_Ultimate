@@ -7,10 +7,16 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.canvas.Canvas?>
-<Canvas fx:id = "flowPane" xmlns="http://javafx.com/javafx"
-        xmlns:fx="http://javafx.com/fxml"
-        fx:controller="controller.Control">
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
 
 
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="controller.Fenetre"
+          fx:id="grid">
 
-</Canvas>
+
+    <ImageView fx:id="imageView" GridPane.rowIndex="0"></ImageView>
+</GridPane>
