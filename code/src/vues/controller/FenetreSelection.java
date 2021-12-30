@@ -1,12 +1,10 @@
-package controller;
+package vues.controller;
 
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
-
-import java.net.URL;
 
 public class FenetreSelection {
 

@@ -2,6 +2,8 @@ package modele;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import vues.afficheur.Afficheur;
+import vues.afficheur.AfficheurPokemon;
 
 //Permet de gérer nos différentes fonctionnalités
 public class Manager {

@@ -1,12 +1,12 @@
-package modele;
+package vues.afficheur;
 
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.ImageView;
+import modele.Position;
 import modele.tuiles.Tuile;
 
 //Permet d'afficher uen tuile
 
-public class AfficheurTuile  implements Afficheur{
+public class AfficheurTuile  implements Afficheur {
     /**
      * Affiche une tuile
      * @param objet : tuile à afficher

@@ -1,12 +1,10 @@
 package launch;
 
-import javafx.scene.Node;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.GridPane;
 import modele.boucle.BoucleJeu;
 import modele.boucle.BoucleJeu16;
 import modele.chargement.Stub;
-import modele.tuiles.Tuile;
 import observateurs.Observateur;
 import observateurs.ObservateurBoucle;
 import modele.*;
@@ -19,6 +17,9 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import vues.afficheur.AfficheurPokemon;
+import vues.afficheur.AfficheurTuile;
+import vues.monde.Monde;
 
 import java.net.URL;
 import java.util.LinkedList;
@@ -84,21 +85,23 @@ public class launcher extends Application {
 
 
         System.out.println(pokemon.toString());
-
+/*
         Monde monde = new Monde("Ressources/Monde.txt");
         racine = monde.affichage();
-        racine.getChildren().addAll(affich.affiche(pokemon, pokemon.getPosition())
-                /*affichT.affiche(Tuile.tuileHerbe ,new Position(0,0))*/ );
+*/
+        //racine.getChildren().addAll(affich.affiche(pokemon, pokemon.getPosition())
+        //        /*affichT.affiche(Tuile.tuileHerbe ,new Position(0,0))*/ );
 
 
         //Test du déplacement
-        Parent parent = FXMLLoader.load(this.getClass().getResource("../FXML/Fenetre.fxml"));
+        GridPane parent = FXMLLoader.load(this.getClass().getResource("../FXML/Fenetre.fxml"));
+        //parent.add(racine,0,0);
         Scene scene1 = new Scene(parent);
 
-        Scene sceneJeu = new Scene(racine);
+        //Scene sceneJeu = new Scene(racine);
 
         //On ajoute un filtre d'évènement pour le déplacement du pokemon
-        sceneJeu.addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
+        scene1.addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
             Pokemon p = manager.getPokemonCourant();
             Position positionPokemon = p.getPosition();
             switch (keyEvent.getCode()){
@@ -122,7 +125,7 @@ public class launcher extends Application {
         });
 
         //stage.setScene(scene1);
-        stage.setScene(sceneJeu);
+        stage.setScene(scene1);
 
 
         manager.setCompteur(0);

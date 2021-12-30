@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="" />
+    <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/FXML/FenetreSelection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/FenetreSelection.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wissocq_perret/FXML/Fenetre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wissocq_perret/FXML/Fenetre.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wissocq_perret/FXML/FenetreSelection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wissocq_perret/FXML/FenetreSelection.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/Fenetre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/FenetreLancement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreLancement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/FenetreSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreSelection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/launch/launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Afficheur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/afficheur/Afficheur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/AfficheurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/afficheur/AfficheurPokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/AfficheurTuile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/afficheur/AfficheurTuile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Monde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/monde/Monde.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

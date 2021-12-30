@@ -1,10 +1,11 @@
-package modele;
+package vues.afficheur;
 
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.ImageView;
+import modele.Pokemon;
+import modele.Position;
 
 //Permet d'afficher un pokemon
-public class AfficheurPokemon implements Afficheur{
+public class AfficheurPokemon implements Afficheur {
 
     /**
      * Affiche un pokemon

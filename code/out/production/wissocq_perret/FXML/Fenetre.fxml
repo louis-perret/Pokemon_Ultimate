@@ -14,11 +14,11 @@
 
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
-          fx:controller="controller.Fenetre"
+          fx:controller="vues.controller.Fenetre"
           fx:id="grid">
 
-
+    <Group fx:id="groupe" GridPane.rowIndex="0"></Group>
     <ImageView fx:id="imageView" GridPane.rowIndex="0"></ImageView>
-    <ImageView fx:id="imageView2" GridPane.rowIndex="0"></ImageView>
+
 
 </GridPane>

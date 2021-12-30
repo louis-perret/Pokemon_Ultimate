@@ -1,13 +1,10 @@
-package modele;
+package vues.monde;
 
 import javafx.scene.Group;
-import javafx.scene.image.ImageView;
+import modele.LectureMonde;
+import modele.Position;
 import modele.tuiles.Tuile;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.SortedMap;
-import java.util.SortedSet;
+import vues.afficheur.AfficheurTuile;
 
 //Contient nos différentes cartes
 public class Monde {
@@ -21,7 +18,6 @@ public class Monde {
 
     public Group affichage(){
         AfficheurTuile at = new AfficheurTuile();
-        ImageView[] tab = new ImageView[10000];
         for(int i=0;largeur>i;i++){
             for(int j=0;j<hauteur;j++) {
                 //at.affiche(getTuile(i,j),new Position(largeur*Tuile.TuileLargeur,hauteur*Tuile.TuileHauteur));
