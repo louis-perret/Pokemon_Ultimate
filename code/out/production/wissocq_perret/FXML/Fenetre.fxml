@@ -19,4 +19,6 @@
 
 
     <ImageView fx:id="imageView" GridPane.rowIndex="0"></ImageView>
+    <ImageView fx:id="imageView2" GridPane.rowIndex="0"></ImageView>
+
 </GridPane>

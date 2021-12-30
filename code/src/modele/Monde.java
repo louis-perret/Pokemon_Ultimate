@@ -1,38 +1,65 @@
 package modele;
 
+import javafx.scene.Group;
 import javafx.scene.image.ImageView;
 import modele.tuiles.Tuile;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.SortedMap;
 import java.util.SortedSet;
 
 //Contient nos différentes cartes
 public class Monde {
+    private Group racine = new Group();
     private int[][] lesTuiles;
-    private int hauteur, largeur;
+    private int hauteur, largeur, spawnX, spawnY;
 
     public Monde(String chemin){
         chargerMonde(chemin);
     }
 
-    public void affichage(){
+    public Group affichage(){
         AfficheurTuile at = new AfficheurTuile();
-        for(int i=0;largeur>i;largeur++){
-            for(int j=0;j>hauteur;hauteur++) {
-                at.affiche(getTuile(5,5),new Position(largeur*Tuile.TuileLargeur,hauteur*Tuile.TuileHauteur));
+        ImageView[] tab = new ImageView[10000];
+        for(int i=0;largeur>i;i++){
+            for(int j=0;j<hauteur;j++) {
+                //at.affiche(getTuile(i,j),new Position(largeur*Tuile.TuileLargeur,hauteur*Tuile.TuileHauteur));
+                racine.getChildren().addAll(at.affiche(getTuile(i,j),new Position(i*Tuile.TuileLargeur,
+                        j*Tuile.TuileHauteur)));
+
             }
         }
+        return racine;
     }
 
     public void chargerMonde(String chemin) {
-        hauteur = 5;
-        largeur = 5;
+        /*
+        hauteur = 20;
+        largeur = 30;
         lesTuiles = new int[largeur][hauteur];
-        for(int i=0;largeur>i;largeur++){
-            for(int j=0;j>hauteur;hauteur++){
-                lesTuiles[largeur][hauteur] = 0;
+        for(int i=0;largeur>i;i++){
+            for(int j=0;j<hauteur;j++) {
+                lesTuiles[i][j] = 0;
             }
         }
+
+         */
+        String fichier = LectureMonde.ChargerFichier(chemin);
+        String[] partie = fichier.split("\\s+");
+        largeur = LectureMonde.parseInt(partie[0]);
+        hauteur = LectureMonde.parseInt(partie[1]);
+        spawnX = LectureMonde.parseInt(partie[2]);
+        spawnY = LectureMonde.parseInt(partie[3]);
+
+        lesTuiles = new int[largeur][hauteur];
+        for(int i=0;largeur>i;i++){
+            for(int j=0;j<hauteur;j++) {
+                lesTuiles[i][j] = LectureMonde.parseInt(partie[(i + j  * largeur) + 4]);
+            }
+        }
+
+
     }
 
     public Tuile getTuile(int largeur, int hauteur) {

@@ -19,6 +19,7 @@ public class Stub implements Chargeur{
     public static Image Portail_haut_gauche = new Image("Tuiles/portail_haut_gauche.png");
     public static Image Portail_bas_droite = new Image("Tuiles/portail_bas_droite.png");
     public static Image Portail_haut_droite = new Image("Tuiles/portail_haut_droite.png");
+    public static Image Brique = new Image("Tuiles/brique.png");
 
 
     public void ChargeImages() {

@@ -1,34 +1,46 @@
 package modele.tuiles;
 
 import javafx.scene.image.Image;
+import modele.chargement.Stub;
 
 //Identifie une tuile
-public abstract class Tuile {
+public class Tuile {
 
     public static final int TuileHauteur = 32;
     public static final int TuileLargeur = 32;
 
     private int id;
     private Image image;
+    private Boolean isTraversable;
     public static Tuile[] lesTuiles = new Tuile[30];
-    public static Tuile tuileHerbe = new TuileHerbe(0);
-    public static Tuile tuilePbg = new TuilePortail_bas_gauche(1);
-    public static Tuile tuilePbd = new TuilePortail_bas_droite(2);
-    public static Tuile tuilePhg = new TuilePortail_haut_gauche(3);
-    public static Tuile tuilePhd = new TuilePortail_haut_droite(4);
+    public static Tuile tuileHerbe = new Tuile(0, Stub.Herbe,true);
+    public static Tuile tuilePbg = new Tuile(1,Stub.Portail_bas_gauche,false);
+    public static Tuile tuilePbd = new Tuile(2,Stub.Portail_bas_droite,false);
+    public static Tuile tuilePhg = new Tuile(3,Stub.Portail_haut_gauche,true);
+    public static Tuile tuilePhd = new Tuile(4,Stub.Portail_haut_droite,true);
+    public static Tuile tuileBrique = new Tuile(5,Stub.Brique,false);
 
 
-    public Tuile(int id, Image image){
+    public Tuile(int id, Image image, Boolean isTraversable){
         this.id = id;
         this.image = image;
+        this.isTraversable = isTraversable;
         lesTuiles[id] = this;
     }
 
-
-    public boolean isTraversable() {
-        return true;
+    public Boolean getTraversable() {
+        return isTraversable;
     }
 
+    public void setTraversable(Boolean traversable) {
+        isTraversable = traversable;
+    }
+
+    /*
+        public boolean isTraversable() {
+            return true;
+        }
+    */
     public int getId() {
         return id;
     }

@@ -1,16 +1,14 @@
 package launch;
 
-import controller.Fenetre;
-import javafx.event.EventHandler;
+import javafx.scene.Node;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import modele.boucle.BoucleJeu;
 import modele.boucle.BoucleJeu16;
 import modele.chargement.Stub;
 import modele.tuiles.Tuile;
-import modele.tuiles.TuileHerbe;
 import observateurs.Observateur;
 import observateurs.ObservateurBoucle;
-import tests.*;
 import modele.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,7 +16,6 @@ import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -63,12 +60,12 @@ public class launcher extends Application {
         Canvas canvas = new Canvas(1000,800);
         VBox content = new VBox();                                  //SCENE DE JEU
         Scene scene = new Scene(content,500,500);
-        Scene scene3 = new Scene(racine);
+        //Scene scene3 = new Scene(racine);
         //GraphicsContext gc = canvas.getGraphicsContext2D(); //Récupère le contexte graphic du canvas
         content.getChildren().add( canvas ); //On ajoute le canvas dans la  Vbox
         racine.getChildren().add(canvas);
 
-        stage.setScene(scene3);
+        //stage.setScene(scene3);
         stage.setTitle("C'est la fenêtre du jeu!");
 
 
@@ -88,38 +85,45 @@ public class launcher extends Application {
 
         System.out.println(pokemon.toString());
 
-        Monde monde = new Monde("");
-        racine.getChildren().addAll(affich.affiche(pokemon, pokemon.getPosition()),
-                affichT.affiche(Tuile.tuileHerbe ,new Position(0,0)));    //Méthode d'affichage sans graphic contexts (pas sur que ce soit bien)
+        Monde monde = new Monde("Ressources/Monde.txt");
+        racine = monde.affichage();
+        racine.getChildren().addAll(affich.affiche(pokemon, pokemon.getPosition())
+                /*affichT.affiche(Tuile.tuileHerbe ,new Position(0,0))*/ );
 
 
         //Test du déplacement
         Parent parent = FXMLLoader.load(this.getClass().getResource("../FXML/Fenetre.fxml"));
         Scene scene1 = new Scene(parent);
+
+        Scene sceneJeu = new Scene(racine);
+
         //On ajoute un filtre d'évènement pour le déplacement du pokemon
-        scene1.addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
+        sceneJeu.addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
             Pokemon p = manager.getPokemonCourant();
             Position positionPokemon = p.getPosition();
             switch (keyEvent.getCode()){
                 case Z :
-                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX(),positionPokemon.getPositionY()+10));
+                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX(),positionPokemon.getPositionY()-32));
                     System.out.println("en haut : " + manager.getPokemonCourant().getPosition());
                     break;
                 case D :
-                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX()+10,positionPokemon.getPositionY()));
+                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX()+32,positionPokemon.getPositionY()));
                     System.out.println("à droite" + manager.getPokemonCourant().getPosition());
                     break;
                 case S :
-                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX(),positionPokemon.getPositionY()-10));
+                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX(),positionPokemon.getPositionY()+32));
                     System.out.println("en bas" + manager.getPokemonCourant().getPosition());
                     break;
                 case Q :
-                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX()-10,positionPokemon.getPositionY()));
+                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX()-32,positionPokemon.getPositionY()));
                     System.out.println("à gauche" + manager.getPokemonCourant().getPosition());
                     break;
             }
         });
-        stage.setScene(scene1);
+
+        //stage.setScene(scene1);
+        stage.setScene(sceneJeu);
+
 
         manager.setCompteur(0);
         manager.setPokemonCourant(pokemon);

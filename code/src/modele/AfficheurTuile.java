@@ -19,7 +19,8 @@ public class AfficheurTuile  implements Afficheur{
             throw new IllegalArgumentException("L'objet " + objet.toString() + " passé en paramètre n'est pas une tuile.");
         }
         Tuile tuile = (Tuile) objet;
-        ImageView img = new ImageView(tuile.getImage());
+        ImageView img = new ImageView();
+        img.setImage(tuile.getImage());
         img.setX(position.getPositionX());
         img.setY(position.getPositionY());
         return img;
