@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/modele/LectureMonde.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Monde.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Monde.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wissocq_perret/FXML/Fenetre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wissocq_perret/FXML/Fenetre.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Fenetre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/launch/launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/AfficheurTuile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/AfficheurTuile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/Monde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Monde.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/chargement/Stub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/chargement/Stub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/tuiles/Tuile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/tuiles/Tuile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/tuiles/TuileHerbe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/tuiles/TuilePortail_bas_droite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/tuiles/TuilePortail_bas_gauche.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/tuiles/TuilePortail_haut_droite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/tuiles/TuilePortail_haut_gauche.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wissocq_perret.iml" beforeDir="false" afterPath="$PROJECT_DIR$/wissocq_perret.iml" afterDir="false" />
-    </list>
+    <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
