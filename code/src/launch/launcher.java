@@ -94,8 +94,7 @@ public class launcher extends Application {
 
 
         //Test du déplacement
-        GridPane parent = FXMLLoader.load(this.getClass().getResource("../FXML/Fenetre.fxml"));
-        //parent.add(racine,0,0);
+        Parent parent = FXMLLoader.load(this.getClass().getResource("../FXML/Fenetre.fxml"));
         Scene scene1 = new Scene(parent);
 
         //Scene sceneJeu = new Scene(racine);
@@ -106,25 +105,24 @@ public class launcher extends Application {
             Position positionPokemon = p.getPosition();
             switch (keyEvent.getCode()){
                 case Z :
-                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX(),positionPokemon.getPositionY()-32));
+                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX(),positionPokemon.getPositionY()-32),stage.getHeight(),stage.getWidth());
                     System.out.println("en haut : " + manager.getPokemonCourant().getPosition());
                     break;
                 case D :
-                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX()+32,positionPokemon.getPositionY()));
+                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX()+32,positionPokemon.getPositionY()),stage.getHeight(),stage.getWidth());
                     System.out.println("à droite" + manager.getPokemonCourant().getPosition());
                     break;
                 case S :
-                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX(),positionPokemon.getPositionY()+32));
+                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX(),positionPokemon.getPositionY()+32),stage.getHeight(),stage.getWidth());
                     System.out.println("en bas" + manager.getPokemonCourant().getPosition());
                     break;
                 case Q :
-                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX()-32,positionPokemon.getPositionY()));
+                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX()-32,positionPokemon.getPositionY()),stage.getHeight(),stage.getWidth());
                     System.out.println("à gauche" + manager.getPokemonCourant().getPosition());
                     break;
             }
         });
 
-        //stage.setScene(scene1);
         stage.setScene(scene1);
 
 

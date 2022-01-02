@@ -16,8 +16,8 @@ public class Tuile {
     public static Tuile tuileHerbe = new Tuile(0, Stub.Herbe,true);
     public static Tuile tuilePbg = new Tuile(1,Stub.Portail_bas_gauche,false);
     public static Tuile tuilePbd = new Tuile(2,Stub.Portail_bas_droite,false);
-    public static Tuile tuilePhg = new Tuile(3,Stub.Portail_haut_gauche,true);
-    public static Tuile tuilePhd = new Tuile(4,Stub.Portail_haut_droite,true);
+    public static Tuile tuilePhg = new Tuile(3,Stub.Portail_haut_gauche,false);
+    public static Tuile tuilePhd = new Tuile(4,Stub.Portail_haut_droite,false);
     public static Tuile tuileBrique = new Tuile(5,Stub.Brique,false);
 
 

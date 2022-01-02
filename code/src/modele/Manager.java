@@ -4,6 +4,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import vues.afficheur.Afficheur;
 import vues.afficheur.AfficheurPokemon;
+import vues.monde.Monde;
 
 //Permet de gérer nos différentes fonctionnalités
 public class Manager {
@@ -13,7 +14,6 @@ public class Manager {
     private Deplaceur deplaceur;
     private ControleurNiveau controleurNiveau;
     private Pokemon pokemonCourant;
-    //private int compteur2=0;
 
     //Propriété compteur
     private IntegerProperty compteur = new SimpleIntegerProperty(); //On déclare la propriété
@@ -22,17 +22,20 @@ public class Manager {
     public IntegerProperty compteurProperty() { return compteur;} //Renvoie la propriété
 
     //private CollectionPokemon collectionPokemon=null;
-    //private Collisionneur collisionneur;
+    private Monde monde;
+    private Collisionneur collisionneur;
 
     /**
      * Constructeur
      * @param collectionPokemon
      */
-    public Manager(CollectionPokemon collectionPokemon) {
+    public Manager(CollectionPokemon collectionPokemon,String monde) {
         this.attaqueur = new AttaqueurPokemon();
         this.afficheur = new AfficheurPokemon();
         this.deplaceur = new DeplacerPokemon();
         this.controleurNiveau=new ControleurNiveau(collectionPokemon);
+        this.collisionneur=new Collisionneur();
+        this.monde=new Monde(monde);
     }
 
     /**
@@ -54,9 +57,11 @@ public class Manager {
      * @param  : sa nouvelle position x
      * @param : sa nouvelle position y
      */
-    public void deplacerPokemon(Pokemon pokemon,Position position){
+    public void deplacerPokemon(Pokemon pokemon,Position position,double hauteurFenetre, double largeurFenetre){
         //Penser à prendre en compte le collisionneur avant de déplacer
-        deplaceur.deplacer(pokemon,new Position(position.getPositionX(),position.getPositionY()));
+        if(!collisionneur.isCollision(pokemon.getPosition(),position,monde)) {
+            deplaceur.deplacer(pokemon,position);
+        }
     }
 
     public Pokemon getPokemonCourant() {

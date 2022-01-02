@@ -34,19 +34,13 @@ public class Fenetre {
         Monde monde = new Monde("Ressources/Monde.txt");
         racine = monde.affichage();
         groupe.getChildren().addAll(racine);
-
         compteur.bind(manager.compteurProperty()); //binding unidirectionnel
         //On lui affecte un ChangeListener
         compteur.addListener((observableValue, number, t1) -> {
-
-
-
             a = afficheurPokemon.affiche(manager.getPokemonCourant(),manager.getPokemonCourant().getPosition());
             imageView.setImage(a.getImage());
             imageView.setTranslateX(a.getX());
             imageView.setTranslateY(a.getY());
-
-
         }
         );
     }

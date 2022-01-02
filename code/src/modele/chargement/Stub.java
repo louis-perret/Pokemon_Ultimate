@@ -57,6 +57,6 @@ public class Stub implements Chargeur{
         niveau3.add(p);
 
         CollectionPokemon collectionPokemon = new CollectionPokemon(niveau1,niveau2,niveau3);
-        return new Manager(collectionPokemon);
+        return new Manager(collectionPokemon,"Ressources/Monde.txt");
     }
 }

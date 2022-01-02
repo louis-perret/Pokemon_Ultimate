@@ -36,7 +36,7 @@ public class Test {
         Position positionInitiale = new Position(0,0);
         Pokemon bulbizarre = new Pokemon("Bulbizarre",null,50,10,10,10,positionInitiale,Type.plante,null,1,0,null);
         System.out.println("Position actuelle de " + bulbizarre.getNom() + " = " + bulbizarre.getPosition());
-        manager.deplacerPokemon(bulbizarre,new Position(positionInitiale.getPositionX(), positionInitiale.getPositionY()));
+        manager.deplacerPokemon(bulbizarre,new Position(positionInitiale.getPositionX(), positionInitiale.getPositionY()),10,10);
         System.out.println("Position actuelle de " + bulbizarre.getNom() + " = " + bulbizarre.getPosition() + "\n");
     }
 
