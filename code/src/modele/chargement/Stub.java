@@ -1,26 +1,19 @@
 package modele.chargement;
 
 import javafx.scene.image.Image;
-import modele.CollectionPokemon;
+import modele.pokemon.CollectionPokemon;
 import modele.Manager;
-import modele.Pokemon;
-import modele.Type;
+import modele.pokemon.Pokemon;
+import modele.pokemon.Type;
+import modele.monde.Tuile;
 
 import java.net.URL;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class Stub implements Chargeur{
-
-    //public static Image Herbe;
-    //public static Image Portail_bas_gauche;
-    public static Image Herbe = new Image("tuiles/herbe.png");
-    public static Image Portail_bas_gauche = new Image("tuiles/portail_bas_gauche.png");
-    public static Image Portail_haut_gauche = new Image("tuiles/portail_haut_gauche.png");
-    public static Image Portail_bas_droite = new Image("tuiles/portail_bas_droite.png");
-    public static Image Portail_haut_droite = new Image("tuiles/portail_haut_droite.png");
-    public static Image Brique = new Image("tuiles/brique.png");
-
 
     public void ChargeImages() {
         URL url = getClass().getResource("tuiles/Herbe.png");
@@ -57,6 +50,21 @@ public class Stub implements Chargeur{
         niveau3.add(p);
 
         CollectionPokemon collectionPokemon = new CollectionPokemon(niveau1,niveau2,niveau3);
-        return new Manager(collectionPokemon,"Ressources/cartes/Lobby.txt");
+
+        Tuile tuileHerbe = new Tuile(0, "tuiles/herbe.png",true);
+        Tuile tuilePbg = new Tuile(1,"tuiles/portail_bas_gauche.png",false);
+        Tuile tuilePbd = new Tuile(2,"tuiles/portail_bas_droite.png",false);
+        Tuile tuilePhg = new Tuile(3,"tuiles/portail_haut_gauche.png",false);
+        Tuile tuilePhd = new Tuile(4,"tuiles/portail_haut_droite.png",false);
+        Tuile tuileBrique = new Tuile(5,"tuiles/brique.png",true);
+
+        Map<Integer,Tuile> dicoTuiles=new HashMap<>();
+        dicoTuiles.put(tuileHerbe.getId(),tuileHerbe);
+        dicoTuiles.put(tuilePbg.getId(),tuilePbg);
+        dicoTuiles.put(tuilePbd.getId(),tuilePbd);
+        dicoTuiles.put(tuilePhg.getId(),tuilePhg);
+        dicoTuiles.put(tuilePhd.getId(),tuilePhd);
+        dicoTuiles.put(tuileBrique.getId(),tuileBrique);
+        return new Manager(collectionPokemon,dicoTuiles);
     }
 }

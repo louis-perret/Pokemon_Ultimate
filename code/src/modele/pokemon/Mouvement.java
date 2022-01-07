@@ -1,4 +1,4 @@
-package modele;
+package modele.pokemon;
 
 //Identifie les attaques
 public class Mouvement {

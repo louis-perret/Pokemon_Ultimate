@@ -1,12 +1,12 @@
 package launch;
 
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.GridPane;
 import modele.boucle.BoucleJeu;
 import modele.boucle.BoucleJeu16;
 import modele.chargement.Stub;
-import observateurs.Observateur;
-import observateurs.ObservateurBoucle;
+import modele.deplaceur.DeplacerPokemon;
+import modele.observateurs.Observateur;
+import modele.observateurs.ObservateurBoucle;
 import modele.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -17,9 +17,12 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import modele.pokemon.Mouvement;
+import modele.pokemon.Pokemon;
+import modele.pokemon.Position;
+import modele.pokemon.Type;
 import vues.afficheur.AfficheurPokemon;
 import vues.afficheur.AfficheurTuile;
-import vues.monde.Monde;
 
 import java.net.URL;
 import java.util.LinkedList;
@@ -94,40 +97,19 @@ public class launcher extends Application {
 
 
         //Test du déplacement
+        manager.setCompteur(0);
+        manager.setPokemonCourant(pokemon);
+        manager.setCarteCourante("lobby");
         Parent parent = FXMLLoader.load(this.getClass().getResource("../FXML/Fenetre.fxml"));
         Scene scene1 = new Scene(parent);
 
-        //Scene sceneJeu = new Scene(racine);
-
         //On ajoute un filtre d'évènement pour le déplacement du pokemon
         scene1.addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
-            Pokemon p = manager.getPokemonCourant();
-            Position positionPokemon = p.getPosition();
-            switch (keyEvent.getCode()){
-                case Z :
-                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX(),positionPokemon.getPositionY()-32),stage.getHeight(),stage.getWidth());
-                    System.out.println("en haut : " + manager.getPokemonCourant().getPosition());
-                    break;
-                case D :
-                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX()+32,positionPokemon.getPositionY()),stage.getHeight(),stage.getWidth());
-                    System.out.println("à droite" + manager.getPokemonCourant().getPosition());
-                    break;
-                case S :
-                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX(),positionPokemon.getPositionY()+32),stage.getHeight(),stage.getWidth());
-                    System.out.println("en bas" + manager.getPokemonCourant().getPosition());
-                    break;
-                case Q :
-                    manager.deplacerPokemon(p, new Position(positionPokemon.getPositionX()-32,positionPokemon.getPositionY()),stage.getHeight(),stage.getWidth());
-                    System.out.println("à gauche" + manager.getPokemonCourant().getPosition());
-                    break;
-            }
+            manager.deplacerPokemon(keyEvent.getCode().getChar());
         });
 
         stage.setScene(scene1);
 
-
-        manager.setCompteur(0);
-        manager.setPokemonCourant(pokemon);
         List<Observateur> listeOb = new LinkedList<>();
         Observateur o = new ObservateurBoucle(manager);
         listeOb.add(o);
@@ -139,5 +121,7 @@ public class launcher extends Application {
         //Test.testAttaque();
         //Test.testDeplacer();
         //TestBoucle.testBoucleJeu();
+        //TestMonde.testerChargementCarte();
+        //TestMonde.testerGetTuile();
     }
 }

@@ -1,10 +1,9 @@
 package tests;
 
-import javafx.scene.image.Image;
 import modele.*;
 import modele.chargement.Stub;
+import modele.pokemon.*;
 
-import java.net.URL;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,7 +15,7 @@ public class Test {
 
     public static void testAttaque(){
         System.out.println("Test sur l'attaque");
-        Mouvement m1 = new Mouvement(10,"flammèche",Type.feu);
+        Mouvement m1 = new Mouvement(10,"flammèche", Type.feu);
         Mouvement m2 = new Mouvement(10,"fouet-liane",Type.plante);
         Mouvement[] tabMouvements=new Mouvement[]{m2};
         Pokemon pAttaque = new Pokemon("Bulbizarre",null,20,10,10,10,null,Type.plante,tabMouvements,3,0,"Herbizarre");
@@ -36,7 +35,8 @@ public class Test {
         Position positionInitiale = new Position(0,0);
         Pokemon bulbizarre = new Pokemon("Bulbizarre",null,50,10,10,10,positionInitiale,Type.plante,null,1,0,null);
         System.out.println("Position actuelle de " + bulbizarre.getNom() + " = " + bulbizarre.getPosition());
-        manager.deplacerPokemon(bulbizarre,new Position(positionInitiale.getPositionX(), positionInitiale.getPositionY()),10,10);
+        manager.setPokemonCourant(bulbizarre);
+        manager.deplacerPokemon("Z");
         System.out.println("Position actuelle de " + bulbizarre.getNom() + " = " + bulbizarre.getPosition() + "\n");
     }
 

@@ -1,4 +1,4 @@
-package modele;
+package modele.pokemon;
 
 import javafx.scene.image.Image;
 

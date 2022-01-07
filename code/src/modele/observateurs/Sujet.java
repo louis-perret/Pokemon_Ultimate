@@ -1,4 +1,4 @@
-package observateurs;
+package modele.observateurs;
 
 import java.util.List;
 

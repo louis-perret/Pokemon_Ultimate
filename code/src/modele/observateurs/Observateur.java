@@ -1,4 +1,4 @@
-package observateurs;
+package modele.observateurs;
 
 public interface Observateur {
 

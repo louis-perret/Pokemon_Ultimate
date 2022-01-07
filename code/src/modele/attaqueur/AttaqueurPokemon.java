@@ -1,7 +1,10 @@
-package modele;
+package modele.attaqueur;
+
+import modele.pokemon.Mouvement;
+import modele.pokemon.Pokemon;
 
 //Gère l'attaque d'un pokemon vers un autre
-public class AttaqueurPokemon implements Attaqueur{
+public class AttaqueurPokemon implements Attaqueur {
 
     /**
      * Gère l'attaque d'un pokemon vers un autre
@@ -11,7 +14,7 @@ public class AttaqueurPokemon implements Attaqueur{
      * @return True si le pokemon attaquant a gagné le combat
      */
     @Override
-    public boolean attaquer(Pokemon attaquant, Pokemon attaque,Mouvement m) {
+    public boolean attaquer(Pokemon attaquant, Pokemon attaque, Mouvement m) {
         int degat = attaquant.getAttaque()+m.getDegats();
         attaque.setPv(attaque.getPv()-degat);
         if(attaque.getPv()<=0){ //Si l'adversaire est ko

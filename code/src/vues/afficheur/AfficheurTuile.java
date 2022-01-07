@@ -1,8 +1,9 @@
 package vues.afficheur;
 
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import modele.Position;
-import modele.tuiles.Tuile;
+import modele.pokemon.Position;
+import modele.monde.Tuile;
 
 //Permet d'afficher uen tuile
 
@@ -20,11 +21,10 @@ public class AfficheurTuile  implements Afficheur {
         }
         Tuile tuile = (Tuile) objet;
         ImageView img = new ImageView();
-        img.setImage(tuile.getImage());
+        img.setImage(new Image(tuile.getImage()));
         img.setX(position.getPositionX());
         img.setY(position.getPositionY());
         return img;
-        //gc.drawImage(tuile.getImage(), position.getPositionX(), position.getPositionY());
     }
 
 

@@ -2,19 +2,30 @@ package modele;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import modele.attaqueur.Attaqueur;
+import modele.attaqueur.AttaqueurPokemon;
+import modele.attaqueur.ControleurNiveau;
+import modele.deplaceur.DeplacerPokemon;
+import modele.deplaceur.Deplaceur;
+import modele.monde.Tuile;
+import modele.pokemon.CollectionPokemon;
+import modele.pokemon.Mouvement;
+import modele.pokemon.Pokemon;
 import vues.afficheur.Afficheur;
 import vues.afficheur.AfficheurPokemon;
-import vues.monde.Carte;
-import vues.monde.Monde;
+import modele.monde.Carte;
+import modele.monde.Monde;
+
+import java.util.Map;
 
 //Permet de gérer nos différentes fonctionnalités
 public class Manager {
 
     private Attaqueur attaqueur;
-    private Afficheur afficheur;
     private Deplaceur deplaceur;
     private ControleurNiveau controleurNiveau;
     private Pokemon pokemonCourant;
+    private Carte carteCourante;
 
     //Propriété compteur
     private IntegerProperty compteur = new SimpleIntegerProperty(); //On déclare la propriété
@@ -22,21 +33,17 @@ public class Manager {
     public void setCompteur(int nombre) { compteur.set(nombre);} //setter
     public IntegerProperty compteurProperty() { return compteur;} //Renvoie la propriété
 
-    //private CollectionPokemon collectionPokemon=null;
     private Monde monde;
-    private Collisionneur collisionneur;
 
     /**
      * Constructeur
      * @param collectionPokemon
      */
-    public Manager(CollectionPokemon collectionPokemon,String monde) {
+    public Manager(CollectionPokemon collectionPokemon, Map<Integer, Tuile>dicoTuiles){
         this.attaqueur = new AttaqueurPokemon();
-        this.afficheur = new AfficheurPokemon();
         this.deplaceur = new DeplacerPokemon();
         this.controleurNiveau=new ControleurNiveau(collectionPokemon);
-        this.collisionneur=new Collisionneur();
-        this.monde=new Monde();
+        this.monde=new Monde(dicoTuiles);
     }
 
     /**
@@ -45,7 +52,7 @@ public class Manager {
      * @param attaque : pokemon qui est attaqué
      * @param m : l'attaque utilisée
      */
-    public void attaquerPokemon(Pokemon attaquant, Pokemon attaque,Mouvement m){
+    public void attaquerPokemon(Pokemon attaquant, Pokemon attaque, Mouvement m){
         boolean battu=attaqueur.attaquer(attaquant,attaque,m);
         if(battu) { //S'il a gagné le combat
             controleurNiveau.gagnerExperience(attaquant, attaque); //On le fait gagner de l'expéricence
@@ -54,22 +61,31 @@ public class Manager {
 
     /**
      * Gère le déplacement d'un pokemon
-     * @param pokemon : pokemon qui se déplace
-     * @param  : sa nouvelle position x
-     * @param : sa nouvelle position y
+     * @param keyChar : Touche appuyée par l'utilisateur
      */
-    public void deplacerPokemon(Pokemon pokemon,Position position,double hauteurFenetre, double largeurFenetre){
-        //Penser à prendre en compte le collisionneur avant de déplacer
-        if(!collisionneur.isCollision(pokemon.getPosition(),position,monde.getLesCartes().get(1))) {
-            deplaceur.deplacer(pokemon,position);
-        }
+    public void deplacerPokemon(String keyChar){
+            deplaceur.deplacer(pokemonCourant,keyChar,carteCourante);
     }
 
+
+    //Getter et setter
     public Pokemon getPokemonCourant() {
         return pokemonCourant;
     }
 
     public void setPokemonCourant(Pokemon pokemonCourant) {
         this.pokemonCourant = pokemonCourant;
+    }
+
+    public Carte getCarteCourante() {
+        return carteCourante;
+    }
+
+    public void setCarteCourante(String nomCarte) {
+        this.carteCourante = monde.getCarte(nomCarte);
+    }
+
+    public Monde getMonde() {
+        return monde;
     }
 }

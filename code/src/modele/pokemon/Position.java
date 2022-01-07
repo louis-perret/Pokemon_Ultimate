@@ -1,4 +1,4 @@
-package modele;
+package modele.pokemon;
 
 //Coordonées d'un pokemon
 public class Position {

@@ -1,4 +1,7 @@
-package modele;
+package modele.attaqueur;
+
+import modele.pokemon.Mouvement;
+import modele.pokemon.Pokemon;
 
 //Interface pour nos attaqueurs
 public interface Attaqueur {
@@ -10,5 +13,5 @@ public interface Attaqueur {
      * @param m : l'attaque utilisée
      * @return True si le pokemon attaquant a gagné le combat
      */
-    public boolean attaquer(Pokemon attaquant, Pokemon attaque,Mouvement m);
+    public boolean attaquer(Pokemon attaquant, Pokemon attaque, Mouvement m);
 }

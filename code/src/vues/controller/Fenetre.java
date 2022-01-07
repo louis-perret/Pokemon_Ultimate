@@ -8,12 +8,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import modele.*;
 import launch.*;
-import modele.tuiles.Tuile;
+import modele.monde.Tuile;
+import modele.pokemon.Position;
 import vues.afficheur.Afficheur;
 import vues.afficheur.AfficheurPokemon;
 import vues.afficheur.AfficheurTuile;
-import vues.monde.Carte;
-import vues.monde.Monde;
+import modele.monde.Carte;
 
 public class Fenetre {
 
@@ -29,28 +29,33 @@ public class Fenetre {
     private Afficheur afficheurPokemon = new AfficheurPokemon();
     private Afficheur afficheurTuile = new AfficheurTuile();
     private IntegerProperty compteur = new SimpleIntegerProperty();
-    Group racine = new Group();
 
-    public Group affichageCarte(Carte carte){
-        AfficheurTuile at = new AfficheurTuile();
-        for(int i=0;carte.getLargeur()>i;i++){
-            for(int j=0;j<carte.getHauteur();j++) {
-                racine.getChildren().addAll(at.affiche(carte.getTuile(i,j),new Position(i* Tuile.TuileLargeur,
+    /**
+     * Affiche la carte
+     */
+    public void affichageCarte(){
+        Group racine = new Group();
+        Carte carte = manager.getCarteCourante(); //On récupère la carte à charger
+        //On parcours chaque tuile pour l'ajouter à racine
+        for(int j=0;carte.getHauteur()>j;j++){
+            for(int i=0;i<carte.getLargeur();i++) {
+                racine.getChildren().addAll(afficheurTuile.affiche(carte.getTuile(i,j),new Position(i* Tuile.TuileLargeur,
                         j*Tuile.TuileHauteur)));
-
             }
         }
-        return racine;
+        if(!groupe.getChildren().isEmpty()) {
+            groupe.getChildren().remove(0); //On enlève l'ancienne carte si y'en a une
+        }
+        groupe.getChildren().add(racine); //On ajoute la nouvelle carte
     }
 
-
+    /**
+     * Initialise la fenêtre à son chargement
+     */
     public void initialize(){
-
-        Monde monde = new Monde();
-        racine = this.affichageCarte(monde.getLesCartes().get(1));
-        groupe.getChildren().addAll(racine);
+        affichageCarte();
         compteur.bind(manager.compteurProperty()); //binding unidirectionnel
-        //On lui affecte un ChangeListener
+        //On lui affecte un ChangeListener pour effectuer une action quand la propriété change
         compteur.addListener((observableValue, number, t1) -> {
             a = afficheurPokemon.affiche(manager.getPokemonCourant(),manager.getPokemonCourant().getPosition());
             imageView.setImage(a.getImage());

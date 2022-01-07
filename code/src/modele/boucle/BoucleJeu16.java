@@ -1,6 +1,6 @@
 package modele.boucle;
 
-import observateurs.Observateur;
+import modele.observateurs.Observateur;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package modele;
+package modele.pokemon;
 
 //Contient chaque type existant
 public enum Type {

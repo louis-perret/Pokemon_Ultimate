@@ -1,4 +1,4 @@
-package observateurs;
+package modele.observateurs;
 
 import modele.Manager;
 

@@ -1,4 +1,7 @@
-package modele;
+package modele.attaqueur;
+
+import modele.pokemon.CollectionPokemon;
+import modele.pokemon.Pokemon;
 
 //Permet de controler le gain d'expérience, le niveau et l'évolution d'un pokemon
 public class ControleurNiveau {

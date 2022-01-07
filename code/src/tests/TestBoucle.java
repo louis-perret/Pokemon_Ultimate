@@ -4,8 +4,8 @@ import modele.Manager;
 import modele.boucle.BoucleJeu16;
 import modele.boucle.*;
 import modele.chargement.Stub;
-import observateurs.Observateur;
-import observateurs.ObservateurBoucle;
+import modele.observateurs.Observateur;
+import modele.observateurs.ObservateurBoucle;
 
 import java.util.LinkedList;
 import java.util.List;

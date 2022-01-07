@@ -1,8 +1,7 @@
 package vues.afficheur;
 
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.ImageView;
-import modele.Position;
+import modele.pokemon.Position;
 
 //Interface pour nos afficheurs
 public interface Afficheur {
