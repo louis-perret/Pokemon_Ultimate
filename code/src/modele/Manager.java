@@ -4,6 +4,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import vues.afficheur.Afficheur;
 import vues.afficheur.AfficheurPokemon;
+import vues.monde.Carte;
 import vues.monde.Monde;
 
 //Permet de gérer nos différentes fonctionnalités
@@ -35,7 +36,7 @@ public class Manager {
         this.deplaceur = new DeplacerPokemon();
         this.controleurNiveau=new ControleurNiveau(collectionPokemon);
         this.collisionneur=new Collisionneur();
-        this.monde=new Monde(monde);
+        this.monde=new Monde();
     }
 
     /**
@@ -59,7 +60,7 @@ public class Manager {
      */
     public void deplacerPokemon(Pokemon pokemon,Position position,double hauteurFenetre, double largeurFenetre){
         //Penser à prendre en compte le collisionneur avant de déplacer
-        if(!collisionneur.isCollision(pokemon.getPosition(),position,monde)) {
+        if(!collisionneur.isCollision(pokemon.getPosition(),position,monde.getLesCartes().get(1))) {
             deplaceur.deplacer(pokemon,position);
         }
     }

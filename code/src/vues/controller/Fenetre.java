@@ -8,9 +8,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import modele.*;
 import launch.*;
+import modele.tuiles.Tuile;
 import vues.afficheur.Afficheur;
 import vues.afficheur.AfficheurPokemon;
 import vues.afficheur.AfficheurTuile;
+import vues.monde.Carte;
 import vues.monde.Monde;
 
 public class Fenetre {
@@ -27,12 +29,25 @@ public class Fenetre {
     private Afficheur afficheurPokemon = new AfficheurPokemon();
     private Afficheur afficheurTuile = new AfficheurTuile();
     private IntegerProperty compteur = new SimpleIntegerProperty();
+    Group racine = new Group();
+
+    public Group affichageCarte(Carte carte){
+        AfficheurTuile at = new AfficheurTuile();
+        for(int i=0;carte.getLargeur()>i;i++){
+            for(int j=0;j<carte.getHauteur();j++) {
+                racine.getChildren().addAll(at.affiche(carte.getTuile(i,j),new Position(i* Tuile.TuileLargeur,
+                        j*Tuile.TuileHauteur)));
+
+            }
+        }
+        return racine;
+    }
 
 
     public void initialize(){
-        Group racine = new Group();
-        Monde monde = new Monde("Ressources/Monde.txt");
-        racine = monde.affichage();
+
+        Monde monde = new Monde();
+        racine = this.affichageCarte(monde.getLesCartes().get(1));
         groupe.getChildren().addAll(racine);
         compteur.bind(manager.compteurProperty()); //binding unidirectionnel
         //On lui affecte un ChangeListener

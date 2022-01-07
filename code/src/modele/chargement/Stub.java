@@ -14,18 +14,18 @@ public class Stub implements Chargeur{
 
     //public static Image Herbe;
     //public static Image Portail_bas_gauche;
-    public static Image Herbe = new Image("Tuiles/herbe.png");
-    public static Image Portail_bas_gauche = new Image("Tuiles/portail_bas_gauche.png");
-    public static Image Portail_haut_gauche = new Image("Tuiles/portail_haut_gauche.png");
-    public static Image Portail_bas_droite = new Image("Tuiles/portail_bas_droite.png");
-    public static Image Portail_haut_droite = new Image("Tuiles/portail_haut_droite.png");
-    public static Image Brique = new Image("Tuiles/brique.png");
+    public static Image Herbe = new Image("tuiles/herbe.png");
+    public static Image Portail_bas_gauche = new Image("tuiles/portail_bas_gauche.png");
+    public static Image Portail_haut_gauche = new Image("tuiles/portail_haut_gauche.png");
+    public static Image Portail_bas_droite = new Image("tuiles/portail_bas_droite.png");
+    public static Image Portail_haut_droite = new Image("tuiles/portail_haut_droite.png");
+    public static Image Brique = new Image("tuiles/brique.png");
 
 
     public void ChargeImages() {
-        URL url = getClass().getResource("Tuiles/Herbe.png");
+        URL url = getClass().getResource("tuiles/Herbe.png");
         Image Herbe = new Image(url.toExternalForm());
-        URL urlPbg = getClass().getResource("Tuiles/portail_bas_gauche.png");
+        URL urlPbg = getClass().getResource("tuiles/portail_bas_gauche.png");
         Image Portail_bas_gauche = new Image(urlPbg.toExternalForm());
     }
 
@@ -57,6 +57,6 @@ public class Stub implements Chargeur{
         niveau3.add(p);
 
         CollectionPokemon collectionPokemon = new CollectionPokemon(niveau1,niveau2,niveau3);
-        return new Manager(collectionPokemon,"Ressources/Monde.txt");
+        return new Manager(collectionPokemon,"Ressources/cartes/Lobby.txt");
     }
 }

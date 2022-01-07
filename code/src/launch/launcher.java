@@ -43,16 +43,16 @@ public class launcher extends Application {
     public void start(Stage stage) throws Exception {
         URL url = getClass().getResource("../FXML/Fenetre.fxml");
 
-        URL bulbURL= getClass().getResource("../Sprite/Sprite_bulbi/bulbasaur-sprite.png");
+        URL bulbURL= getClass().getResource("../sprite/Sprite_bulbi/bulbasaur-sprite.png");
         Image bulbasaurimg = new Image(bulbURL.toExternalForm());
 
-        URL bulbfURL= getClass().getResource("../Sprite/Sprite_bulbi/bulb_1.png");
+        URL bulbfURL= getClass().getResource("../sprite/Sprite_bulbi/bulb_1.png");
         Image bulbasaurfimg = new Image(bulbfURL.toExternalForm());
 
-        URL charmURL= getClass().getResource("../Sprite/Sprite_salam/charmender-sprite.png");
+        URL charmURL= getClass().getResource("../sprite/Sprite_salam/charmender-sprite.png");
         Image charmimg = new Image(charmURL.toExternalForm());
 
-        URL squirURL= getClass().getResource("../Sprite/Sprite_carap/squirtle-sprite.png");
+        URL squirURL= getClass().getResource("../sprite/Sprite_carap/squirtle-sprite.png");
         Image squirimg = new Image(squirURL.toExternalForm());
 
         FXMLLoader fxmlloader = new FXMLLoader(url);
@@ -86,7 +86,7 @@ public class launcher extends Application {
 
         System.out.println(pokemon.toString());
 /*
-        Monde monde = new Monde("Ressources/Monde.txt");
+        Monde monde = new Monde("Ressources/Lobby.txt");
         racine = monde.affichage();
 */
         //racine.getChildren().addAll(affich.affiche(pokemon, pokemon.getPosition())

@@ -2,7 +2,110 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Ressources/cartes/Arène.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vues/monde/Carte.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Monde.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/cartes/Lobby.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_bulbi/bulb_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_bulbi/bulb_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_bulbi/bulb_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_bulbi/bulb_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_bulbi/bulb_combat.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_bulbi/bulb_combat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_bulbi/bulb_combat_dos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_bulbi/bulb_combat_dos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_bulbi/bulb_d_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_bulbi/bulb_d_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_bulbi/bulb_d_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_bulbi/bulb_d_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_bulbi/bulb_dos_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_bulbi/bulb_dos_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_bulbi/bulb_dos_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_bulbi/bulb_dos_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_bulbi/bulb_g_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_bulbi/bulb_g_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_bulbi/bulb_g_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_bulbi/bulb_g_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_bulbi/bulbasaur-sprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_bulbi/bulbasaur-sprite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carab/war_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carab/war_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carab/war_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carab/war_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carab/war_combat_dos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carab/war_combat_dos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carab/war_d_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carab/war_d_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carab/war_d_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carab/war_d_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carab/war_dos_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carab/war_dos_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carab/war_dos_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carab/war_dos_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carab/war_g_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carab/war_g_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carab/war_g_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carab/war_g_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carap/squi_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carap/squi_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carap/squi_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carap/squi_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carap/squi_combat_dos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carap/squi_combat_dos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carap/squi_d_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carap/squi_d_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carap/squi_d_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carap/squi_d_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carap/squi_dos_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carap/squi_dos_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carap/squi_dos_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carap/squi_dos_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carap/squi_g_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carap/squi_g_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carap/squi_g_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carap/squi_g_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_carap/squirtle-sprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_carap/squirtle-sprite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_drac/drac_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_drac/drac_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_drac/drac_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_drac/drac_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_drac/drac_combat_dos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_drac/drac_combat_dos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_drac/drac_d_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_drac/drac_d_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_drac/drac_d_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_drac/drac_d_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_drac/drac_dos_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_drac/drac_dos_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_drac/drac_dos_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_drac/drac_dos_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_drac/drac_g_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_drac/drac_g_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_drac/drac_g_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_drac/drac_g_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_flo/flo_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_flo/flo_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_flo/flo_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_flo/flo_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_flo/flo_combat.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_flo/flo_combat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_flo/flo_combat_dos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_flo/flo_combat_dos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_flo/flo_d_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_flo/flo_d_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_flo/flo_d_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_flo/flo_d_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_flo/flo_dos_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_flo/flo_dos_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_flo/flo_dos_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_flo/flo_dos_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_flo/flo_g_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_flo/flo_g_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_flo/flo_g_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_flo/flo_g_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_herbi/herb_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_herbi/herb_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_herbi/herb_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_herbi/herb_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_herbi/herb_combat.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_herbi/herb_combat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_herbi/herb_combat_dos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_herbi/herb_combat_dos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_herbi/herb_d_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_herbi/herb_d_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_herbi/herb_d_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_herbi/herb_d_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_herbi/herb_dos_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_herbi/herb_dos_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_herbi/herb_dos_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_herbi/herb_dos_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_herbi/herb_g_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_herbi/herb_g_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_herbi/herb_g_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_herbi/herb_g_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_rept/rept_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_rept/rept_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_rept/rept_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_rept/rept_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_rept/rept_combat_dos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_rept/rept_combat_dos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_rept/rept_d_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_rept/rept_d_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_rept/rept_d_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_rept/rept_d_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_rept/rept_dos_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_rept/rept_dos_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_rept/rept_dos_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_rept/rept_dos_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_rept/rept_g_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_rept/rept_g_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_rept/rept_g_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_rept/rept_g_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_salam/charmender-sprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_salam/charmender-sprite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_salam/salam_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_salam/salam_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_salam/salam_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_salam/salam_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_salam/salam_combat_dos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_salam/salam_combat_dos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_salam/salam_d_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_salam/salam_d_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_salam/salam_dos_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_salam/salam_dos_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_salam/salam_dos_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_salam/salam_dos_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_salam/salam_g_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_salam/salam_g_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_salam/salam_g_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_salam/salam_g_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_salam/salam_l_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_salam/salam_l_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_tort/blas_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_tort/blas_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_tort/blas_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_tort/blas_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_tort/blas_combat_dos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_tort/blas_combat_dos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_tort/blas_d_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_tort/blas_d_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_tort/blas_d_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_tort/blas_d_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_tort/blas_dos_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_tort/blas_dos_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_tort/blas_dos_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_tort/blas_dos_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_tort/blas_g_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_tort/blas_g_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Sprite/Sprite_tort/blas_g_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/sprite/Sprite_tort/blas_g_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Tuiles/brique.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/tuiles/brique.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Tuiles/herbe.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/tuiles/herbe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Tuiles/portail_bas_droite.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/tuiles/portail_bas_droite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Tuiles/portail_bas_gauche.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/tuiles/portail_bas_gauche.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Tuiles/portail_haut_droite.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/tuiles/portail_haut_droite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Tuiles/portail_haut_gauche.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/tuiles/portail_haut_gauche.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/launch/launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Boucle16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/boucle/Boucle16.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Collisionneur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Collisionneur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/chargement/Stub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/chargement/Stub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vues/controller/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/Fenetre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vues/monde/Monde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/monde/Monde.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,18 +133,18 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/modele/AttaqueurPokemon.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/modele/ControleurNiveau.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/tests/Test.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/launch/launcher.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/Pokemon.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/Attaqueur.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/CollectionPokemon.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/modele/chargement/Chargeur.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/Attaqueur.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/AttaqueurPokemon.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/modele/chargement/Stub.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/CollectionPokemon.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/modele/Manager.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/tests/Test.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/Pokemon.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21lkHFp6FJ8j70Nq9eqiPbYdFSn" />
   <component name="ProjectViewState">
@@ -52,14 +155,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/tp1-test" />
+    <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Ressources/cartes" />
       <recent name="C:\JavaFX\projet_perret_wissocq\code\Ressources\Tuiles" />
     </key>
   </component>
