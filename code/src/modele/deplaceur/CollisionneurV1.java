@@ -28,7 +28,7 @@ public class CollisionneurV1 extends Collisionneur{
         }
 
         //Le y sur la fenêtre commence à 0 au milieu de la fenêtre, il fallait gérer cette partie
-        int posTuilX = nextX/32,posTuilY = nextY;
+        int posTuilX = nextX/getHauteurTuile(),posTuilY = nextY;
         if(posTuilY<0){ //Si c'est négatif
             posTuilY = (abs(getHauteurFenetre() - getHauteurTuile()) + posTuilY)/getHauteurTuile(); //On fait partir le y du début du tableau
         }

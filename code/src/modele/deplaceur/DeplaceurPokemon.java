@@ -5,10 +5,10 @@ import modele.pokemon.Position;
 import modele.monde.Carte;
 
 //Permet de déplacer un pokemon
-public class DeplacerPokemon extends Deplaceur {
+public class DeplaceurPokemon extends Deplaceur {
 
     //Constructeur
-    public DeplacerPokemon() {
+    public DeplaceurPokemon() {
         super.setCollisionneur(new CollisionneurV1());
     }
 
@@ -18,6 +18,7 @@ public class DeplacerPokemon extends Deplaceur {
      * @param keyChar : touche appuyée
      * @param carte : Carte pour vérifier la collision
      */
+    @Override
     public void deplacer(Pokemon p, String keyChar, Carte carte){
         switch (keyChar){
             case "Z" :

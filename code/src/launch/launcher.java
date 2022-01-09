@@ -4,7 +4,7 @@ import javafx.scene.input.KeyEvent;
 import modele.boucle.BoucleJeu;
 import modele.boucle.BoucleJeu16;
 import modele.chargement.Stub;
-import modele.deplaceur.DeplacerPokemon;
+import modele.deplaceur.DeplaceurPokemon;
 import modele.observateurs.Observateur;
 import modele.observateurs.ObservateurBoucle;
 import modele.*;
@@ -84,7 +84,7 @@ public class launcher extends Application {
         Pokemon p2 = new Pokemon("Salamèche",bulbasaurimg,10,10,10,10,position, Type.feu,tabMouvements,1,0,null);
         AfficheurPokemon affich = new AfficheurPokemon();
         AfficheurTuile affichT = new AfficheurTuile();
-        DeplacerPokemon dp = new DeplacerPokemon();
+        DeplaceurPokemon dp = new DeplaceurPokemon();
 
 
         System.out.println(pokemon.toString());
@@ -99,7 +99,7 @@ public class launcher extends Application {
         //Test du déplacement
         manager.setCompteur(0);
         manager.setPokemonCourant(pokemon);
-        manager.setCarteCourante("lobby");
+        manager.setCarteCourante("arene");
         Parent parent = FXMLLoader.load(this.getClass().getResource("../FXML/Fenetre.fxml"));
         Scene scene1 = new Scene(parent);
 

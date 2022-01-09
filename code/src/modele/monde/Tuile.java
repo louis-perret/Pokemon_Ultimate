@@ -6,8 +6,8 @@ import modele.chargement.Stub;
 //Identifie une tuile
 public class Tuile {
 
-    public static final int TuileHauteur = 32;
-    public static final int TuileLargeur = 32;
+    public static final int tuileHauteur = 32;
+    public static final int tuileLargeur = 32;
 
     private int id;
     private String image;

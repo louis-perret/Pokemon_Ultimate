@@ -29,6 +29,7 @@ public class BoucleJeu16 extends BoucleJeu{
         }
     }
 
+    @Override
     public void notifier() {
         for(Observateur o : super.observateurs){
             o.update();

@@ -5,14 +5,12 @@ import javafx.beans.property.SimpleIntegerProperty;
 import modele.attaqueur.Attaqueur;
 import modele.attaqueur.AttaqueurPokemon;
 import modele.attaqueur.ControleurNiveau;
-import modele.deplaceur.DeplacerPokemon;
+import modele.deplaceur.DeplaceurPokemon;
 import modele.deplaceur.Deplaceur;
 import modele.monde.Tuile;
 import modele.pokemon.CollectionPokemon;
 import modele.pokemon.Mouvement;
 import modele.pokemon.Pokemon;
-import vues.afficheur.Afficheur;
-import vues.afficheur.AfficheurPokemon;
 import modele.monde.Carte;
 import modele.monde.Monde;
 
@@ -41,7 +39,7 @@ public class Manager {
      */
     public Manager(CollectionPokemon collectionPokemon, Map<Integer, Tuile>dicoTuiles){
         this.attaqueur = new AttaqueurPokemon();
-        this.deplaceur = new DeplacerPokemon();
+        this.deplaceur = new DeplaceurPokemon();
         this.controleurNiveau=new ControleurNiveau(collectionPokemon);
         this.monde=new Monde(dicoTuiles);
     }
