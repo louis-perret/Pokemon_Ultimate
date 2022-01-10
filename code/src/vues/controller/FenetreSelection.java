@@ -18,9 +18,11 @@ public class FenetreSelection {
     @FXML
     private ImageView Image3;
 
-    private Image b = new Image(getClass().getResource("../Sprite_bulbi/bulbasaur-sprite.png").toExternalForm());
-    private Image c = new Image(getClass().getResource("../Sprite_salam/charmender-sprite.png").toExternalForm());
-    private Image s = new Image(getClass().getResource("../Sprite_carap/squirtle-sprite.png").toExternalForm());
+
+
+    private Image b = new Image(getClass().getResource("/sprite/Sprite_bulbi/bulbasaur-sprite.png").toExternalForm());
+    private Image c = new Image(getClass().getResource("/sprite/Sprite_salam/charmender-sprite.png").toExternalForm());
+    private Image s = new Image(getClass().getResource("/sprite/Sprite_carap/squirtle-sprite.png").toExternalForm());
 
     public void initialize(){
         hbox.setPadding(new Insets(20));

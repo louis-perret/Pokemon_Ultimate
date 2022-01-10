@@ -11,6 +11,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class FenetreLancement {
 
@@ -23,10 +24,9 @@ public class FenetreLancement {
     @FXML
     private Button boutonStart;
 
-
     public void lancementJeu(ActionEvent actionEvent) {
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("/FXML/FenetreSelection.fxml"));
+            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreSelection.fxml")));
             Scene scene = new Scene(parent);
             launch.launcher.getPrimaryStage().setScene(scene);
         } catch (IOException e) {
