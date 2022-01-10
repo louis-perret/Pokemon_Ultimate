@@ -34,6 +34,9 @@ public class launcher extends Application {
 
     private static Manager manager = new Stub().charger();
 
+    private static Stage primaryStage;
+
+
     public static Manager getManager() {
         return manager;
     }
@@ -42,9 +45,24 @@ public class launcher extends Application {
         launcher.manager = m;
     }
 
+    public static Stage getPrimaryStage() {
+        return primaryStage;
+    }
+
+    public static void setPrimaryStage(Stage stage) {
+        primaryStage = stage;
+    }
+
     @Override
     public void start(Stage stage) throws Exception {
-        URL url = getClass().getResource("../FXML/Fenetre.fxml");
+        setPrimaryStage(stage);
+        stage.setTitle("C'est la fenêtre du jeu!");
+
+        Parent parent = FXMLLoader.load(getClass().getResource("../FXML/FenetreLancement.fxml"));
+        Scene scene = new Scene(parent);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+       /* URL url = getClass().getResource("../FXML/Fenetre.fxml");
 
         URL bulbURL= getClass().getResource("../sprite/Sprite_bulbi/bulbasaur-sprite.png");
         Image bulbasaurimg = new Image(bulbURL.toExternalForm());
@@ -70,7 +88,7 @@ public class launcher extends Application {
         racine.getChildren().add(canvas);
 
         //stage.setScene(scene3);
-        stage.setTitle("C'est la fenêtre du jeu!");
+
 
 
 
@@ -86,18 +104,17 @@ public class launcher extends Application {
         AfficheurTuile affichT = new AfficheurTuile();
         DeplaceurPokemon dp = new DeplaceurPokemon();
 
-
         System.out.println(pokemon.toString());
-/*
+
         Monde monde = new Monde("Ressources/Lobby.txt");
         racine = monde.affichage();
-*/
+        */
         //racine.getChildren().addAll(affich.affiche(pokemon, pokemon.getPosition())
         //        /*affichT.affiche(Tuile.tuileHerbe ,new Position(0,0))*/ );
 
 
         //Test du déplacement
-        manager.setCompteur(0);
+        /*manager.setCompteur(0);
         manager.setPokemonCourant(pokemon);
         manager.setCarteCourante("arene");
         Parent parent = FXMLLoader.load(this.getClass().getResource("../FXML/Fenetre.fxml"));
@@ -109,14 +126,17 @@ public class launcher extends Application {
         });
 
         stage.setScene(scene1);
-
+        stage.setMaxHeight(520);
+        stage.setMinHeight(520);
+        stage.setMaxWidth(320);
+        stage.setMinHeight(320);
         List<Observateur> listeOb = new LinkedList<>();
         Observateur o = new ObservateurBoucle(manager);
         listeOb.add(o);
         BoucleJeu b = new BoucleJeu16(listeOb);
         Thread thread = new Thread(b);
         thread.start();
-        stage.show();
+        stage.show();*/
         /* Appel des tests */
         //Test.testAttaque();
         //Test.testDeplacer();

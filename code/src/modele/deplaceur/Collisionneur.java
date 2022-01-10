@@ -18,9 +18,7 @@ public abstract class Collisionneur {
      * @param carte : Carte sur laquelle on se déplace
      * @return True si y'a collision
      */
-    public boolean isCollision(Position nextPosition, Carte carte){
-        return true;
-    }
+    public abstract boolean isCollision(Position nextPosition, Carte carte);
 
     //getter et setter
     public int getHauteurFenetre() {

@@ -5,7 +5,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class LectureMonde {
-    public static String ChargerFichier(String chemin) {
+
+    public static String chargerFichier(String chemin) {
         StringBuilder builder = new StringBuilder();
 
         try{

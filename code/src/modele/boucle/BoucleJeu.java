@@ -8,6 +8,7 @@ public abstract class BoucleJeu extends Sujet implements Runnable {
 
     }
 
+    @Override
     public void notifier(){
 
     }

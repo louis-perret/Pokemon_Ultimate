@@ -21,7 +21,7 @@ public class Carte {
      */
     public void chargerCarte(String chemin) {
 
-        String fichier = LectureMonde.ChargerFichier(chemin);
+        String fichier = LectureMonde.chargerFichier(chemin);
         String[] partie = fichier.split("\\s+");
         largeur = LectureMonde.parseInt(partie[0]);
         hauteur = LectureMonde.parseInt(partie[1]);

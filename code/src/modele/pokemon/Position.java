@@ -63,11 +63,6 @@ public class Position {
     }
 
     @Override
-    public int hashCode() {
-        return (int) (positionX + positionY);
-    }
-
-    @Override
     public boolean equals(Object obj) {
         if (obj == null) return false;
         if (this == obj) return true;

@@ -15,13 +15,6 @@ import java.util.Set;
 
 public class Stub implements Chargeur{
 
-    public void ChargeImages() {
-        URL url = getClass().getResource("tuiles/Herbe.png");
-        Image Herbe = new Image(url.toExternalForm());
-        URL urlPbg = getClass().getResource("tuiles/portail_bas_gauche.png");
-        Image Portail_bas_gauche = new Image(urlPbg.toExternalForm());
-    }
-
     @Override
     public Manager charger() {
         Set<Pokemon> niveau1=new HashSet<>();
