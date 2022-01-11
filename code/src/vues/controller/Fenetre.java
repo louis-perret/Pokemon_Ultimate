@@ -36,6 +36,7 @@ public class Fenetre {
     public void affichageCarte(){
         Group racine = new Group();
         Carte carte = manager.getCarteCourante(); //On récupère la carte à charger
+
         //On parcours chaque tuile pour l'ajouter à racine
         for(int j=0;carte.getHauteur()>j;j++){
             for(int i=0;i<carte.getLargeur();i++) {

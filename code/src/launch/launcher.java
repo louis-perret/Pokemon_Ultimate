@@ -61,7 +61,7 @@ public class launcher extends Application {
         Parent parent = FXMLLoader.load(getClass().getResource("../FXML/FenetreLancement.fxml"));
         Scene scene = new Scene(parent);
         primaryStage.setScene(scene);
-        primaryStage.show();
+        //primaryStage.show();
        /* URL url = getClass().getResource("../FXML/Fenetre.fxml");
 
         URL bulbURL= getClass().getResource("../sprite/Sprite_bulbi/bulbasaur-sprite.png");
@@ -119,24 +119,27 @@ public class launcher extends Application {
         manager.setCarteCourante("arene");
         Parent parent = FXMLLoader.load(this.getClass().getResource("../FXML/Fenetre.fxml"));
         Scene scene1 = new Scene(parent);
-
+*/
         //On ajoute un filtre d'évènement pour le déplacement du pokemon
-        scene1.addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
+        primaryStage.getScene().addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
             manager.deplacerPokemon(keyEvent.getCode().getChar());
         });
-
+/*
         stage.setScene(scene1);
         stage.setMaxHeight(520);
         stage.setMinHeight(520);
         stage.setMaxWidth(320);
         stage.setMinHeight(320);
+        */
         List<Observateur> listeOb = new LinkedList<>();
         Observateur o = new ObservateurBoucle(manager);
         listeOb.add(o);
         BoucleJeu b = new BoucleJeu16(listeOb);
         Thread thread = new Thread(b);
         thread.start();
-        stage.show();*/
+        System.out.println(primaryStage.getScene());
+        primaryStage.show();
+
         /* Appel des tests */
         //Test.testAttaque();
         //Test.testDeplacer();

@@ -2,18 +2,18 @@ package modele;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.scene.image.Image;
 import modele.attaqueur.Attaqueur;
 import modele.attaqueur.AttaqueurPokemon;
 import modele.attaqueur.ControleurNiveau;
 import modele.deplaceur.DeplaceurPokemon;
 import modele.deplaceur.Deplaceur;
 import modele.monde.Tuile;
-import modele.pokemon.CollectionPokemon;
-import modele.pokemon.Mouvement;
-import modele.pokemon.Pokemon;
+import modele.pokemon.*;
 import modele.monde.Carte;
 import modele.monde.Monde;
 
+import java.net.URL;
 import java.util.Map;
 
 //Permet de gérer nos différentes fonctionnalités
@@ -53,7 +53,7 @@ public class Manager {
     public void attaquerPokemon(Pokemon attaquant, Pokemon attaque, Mouvement m){
         boolean battu=attaqueur.attaquer(attaquant,attaque,m);
         if(battu) { //S'il a gagné le combat
-            controleurNiveau.gagnerExperience(attaquant, attaque); //On le fait gagner de l'expéricence
+            controleurNiveau.gagnerExperience(attaquant, attaque); //On lui fait gagner de l'expéricence
         }
     }
 
@@ -68,6 +68,18 @@ public class Manager {
 
     //Getter et setter
     public Pokemon getPokemonCourant() {
+
+        if(pokemonCourant == null){
+            URL bulbfURL= getClass().getResource("../sprite/Sprite_bulbi/bulb_1.png");
+            Image bulbasaurfimg = new Image(bulbfURL.toExternalForm());
+            Position position = new Position(64,64);
+            Type type = Type.plante;
+            Mouvement m1 = new Mouvement(10,"flammèche",Type.feu);
+            Mouvement m2 = new Mouvement(10,"fouet-liane",Type.plante);
+            Mouvement[] tabMouvements=new Mouvement[]{m2};
+            Pokemon pokemon = new Pokemon("Bulbizarre",bulbasaurfimg,50,10,10,10,position,type,tabMouvements,1,0,null);
+            this.setPokemonCourant(pokemon);
+        }
         return pokemonCourant;
     }
 
@@ -76,6 +88,9 @@ public class Manager {
     }
 
     public Carte getCarteCourante() {
+        if(carteCourante == null){
+            this.setCarteCourante("lobby");
+        }
         return carteCourante;
     }
 

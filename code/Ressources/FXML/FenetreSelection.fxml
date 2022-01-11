@@ -44,7 +44,7 @@
                        <Font name="DejaVu Serif Bold" size="15.0"></Font>
                    </font>
                </Text>
-                <Button text="Choisir" textFill="green"></Button>
+                <Button fx:id="boutonbulb" text="Choisir" textFill="green" onAction="#choixPokemon"></Button>
            </VBox>
            <VBox alignment="CENTER">
                <ImageView fx:id="Image2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER"/>
@@ -54,7 +54,7 @@
                        <Font name="DejaVu Serif Bold" size="15.0"></Font>
                    </font>
                </Text>
-               <Button text="Choisir" textFill="red"></Button>
+               <Button fx:id="boutonsalam" text="Choisir" textFill="red" onAction="#choixPokemon"></Button>
            </VBox>
            <VBox alignment="CENTER">
                <ImageView fx:id="Image3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER"/>
@@ -63,7 +63,7 @@
                        <Font name="DejaVu Serif Bold" size="15.0"></Font>
                    </font>
                </Text>
-               <Button text="Choisir" textFill="blue"></Button>
+               <Button fx:id="boutoncarap" text="Choisir" textFill="blue" onAction="#choixPokemon"></Button>
            </VBox>
        </HBox>
    </center>

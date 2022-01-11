@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreLancement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreLancement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/FXML/FenetreSelection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/FenetreSelection.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/launch/launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vues/controller/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/Fenetre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreSelection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wissocq_perret.iml" beforeDir="false" afterPath="$PROJECT_DIR$/wissocq_perret.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,18 +36,18 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/tests/Test.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/Manager.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/chargement/Chargeur.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/pokemon/CollectionPokemon.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/pokemon/Pokemon.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/chargement/Stub.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/attaqueur/ControleurNiveau.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/attaqueur/Attaqueur.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/modele/attaqueur/AttaqueurPokemon.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/attaqueur/ControleurNiveau.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/chargement/Chargeur.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/launch/launcher.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/pokemon/CollectionPokemon.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/chargement/Stub.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/Manager.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/pokemon/Pokemon.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/tests/Test.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/attaqueur/Attaqueur.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21lkHFp6FJ8j70Nq9eqiPbYdFSn" />
   <component name="ProjectViewState">
@@ -54,8 +58,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/tp1-test" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="last_opened_file_path" value="/usr/share/openjfx/lib" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
@@ -71,7 +75,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="MAIN_CLASS_NAME" value="launch.launcher" />
       <module name="wissocq_perret" />
-      <option name="VM_PARAMETERS" value="--module-path $PATH_TO_FX$ --add-modules javafx.controls,javafx.fxml " />
+      <option name="VM_PARAMETERS" value="--module-path /usr/share/openjfx/lib --add-modules javafx.controls,javafx.fxml " />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
