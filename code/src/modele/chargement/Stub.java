@@ -1,17 +1,10 @@
 package modele.chargement;
 
-import javafx.scene.image.Image;
-import modele.pokemon.CollectionPokemon;
+import modele.pokemon.*;
 import modele.Manager;
-import modele.pokemon.Pokemon;
-import modele.pokemon.Type;
 import modele.monde.Tuile;
 
-import java.net.URL;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Stub implements Chargeur{
 
@@ -21,25 +14,60 @@ public class Stub implements Chargeur{
         Set<Pokemon> niveau2=new HashSet<>();
         Set<Pokemon> niveau3=new HashSet<>();
 
-        Pokemon p = new Pokemon("Bulbizarre",null,50,10,10,10,null, Type.plante,null,1,0,"Herbizarre");
-        niveau1.add(p);
-        p = new Pokemon("Salamèche",null,10,10,10,10,null, Type.feu,null,1,0,"Reptincel");
-        niveau1.add(p);
-        p = new Pokemon("Carapuce",null,10,10,10,10,null, Type.eau,null,1,0,"Carabaffe");
+        /* Création des types */
+        List<NomType> faiblessesPlante = new ArrayList<>();
+        faiblessesPlante.add(NomType.feu);
+        faiblessesPlante.add(NomType.glace);
+        faiblessesPlante.add(NomType.insecte);
+        faiblessesPlante.add(NomType.poison);
+        faiblessesPlante.add(NomType.vol);
+
+        List<NomType> forcesPlante = new ArrayList<>();
+        forcesPlante.add(NomType.eau);
+        forcesPlante.add(NomType.sol);
+        forcesPlante.add(NomType.roche);
+
+        Type plante = new Type(NomType.plante,forcesPlante,faiblessesPlante);
+
+        List<NomType> faiblessesFeu = new ArrayList<>();
+        faiblessesFeu.add(NomType.eau);
+        faiblessesFeu.add(NomType.sol);
+        faiblessesFeu.add(NomType.roche);
+
+        List<NomType> forcesFeu = new ArrayList<>();
+        forcesFeu.add(NomType.glace);
+        forcesFeu.add(NomType.plante);
+        forcesFeu.add(NomType.insecte);
+
+        Type feu = new Type(NomType.feu,forcesFeu,faiblessesFeu);
+
+        Type eau = new Type(NomType.eau,forcesFeu,faiblessesFeu);
+
+        /* Création des attaques */
+        Mouvement flammèche = new Mouvement(10,"Flammèche",feu);
+        Mouvement foutLiane = new Mouvement(10,"Fouet-liane",plante);
+        Mouvement[] tabMouvements=new Mouvement[]{foutLiane};
+        Pokemon p = new Pokemon("Bulbizarre",null,50,10,10,10,null, plante,tabMouvements,1,0,"Herbizarre");
         niveau1.add(p);
 
-        p = new Pokemon("Herbizarre",null,20,20,20,20,null, Type.plante,null,2,0,"Florizarre");
+        tabMouvements=new Mouvement[]{flammèche};
+        p = new Pokemon("Salamèche",null,10,10,10,10,null, feu,tabMouvements,1,0,"Reptincel");
+        niveau1.add(p);
+        p = new Pokemon("Carapuce",null,10,10,10,10,null, eau,null,1,0,"Carabaffe");
+        niveau1.add(p);
+
+        p = new Pokemon("Herbizarre",null,20,20,20,20,null, plante,null,2,0,"Florizarre");
         niveau2.add(p);
-        p = new Pokemon("Reptincel",null,20,20,20,20,null, Type.feu,null,2,0,"Dracaufeu");
+        p = new Pokemon("Reptincel",null,20,20,20,20,null, feu,null,2,0,"Dracaufeu");
         niveau2.add(p);
-        p = new Pokemon("Carabaffe",null,20,20,20,20,null, Type.eau,null,2,0,"Tortank");
+        p = new Pokemon("Carabaffe",null,20,20,20,20,null, eau,null,2,0,"Tortank");
         niveau2.add(p);
 
-        p = new Pokemon("Florizarre",null,30,30,30,30,null, Type.plante,null,3,0,null);
+        p = new Pokemon("Florizarre",null,30,30,30,30,null, plante,null,3,0,null);
         niveau3.add(p);
-        p = new Pokemon("Dracaufeu",null,30,30,30,30,null, Type.feu,null,3,0,null);
+        p = new Pokemon("Dracaufeu",null,30,30,30,30,null, feu,null,3,0,null);
         niveau3.add(p);
-        p = new Pokemon("Tortank",null,30,30,30,30,null, Type.eau,null,3,0,null);
+        p = new Pokemon("Tortank",null,30,30,30,30,null, eau,null,3,0,null);
         niveau3.add(p);
 
         CollectionPokemon collectionPokemon = new CollectionPokemon(niveau1,niveau2,niveau3);

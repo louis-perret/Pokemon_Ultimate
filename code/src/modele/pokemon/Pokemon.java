@@ -11,7 +11,7 @@ public class Pokemon {
     private int defense; //ses points de défence
     private int vitesse; //ses points de vitesse
     private Position position; //ses coordonées
-    private Type type; //son type
+    private Type type; //son nomType
     private Mouvement[] mouvements; //contient ses 4 attaques
 
     private int niveau; //son niveau (1 au minimum)
@@ -29,13 +29,13 @@ public class Pokemon {
      * @param defense : ses points de défence
      * @param vitesse : ses points de vitesse
      * @param position : ses coordonées
-     * @param type : son type
+     * @param type : son nomType
      * @param tabMouvements : ses attaques
      * @param niveau : son niveau
      * @param experience : son expérience
      * @param evolution : le nom de son évolution
      */
-    public Pokemon(String nom, Image image, int pv, int attaque, int defense, int vitesse, Position position,Type type,Mouvement[] tabMouvements, int niveau, int experience,String evolution) {
+    public Pokemon(String nom, Image image, int pv, int attaque, int defense, int vitesse, Position position, Type type, Mouvement[] tabMouvements, int niveau, int experience, String evolution) {
         this.nom = nom;
         this.image = image;
         this.pv = pv;
@@ -64,7 +64,12 @@ public class Pokemon {
     }
 
     public void setPv(int pv) {
-        this.pv = pv;
+        if(pv<=0){ //S'il n'a plus de points de vie
+            this.pv=0;
+        }
+        else{
+            this.pv=pv;
+        }
     }
 
     public Image getImage() {
@@ -121,6 +126,16 @@ public class Pokemon {
 
     public void setMouvements(Mouvement[] mouvements) {
         this.mouvements = mouvements;
+    }
+
+    public Mouvement getMouvement(String nom){
+        for (Mouvement m : mouvements){
+            if(m.getNom().equals(nom)){
+                return m;
+            }
+        }
+
+        return null;
     }
 
     public int getNiveau() {
@@ -183,7 +198,7 @@ public class Pokemon {
      */
     @Override
     public String toString(){
-        String res = "Pokemon : " + this.getNom() + " de type " + this.getType()  + "A comme technique : ";
+        String res = "Pokemon : " + this.getNom() + " de nomType " + this.getType()  + "A comme technique : ";
         for (Mouvement m : mouvements){
             res  += m.getNom();
         }

@@ -4,27 +4,16 @@ import javafx.scene.input.KeyEvent;
 import modele.boucle.BoucleJeu;
 import modele.boucle.BoucleJeu16;
 import modele.chargement.Stub;
-import modele.deplaceur.DeplaceurPokemon;
 import modele.observateurs.Observateur;
 import modele.observateurs.ObservateurBoucle;
 import modele.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.image.Image;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import modele.pokemon.Mouvement;
-import modele.pokemon.Pokemon;
-import modele.pokemon.Position;
-import modele.pokemon.Type;
-import vues.afficheur.AfficheurPokemon;
-import vues.afficheur.AfficheurTuile;
+import tests.Test;
 
-import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -131,17 +120,17 @@ public class launcher extends Application {
         stage.setMaxWidth(320);
         stage.setMinHeight(320);
         */
-        List<Observateur> listeOb = new LinkedList<>();
+        /*List<Observateur> listeOb = new LinkedList<>();
         Observateur o = new ObservateurBoucle(manager);
         listeOb.add(o);
         BoucleJeu b = new BoucleJeu16(listeOb);
         Thread thread = new Thread(b);
         thread.start();
         System.out.println(primaryStage.getScene());
-        primaryStage.show();
+        primaryStage.show();*/
 
         /* Appel des tests */
-        //Test.testAttaque();
+        Test.testAttaque();
         //Test.testDeplacer();
         //TestBoucle.testBoucleJeu();
         //TestMonde.testerChargementCarte();

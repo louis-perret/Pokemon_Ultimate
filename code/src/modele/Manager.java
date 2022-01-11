@@ -32,7 +32,7 @@ public class Manager {
     public IntegerProperty compteurProperty() { return compteur;} //Renvoie la propriété
 
     private Monde monde;
-
+    private CollectionPokemon pokedex;
     /**
      * Constructeur
      * @param collectionPokemon
@@ -40,6 +40,7 @@ public class Manager {
     public Manager(CollectionPokemon collectionPokemon, Map<Integer, Tuile>dicoTuiles){
         this.attaqueur = new AttaqueurPokemon();
         this.deplaceur = new DeplaceurPokemon();
+        this.pokedex=collectionPokemon;
         this.controleurNiveau=new ControleurNiveau(collectionPokemon);
         this.monde=new Monde(dicoTuiles);
     }
@@ -69,17 +70,17 @@ public class Manager {
     //Getter et setter
     public Pokemon getPokemonCourant() {
 
-        if(pokemonCourant == null){
+        /*if(pokemonCourant == null){
             URL bulbfURL= getClass().getResource("../sprite/Sprite_bulbi/bulb_1.png");
             Image bulbasaurfimg = new Image(bulbfURL.toExternalForm());
             Position position = new Position(64,64);
-            Type type = Type.plante;
-            Mouvement m1 = new Mouvement(10,"flammèche",Type.feu);
-            Mouvement m2 = new Mouvement(10,"fouet-liane",Type.plante);
+            NomType nomType = NomType.plante;
+            Mouvement m1 = new Mouvement(10,"flammèche", ;
+            Mouvement m2 = new Mouvement(10,"fouet-liane", );
             Mouvement[] tabMouvements=new Mouvement[]{m2};
-            Pokemon pokemon = new Pokemon("Bulbizarre",bulbasaurfimg,50,10,10,10,position,type,tabMouvements,1,0,null);
+            Pokemon pokemon = new Pokemon("Bulbizarre",bulbasaurfimg,50,10,10,10,position, nomType,tabMouvements,1,0,null);
             this.setPokemonCourant(pokemon);
-        }
+        }*/
         return pokemonCourant;
     }
 
@@ -100,5 +101,9 @@ public class Manager {
 
     public Monde getMonde() {
         return monde;
+    }
+
+    public CollectionPokemon getPokedex() {
+        return pokedex;
     }
 }

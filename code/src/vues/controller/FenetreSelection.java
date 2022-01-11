@@ -10,14 +10,8 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
-import modele.Manager;
-import modele.chargement.Stub;
-import modele.pokemon.Pokemon;
-import modele.pokemon.Position;
-import modele.pokemon.Type;
 
 import java.io.IOException;
-import java.net.URL;
 
 public class FenetreSelection {
 
