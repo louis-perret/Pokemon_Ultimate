@@ -20,7 +20,7 @@ public class BoucleJeu16 extends BoucleJeu{
     public void run() {
         try{
             while(true) {
-                sleep(16);
+                Thread.sleep(16);
                 notifier();
             }
         }

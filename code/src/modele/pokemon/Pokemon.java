@@ -5,7 +5,7 @@ import javafx.scene.image.Image;
 //Identifie un pokemon
 public class Pokemon {
     private String nom; //son nom
-    private Image image; //son image
+    private String image; //son image
     private int pv; //ses points de vies
     private int attaque; //ses points d'attaque
     private int defense; //ses points de défence
@@ -35,7 +35,7 @@ public class Pokemon {
      * @param experience : son expérience
      * @param evolution : le nom de son évolution
      */
-    public Pokemon(String nom, Image image, int pv, int attaque, int defense, int vitesse, Position position, Type type, Mouvement[] tabMouvements, int niveau, int experience, String evolution) {
+    public Pokemon(String nom, String image, int pv, int attaque, int defense, int vitesse, Position position, Type type, Mouvement[] tabMouvements, int niveau, int experience, String evolution) {
         this.nom = nom;
         this.image = image;
         this.pv = pv;
@@ -72,11 +72,11 @@ public class Pokemon {
         }
     }
 
-    public Image getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(Image image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

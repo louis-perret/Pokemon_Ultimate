@@ -6,14 +6,20 @@ import javafx.scene.image.Image;
 import modele.attaqueur.Attaqueur;
 import modele.attaqueur.AttaqueurPokemon;
 import modele.attaqueur.ControleurNiveau;
+import modele.boucle.BoucleJeu;
+import modele.boucle.BoucleJeu16;
 import modele.deplaceur.DeplaceurPokemon;
 import modele.deplaceur.Deplaceur;
 import modele.monde.Tuile;
+import modele.observateurs.Observateur;
+import modele.observateurs.ObservateurBoucle;
 import modele.pokemon.*;
 import modele.monde.Carte;
 import modele.monde.Monde;
 
 import java.net.URL;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 //Permet de gérer nos différentes fonctionnalités
@@ -82,6 +88,18 @@ public class Manager {
             this.setPokemonCourant(pokemon);
         }*/
         return pokemonCourant;
+    }
+
+    public void lancerBoucleJeu(){
+        setCompteur(0);
+        setPokemonCourant(pokedex.getPokemon("Bulbizarre",1));
+        setCarteCourante("lobby");
+        List<Observateur> listeOb = new LinkedList<>();
+        Observateur o = new ObservateurBoucle(this);
+        listeOb.add(o);
+        BoucleJeu b = new BoucleJeu16(listeOb);
+        Thread thread = new Thread(b);
+        thread.start();
     }
 
     public void setPokemonCourant(Pokemon pokemonCourant) {

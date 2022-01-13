@@ -12,7 +12,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import modele.pokemon.Mouvement;
+import modele.pokemon.Pokemon;
+import modele.pokemon.Position;
+import modele.pokemon.Type;
 import tests.Test;
+import vues.afficheur.AfficheurPokemon;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -47,9 +52,9 @@ public class launcher extends Application {
         setPrimaryStage(stage);
         stage.setTitle("C'est la fenêtre du jeu!");
 
-        Parent parent = FXMLLoader.load(getClass().getResource("../FXML/FenetreLancement.fxml"));
+        /*Parent parent = FXMLLoader.load(getClass().getResource("../FXML/Fenetre.fxml"));
         Scene scene = new Scene(parent);
-        primaryStage.setScene(scene);
+        primaryStage.setScene(scene);*/
         //primaryStage.show();
        /* URL url = getClass().getResource("../FXML/Fenetre.fxml");
 
@@ -77,39 +82,17 @@ public class launcher extends Application {
         racine.getChildren().add(canvas);
 
         //stage.setScene(scene3);
-
-
-
-
-        Position position = new Position(64,64);
-        Type type = Type.plante;
-        Mouvement m1 = new Mouvement(10,"flammèche",Type.feu);
-        Mouvement m2 = new Mouvement(10,"fouet-liane",Type.plante);
-        Mouvement[] tabMouvements=new Mouvement[]{m2};
-        Pokemon pokemon = new Pokemon("Bulbizarre",bulbasaurfimg,50,10,10,10,position,type,tabMouvements,1,0,null);
-        tabMouvements[0]=m1;
-        Pokemon p2 = new Pokemon("Salamèche",bulbasaurimg,10,10,10,10,position, Type.feu,tabMouvements,1,0,null);
-        AfficheurPokemon affich = new AfficheurPokemon();
-        AfficheurTuile affichT = new AfficheurTuile();
-        DeplaceurPokemon dp = new DeplaceurPokemon();
-
-        System.out.println(pokemon.toString());
-
-        Monde monde = new Monde("Ressources/Lobby.txt");
-        racine = monde.affichage();
-        */
+*/
         //racine.getChildren().addAll(affich.affiche(pokemon, pokemon.getPosition())
         //        /*affichT.affiche(Tuile.tuileHerbe ,new Position(0,0))*/ );
 
 
         //Test du déplacement
-        /*manager.setCompteur(0);
-        manager.setPokemonCourant(pokemon);
-        manager.setCarteCourante("arene");
+
         Parent parent = FXMLLoader.load(this.getClass().getResource("../FXML/Fenetre.fxml"));
         Scene scene1 = new Scene(parent);
-*/
-        //On ajoute un filtre d'évènement pour le déplacement du pokemon
+        primaryStage.setScene(scene1);
+        //On ajoute un filtre d'évènement pour s'abonner à l'évènement keyPressed pour le déplacement du pokemon
         primaryStage.getScene().addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
             manager.deplacerPokemon(keyEvent.getCode().getChar());
         });
@@ -120,17 +103,11 @@ public class launcher extends Application {
         stage.setMaxWidth(320);
         stage.setMinHeight(320);
         */
-        /*List<Observateur> listeOb = new LinkedList<>();
-        Observateur o = new ObservateurBoucle(manager);
-        listeOb.add(o);
-        BoucleJeu b = new BoucleJeu16(listeOb);
-        Thread thread = new Thread(b);
-        thread.start();
-        System.out.println(primaryStage.getScene());
-        primaryStage.show();*/
+        manager.lancerBoucleJeu();
+        primaryStage.show();
 
         /* Appel des tests */
-        Test.testAttaque();
+        //Test.testAttaque();
         //Test.testDeplacer();
         //TestBoucle.testBoucleJeu();
         //TestMonde.testerChargementCarte();

@@ -43,31 +43,34 @@ public class Stub implements Chargeur{
 
         Type eau = new Type(NomType.eau,forcesFeu,faiblessesFeu);
 
+        Position position = new Position(0,0);
+
         /* Création des attaques */
         Mouvement flammèche = new Mouvement(10,"Flammèche",feu);
         Mouvement foutLiane = new Mouvement(10,"Fouet-liane",plante);
         Mouvement[] tabMouvements=new Mouvement[]{foutLiane};
-        Pokemon p = new Pokemon("Bulbizarre",null,50,10,10,10,null, plante,tabMouvements,1,0,"Herbizarre");
+
+        Pokemon p = new Pokemon("Bulbizarre","/sprite/Sprite_bulbi/bulb_1.png",50,10,10,10,position, plante,tabMouvements,1,0,"Herbizarre");
         niveau1.add(p);
 
         tabMouvements=new Mouvement[]{flammèche};
-        p = new Pokemon("Salamèche",null,10,10,10,10,null, feu,tabMouvements,1,0,"Reptincel");
+        p = new Pokemon("Salamèche","/sprite/Sprite_salam/charmender-sprite.png",10,10,10,10,position, feu,tabMouvements,1,0,"Reptincel");
         niveau1.add(p);
-        p = new Pokemon("Carapuce",null,10,10,10,10,null, eau,null,1,0,"Carabaffe");
+        p = new Pokemon("Carapuce",null,10,10,10,10,position, eau,null,1,0,"Carabaffe");
         niveau1.add(p);
 
-        p = new Pokemon("Herbizarre",null,20,20,20,20,null, plante,null,2,0,"Florizarre");
+        p = new Pokemon("Herbizarre",null,20,20,20,20,position, plante,null,2,0,"Florizarre");
         niveau2.add(p);
-        p = new Pokemon("Reptincel",null,20,20,20,20,null, feu,null,2,0,"Dracaufeu");
+        p = new Pokemon("Reptincel",null,20,20,20,20,position, feu,null,2,0,"Dracaufeu");
         niveau2.add(p);
-        p = new Pokemon("Carabaffe",null,20,20,20,20,null, eau,null,2,0,"Tortank");
+        p = new Pokemon("Carabaffe",null,20,20,20,20,position, eau,null,2,0,"Tortank");
         niveau2.add(p);
 
-        p = new Pokemon("Florizarre",null,30,30,30,30,null, plante,null,3,0,null);
+        p = new Pokemon("Florizarre",null,30,30,30,30,position, plante,null,3,0,null);
         niveau3.add(p);
-        p = new Pokemon("Dracaufeu",null,30,30,30,30,null, feu,null,3,0,null);
+        p = new Pokemon("Dracaufeu",null,30,30,30,30,position, feu,null,3,0,null);
         niveau3.add(p);
-        p = new Pokemon("Tortank",null,30,30,30,30,null, eau,null,3,0,null);
+        p = new Pokemon("Tortank",null,30,30,30,30,position, eau,null,3,0,null);
         niveau3.add(p);
 
         CollectionPokemon collectionPokemon = new CollectionPokemon(niveau1,niveau2,niveau3);
