@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyEvent;
+import javafx.stage.Stage;
 import modele.Manager;
 import modele.pokemon.Pokemon;
 
@@ -13,58 +15,43 @@ import java.util.List;
 
 public class Navigateur {
 
+    private Manager manager = launch.launcher.getManager();
+    private Stage primaryStage = launch.launcher.getPrimaryStage();
 
+    public void lancerFenetreLancement() {
+        try {
+            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreLancement.fxml")));
+            Scene scene = new Scene(parent);
+            scene.getStylesheets().add(getClass().getResource("/FXML/Lancement.css").toExternalForm());
+            primaryStage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-
-    public void lancementJeu(ActionEvent actionEvent) {
+    public void lancerFenetreSelection() {
         try {
             Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreSelection.fxml")));
             Scene scene = new Scene(parent);
             scene.getStylesheets().add(getClass().getResource("/FXML/Selection.css").toExternalForm());
-            launch.launcher.getPrimaryStage().setScene(scene);
+            primaryStage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void choixPokemon1(ActionEvent actionEvent) {
+    public void lancerFenetreJeu() {
         try {
             Parent parent = FXMLLoader.load((getClass().getResource("/FXML/Fenetre.fxml")));
             Scene scene = new Scene(parent);
-            launch.launcher.getPrimaryStage().setScene(scene);
-            System.out.println(launch.launcher.getPrimaryStage().getScene());
-
+            primaryStage.setScene(scene);
+            primaryStage.getScene().addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
+                manager.deplacerPokemon(keyEvent.getCode().getChar());
+            });
+            manager.setCarteCourante("lobby");
+            manager.lancerBoucleJeu();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-    public void choixPokemon2(ActionEvent actionEvent) {
-        try {
-            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/Fenetre.fxml")));
-            Scene scene = new Scene(parent);
-            launch.launcher.getPrimaryStage().setScene(scene);
-            System.out.println(launch.launcher.getPrimaryStage().getScene());
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void choixPokemon3(ActionEvent actionEvent) {
-        try {
-
-            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/Fenetre.fxml")));
-            Scene scene = new Scene(parent);
-            launch.launcher.getPrimaryStage().setScene(scene);
-            System.out.println(launch.launcher.getPrimaryStage().getScene());
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-
-
 }

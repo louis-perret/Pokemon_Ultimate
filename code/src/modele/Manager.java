@@ -2,10 +2,9 @@ package modele;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.scene.image.Image;
-import modele.attaqueur.Attaqueur;
-import modele.attaqueur.AttaqueurPokemon;
-import modele.attaqueur.ControleurNiveau;
+import modele.combat.Attaqueur;
+import modele.combat.AttaqueurPokemon;
+import modele.combat.ControleurNiveau;
 import modele.boucle.BoucleJeu;
 import modele.boucle.BoucleJeu16;
 import modele.deplaceur.DeplaceurPokemon;
@@ -17,8 +16,6 @@ import modele.pokemon.*;
 import modele.monde.Carte;
 import modele.monde.Monde;
 
-import java.net.URL;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -58,10 +55,10 @@ public class Manager {
      * Gère l'attaque d'un pokemon vers un autre
      * @param attaquant : pokemon qui attaque
      * @param attaque : pokemon qui est attaqué
-     * @param m : l'attaque utilisée
+     * @param mouvementAttaquant : l'attaque utilisée
      */
-    public void attaquerPokemon(Pokemon attaquant, Pokemon attaque, Mouvement m){
-        boolean battu=attaqueur.attaquer(attaquant,attaque,m);
+    public void tourDeCombat(Pokemon attaquant, Pokemon attaque, Mouvement mouvementAttaquant,Mouvement mouvementAttaque){
+        boolean battu=attaqueur.attaquer(attaquant,attaque,mouvementAttaquant);
         if(battu) { //S'il a gagné le combat
             controleurNiveau.gagnerExperience(attaquant, attaque); //On lui fait gagner de l'expéricence
         }
@@ -75,34 +72,18 @@ public class Manager {
             deplaceur.deplacer(pokemonCourant,keyChar,carteCourante);
     }
 
+    public void lancerBoucleJeu(){
+        setCompteur(0);
+        Observateur observateur = new ObservateurBoucle(this);
+        BoucleJeu boucleJeu = new BoucleJeu16();
+        boucleJeu.addObservateur(observateur);
+        Thread thread = new Thread(boucleJeu);
+        thread.start();
+    }
 
     //Getter et setter
     public Pokemon getPokemonCourant() {
-
-        /*if(pokemonCourant == null){
-            URL bulbfURL= getClass().getResource("../sprite/Sprite_bulbi/bulb_1.png");
-            Image bulbasaurfimg = new Image(bulbfURL.toExternalForm());
-            Position position = new Position(64,64);
-            NomType nomType = NomType.plante;
-            Mouvement m1 = new Mouvement(10,"flammèche", ;
-            Mouvement m2 = new Mouvement(10,"fouet-liane", );
-            Mouvement[] tabMouvements=new Mouvement[]{m2};
-            Pokemon pokemon = new Pokemon("Bulbizarre",bulbasaurfimg,50,10,10,10,position, nomType,tabMouvements,1,0,null);
-            this.setPokemonCourant(pokemon);
-        }*/
         return pokemonCourant;
-    }
-
-    public void lancerBoucleJeu(){
-        setCompteur(0);
-        setPokemonCourant(pokedex.getPokemon("Bulbizarre",1));
-        setCarteCourante("lobby");
-        List<Observateur> listeOb = new LinkedList<>();
-        Observateur o = new ObservateurBoucle(this);
-        listeOb.add(o);
-        BoucleJeu b = new BoucleJeu16(listeOb);
-        Thread thread = new Thread(b);
-        thread.start();
     }
 
     public List<Pokemon> getStarterslvl1() {

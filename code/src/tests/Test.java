@@ -4,9 +4,6 @@ import modele.*;
 import modele.chargement.Stub;
 import modele.pokemon.*;
 
-import java.util.HashSet;
-import java.util.Set;
-
 //Pour effectuer nos tests
 public class Test {
 
@@ -20,7 +17,7 @@ public class Test {
         System.out.println(pAttaquant.getNom() + " : Niveau = " + pAttaquant.getNiveau() + ", Expérience : " + pAttaquant.getExperience());
         System.out.println("Le pokemon " + pAttaquant.getNom() + " attaque "+ pAttaque.getNom() + " avec " + pAttaquant.getMouvement("Fouet-liane").getNom());
         System.out.println("PV de "  + pAttaque.getNom() + " avant attaque = " + pAttaque.getPv());
-        manager.attaquerPokemon(pAttaquant,pAttaque,pAttaquant.getMouvement("Fouet-liane"));
+        manager.tourDeCombat(pAttaquant,pAttaque,pAttaquant.getMouvement("Fouet-liane"),null);
         System.out.println("PV de "  + pAttaque.getNom() + " après attaque = " + pAttaque.getPv() + "\n");
         System.out.println(pAttaquant.getNom() + " : Niveau = " + pAttaquant.getNiveau() + ", Expérience : " + pAttaquant.getExperience());
     }

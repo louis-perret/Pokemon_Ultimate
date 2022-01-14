@@ -14,10 +14,9 @@ public class TestBoucle {
 
     public static void testBoucleJeu(){
         Manager m = new Stub().charger();
-        List<Observateur> listeOb = new LinkedList<>();
         Observateur o = new ObservateurBoucle(m);
-        listeOb.add(o);
-        BoucleJeu b = new BoucleJeu16(listeOb);
+        BoucleJeu b = new BoucleJeu16();
+        b.addObservateur(o);
         Thread t = new Thread(b);
         t.start();
         while(m.getCompteur()<10) {

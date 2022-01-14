@@ -2,16 +2,10 @@ package vues.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
-
-import java.io.IOException;
-import java.util.Objects;
 
 public class FenetreLancement {
 
@@ -28,7 +22,7 @@ public class FenetreLancement {
 
 
     public void lancementJeu(ActionEvent actionEvent) {
-        navigateur.lancementJeu(actionEvent);
+        navigateur.lancerFenetreSelection();
         /*
         try {
             Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreSelection.fxml")));

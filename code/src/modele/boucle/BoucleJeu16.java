@@ -1,5 +1,6 @@
 package modele.boucle;
 
+import javafx.application.Platform;
 import modele.observateurs.Observateur;
 
 import java.util.LinkedList;
@@ -9,11 +10,8 @@ import static java.lang.Thread.sleep;
 
 public class BoucleJeu16 extends BoucleJeu{
 
-    public BoucleJeu16(List<Observateur> l){
+    public BoucleJeu16(){
         super.observateurs=new LinkedList<>();
-        for(Observateur o : l ){
-            super.addObservateur(o);
-        }
     }
 
     @Override
@@ -31,8 +29,11 @@ public class BoucleJeu16 extends BoucleJeu{
 
     @Override
     public void notifier() {
-        for(Observateur o : super.observateurs){
-            o.update();
-        }
+        Platform.runLater(() -> {
+            for(Observateur o : super.observateurs){
+                o.update();
+            }
+        });
+
     }
 }

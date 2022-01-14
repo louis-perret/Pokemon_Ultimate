@@ -1,4 +1,4 @@
-package modele.attaqueur;
+package modele.combat;
 
 import modele.pokemon.Mouvement;
 import modele.pokemon.Pokemon;
