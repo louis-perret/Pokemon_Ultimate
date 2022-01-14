@@ -1,8 +1,6 @@
 package modele.pokemon;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 //Permet de stocker tous les pokemons du jeu
 public class CollectionPokemon {
@@ -37,6 +35,17 @@ public class CollectionPokemon {
             }
         }
         return pokemonRecherche;
+    }
+
+    public List<Pokemon> getStarterLvl1(){
+        Set<Pokemon> niv1 = pokedex.get(1);
+        List<Pokemon> listeStarterNiv1 = new ArrayList<Pokemon>();
+        for (Pokemon p : niv1){
+            if(p.getStarter()){
+                listeStarterNiv1.add(p);
+            }
+        }
+        return listeStarterNiv1;
     }
     
 

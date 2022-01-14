@@ -39,6 +39,8 @@ public class Manager {
 
     private Monde monde;
     private CollectionPokemon pokedex;
+
+
     /**
      * Constructeur
      * @param collectionPokemon
@@ -50,6 +52,7 @@ public class Manager {
         this.controleurNiveau=new ControleurNiveau(collectionPokemon);
         this.monde=new Monde(dicoTuiles);
     }
+
 
     /**
      * Gère l'attaque d'un pokemon vers un autre
@@ -102,6 +105,10 @@ public class Manager {
         thread.start();
     }
 
+    public List<Pokemon> getStarterslvl1() {
+        return pokedex.getStarterLvl1();
+    }
+
     public void setPokemonCourant(Pokemon pokemonCourant) {
         this.pokemonCourant = pokemonCourant;
     }
@@ -124,4 +131,6 @@ public class Manager {
     public CollectionPokemon getPokedex() {
         return pokedex;
     }
+
+
 }

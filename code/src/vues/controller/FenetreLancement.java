@@ -24,7 +24,12 @@ public class FenetreLancement {
     @FXML
     private Button boutonStart;
 
+    Navigateur navigateur = new Navigateur();
+
+
     public void lancementJeu(ActionEvent actionEvent) {
+        navigateur.lancementJeu(actionEvent);
+        /*
         try {
             Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreSelection.fxml")));
             Scene scene = new Scene(parent);
@@ -32,6 +37,8 @@ public class FenetreLancement {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+         */
     }
 
     public void initialize(){

@@ -1,0 +1,9 @@
+.root {
+    -fx-font-size: 14px;
+    -fx-font-family: sans-serif;
+    -fx-background-color: lightsteelblue;
+}
+
+.fontStyle{-fx-font-size: 25;-fx-font-family: "Times New Roman";}
+
+

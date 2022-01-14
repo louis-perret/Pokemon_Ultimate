@@ -10,8 +10,12 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import launch.launcher;
+import modele.Manager;
+import modele.pokemon.Pokemon;
 
 import java.io.IOException;
+import java.util.List;
 
 public class FenetreSelection {
 
@@ -34,30 +38,37 @@ public class FenetreSelection {
     @FXML
     private Button boutoncarap;
 
+    Navigateur navigateur = new Navigateur();
+
+    private Manager manager = launcher.getManager();
+    private List<Pokemon> listeStarter;
+
+
+
+
     public void choixPokemon(ActionEvent actionEvent) {
-        try {
-            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/Fenetre.fxml")));
-            Scene scene = new Scene(parent);
-            if (actionEvent.getSource() == boutonbulb) {
-                launch.launcher.getPrimaryStage().setScene(scene);
-                System.out.println(launch.launcher.getPrimaryStage().getScene());
 
-            }
-            else if(actionEvent.getSource() == boutonsalam){
-                //URL charmURL= getClass().getResource("/sprite/Sprite_salam/charmender-sprite.png");
-                //Image charmimg = new Image(charmURL.toExternalForm());
-                //Manager.setPokemonCourant(new Pokemon("Salamèche",charmimg,10,10,10,10,new Position(0,0), Type.feu,null,1,0,"Reptincel"));
-                System.out.println("Salamèche");
-                launch.launcher.getPrimaryStage().setScene(scene);
+        listeStarter = manager.getStarterslvl1();
 
-            }
-            else if(actionEvent.getSource() == boutoncarap){
-                System.out.println("Carapuce");
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (actionEvent.getSource() == boutonbulb){
+            navigateur.choixPokemon1(actionEvent);
+            manager.setPokemonCourant(listeStarter.get(0));
         }
+
+        if (actionEvent.getSource() == boutonsalam){
+            navigateur.choixPokemon2(actionEvent);
+            manager.setPokemonCourant(listeStarter.get(1));
+
+        }
+
+        if (actionEvent.getSource() == boutoncarap){
+            navigateur.choixPokemon3(actionEvent);
+            manager.setPokemonCourant(listeStarter.get(2));
+
+        }
+
+
+
     }
 
 

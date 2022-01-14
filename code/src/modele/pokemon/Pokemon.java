@@ -17,6 +17,7 @@ public class Pokemon {
     private int niveau; //son niveau (1 au minimum)
     private int experience; //son expérience (0 au minimum)
     private String evolution; //contient le nom de son évolution
+    private Boolean isStarter; //le pokemon est-il un starter
 
 
 
@@ -35,7 +36,7 @@ public class Pokemon {
      * @param experience : son expérience
      * @param evolution : le nom de son évolution
      */
-    public Pokemon(String nom, String image, int pv, int attaque, int defense, int vitesse, Position position, Type type, Mouvement[] tabMouvements, int niveau, int experience, String evolution) {
+    public Pokemon(String nom, String image, int pv, int attaque, int defense, int vitesse, Position position, Type type, Mouvement[] tabMouvements, int niveau, int experience, String evolution,Boolean isStarter) {
         this.nom = nom;
         this.image = image;
         this.pv = pv;
@@ -48,6 +49,7 @@ public class Pokemon {
         this.niveau=niveau;
         this.experience=experience;
         this.evolution=evolution;
+        this.isStarter = isStarter;
     }
 
     /* Getter et Setter */
@@ -161,6 +163,10 @@ public class Pokemon {
     public void setEvolution(String evolution) {
         this.evolution = evolution;
     }
+
+    public Boolean getStarter() {return isStarter;}
+
+    public void setStarter(Boolean starter) {isStarter = starter;}
 
 
     /**

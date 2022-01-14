@@ -89,8 +89,9 @@ public class launcher extends Application {
 
         //Test du déplacement
 
-        Parent parent = FXMLLoader.load(this.getClass().getResource("../FXML/Fenetre.fxml"));
+        Parent parent = FXMLLoader.load(this.getClass().getResource("../FXML/FenetreLancement.fxml"));
         Scene scene1 = new Scene(parent);
+        scene1.getStylesheets().add(getClass().getResource("/FXML/Lancement.css").toExternalForm());
         primaryStage.setScene(scene1);
         //On ajoute un filtre d'évènement pour s'abonner à l'évènement keyPressed pour le déplacement du pokemon
         primaryStage.getScene().addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
