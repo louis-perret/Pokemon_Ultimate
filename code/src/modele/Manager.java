@@ -2,13 +2,11 @@ package modele;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import modele.combat.Attaqueur;
-import modele.combat.AttaqueurPokemon;
-import modele.combat.ControleurNiveau;
+import modele.combat.*;
 import modele.boucle.BoucleJeu;
 import modele.boucle.BoucleJeu16;
+import modele.deplaceur.DeplaceurPokemonSimple;
 import modele.deplaceur.DeplaceurPokemon;
-import modele.deplaceur.Deplaceur;
 import modele.monde.Tuile;
 import modele.observateurs.Observateur;
 import modele.observateurs.ObservateurBoucle;
@@ -23,8 +21,8 @@ import java.util.Map;
 public class Manager {
 
     private Attaqueur attaqueur;
-    private Deplaceur deplaceur;
-    private ControleurNiveau controleurNiveau;
+    private DeplaceurPokemon deplaceur;
+    private ControleurCombat controleurCombat;
     private Pokemon pokemonCourant;
     private Carte carteCourante;
 
@@ -44,24 +42,21 @@ public class Manager {
      */
     public Manager(CollectionPokemon collectionPokemon, Map<Integer, Tuile>dicoTuiles){
         this.attaqueur = new AttaqueurPokemon();
-        this.deplaceur = new DeplaceurPokemon();
+        this.deplaceur = new DeplaceurPokemonSimple();
         this.pokedex=collectionPokemon;
-        this.controleurNiveau=new ControleurNiveau(collectionPokemon);
+        this.controleurCombat = new ControleurCombatV1(collectionPokemon);
         this.monde=new Monde(dicoTuiles);
     }
 
 
     /**
      * Gère l'attaque d'un pokemon vers un autre
-     * @param attaquant : pokemon qui attaque
-     * @param attaque : pokemon qui est attaqué
-     * @param mouvementAttaquant : l'attaque utilisée
+     * @param allie : pokemon qui attaque
+     * @param ennemi : pokemon qui est attaqué
+     * @param mAllie : l'attaque utilisée
      */
-    public void tourDeCombat(Pokemon attaquant, Pokemon attaque, Mouvement mouvementAttaquant,Mouvement mouvementAttaque){
-        boolean battu=attaqueur.attaquer(attaquant,attaque,mouvementAttaquant);
-        if(battu) { //S'il a gagné le combat
-            controleurNiveau.gagnerExperience(attaquant, attaque); //On lui fait gagner de l'expéricence
-        }
+    public int tourDeCombat(Pokemon allie, Pokemon ennemi, Mouvement mAllie,Mouvement mEnnemi){
+        return controleurCombat.effectuerCombat(allie,ennemi,mAllie,mEnnemi);
     }
 
     /**

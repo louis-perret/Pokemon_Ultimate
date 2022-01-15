@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import tests.Test;
 import vues.controller.Navigateur;
 
 //import static Modele.Type.plante;
@@ -50,10 +51,10 @@ public class launcher extends Application {
 
         navigateur = new Navigateur();
         navigateur.lancerFenetreLancement();
-        primaryStage.show();
+        //primaryStage.show();
 
         /* Appel des tests */
-        //Test.testAttaque();
+        Test.testAttaque();
         //Test.testDeplacer();
         //TestBoucle.testBoucleJeu();
         //TestMonde.testerChargementCarte();

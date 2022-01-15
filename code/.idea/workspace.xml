@@ -2,22 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemonSimple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/launch/launcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/attaqueur/Attaqueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/Attaqueur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/attaqueur/AttaqueurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/AttaqueurPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/attaqueur/CalculCoefficient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/CalculCoefficient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/attaqueur/CalculCoefficientV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/CalculCoefficientV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/attaqueur/ControleurNiveau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/ControleurNiveau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/boucle/BoucleJeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/boucle/BoucleJeu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/boucle/BoucleJeu16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/boucle/BoucleJeu16.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/chargement/Stub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/chargement/Stub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/combat/AttaqueurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/AttaqueurPokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/combat/ControleurCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/ControleurCombat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/combat/ControleurCombatV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/ControleurCombatV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/Deplaceur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/Pokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/Type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/TestBoucle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/TestBoucle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreLancement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreLancement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../documentation/diag-classe.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/../documentation/diag-classe.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../documentation/diagSystemCombat.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/../documentation/diagSystemCombat.mdj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +98,14 @@
       <option name="presentableId" value="Default" />
       <updated>1638522971616</updated>
     </task>
+    <task id="LOCAL-00001" summary="Déplacement fonctionnel avec le navigateur + début gestion des combats">
+      <created>1642178104866</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642178104867</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,6 +119,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Déplacement fonctionnel avec le navigateur + début gestion des combats" />
+    <option name="LAST_COMMIT_MESSAGE" value="Déplacement fonctionnel avec le navigateur + début gestion des combats" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

@@ -4,6 +4,8 @@ import modele.*;
 import modele.chargement.Stub;
 import modele.pokemon.*;
 
+import java.util.Scanner;
+
 //Pour effectuer nos tests
 public class Test {
 
@@ -11,15 +13,40 @@ public class Test {
     private static Manager manager = new Stub().charger(); //On effectuera nos tests en passant par le manager
 
     public static void testAttaque(){
-        System.out.println("Test sur l'attaque");
-        Pokemon pAttaquant = manager.getPokedex().getPokemon("Bulbizarre",1);
-        Pokemon pAttaque = manager.getPokedex().getPokemon("Salamèche",1);
-        System.out.println(pAttaquant.getNom() + " : Niveau = " + pAttaquant.getNiveau() + ", Expérience : " + pAttaquant.getExperience());
-        System.out.println("Le pokemon " + pAttaquant.getNom() + " attaque "+ pAttaque.getNom() + " avec " + pAttaquant.getMouvement("Fouet-liane").getNom());
-        System.out.println("PV de "  + pAttaque.getNom() + " avant attaque = " + pAttaque.getPv());
-        manager.tourDeCombat(pAttaquant,pAttaque,pAttaquant.getMouvement("Fouet-liane"),null);
-        System.out.println("PV de "  + pAttaque.getNom() + " après attaque = " + pAttaque.getPv() + "\n");
-        System.out.println(pAttaquant.getNom() + " : Niveau = " + pAttaquant.getNiveau() + ", Expérience : " + pAttaquant.getExperience());
+        System.out.println("Test combat");
+
+        int i, ko=0;
+        Pokemon allie = manager.getPokedex().getPokemon("Bulbizarre",1);
+        Pokemon ennemi = manager.getPokedex().getPokemon("Carapuce",1);
+        Mouvement mouvement;
+
+        System.out.println(allie.getNom() + " affrontera " + ennemi.getNom() + ".");
+        while(ko==0){
+            System.out.println("Techniques de bulbizarre : ");
+            i=1;
+            for (Mouvement m : allie.getMouvements()) {
+                System.out.print(i + "." + m.getNom() + ", ");
+            }
+            System.out.println();
+            System.out.print("Attaque sélectionnée : ");
+            Scanner scanner = new Scanner(System.in);
+            i=scanner.nextInt();
+            mouvement = allie.getMouvements()[i-1];
+            System.out.println("Bulbizarre effectue : " + mouvement.getNom());
+            ko=manager.tourDeCombat(allie,ennemi,mouvement,ennemi.getMouvements()[0]);
+            System.out.println("Nombre de pv restant pour " + allie.getNom() + " : " + allie.getPv());
+            System.out.println("Nombre de pv restant pour " + ennemi.getNom() + " : " + ennemi.getPv());
+        }
+
+        if(ko==2){
+            System.out.println("Vous avez perdu le combat. Ressayer");
+        }
+        else{
+            System.out.println("Vous avez gagné le combat. Bien joué");
+        }
+
+        System.out.println(allie.getNom() + " est de niveau : " + allie.getNiveau() + " avec " + allie.getExperience() + " d'expériences");
+        System.out.println(ennemi.getNom() + " est de niveau : " + ennemi.getNiveau() + " avec " + ennemi.getExperience() + " d'expériences");
     }
 
     public static void testDeplacer(){

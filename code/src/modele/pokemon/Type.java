@@ -26,4 +26,10 @@ public class Type {
     public List<NomType> getFaiblesses() {
         return faiblesses;
     }
+
+    @Override
+    public String toString(){
+        String res = "" + getNom();
+        return res;
+    }
 }

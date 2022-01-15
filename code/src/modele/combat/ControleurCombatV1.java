@@ -12,17 +12,31 @@ public class ControleurCombatV1 extends ControleurCombat{
     }
 
     @Override
-    public boolean effectuerCombat(Pokemon allie, Pokemon ennemi, Mouvement mAllie, Mouvement mEnnemi){
+    public int effectuerCombat(Pokemon allie, Pokemon ennemi, Mouvement mAllie, Mouvement mEnnemi){
         if(allie.getVitesse() >= ennemi.getVitesse()){
-            if(attaqueur.attaquer(allie,ennemi,mAllie));
+            System.out.println(allie.getNom() + " attaque en premier.");
+            if(attaqueur.attaquer(allie,ennemi,mAllie)) {
                 controleurNiveau.gagnerExperience(allie, ennemi); //On lui fait gagner de l'expérience
-                return true;
-        }
-        else{
-            if(attaqueur.attaquer(ennemi,allie,mEnnemi)) {
-                return true;
+                return 1; //le pokemon ennemi est ko
+            }
+            else{
+                if(attaqueur.attaquer(ennemi,allie,mEnnemi)) {
+                    return 2; //le pokemon du joueur est ko
+                }
             }
         }
-        return false;
+        else{
+            System.out.println(ennemi.getNom() + " attaque en premier.");
+            if(attaqueur.attaquer(ennemi,allie,mEnnemi)) {
+                return 2; //le pokemon du joueur est ko
+            }
+            else{
+                if(attaqueur.attaquer(allie,ennemi,mAllie)) {
+                    controleurNiveau.gagnerExperience(allie, ennemi); //On lui fait gagner de l'expérience
+                    return 1; //le pokemon ennemi est ko
+                }
+            }
+        }
+        return 0; //aucun pokemon n'est ko
     }
 }

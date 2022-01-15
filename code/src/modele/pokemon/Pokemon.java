@@ -204,7 +204,7 @@ public class Pokemon {
      */
     @Override
     public String toString(){
-        String res = "Pokemon : " + this.getNom() + " de nomType " + this.getType()  + "A comme technique : ";
+        String res = "Pokemon : " + this.getNom() + " de type " + this.getType()  + ". A comme technique : ";
         for (Mouvement m : mouvements){
             res  += m.getNom();
         }

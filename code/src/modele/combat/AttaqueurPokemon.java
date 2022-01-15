@@ -18,10 +18,10 @@ public class AttaqueurPokemon implements Attaqueur {
      */
     @Override
     public boolean attaquer(Pokemon attaquant, Pokemon attaque, Mouvement m) {
+        //calculé en prenant en compte l'attaque de l'attaquant, les dégats de l'attaque, puis le type de l'attaque utilisée ainsi que la défence de l'attaqué
         int degat = (int)ceil((attaquant.getAttaque()/100.0+1)*m.getDegats()*calculCoefficient.getCoefficient(m.getType(),attaque
-                .getType())); //calculé en prenant en compte l'attaque de l'attaquant, les dégats et le type de l'attaque utilisée
+                .getType())*(1-attaque.getDefense()/100.0));
         attaque.setPv(attaque.getPv()-degat);
-        System.out.println(degat);
         if(attaque.getPv()<=0){ //Si l'adversaire est ko
             return true;
         }
