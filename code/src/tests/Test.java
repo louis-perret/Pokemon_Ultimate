@@ -4,6 +4,7 @@ import modele.*;
 import modele.chargement.Stub;
 import modele.pokemon.*;
 
+import java.util.List;
 import java.util.Scanner;
 
 //Pour effectuer nos tests
@@ -51,6 +52,13 @@ public class Test {
         System.out.println(ennemi.getNom() + " est de niveau : " + ennemi.getNiveau() + " avec " + ennemi.getExperience() + " d'expériences");
     }
 
+    public static void testVague(){
+        manager.setPokemonCourant(manager.getPokedex().getPokemon("Bulbizarre",1));
+        List<Pokemon> listePokemon = manager.lancerVague();
+        for(Pokemon p : listePokemon){
+            System.out.print(p.getNom() + ", ");
+        }
+    }
     public static void testDeplacer(){
         /*System.out.println("Test sur le déplacement");
         Position positionInitiale = new Position(0,0);
