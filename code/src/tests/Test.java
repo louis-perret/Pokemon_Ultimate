@@ -16,7 +16,7 @@ public class Test {
         System.out.println("Test combat");
 
         int i, ko=0;
-        Pokemon allie = manager.getPokedex().getPokemon("Bulbizarre",1);
+        Pokemon allie = manager.getPokedex().getPokemon("Bulbizarre",1).cloner();
         Pokemon ennemi = manager.getPokedex().getPokemon("Carapuce",1);
         Mouvement mouvement;
 
@@ -33,7 +33,7 @@ public class Test {
             i=scanner.nextInt();
             mouvement = allie.getMouvements()[i-1];
             System.out.println("Bulbizarre effectue : " + mouvement.getNom());
-            ko=manager.tourDeCombat(allie,ennemi,mouvement,ennemi.getMouvements()[0]);
+            ko=manager.tourDeCombat(allie,ennemi,mouvement);
             System.out.println("Nombre de pv restant pour " + allie.getNom() + " : " + allie.getPv());
             System.out.println("Nombre de pv restant pour " + ennemi.getNom() + " : " + ennemi.getPv());
         }
@@ -43,6 +43,8 @@ public class Test {
         }
         else{
             System.out.println("Vous avez gagné le combat. Bien joué");
+            Pokemon p = manager.getPokedex().getPokemon("Bulbizarre",1);
+            System.out.println(p.getNom() + " PV : " + p.getPv() + ", Expérience : " + p.getExperience());
         }
 
         System.out.println(allie.getNom() + " est de niveau : " + allie.getNiveau() + " avec " + allie.getExperience() + " d'expériences");

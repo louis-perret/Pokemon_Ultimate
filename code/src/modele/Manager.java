@@ -55,8 +55,8 @@ public class Manager {
      * @param ennemi : pokemon qui est attaqué
      * @param mAllie : l'attaque utilisée
      */
-    public int tourDeCombat(Pokemon allie, Pokemon ennemi, Mouvement mAllie,Mouvement mEnnemi){
-        return controleurCombat.effectuerCombat(allie,ennemi,mAllie,mEnnemi);
+    public int tourDeCombat(Pokemon allie, Pokemon ennemi, Mouvement mAllie){
+        return controleurCombat.effectuerCombat(allie,ennemi,mAllie);
     }
 
     /**

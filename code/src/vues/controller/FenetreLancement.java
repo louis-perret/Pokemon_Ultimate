@@ -23,16 +23,6 @@ public class FenetreLancement {
 
     public void lancementJeu(ActionEvent actionEvent) {
         navigateur.lancerFenetreSelection();
-        /*
-        try {
-            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreSelection.fxml")));
-            Scene scene = new Scene(parent);
-            launch.launcher.getPrimaryStage().setScene(scene);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-         */
     }
 
     public void initialize(){
