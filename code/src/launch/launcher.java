@@ -55,7 +55,10 @@ public class launcher extends Application {
         primaryStage.show();
 
         /* Appel des tests */
-        //Test.testAttaque();
+
+        Test.testAttaque();
+        //Test.testVague();
+
         //Test.testDeplacer();
         //TestBoucle.testBoucleJeu();
         //TestMonde.testerChargementCarte();

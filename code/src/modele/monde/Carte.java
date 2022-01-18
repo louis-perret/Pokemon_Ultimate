@@ -7,7 +7,7 @@ public class Carte {
     private int[][] lesTuiles;
     private int hauteur, largeur, spawnX, spawnY;
 
-    private Map<Integer,Tuile> dicoTuiles; //Contient tous les types de tuiles
+    private Map<Integer,Tuile> dicoTuiles; //Contient tous les types de tuiles de la carte
 
 
     public Carte(String chemin,Map<Integer,Tuile> dicoTuiles){
@@ -38,9 +38,9 @@ public class Carte {
 
     /**
      * Récupère suivant une tuile suivant sa position x,y
-     * @param x
-     * @param y
-     * @return
+     * @param x : position en x
+     * @param y : position en y
+     * @return une Tuile
      */
     public Tuile getTuile(int x, int y) {
         Tuile t=dicoTuiles.get(lesTuiles[y][x]);

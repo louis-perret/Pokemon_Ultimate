@@ -25,15 +25,15 @@ public class Manager {
     private ControleurCombat controleurCombat;
     private Pokemon pokemonCourant;
     private Carte carteCourante;
+    private int numeroVague = 0;
+    private Monde monde;
+    private CollectionPokemon pokedex;
 
     //Propriété compteur
     private IntegerProperty compteur = new SimpleIntegerProperty(); //On déclare la propriété
     public int getCompteur() { return compteur.get();} //getter
     public void setCompteur(int nombre) { compteur.set(nombre);} //setter
     public IntegerProperty compteurProperty() { return compteur;} //Renvoie la propriété
-
-    private Monde monde;
-    private CollectionPokemon pokedex;
 
 
     /**
@@ -55,8 +55,8 @@ public class Manager {
      * @param ennemi : pokemon qui est attaqué
      * @param mAllie : l'attaque utilisée
      */
-    public int tourDeCombat(Pokemon allie, Pokemon ennemi, Mouvement mAllie,Mouvement mEnnemi){
-        return controleurCombat.effectuerCombat(allie,ennemi,mAllie,mEnnemi);
+    public int tourDeCombat(Pokemon allie, Pokemon ennemi, Mouvement mAllie){
+        return controleurCombat.effectuerCombat(allie,ennemi,mAllie);
     }
 
     /**
@@ -64,18 +64,32 @@ public class Manager {
      * @param keyChar : Touche appuyée par l'utilisateur
      */
     public void deplacerPokemon(String keyChar){
-            deplaceur.deplacer(pokemonCourant,keyChar,carteCourante);
+        deplaceur.deplacer(pokemonCourant,keyChar,carteCourante);
     }
 
+    /**
+     * Lance la boucle de jeu utile au déplacement du pokemon du joueur
+     */
     public void lancerBoucleJeu(){
         setCompteur(0);
-        Observateur observateur = new ObservateurBoucle(this);
+        Observateur observateur = new ObservateurBoucle(this); //On créé l'observateur de la boucle
         BoucleJeu boucleJeu = new BoucleJeu16();
         boucleJeu.addObservateur(observateur);
         Thread thread = new Thread(boucleJeu);
-        thread.start();
+        thread.start(); //On lance le thread qui contient la boucle
     }
 
+    /**
+     * Gère les vagues de pokemon ennemi du jeu
+     * @return une liste de 3 pokemon que devra combattre le joueur
+     */
+    public List<Pokemon> lancerVague(){
+        if(numeroVague>=3){ //Le joueur a gagné toutes les vagues
+            return null; //Pour prévenir qu'il n'y a plus de pokemon à combattre
+        }
+        numeroVague++;
+        return pokedex.getListePokemon(numeroVague,3, pokemonCourant);  //Sinon on renvoie les pokemon de la vague d'après
+    }
     //Getter et setter
     public Pokemon getPokemonCourant() {
         return pokemonCourant;
@@ -86,7 +100,8 @@ public class Manager {
     }
 
     public void setPokemonCourant(Pokemon pokemonCourant) {
-        this.pokemonCourant = pokemonCourant;
+        //On clone le pokemon pour éviter qu'il pointe vers la même référence et ainsi éviter qu'il modifie directement le pokemon contenu dans le pokedex
+        this.pokemonCourant = pokemonCourant.cloner();
     }
 
     public Carte getCarteCourante() {

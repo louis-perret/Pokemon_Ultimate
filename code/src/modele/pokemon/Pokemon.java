@@ -52,6 +52,10 @@ public class Pokemon {
         this.isStarter = isStarter;
     }
 
+    public Pokemon cloner(){
+        return new Pokemon(getNom(),getImage(),getPv(),getAttaque(),getDefense(),getVitesse(),getPosition(),getType(),getMouvements(),getNiveau(),getExperience(),getEvolution(),getStarter());
+    }
+
     /* Getter et Setter */
     public String getNom() {
         return nom;
@@ -136,7 +140,6 @@ public class Pokemon {
                 return m;
             }
         }
-
         return null;
     }
 

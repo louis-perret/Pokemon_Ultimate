@@ -4,6 +4,7 @@ import modele.*;
 import modele.chargement.Stub;
 import modele.pokemon.*;
 
+import java.util.List;
 import java.util.Scanner;
 
 //Pour effectuer nos tests
@@ -16,8 +17,8 @@ public class Test {
         System.out.println("Test combat");
 
         int i, ko=0;
-        Pokemon allie = manager.getPokedex().getPokemon("Bulbizarre",1);
-        Pokemon ennemi = manager.getPokedex().getPokemon("Carapuce",1);
+        Pokemon allie = manager.getPokedex().getPokemon("Bulbizarre",1).cloner();
+        Pokemon ennemi = manager.getPokedex().getPokemon("Carapuce",1).cloner();
         Mouvement mouvement;
 
         System.out.println(allie.getNom() + " affrontera " + ennemi.getNom() + ".");
@@ -33,7 +34,7 @@ public class Test {
             i=scanner.nextInt();
             mouvement = allie.getMouvements()[i-1];
             System.out.println("Bulbizarre effectue : " + mouvement.getNom());
-            ko=manager.tourDeCombat(allie,ennemi,mouvement,ennemi.getMouvements()[0]);
+            ko=manager.tourDeCombat(allie,ennemi,mouvement);
             System.out.println("Nombre de pv restant pour " + allie.getNom() + " : " + allie.getPv());
             System.out.println("Nombre de pv restant pour " + ennemi.getNom() + " : " + ennemi.getPv());
         }
@@ -43,12 +44,23 @@ public class Test {
         }
         else{
             System.out.println("Vous avez gagné le combat. Bien joué");
+            Pokemon p = manager.getPokedex().getPokemon("Bulbizarre",1);
+            System.out.println(p.getNom() + " PV : " + p.getPv() + ", Expérience : " + p.getExperience());
+            p=manager.getPokedex().getPokemon(ennemi.getNom(), ennemi.getNiveau());
+            System.out.println(p.getNom() + " PV : " + p.getPv() + ", Expérience : " + p.getExperience());
         }
 
         System.out.println(allie.getNom() + " est de niveau : " + allie.getNiveau() + " avec " + allie.getExperience() + " d'expériences");
         System.out.println(ennemi.getNom() + " est de niveau : " + ennemi.getNiveau() + " avec " + ennemi.getExperience() + " d'expériences");
     }
 
+    public static void testVague(){
+        manager.setPokemonCourant(manager.getPokedex().getPokemon("Bulbizarre",1));
+        List<Pokemon> listePokemon = manager.lancerVague();
+        for(Pokemon p : listePokemon){
+            System.out.print(p.getNom() + ", ");
+        }
+    }
     public static void testDeplacer(){
         /*System.out.println("Test sur le déplacement");
         Position positionInitiale = new Position(0,0);

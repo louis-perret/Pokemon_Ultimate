@@ -34,6 +34,7 @@ public class DeplaceurPokemonSimple extends DeplaceurPokemon {
                 deplacerAGauche(p,carte);
                 break;
         }
+        //Mettre isChangement ici
     }
 
     /* Déplacer dans les 4 directions */

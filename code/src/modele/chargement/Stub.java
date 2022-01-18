@@ -10,9 +10,9 @@ public class Stub implements Chargeur{
 
     @Override
     public Manager charger() {
-        Set<Pokemon> niveau1=new HashSet<>();
-        Set<Pokemon> niveau2=new HashSet<>();
-        Set<Pokemon> niveau3=new HashSet<>();
+        List<Pokemon> niveau1=new ArrayList<>();
+        List<Pokemon> niveau2=new ArrayList<>();
+        List<Pokemon> niveau3=new ArrayList<>();
 
         /* Création des types */
         List<NomType> faiblesses = new ArrayList<>();
@@ -64,7 +64,10 @@ public class Stub implements Chargeur{
         tabMouvements=new Mouvement[]{pistolet_a_eau};
         p = new Pokemon("Carapuce","/sprite/Sprite_carap/squi_1.png",50,10,10,15,position, eau,tabMouvements,1,0,"Carabaffe", true);
         niveau1.add(p);
-
+        p= new Pokemon("Chenipan",null,10,10,10,10,null,null,null,1,0,"Chrysacier",false);
+        niveau1.add(p);
+        p= new Pokemon("Ratatta",null,10,10,10,10,null,null,null,1,0,"Ratattac",false);
+        niveau1.add(p);
         p = new Pokemon("Herbizarre","/sprite/Sprite_herbi/herb_1.png",100,20,20,20,position, plante,null,2,0,"Florizarre", true);
         niveau2.add(p);
         p = new Pokemon("Reptincel","/sprite/Sprite_rept/rept_1.png",100,20,20,20,position, feu,null,2,0,"Dracaufeu", true);
