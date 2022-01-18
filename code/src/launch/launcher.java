@@ -56,7 +56,7 @@ public class launcher extends Application {
 
         /* Appel des tests */
 
-        Test.testAttaque();
+        //Test.testAttaque();
         //Test.testVague();
 
         //Test.testDeplacer();
