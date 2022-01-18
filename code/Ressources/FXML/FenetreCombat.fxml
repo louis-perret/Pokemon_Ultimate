@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="panecombat" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vues.controller.FenetreCombat">
+
+    <ImageView fx:id="joueur" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+
+    <ImageView fx:id="ennemi" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+
+
+<HBox>
+    <Button fx:id="Attaque1" text="Attaque1" textFill="green" />
+    <Button fx:id="Attaque3" text="Attaque3" textFill="green" />
+    <Button fx:id="Attaque4" text="Attaque4" textFill="green" />
+    <Button fx:id="Attaque2" text="Attaque2" textFill="green" />
+</HBox>
+
+
+
+    <stylesheets>
+        <URL value="@Combat.css" />
+    </stylesheets>
+
+
+
+</BorderPane>

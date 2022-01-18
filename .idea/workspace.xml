@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbcc6957-2797-484b-a583-432b641a4d52" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/Ressources/FXML/FenetreCombat.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/src/vues/controller/FenetreCombat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/src/launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/src/launch/launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/src/vues/afficheur/AfficheurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/src/vues/afficheur/AfficheurPokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/src/vues/controller/FenetreLancement.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/src/vues/controller/FenetreLancement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/src/vues/controller/Navigateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/src/vues/controller/Navigateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/wissocq_perret.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code/wissocq_perret.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +31,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PATH_TO_FX$" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">

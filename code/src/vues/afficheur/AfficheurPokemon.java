@@ -24,6 +24,5 @@ public class AfficheurPokemon implements Afficheur {
         return img;
 
 
-        //gc.drawImage(pokemon.getImage(), position.getPositionX(), position.getPositionY());
     }
 }

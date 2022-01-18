@@ -54,4 +54,15 @@ public class Navigateur {
             e.printStackTrace();
         }
     }
+
+    public void lancerFenetreCombat() {
+        try {
+            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreCombat.fxml")));
+            Scene scene = new Scene(parent);
+            scene.getStylesheets().add(getClass().getResource("/FXML/Combat.css").toExternalForm());
+            primaryStage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
