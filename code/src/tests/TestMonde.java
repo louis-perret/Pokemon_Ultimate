@@ -1,7 +1,7 @@
 package tests;
 
 import modele.Manager;
-import modele.chargement.Stub;
+import chargement.Stub;
 import modele.monde.*;
 
 import java.util.Collection;

@@ -2,11 +2,13 @@ package modele.pokemon.etat;
 
 import modele.pokemon.Pokemon;
 
+import java.io.Serializable;
+
 import static java.lang.Math.ceil;
 
-public class Inflammé extends Etat{
+public class Inflammé extends Etat implements Serializable {
 
-    private static float coefficient=1/8F; //Dégâts de l'inflammation
+    private transient static float coefficient=1/8F; //Dégâts de l'inflammation
 
     /**
      * Constructeur

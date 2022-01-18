@@ -1,16 +1,15 @@
-package modele.chargement;
+package chargement;
 
+import chargement.Chargeur;
 import modele.pokemon.*;
 import modele.Manager;
 import modele.monde.Tuile;
 import modele.pokemon.Mouvement;
-import modele.pokemon.etat.Empoisonné;
-import modele.pokemon.etat.Inflammé;
 import modele.pokemon.etat.Paralysé;
 
 import java.util.*;
 
-public class Stub implements Chargeur{
+public class Stub extends Chargeur{
 
     @Override
     public Manager charger() {

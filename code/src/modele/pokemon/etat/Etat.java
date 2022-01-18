@@ -2,7 +2,9 @@ package modele.pokemon.etat;
 
 import modele.pokemon.Pokemon;
 
-public abstract class Etat {
+import java.io.Serializable;
+
+public abstract class Etat implements Serializable{
 
     protected String nom; //nom de l'état
     protected String image; //image de l'état

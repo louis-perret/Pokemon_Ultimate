@@ -15,24 +15,26 @@ import modele.monde.Carte;
 import modele.monde.Monde;
 import modele.pokemon.Mouvement;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
 /**
  * Classe qui gère toutes les fonctionnalités du jeu
  */
-public class Manager {
+public class Manager implements Serializable {
 
-    private DeplaceurPokemon deplaceur; //pour le déplacement
-    private ControleurCombat controleurCombat; //pour les combats
-    private Pokemon pokemonCourant; //le pokemon choisie par l'utilisateur
-    private Carte carteCourante; //la carte actuellement affichée
-    private int numeroVague = 0; //numéro de la vague
-    private Monde monde; //notre monde
+    private transient DeplaceurPokemon deplaceur; //pour le déplacement
+    private transient ControleurCombat controleurCombat; //pour les combats
+    private transient Pokemon pokemonCourant; //le pokemon choisie par l'utilisateur
+    private transient Carte carteCourante; //la carte actuellement affichée
+    private transient int numeroVague = 0; //numéro de la vague
+    private transient Monde monde; //notre monde
     private CollectionPokemon pokedex; //collection des pokemons
+    private int nbVictoires = 0;
 
     //Propriété compteur (utile pour les déplacements du personnages car notifie la fenêtre d'un beep de la part de notre boucle jeu)
-    private IntegerProperty compteur = new SimpleIntegerProperty(); //On déclare la propriété
+    private transient IntegerProperty compteur = new SimpleIntegerProperty(); //On déclare la propriété
     public int getCompteur() { return compteur.get();} //getter
     public void setCompteur(int nombre) { compteur.set(nombre);} //setter
     public IntegerProperty compteurProperty() { return compteur;} //Renvoie la propriété

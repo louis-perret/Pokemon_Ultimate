@@ -2,9 +2,11 @@ package modele.pokemon.etat;
 
 import modele.pokemon.Pokemon;
 
-public class Paralysé extends Etat{
+import java.io.Serializable;
 
-    private boolean vitesseReduit=false; //permet de savoir si l'effet a déjà été appliqué
+public class Paralysé extends Etat implements Serializable {
+
+    private transient boolean vitesseReduit=false; //permet de savoir si l'effet a déjà été appliqué
 
     /**
      * Constructeur

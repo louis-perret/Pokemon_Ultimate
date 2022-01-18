@@ -1,8 +1,5 @@
 package modele.monde;
 
-import javafx.scene.image.Image;
-import modele.chargement.Stub;
-
 /**
  * Classe qui défiinit une tuile
  */

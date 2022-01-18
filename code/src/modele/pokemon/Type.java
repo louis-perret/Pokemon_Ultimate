@@ -1,12 +1,13 @@
 package modele.pokemon;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 
 /**
  * Classe qui identifie un type
  */
-public class Type {
+public class Type implements Serializable{
 
     private NomType nom; //son nom
     private List<NomType> forces; //ses forces

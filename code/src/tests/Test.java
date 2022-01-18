@@ -1,7 +1,7 @@
 package tests;
 
 import modele.*;
-import modele.chargement.Stub;
+import chargement.Stub;
 import modele.pokemon.*;
 import modele.pokemon.etat.Inflammé;
 import modele.pokemon.etat.Paralysé;

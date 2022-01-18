@@ -3,12 +3,13 @@ package modele.pokemon;
 import modele.pokemon.Type;
 import modele.pokemon.etat.Etat;
 
+import java.io.Serializable;
 import java.util.Random;
 
 /**
  * Classe qui définit les attaques d'un pokemon
  */
-public class Mouvement {
+public class Mouvement implements Serializable {
     private int degats; //ses points de dégâts
     private String nom; //son nom
     private Type type; //son type
@@ -66,5 +67,12 @@ public class Mouvement {
 
     public void setType(Type type) {
         this.type = type;
+    }
+
+    @Override
+    public String toString(){
+        String res = "";
+        res += nom + " de type " + type.getNom() + " fais comme dégâts : " + degats;
+        return res;
     }
 }

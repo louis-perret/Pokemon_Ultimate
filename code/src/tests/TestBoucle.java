@@ -3,12 +3,9 @@ package tests;
 import modele.Manager;
 import modele.boucle.BoucleJeu16;
 import modele.boucle.*;
-import modele.chargement.Stub;
+import chargement.Stub;
 import modele.observateurs.Observateur;
 import modele.observateurs.ObservateurBoucle;
-
-import java.util.LinkedList;
-import java.util.List;
 
 //Pour effectuer nos tests
 public class TestBoucle {

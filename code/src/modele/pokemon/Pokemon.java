@@ -2,17 +2,19 @@ package modele.pokemon;
 
 import modele.pokemon.etat.*;
 
+import java.io.Serializable;
+
 /**
  * Classe qui identifie un pokemon
  */
-public class Pokemon {
+public class Pokemon implements Serializable {
     private String nom; //son nom
     private String image; //son image
     private int pv; //ses points de vies
     private int attaque; //ses points d'attaque
     private int defense; //ses points de défense
     private int vitesse; //ses points de vitesse
-    private Position position; //ses coordonées
+    private transient Position position; //ses coordonées
     private Type type; //son type
     private Mouvement[] mouvements; //contient ses 4 attaques
 
@@ -20,7 +22,7 @@ public class Pokemon {
     private int experience; //son expérience (0 au minimum)
     private String evolution; //contient le nom de son évolution
     private Boolean isStarter; //true si c'est un starter, false sinon
-    private Etat etat; //état d'un pokemon
+    private transient Etat etat; //état d'un pokemon
 
 
     /**
