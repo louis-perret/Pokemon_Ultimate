@@ -47,6 +47,7 @@ public class Navigateur {
             primaryStage.setScene(scene);
             primaryStage.getScene().addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
                 manager.deplacerPokemon(keyEvent.getCode().getChar());
+
             });
             manager.setCarteCourante("lobby");
             manager.lancerBoucleJeu();

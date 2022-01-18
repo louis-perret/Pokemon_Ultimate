@@ -67,7 +67,7 @@ public class CollectionPokemon {
         while(listePokemon.size()<nbPokemonByVague){
             p=pokedex.get(numeroVague).get(random.nextInt(pokedex.get(numeroVague).size()));
             if(!listePokemon.contains(p) && !courant.equals(p)) { //Si le pokemon n'a pas déjà été pris ou si ce n'est pas le pokemon choisi par le joueur
-                listePokemon.add(p); //On l'ajoute à la liste
+                listePokemon.add(p.cloner()); //On l'ajoute à la liste
             }
         }
         return listePokemon;

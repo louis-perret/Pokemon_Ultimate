@@ -18,7 +18,7 @@ public class Test {
 
         int i, ko=0;
         Pokemon allie = manager.getPokedex().getPokemon("Bulbizarre",1).cloner();
-        Pokemon ennemi = manager.getPokedex().getPokemon("Carapuce",1);
+        Pokemon ennemi = manager.getPokedex().getPokemon("Carapuce",1).cloner();
         Mouvement mouvement;
 
         System.out.println(allie.getNom() + " affrontera " + ennemi.getNom() + ".");
@@ -45,6 +45,8 @@ public class Test {
         else{
             System.out.println("Vous avez gagné le combat. Bien joué");
             Pokemon p = manager.getPokedex().getPokemon("Bulbizarre",1);
+            System.out.println(p.getNom() + " PV : " + p.getPv() + ", Expérience : " + p.getExperience());
+            p=manager.getPokedex().getPokemon(ennemi.getNom(), ennemi.getNiveau());
             System.out.println(p.getNom() + " PV : " + p.getPv() + ", Expérience : " + p.getExperience());
         }
 
