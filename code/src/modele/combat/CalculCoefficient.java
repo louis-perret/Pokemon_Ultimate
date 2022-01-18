@@ -2,6 +2,9 @@ package modele.combat;
 
 import modele.pokemon.Type;
 
+/**
+ * Interface fonctionnelle gérant le calcul du coefficient entre les types
+ */
 public interface CalculCoefficient {
 
     /**

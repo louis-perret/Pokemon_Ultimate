@@ -3,7 +3,9 @@ package modele.monde;
 import java.util.HashMap;
 import java.util.Map;
 
-//Contient nos différentes cartes
+/**
+ * Classe qui contient toutes nos cartes
+ */
 public class Monde {
 
     private Map<String,Carte> lesCartes=new HashMap<>(); //Les cartes ont un nom, ce sera plus simple pour en sélectionner une

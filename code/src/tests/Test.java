@@ -3,9 +3,14 @@ package tests;
 import modele.*;
 import modele.chargement.Stub;
 import modele.pokemon.*;
+import modele.pokemon.etat.Inflammé;
+import modele.pokemon.etat.Paralysé;
+import modele.pokemon.Mouvement;
 
 import java.util.List;
 import java.util.Scanner;
+
+import static java.lang.Thread.sleep;
 
 //Pour effectuer nos tests
 public class Test {
@@ -13,6 +18,9 @@ public class Test {
 
     private static Manager manager = new Stub().charger(); //On effectuera nos tests en passant par le manager
 
+    /**
+     * Test un tour de combat
+     */
     public static void testAttaque(){
         System.out.println("Test combat");
 
@@ -27,6 +35,7 @@ public class Test {
             i=1;
             for (Mouvement m : allie.getMouvements()) {
                 System.out.print(i + "." + m.getNom() + ", ");
+                i++;
             }
             System.out.println();
             System.out.print("Attaque sélectionnée : ");
@@ -37,6 +46,9 @@ public class Test {
             ko=manager.tourDeCombat(allie,ennemi,mouvement);
             System.out.println("Nombre de pv restant pour " + allie.getNom() + " : " + allie.getPv());
             System.out.println("Nombre de pv restant pour " + ennemi.getNom() + " : " + ennemi.getPv());
+            if(ennemi.getEtat() != null){
+                System.out.println("Etat : " + ennemi.getEtat().getNom());
+            }
         }
 
         if(ko==2){
@@ -44,16 +56,15 @@ public class Test {
         }
         else{
             System.out.println("Vous avez gagné le combat. Bien joué");
-            Pokemon p = manager.getPokedex().getPokemon("Bulbizarre",1);
-            System.out.println(p.getNom() + " PV : " + p.getPv() + ", Expérience : " + p.getExperience());
-            p=manager.getPokedex().getPokemon(ennemi.getNom(), ennemi.getNiveau());
-            System.out.println(p.getNom() + " PV : " + p.getPv() + ", Expérience : " + p.getExperience());
         }
 
         System.out.println(allie.getNom() + " est de niveau : " + allie.getNiveau() + " avec " + allie.getExperience() + " d'expériences");
         System.out.println(ennemi.getNom() + " est de niveau : " + ennemi.getNiveau() + " avec " + ennemi.getExperience() + " d'expériences");
     }
 
+    /**
+     * Test le système de vagues
+     */
     public static void testVague(){
         manager.setPokemonCourant(manager.getPokedex().getPokemon("Bulbizarre",1));
         List<Pokemon> listePokemon = manager.lancerVague();
@@ -61,6 +72,32 @@ public class Test {
             System.out.print(p.getNom() + ", ");
         }
     }
+
+    /**
+     * Test l'implémentation des états d'un pokemon
+     */
+    public static void testEtat(){
+        Pokemon p = manager.getPokedex().getPokemon("Bulbizarre",1);
+        System.out.println("Ce pokemon est en pleine santé");
+        p.setEtat(new Inflammé("inflammé", null));
+        System.out.println("Ce pokemon est inflammé et va perde peur à peu de la vie");
+        while(p.getPv()>0){ //La vie descend bien correctement
+            p.appliquerEtat();
+            System.out.println("Il lui reste : " + p.getPv() + " PV");
+        }
+
+        p.setEtat(new Paralysé("paralysé", null));
+        System.out.println("Ce pokemon est paralysé et va perdre en vitesse");
+        System.out.println("Vitesse du pokemon : " + p.getVitesse());
+        for(int i=0;i<10;i++){
+            p.appliquerEtat();
+            System.out.println("Vitesse du pokemon : " + p.getVitesse()); //On voit bien que sa vitesse n'a diminué qu'une seule fois
+        }
+    }
+
+    /**
+     * Test le déplacement d'un pokemon
+     */
     public static void testDeplacer(){
         /*System.out.println("Test sur le déplacement");
         Position positionInitiale = new Position(0,0);
@@ -71,6 +108,9 @@ public class Test {
         System.out.println("Position actuelle de " + bulbizarre.getNom() + " = " + bulbizarre.getPosition() + "\n");*/
     }
 
+    /**
+     * Test la collection de pokemon
+     */
     public static void testCollection(){
         /*System.out.println("Test de la classe Collection");
         Set<Pokemon> niveau1=new HashSet<>();

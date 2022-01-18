@@ -2,14 +2,22 @@ package modele.monde;
 
 import java.util.Map;
 
+/**
+ * Classe définissant une carte
+ */
 public class Carte {
 
-    private int[][] lesTuiles;
-    private int hauteur, largeur, spawnX, spawnY;
+    private int[][] lesTuiles; //les élements qui composent la carte
+    private int hauteur, largeur, spawnX, spawnY; //hauteur et largeur de la carte, point de spawn en x & y
 
     private Map<Integer,Tuile> dicoTuiles; //Contient tous les types de tuiles de la carte
 
 
+    /**
+     * Constructeur
+     * @param chemin : chemin du fichier qui contient la carte à charger
+     * @param dicoTuiles : type de tuiles qui l'a compose
+     */
     public Carte(String chemin,Map<Integer,Tuile> dicoTuiles){
         chargerCarte(chemin);
         this.dicoTuiles=dicoTuiles;
@@ -37,7 +45,7 @@ public class Carte {
     }
 
     /**
-     * Récupère suivant une tuile suivant sa position x,y
+     * Récupère une tuile suivant sa position x,y
      * @param x : position en x
      * @param y : position en y
      * @return une Tuile

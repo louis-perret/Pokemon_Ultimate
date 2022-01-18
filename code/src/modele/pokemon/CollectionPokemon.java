@@ -2,7 +2,9 @@ package modele.pokemon;
 
 import java.util.*;
 
-//Permet de stocker tous les pokemons du jeu
+/**
+ * Classe qui stocke tous les pokemon
+ */
 public class CollectionPokemon {
 
     private Map<Integer, List<Pokemon>> pokedex; //On stocke les pokemons suivant leur niveau

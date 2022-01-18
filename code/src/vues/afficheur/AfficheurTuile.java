@@ -5,15 +5,17 @@ import javafx.scene.image.ImageView;
 import modele.pokemon.Position;
 import modele.monde.Tuile;
 
-//Permet d'afficher uen tuile
-
+/**
+ * Classe qui gère l'affichage d'une tuile
+ */
 public class AfficheurTuile  implements Afficheur {
-    /**
-     * Affiche une tuile
-     * @param objet : tuile à afficher
-     * @param position : la position où l'insérer
-     */
 
+    /**
+     * Gère l'affichage d'un objet
+     * @param objet : objet à afficher
+     * @param position : à telle position
+     * @return une ImageView
+     */
     @Override
     public ImageView affiche(Object objet, Position position){
         if (!(objet instanceof Tuile)) {

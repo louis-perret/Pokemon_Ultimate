@@ -13,23 +13,25 @@ import modele.observateurs.ObservateurBoucle;
 import modele.pokemon.*;
 import modele.monde.Carte;
 import modele.monde.Monde;
+import modele.pokemon.Mouvement;
 
 import java.util.List;
 import java.util.Map;
 
-//Permet de gérer nos différentes fonctionnalités
+/**
+ * Classe qui gère toutes les fonctionnalités du jeu
+ */
 public class Manager {
 
-    private Attaqueur attaqueur;
-    private DeplaceurPokemon deplaceur;
-    private ControleurCombat controleurCombat;
-    private Pokemon pokemonCourant;
-    private Carte carteCourante;
-    private int numeroVague = 0;
-    private Monde monde;
-    private CollectionPokemon pokedex;
+    private DeplaceurPokemon deplaceur; //pour le déplacement
+    private ControleurCombat controleurCombat; //pour les combats
+    private Pokemon pokemonCourant; //le pokemon choisie par l'utilisateur
+    private Carte carteCourante; //la carte actuellement affichée
+    private int numeroVague = 0; //numéro de la vague
+    private Monde monde; //notre monde
+    private CollectionPokemon pokedex; //collection des pokemons
 
-    //Propriété compteur
+    //Propriété compteur (utile pour les déplacements du personnages car notifie la fenêtre d'un beep de la part de notre boucle jeu)
     private IntegerProperty compteur = new SimpleIntegerProperty(); //On déclare la propriété
     public int getCompteur() { return compteur.get();} //getter
     public void setCompteur(int nombre) { compteur.set(nombre);} //setter
@@ -38,10 +40,10 @@ public class Manager {
 
     /**
      * Constructeur
-     * @param collectionPokemon
+     * @param collectionPokemon : collection des pokemons
+     * @param dicoTuiles : type de tuiles
      */
     public Manager(CollectionPokemon collectionPokemon, Map<Integer, Tuile>dicoTuiles){
-        this.attaqueur = new AttaqueurPokemon();
         this.deplaceur = new DeplaceurPokemonSimple();
         this.pokedex=collectionPokemon;
         this.controleurCombat = new ControleurCombatV1(collectionPokemon);
@@ -50,10 +52,10 @@ public class Manager {
 
 
     /**
-     * Gère l'attaque d'un pokemon vers un autre
-     * @param allie : pokemon qui attaque
-     * @param ennemi : pokemon qui est attaqué
-     * @param mAllie : l'attaque utilisée
+     * Gère un tour de combat entre deux pokemon
+     * @param allie : pokemon du joueur
+     * @param ennemi : pokemon ennemi
+     * @param mAllie : l'attaque utilisée par le pokemon du joueur
      */
     public int tourDeCombat(Pokemon allie, Pokemon ennemi, Mouvement mAllie){
         return controleurCombat.effectuerCombat(allie,ennemi,mAllie);

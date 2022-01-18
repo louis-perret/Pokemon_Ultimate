@@ -50,13 +50,13 @@ public class launcher extends Application {
         stage.setTitle("Pokemon Colosseum");
 
         navigateur = new Navigateur();
-        //navigateur.lancerFenetreLancement();
-        navigateur.lancerFenetreCombat();
-        primaryStage.show();
+        navigateur.lancerFenetreLancement();
+        //navigateur.lancerFenetreCombat();
+        //primaryStage.show();
 
         /* Appel des tests */
 
-        //Test.testAttaque();
+        Test.testAttaque();
         //Test.testVague();
 
         //Test.testDeplacer();

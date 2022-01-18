@@ -3,10 +3,12 @@ package modele.deplaceur;
 import modele.pokemon.Pokemon;
 import modele.monde.Carte;
 
-//Interface pour nos deplaceurs
+/**
+ * Interface pour les déplacements d'un pokemon
+ */
 public abstract class DeplaceurPokemon {
 
-    private Collisionneur collisionneur;
+    private Collisionneur collisionneur; //pour savoir les collisions
 
     //Getter et Setter
     public Collisionneur getCollisionneur() {
@@ -19,50 +21,40 @@ public abstract class DeplaceurPokemon {
 
     /**
      * Effectue le déplacement d'un pokemon
-     * @param p : pokeon a déplacé
+     * @param p : pokemon à déplacer
      * @param keyChar : touche appuyée
      * @param carte : Carte pour vérifier la collision
      */
-    public void deplacer(Pokemon p, String keyChar, Carte carte){
-
-    }
+    public abstract void deplacer(Pokemon p, String keyChar, Carte carte);
 
 
     /* Déplacer dans les 4 directions */
 
     /**
      * Déplacer le pokemon vers la gauche
-     * @param p : Pokemon a déplacer
+     * @param p : Pokemon à déplacer
      * @param carte : Carte pour la collision
      */
-    public void deplacerAGauche(Pokemon p,Carte carte){
-
-    }
+    public abstract void deplacerAGauche(Pokemon p,Carte carte);
 
     /**
      * Déplacer le pokemon vers la droite
-     * @param p : Pokemon a déplacer
+     * @param p : Pokemon à déplacer
      * @param carte : Carte pour la collision
      */
-    public void deplacerADroite(Pokemon p,Carte carte){
-
-    }
+    public abstract void deplacerADroite(Pokemon p,Carte carte);
 
     /**
      * Déplacer le pokemon vers le haut
-     * @param p : Pokemon a déplacer
+     * @param p : Pokemon à déplacer
      * @param carte : Carte pour la collision
      */
-    public void deplacerEnHaut(Pokemon p,Carte carte){
-
-    }
+    public abstract void deplacerEnHaut(Pokemon p,Carte carte);
 
     /**
      * Déplacer le pokemon vers le bas
-     * @param p : Pokemon a déplacer
+     * @param p : Pokemon à déplacer
      * @param carte : Carte pour la collision
      */
-    public void deplacerEnBas(Pokemon p,Carte carte){
-
-    }
+    public abstract void deplacerEnBas(Pokemon p,Carte carte);
 }
