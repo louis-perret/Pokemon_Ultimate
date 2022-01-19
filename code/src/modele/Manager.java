@@ -27,9 +27,13 @@ public class Manager implements Serializable {
 
     private transient DeplaceurPokemon deplaceur; //pour le déplacement
     private transient ControleurCombat controleurCombat; //pour les combats
+
     private transient Pokemon pokemonCourant; //le pokemon choisie par l'utilisateur
-    private transient Carte carteCourante; //la carte actuellement affichée
+    private transient Pokemon pokemonEnnemiCourant; //pokemon qu'affronte le joueur
     private transient int numeroVague = 0; //numéro de la vague
+    private transient List<Pokemon> listePokemonByVague; //liste des pokemon ennemi de la vague
+
+    private transient Carte carteCourante; //la carte actuellement affichée
     private transient Monde monde; //notre monde
     private CollectionPokemon pokedex; //collection des pokemons
     private int nbVictoires = 0; //nombre de victoires du joueur
@@ -43,19 +47,10 @@ public class Manager implements Serializable {
     public void setCompteur(int nombre) { compteur.set(nombre);} //setter
     public IntegerProperty compteurProperty() { return compteur;} //Renvoie la propriété
 
-    private transient IntegerProperty pv = new SimpleIntegerProperty();
-
-    public IntegerProperty pvProperty() {
-        //pv = pokemonCourant.getPv();
-        return pv;
-    }
-
-
     private transient IntegerProperty changeur = new SimpleIntegerProperty(); //On déclare la propriété
     public int getChangeur() {return changeur.get();}
     public void setChangeur(int nombre) {this.changeur.set(nombre);}
     public IntegerProperty changeurProperty() { return changeur;}
-
 
 
 
@@ -124,25 +119,36 @@ public class Manager implements Serializable {
      * Gère les vagues de pokemon ennemi du jeu
      * @return une liste de 3 pokemon que devra combattre le joueur
      */
-    public List<Pokemon> lancerVague(){
+    public boolean lancerVague(){
         if(numeroVague>=3){ //Le joueur a gagné toutes les vagues
-            return null; //Pour prévenir qu'il n'y a plus de pokemon à combattre
+            return true;//Pour prévenir qu'il n'y a plus de pokemon à combattre
         }
         numeroVague++;
-        return pokedex.getListePokemon(numeroVague,3, pokemonCourant);  //Sinon on renvoie les pokemon de la vague d'après
-    }
-    //Getter et setter
-    public Pokemon getPokemonCourant() {
-        return pokemonCourant;
+        listePokemonByVague=pokedex.getListePokemon(numeroVague,3, pokemonCourant);  //Sinon on renvoie les pokemon de la vague d'après
+        pokemonEnnemiCourant=listePokemonByVague.get(0);
+        return false;
     }
 
     public List<Pokemon> getStarterslvl1() {
         return pokedex.getStarterLvl1();
     }
 
+    //Getter et setter
+    public Pokemon getPokemonCourant() {
+        return pokemonCourant;
+    }
+
     public void setPokemonCourant(Pokemon pokemonCourant) {
         //On clone le pokemon pour éviter qu'il pointe vers la même référence et ainsi éviter qu'il modifie directement le pokemon contenu dans le pokedex
         this.pokemonCourant = pokemonCourant.cloner();
+    }
+
+    public Pokemon getPokemonEnnemiCourant() {
+        return pokemonEnnemiCourant;
+    }
+
+    public void setPokemonEnnemiCourant(Pokemon pokemonEnnemiCourant) {
+        this.pokemonEnnemiCourant = pokemonEnnemiCourant;
     }
 
     public Carte getCarteCourante() {

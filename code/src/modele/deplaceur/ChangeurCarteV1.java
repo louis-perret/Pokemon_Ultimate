@@ -5,16 +5,13 @@ import modele.pokemon.Position;
 
 import static java.lang.Math.abs;
 
-public class ChangeurCarteV1 implements ChangeurCarte {
+public class ChangeurCarteV1 extends ChangeurCarte {
 
 
-    private int hauteurFenetre;
-    private int largeurFenetre;
-    private int hauteurTuile; //Taille du pas
 
-    public ChangeurCarteV1() {
-        setHauteurFenetre(256);
-        setLargeurFenetre(320);
+    public ChangeurCarteV1(int hauteurSurface, int largeurSurface) {
+        setHauteurSurface(hauteurSurface/2);
+        setLargeurSurface(largeurSurface);
         setHauteurTuile(32);
     }
 
@@ -26,34 +23,11 @@ public class ChangeurCarteV1 implements ChangeurCarte {
         //Le y sur la fenêtre commence à 0 au milieu de la fenêtre, il fallait gérer cette partie
         int posTuilX = X / getHauteurTuile(), posTuilY = Y;
         if (posTuilY < 0) { //Si c'est négatif
-            posTuilY = (abs(getHauteurFenetre() - getHauteurTuile()) + posTuilY) / getHauteurTuile(); //On fait partir le y du début du tableau
+            posTuilY = (abs(getHauteurSurface() - getHauteurTuile()) + posTuilY) / getHauteurTuile(); //On fait partir le y du début du tableau
         } else { //Si c'est positif
             posTuilY = (carte.getHauteur() / 2) + (posTuilY / getHauteurTuile()); //on fait partir le y du milieu du tableau
         }
-        return carte.getTuile(posTuilX, posTuilY).getEvenement(); //Renvoie true s'il y a collision    }
+        return carte.getTuile(posTuilX, posTuilY).getEvenement(); //Renvoie true s'il y a collision  z
     }
 
-    public int getHauteurFenetre() {
-        return hauteurFenetre;
-    }
-
-    public void setHauteurFenetre(int hauteurFenetre) {
-        this.hauteurFenetre = hauteurFenetre;
-    }
-
-    public int getLargeurFenetre() {
-        return largeurFenetre;
-    }
-
-    public void setLargeurFenetre(int largeurFenetre) {
-        this.largeurFenetre = largeurFenetre;
-    }
-
-    public int getHauteurTuile() {
-        return hauteurTuile;
-    }
-
-    public void setHauteurTuile(int hauteurTuile) {
-        this.hauteurTuile = hauteurTuile;
-    }
 }
