@@ -67,13 +67,3 @@ public class Tuile implements Serializable {
         return res;
     }
 }
-//BINDING
-
-/*
-private StringProperty toto = new SimpleStringProperty();
-public String getToto{return toto.get();}
-public void setToto(String valeur){toto.set(valeur);}
-public ReadOnlyStringProperty totoProperty(){return toto;}
-objet.preopriete().bind(objet2.property());
-<Button text="${objet.prop}"/>
- */
