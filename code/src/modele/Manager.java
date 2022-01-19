@@ -13,25 +13,31 @@ import modele.observateurs.ObservateurBoucle;
 import modele.pokemon.*;
 import modele.monde.Carte;
 import modele.monde.Monde;
+import modele.pokemon.Mouvement;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
-//Permet de gérer nos différentes fonctionnalités
-public class Manager {
 
-    private Attaqueur attaqueur;
-    private DeplaceurPokemon deplaceur = new DeplaceurPokemonSimple();
-    private ControleurCombat controleurCombat;
-    private Pokemon pokemonCourant;
-    private Carte carteCourante;
-    private int numeroVague = 0;
-    private Monde monde;
-    private CollectionPokemon pokedex;
+/**
+ * Classe qui gère toutes les fonctionnalités du jeu
+ */
+public class Manager implements Serializable {
+
+    private transient DeplaceurPokemon deplaceur; //pour le déplacement
+    private transient ControleurCombat controleurCombat; //pour les combats
+    private transient Pokemon pokemonCourant; //le pokemon choisie par l'utilisateur
+    private transient Carte carteCourante; //la carte actuellement affichée
+    private transient int numeroVague = 0; //numéro de la vague
+    private transient Monde monde; //notre monde
+    private CollectionPokemon pokedex; //collection des pokemons
+    private int nbVictoires = 0;
     private Thread thread;
 
-    //Propriété compteur
-    private IntegerProperty compteur = new SimpleIntegerProperty(); //On déclare la propriété
+
+    //Propriété compteur (utile pour les déplacements du personnages car notifie la fenêtre d'un beep de la part de notre boucle jeu)
+    private transient IntegerProperty compteur = new SimpleIntegerProperty(); //On déclare la propriété
     public int getCompteur() { return compteur.get();} //getter
     public void setCompteur(int nombre) { compteur.set(nombre);} //setter
     public IntegerProperty compteurProperty() { return compteur;} //Renvoie la propriété
@@ -57,10 +63,10 @@ public class Manager {
 
     /**
      * Constructeur
-     * @param collectionPokemon
+     * @param collectionPokemon : collection des pokemons
+     * @param dicoTuiles : type de tuiles
      */
     public Manager(CollectionPokemon collectionPokemon, Map<Integer, Tuile>dicoTuiles){
-        this.attaqueur = new AttaqueurPokemon();
         this.deplaceur = new DeplaceurPokemonSimple();
         this.pokedex=collectionPokemon;
         this.controleurCombat = new ControleurCombatV1(collectionPokemon);
@@ -68,10 +74,10 @@ public class Manager {
     }
 
     /**
-     * Gère l'attaque d'un pokemon vers un autre
-     * @param allie : pokemon qui attaque
-     * @param ennemi : pokemon qui est attaqué
-     * @param mAllie : l'attaque utilisée
+     * Gère un tour de combat entre deux pokemon
+     * @param allie : pokemon du joueur
+     * @param ennemi : pokemon ennemi
+     * @param mAllie : l'attaque utilisée par le pokemon du joueur
      */
     public int tourDeCombat(Pokemon allie, Pokemon ennemi, Mouvement mAllie){
         return controleurCombat.effectuerCombat(allie,ennemi,mAllie);

@@ -4,13 +4,17 @@ import javafx.scene.image.ImageView;
 import modele.pokemon.Pokemon;
 import modele.pokemon.Position;
 
-//Permet d'afficher un pokemon
+
+/**
+ * Classe qui gère l'affichage d'un pokemon
+ */
 public class AfficheurPokemon implements Afficheur {
 
     /**
-     * Affiche un pokemon
-     * @param objet : pokemon à afficher
+     * Gère l'affichage d'un objet
+     * @param objet : objet à afficher
      * @param position : à telle position
+     * @return une ImageView
      */
     @Override
     public ImageView affiche(Object objet, Position position){

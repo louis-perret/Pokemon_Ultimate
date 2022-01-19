@@ -3,7 +3,9 @@ package modele.combat;
 import modele.pokemon.Mouvement;
 import modele.pokemon.Pokemon;
 
-//Interface pour nos attaqueurs
+/**
+ * Interface fonctionnelle pour gérer l'attaque d'un pokemon
+ */
 public interface Attaqueur {
 
     /**

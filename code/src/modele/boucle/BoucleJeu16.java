@@ -8,12 +8,21 @@ import java.util.List;
 
 import static java.lang.Thread.sleep;
 
+/**
+ * Boucle de jeu utile pour le déplacement du pokemon choisi par l'utilisateur
+ */
 public class BoucleJeu16 extends BoucleJeu{
 
+    /**
+     * Constructeur
+     */
     public BoucleJeu16(){
         super.observateurs=new LinkedList<>();
     }
 
+    /**
+     * Méthode exécuté par le thread. S'endort 16 milli-secondes avant de notifier son observateur
+     */
     @Override
     public void run() {
         try{
@@ -27,8 +36,12 @@ public class BoucleJeu16 extends BoucleJeu{
         }
     }
 
+    /**
+     * Notifie tous ses observateurs
+     */
     @Override
     public void notifier() {
+        //Instruction envoyée au thread principal
         Platform.runLater(() -> {
             for(Observateur o : super.observateurs){
                 o.update();

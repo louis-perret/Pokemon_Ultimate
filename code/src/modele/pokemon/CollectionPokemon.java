@@ -1,9 +1,12 @@
 package modele.pokemon;
 
+import java.io.Serializable;
 import java.util.*;
 
-//Permet de stocker tous les pokemons du jeu
-public class CollectionPokemon {
+/**
+ * Classe qui stocke tous les pokemon
+ */
+public class CollectionPokemon implements Serializable {
 
     private Map<Integer, List<Pokemon>> pokedex; //On stocke les pokemons suivant leur niveau
 

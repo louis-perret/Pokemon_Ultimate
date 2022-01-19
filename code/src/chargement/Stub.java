@@ -1,12 +1,15 @@
-package modele.chargement;
+package chargement;
 
+import chargement.Chargeur;
 import modele.pokemon.*;
 import modele.Manager;
 import modele.monde.Tuile;
+import modele.pokemon.Mouvement;
+import modele.pokemon.etat.Paralysé;
 
 import java.util.*;
 
-public class Stub implements Chargeur{
+public class Stub extends Chargeur{
 
     @Override
     public Manager charger() {
@@ -47,13 +50,21 @@ public class Stub implements Chargeur{
         forces.add(NomType.roche);
         Type eau = new Type(NomType.eau,forces,faiblesses);
 
+        faiblesses = new ArrayList<>();
+        faiblesses.add(NomType.psy);
+        faiblesses.add(NomType.sol);
+        forces = new ArrayList<>();
+        forces.add(NomType.plante);
+        Type poison = new Type(NomType.eau,forces,faiblesses);
+
         Position position = new Position(0,0);
 
         /* Création des attaques */
-        Mouvement flammèche = new Mouvement(10,"Flammèche",feu);
-        Mouvement foutLiane = new Mouvement(10,"Fouet-liane",plante);
-        Mouvement pistolet_a_eau = new Mouvement(10,"Pistolet à eau",eau);
-        Mouvement[] tabMouvements=new Mouvement[]{foutLiane};
+        Mouvement flammèche = new Mouvement(10,"Flammèche",feu,null);
+        Mouvement foutLiane = new Mouvement(10,"Fouet-liane",plante,null);
+        Mouvement pistolet_a_eau = new Mouvement(10,"Pistolet à eau",eau,null);
+        Mouvement toxic = new Mouvement(0,"Toxic",eau,new Paralysé("paralysé",null));
+        Mouvement[] tabMouvements=new Mouvement[]{foutLiane,toxic};
 
         Pokemon p = new Pokemon("Bulbizarre","/sprite/Sprite_bulbi/bulb_1.png",50,10,30,10,position, plante,tabMouvements,1,0,"Herbizarre", true);
         niveau1.add(p);

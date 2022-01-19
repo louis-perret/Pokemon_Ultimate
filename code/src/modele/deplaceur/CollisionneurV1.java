@@ -5,8 +5,14 @@ import modele.pokemon.Position;
 
 import static java.lang.Math.abs;
 
+/**
+ * Classe gérant les collisions
+ */
 public class CollisionneurV1 extends Collisionneur{
 
+    /**
+     * Constructeur
+     */
     public CollisionneurV1(){
         setHauteurFenetre(256);
         setLargeurFenetre(320);

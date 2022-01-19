@@ -5,11 +5,13 @@ import modele.monde.Carte;
 
 import static java.lang.Math.abs;
 
-//Gère les collisions
+/**
+ * Classe qui gère les collisions
+ */
 public abstract class Collisionneur {
 
-    private int hauteurFenetre;
-    private int largeurFenetre;
+    private int hauteurFenetre; //hauteur de surface de jeu
+    private int largeurFenetre; //largeur de la surface de jeu
     private int hauteurTuile; //Taille du pas
 
     /**

@@ -2,13 +2,16 @@ package modele.combat;
 
 import modele.pokemon.Type;
 
+/**
+ * Gère le calcul des coefficients entre les types
+ */
 public class CalculCoefficientV1 implements CalculCoefficient{
 
     /**
      * Retourne un coefficiant de dégâts en fonction du type de l'attaque lancée par rapport au type du pokemon attaqué
      * @param typeAttaquant : type de l'attaque utilisée
      * @param typeAttaque : type du pokemon attaqué
-     * @return
+     * @return un int
      */
     @Override
     public float getCoefficient(Type typeAttaquant, Type typeAttaque) {

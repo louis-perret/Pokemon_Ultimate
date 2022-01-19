@@ -3,13 +3,16 @@ package vues.afficheur;
 import javafx.scene.image.ImageView;
 import modele.pokemon.Position;
 
-//Interface pour nos afficheurs
+/**
+ * Interface fonctionnelle pour notre affichage
+ */
 public interface Afficheur {
 
     /**
-     * Objet à afficher
+     * Gère l'affichage d'un objet
      * @param objet : objet à afficher
      * @param position : à telle position
+     * @return une ImageView
      */
     ImageView affiche(Object objet, Position position);
 }

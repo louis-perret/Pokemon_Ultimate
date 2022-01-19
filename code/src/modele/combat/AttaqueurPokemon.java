@@ -5,7 +5,9 @@ import modele.pokemon.Pokemon;
 
 import static java.lang.Math.ceil;
 
-//Gère l'attaque d'un pokemon vers un autre
+/**
+ * Gère l'attaque d'un pokemon vers un autre
+ */
 public class AttaqueurPokemon implements Attaqueur {
 
     private CalculCoefficient calculCoefficient= new CalculCoefficientV1();
@@ -21,7 +23,8 @@ public class AttaqueurPokemon implements Attaqueur {
         //calculé en prenant en compte l'attaque de l'attaquant, les dégats de l'attaque, puis le type de l'attaque utilisée ainsi que la défence de l'attaqué
         int degat = (int)ceil((attaquant.getAttaque()/100.0+1)*m.getDegats()*calculCoefficient.getCoefficient(m.getType(),attaque
                 .getType())*(1-attaque.getDefense()/100.0));
-        attaque.setPv(attaque.getPv()-degat);
+        attaque.setPv(attaque.getPv()-degat); //Actualise ses pv
+        m.comportement(attaque); //Effectue le comportement de l'attaque
         if(attaque.getPv()<=0){ //Si l'adversaire est ko
             return true;
         }

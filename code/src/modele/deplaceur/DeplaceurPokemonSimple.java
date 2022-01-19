@@ -7,12 +7,15 @@ import modele.pokemon.Pokemon;
 import modele.pokemon.Position;
 import modele.monde.Carte;
 
-//Permet de déplacer un pokemon
+/**
+ * Classe gérant un déplacement simple du pokemon
+ */
 public class DeplaceurPokemonSimple extends DeplaceurPokemon {
 
 
-
-    //Constructeur
+    /**
+     * Constructeur
+     */
     public DeplaceurPokemonSimple() {
         super.setCollisionneur(new CollisionneurV1());
         super.setChangeurCarte(new ChangeurCarteV1());
@@ -20,7 +23,7 @@ public class DeplaceurPokemonSimple extends DeplaceurPokemon {
 
     /**
      * Effectue le déplacement d'un pokemon
-     * @param p : pokeon a déplacé
+     * @param p : pokemon à déplacer
      * @param keyChar : touche appuyée
      * @param carte : Carte pour vérifier la collision
      */
@@ -65,7 +68,7 @@ public class DeplaceurPokemonSimple extends DeplaceurPokemon {
 
     /**
      * Déplacer le pokemon vers la gauche
-     * @param p : Pokemon a déplacer
+     * @param p : Pokemon à déplacer
      * @param carte : Carte pour la collision
      */
     @Override
@@ -82,7 +85,7 @@ public class DeplaceurPokemonSimple extends DeplaceurPokemon {
 
     /**
      * Déplacer le pokemon vers la droite
-     * @param p : Pokemon a déplacer
+     * @param p : Pokemon à déplacer
      * @param carte : Carte pour la collision
      */
     @Override
@@ -97,7 +100,7 @@ public class DeplaceurPokemonSimple extends DeplaceurPokemon {
 
     /**
      * Déplacer le pokemon vers le haut
-     * @param p : Pokemon a déplacer
+     * @param p : Pokemon à déplacer
      * @param carte : Carte pour la collision
      */
     @Override
@@ -112,7 +115,7 @@ public class DeplaceurPokemonSimple extends DeplaceurPokemon {
 
     /**
      * Déplacer le pokemon vers le bas
-     * @param p : Pokemon a déplacer
+     * @param p : Pokemon à déplacer
      * @param carte : Carte pour la collision
      */
     @Override

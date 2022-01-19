@@ -13,11 +13,17 @@ import modele.pokemon.Pokemon;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Classe qui permet le déplacement entre nos différentes fenêtres
+ */
 public class Navigateur {
 
-    private Manager manager = launch.launcher.getManager();
-    private Stage primaryStage = launch.launcher.getPrimaryStage();
+    private Manager manager = launch.launcher.getManager(); //manager du jeu
+    private Stage primaryStage = launch.launcher.getPrimaryStage(); //la fenêtre
 
+    /**
+     * Lance la première fenêtre du jeu
+     */
     public void lancerFenetreLancement() {
         try {
             Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreLancement.fxml")));
@@ -30,6 +36,9 @@ public class Navigateur {
         }
     }
 
+    /**
+     * Lance la fenêtre où l'on sélectionne le starter du jeu
+     */
     public void lancerFenetreSelection() {
         try {
             Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreSelection.fxml")));
@@ -41,6 +50,9 @@ public class Navigateur {
         }
     }
 
+    /**
+     * Lance la fenêtre du jeu où l'on peut se déplacer
+     */
     public void lancerFenetreJeu() {
         try {
             Parent parent = FXMLLoader.load((getClass().getResource("/FXML/Fenetre.fxml")));
@@ -58,6 +70,9 @@ public class Navigateur {
         }
     }
 
+    /**
+     * Lance la fenêtre de combat du jeu
+     */
     public void lancerFenetreCombat() {
         try {
             Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreCombat.fxml")));

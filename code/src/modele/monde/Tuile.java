@@ -1,9 +1,8 @@
 package modele.monde;
 
-import javafx.scene.image.Image;
-import modele.chargement.Stub;
-
-//Identifie une tuile
+/**
+ * Classe qui défiinit une tuile
+ */
 public class Tuile {
 
     public static final int tuileHauteur = 32;
@@ -23,6 +22,7 @@ public class Tuile {
     }
 
     public Tuile(int id, String image, Boolean isTraversable, int evenement){
+
         this.id = id;
         this.image = image;
         this.isTraversable = isTraversable;
