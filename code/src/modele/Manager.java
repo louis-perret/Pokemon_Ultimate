@@ -32,8 +32,9 @@ public class Manager implements Serializable {
     private transient int numeroVague = 0; //numéro de la vague
     private transient Monde monde; //notre monde
     private CollectionPokemon pokedex; //collection des pokemons
-    private int nbVictoires = 0;
-    private Thread thread;
+    private int nbVictoires = 0; //nombre de victoires du joueur
+    private Map<Integer, Tuile> dicoTuiles; //dictionnaire contenant toutes les types de tuiles de nos cartes (pour le sauvegarder)
+    private transient Thread thread; //thread de la boucle de jeu
 
 
     //Propriété compteur (utile pour les déplacements du personnages car notifie la fenêtre d'un beep de la part de notre boucle jeu)
@@ -42,7 +43,7 @@ public class Manager implements Serializable {
     public void setCompteur(int nombre) { compteur.set(nombre);} //setter
     public IntegerProperty compteurProperty() { return compteur;} //Renvoie la propriété
 
-    private IntegerProperty pv = new SimpleIntegerProperty();
+    private transient IntegerProperty pv = new SimpleIntegerProperty();
 
     public IntegerProperty pvProperty() {
         //pv = pokemonCourant.getPv();
@@ -50,8 +51,7 @@ public class Manager implements Serializable {
     }
 
 
-    private IntegerProperty changeur = new SimpleIntegerProperty(); //On déclare la propriété
-
+    private transient IntegerProperty changeur = new SimpleIntegerProperty(); //On déclare la propriété
     public int getChangeur() {return changeur.get();}
     public void setChangeur(int nombre) {this.changeur.set(nombre);}
     public IntegerProperty changeurProperty() { return changeur;}
@@ -70,7 +70,17 @@ public class Manager implements Serializable {
         this.deplaceur = new DeplaceurPokemonSimple();
         this.pokedex=collectionPokemon;
         this.controleurCombat = new ControleurCombatV1(collectionPokemon);
+        this.dicoTuiles=dicoTuiles;
         this.monde=new Monde(dicoTuiles);
+    }
+
+    /**
+     * Initialise le deplaceur, le controleur combat et le monde de Manager après sa désérialisation
+     */
+    public void initialisationOnDeserialized(){
+        deplaceur = new DeplaceurPokemonSimple();
+        controleurCombat = new ControleurCombatV1(pokedex);
+        monde=new Monde(dicoTuiles);
     }
 
     /**
@@ -103,6 +113,9 @@ public class Manager implements Serializable {
         thread.start(); //On lance le thread qui contient la boucle
     }
 
+    /**
+     * Arrête le thread de la boucle de jeu
+     */
     public void terminerBoucleJeu(){
         thread.interrupt();
     }

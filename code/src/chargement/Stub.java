@@ -9,8 +9,15 @@ import modele.pokemon.etat.Paralysé;
 
 import java.util.*;
 
+/**
+ * Classe simulant un chargement à partir d'un jeu de données
+ */
 public class Stub extends Chargeur{
 
+    /**
+     * Charge un objet Manager à partir d'un jeu de données
+     * @return un Manager
+     */
     @Override
     public Manager charger() {
         List<Pokemon> niveau1=new ArrayList<>();
