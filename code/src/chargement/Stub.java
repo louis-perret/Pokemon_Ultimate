@@ -190,7 +190,7 @@ public class Stub extends Chargeur{
 
 
         Mouvement[] tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
-        Pokemon p = new Pokemon("Bulbizarre","/sprite/Sprite_bulbi/bulb_1.png","/sprite/Sprite_bulbi/bulb_combat_dos.png",50,10,30,10,position, plante,tabMouvements,1,0,"Herbizarre", true);
+        Pokemon p = new Pokemon("Bulbizarre","/sprite/Sprite_bulbi/bulb_1.png","/sprite/Sprite_bulbi/bulb_combat_dos.png",50,10,20,10,position, plante,tabMouvements,1,0,"Herbizarre", true);
         niveau1.add(p);
 
         tabMouvements=new Mouvement[]{flammèche};
@@ -200,43 +200,66 @@ public class Stub extends Chargeur{
         p = new Pokemon("Carapuce","/sprite/Sprite_carap/squi_1.png","/sprite/Sprite_carap/squi_combat_dos.png",50,10,10,15,position, eau,tabMouvements,1,0,"Carabaffe", true);
         niveau1.add(p);
         tabMouvements=new Mouvement[]{piqure};
-        p= new Pokemon("Chenipan","/sprite/chenipan.png","/sprite/chenipan.png",10,10,10,10,position,insecte,tabMouvements,1,0,"Chrysacier",false);
+        p= new Pokemon("Chenipan","/sprite/chenipan.png","/sprite/chenipan.png",35,9,9,9,position,insecte,tabMouvements,1,0,"Chrysacier",false);
         niveau1.add(p);
         tabMouvements=new Mouvement[]{charge};
-        p= new Pokemon("Ratatta",null,"/sprite/ratata.png",10,10,10,10,position,normal,tabMouvements,1,0,"Ratattac",false);
+        p= new Pokemon("Ratatta",null,"/sprite/ratata.png",35,10,10,10,position,normal,tabMouvements,1,0,"Ratattac",false);
         niveau1.add(p);
         tabMouvements=new Mouvement[]{machpunch};
-        p= new Pokemon("Machoc",null,"/sprite/machoc.png",9,11,10,10,position,combat,tabMouvements,1,0,"Machopeur",false);
+        p= new Pokemon("Machoc",null,"/sprite/machoc.png",40,11,10,10,position,combat,tabMouvements,1,0,"Machopeur",false);
         niveau1.add(p);
         tabMouvements=new Mouvement[]{vague_psy};
-        p= new Pokemon("Abra",null,"/sprite/abra.png",8,14,9,13,position,psy,tabMouvements,1,0,"Ratattac",false);
+        p= new Pokemon("Abra",null,"/sprite/abra.png",38,15,9,13,position,psy,tabMouvements,1,0,"Ratattac",false);
         niveau1.add(p);
         tabMouvements=new Mouvement[]{ombre_portee};
-        p= new Pokemon("Fantominus",null,"/sprite/fantominus.png",9,13,9,12,position,spectre,tabMouvements,1,0,"Ratattac",false);
+        p= new Pokemon("Fantominus",null,"/sprite/fantominus.png",40,13,9,12,position,spectre,tabMouvements,1,0,"Ratattac",false);
         niveau1.add(p);
         tabMouvements=new Mouvement[]{trempette};
-        p= new Pokemon("Magicarp",null,"/sprite/magicarp.png",8,7,7,4,position,eau,tabMouvements,1,0,"Leviathor",false);
+        p= new Pokemon("Magicarp",null,"/sprite/magicarp.png",35,7,15,4,position,eau,tabMouvements,1,0,"Leviathor",false);
         niveau1.add(p);
 
 
         tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
-        p = new Pokemon("Herbizarre","/sprite/Sprite_herbi/herb_1.png","/sprite/Sprite_herbi/herb_combat_dos.png",100,20,20,20,position, plante,null,2,0,"Florizarre", true);
+        p = new Pokemon("Herbizarre","/sprite/Sprite_herbi/herb_1.png","/sprite/Sprite_herbi/herb_combat_dos.png",100,20,20,20,position, plante,tabMouvements,2,0,"Florizarre", true);
         niveau2.add(p);
-        p = new Pokemon("Reptincel","/sprite/Sprite_rept/rept_1.png","/sprite/Sprite_rept/rept_combat_dos.png",100,20,20,20,position, feu,null,2,0,"Dracaufeu", true);
+        tabMouvements=new Mouvement[]{flammèche,ouragan,charge,sabotage};
+        p = new Pokemon("Reptincel","/sprite/Sprite_rept/rept_1.png","/sprite/Sprite_rept/rept_combat_dos.png",100,20,20,20,position, feu,tabMouvements,2,0,"Dracaufeu", true);
         niveau2.add(p);
-        p = new Pokemon("Carabaffe","/sprite/Sprite_carab/war_1.png","/sprite/Sprite_carab/war_combat_dos.png",100,20,20,20,position, eau,null,2,0,"Tortank", true);
+        tabMouvements=new Mouvement[]{pistolet_a_eau,machpunch,charge,sabotage};
+        p = new Pokemon("Carabaffe","/sprite/Sprite_carab/war_1.png","/sprite/Sprite_carab/war_combat_dos.png",100,20,20,20,position, eau,tabMouvements,2,0,"Tortank", true);
         niveau2.add(p);
-        p = new Pokemon("Kadabra",null,"/sprite/kadabra.png",100,20,20,20,position, eau,null,2,0,"Tortank", true);
+        tabMouvements=new Mouvement[]{vague_psy,ombre_portee,charge,sabotage};
+        p = new Pokemon("Kadabra",null,"/sprite/kadabra.png",68,45,39,43,position, psy,tabMouvements,2,0,"Alakazam", false);
+        niveau2.add(p);
+        tabMouvements=new Mouvement[]{vague_psy,ombre_portee,charge,sabotage};
+        p = new Pokemon("Spectrum",null,"/sprite/spectrum.png",70,43,39,42,position, spectre,tabMouvements,2,0,"Ectoplasma", false);
+        niveau2.add(p);
+        tabMouvements=new Mouvement[]{vague_psy,ombre_portee,charge,sabotage};
+        p = new Pokemon("Chrysacier",null,"/sprite/chrysacier.png",70,15,80,10,position, insecte,tabMouvements,2,0,"Papillusion", false);
+        niveau2.add(p);
+        tabMouvements=new Mouvement[]{vague_psy,ombre_portee,charge,sabotage};
+        p = new Pokemon("Ratatak",null,"/sprite/ratatak.png",65,40,40,40,position, normal,tabMouvements,2,0,null, false);
+        niveau2.add(p);
+        tabMouvements=new Mouvement[]{vague_psy,ombre_portee,charge,sabotage};
+        p = new Pokemon("Machopeur",null,"/sprite/machopeur.png",70,41,40,40,position, combat,tabMouvements,2,0,"Mackogneur", false);
         niveau2.add(p);
 
 
 
-
+        tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
         p = new Pokemon("Florizarre","/sprite/Sprite_flo/flo_1.png","/sprite/Sprite_flo/flo_combat_dos.png",200,30,30,30,position, plante,null,3,0,null, true);
         niveau3.add(p);
+        tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
         p = new Pokemon("Dracaufeu","/sprite/Sprite_drac/drac_1.png","/sprite/Sprite_drac/drac_combat_dos.png",200,30,30,30,position, feu,null,3,0,null, true);
         niveau3.add(p);
+        tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
         p = new Pokemon("Tortank","/sprite/Sprite_tort/blas_1.png","/sprite/Sprite_tort/blas_combat_dos.png",200,30,30,30,position, eau,tabMouvements,3,0,null, true);
+        niveau3.add(p);
+        tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
+        p = new Pokemon("Alakazam",null,"/sprite/alakazam.png",100,80,65,80,position, psy,tabMouvements,3,0,null, false);
+        niveau3.add(p);
+        tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
+        p = new Pokemon("Ectoplasma",null,"/sprite/ectoplasama.png",110,80,70,79,position, spectre,tabMouvements,3,0,null, false);
         niveau3.add(p);
 
         CollectionPokemon collectionPokemon = new CollectionPokemon(niveau1,niveau2,niveau3);
