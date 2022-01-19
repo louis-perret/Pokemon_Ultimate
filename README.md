@@ -1,3 +1,3 @@
 # Projet_PERRET_WISSOCQ
 
-J'ai commencé à codé la structure des deux premières fenêtres (fenêtre de lancement + fenêtre de sélection) -> reste à rendre le tout jolie 
+Jeu tirant son inspiration de pokemon. L'uutilisateur peut choisir un pokemon parmis 3 disponibles puis va pouvoir se déplacer de carte en carte en battant différentes vagues de pokemon dans des combats. Ce pokemon evoluera au fil des combats puis après avoir battu un certain nombre de pokemon, il remportera la victoire. 
