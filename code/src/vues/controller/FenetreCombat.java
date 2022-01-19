@@ -1,6 +1,8 @@
 package vues.controller;
 
 import javafx.beans.property.*;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
@@ -56,9 +58,7 @@ public class FenetreCombat {
     private ImageView a = new ImageView();
     private Afficheur afficheurPokemon = new AfficheurPokemon();
     private Image fondimg = new Image(getClass().getResource("/FondCombat/Fond.png").toExternalForm());
-    //private Image joueurimg = new Image(getClass().getResource("/sprite/Sprite_bulbi/bulb_combat_dos.png").toExternalForm());
     private StringProperty joueurimg = new SimpleStringProperty();
-    //private Image ennemiimg = new Image(getClass().getResource("/sprite/abra.png").toExternalForm());
     private StringProperty ennemiimg = new SimpleStringProperty();
     private Manager manager = launcher.getManager();
 
@@ -88,7 +88,6 @@ public class FenetreCombat {
         ennemiimg.bind(manager.getPokemonEnnemiCourant().imageCombatProperty());
         setDecor();
 
-
         int i=1; //Pour mettre une attaque dans un bouton
         for(Mouvement m : manager.getPokemonCourant().getMouvements()) {
             if(i==1) {
@@ -105,5 +104,36 @@ public class FenetreCombat {
             }
             i++;
         }
+
+        //Dans le cas où l'image d'un des deux pokemon changent, il faut la recharger dans le ImageView
+        joueurimg.addListener((observableValue, s, t1) -> {
+            joueur.setImage(new Image(joueurimg.get()));
+        }
+        );
+        ennemiimg.addListener((observableValue, s, t1) -> {
+            ennemi.setImage(new Image(ennemiimg.get()));
+        }
+        );
+    }
+
+    public void effectuerAttaque1(ActionEvent actionEvent) {
+       int resultat = manager.tourDeCombat(manager.getPokemonCourant(),manager.getPokemonEnnemiCourant(),manager.getPokemonCourant().getMouvement(attaque1.getText()));
+       if(resultat == 2){
+           navigateur.lancerFenetreLancement();
+       }
+       else{
+           if(resultat == 3){
+               navigateur.lancerFenetreJeu();
+           }
+       }
+    }
+
+    public void effectuerAttaque2(ActionEvent actionEvent) {
+    }
+
+    public void effectuerAttaque3(ActionEvent actionEvent) {
+    }
+
+    public void effectuerAttaque4(ActionEvent actionEvent) {
     }
 }

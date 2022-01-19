@@ -85,7 +85,25 @@ public class Manager implements Serializable {
      * @param mAllie : l'attaque utilisée par le pokemon du joueur
      */
     public int tourDeCombat(Pokemon allie, Pokemon ennemi, Mouvement mAllie){
-        return controleurCombat.effectuerCombat(allie,ennemi,mAllie);
+        int resultat = controleurCombat.effectuerCombat(allie,ennemi,mAllie);
+        if(resultat == 1){ //le pokemon ennemi est ko
+            listePokemonByVague.remove(0); //on l'enlève de la liste des pokemon ennemis
+            if(!listePokemonByVague.isEmpty()){ //s'il reste des pokemon à combattre
+                setPokemonEnnemiCourant(listePokemonByVague.get(0)); //on envoie le prochain au casse-pipe
+                return 1;
+            }
+            else{ //sinon la vague est finie
+                pokemonCourant.setPv(pokedex.getPokemon(pokemonCourant.getNom(),pokemonCourant.getNiveau()).getPv()); //on le soigne
+                //setCarteCourante("lobby"); //puis on ramène le pokemon au lobby
+                return 3;
+            }
+        }
+        else{
+            if(resultat == 2){
+                return 2; //le pokemon du joueur est ko
+            }
+        }
+        return 0; //aucun pokemon n'est ko
     }
 
     /**
@@ -147,8 +165,20 @@ public class Manager implements Serializable {
         return pokemonEnnemiCourant;
     }
 
-    public void setPokemonEnnemiCourant(Pokemon pokemonEnnemiCourant) {
-        this.pokemonEnnemiCourant = pokemonEnnemiCourant;
+    public void setPokemonEnnemiCourant(Pokemon pokemon) {
+        pokemonEnnemiCourant.setNom(pokemon.getNom());
+        pokemonEnnemiCourant.setPv(pokemon.getPv());
+        pokemonEnnemiCourant.setImageCombat(pokemon.getImageCombat());
+        pokemonEnnemiCourant.setImage(pokemon.getImage());
+        pokemonEnnemiCourant.setMouvements(pokemon.getMouvements());
+        pokemonEnnemiCourant.setEtat(pokemon.getEtat());
+        pokemonEnnemiCourant.setVitesse(pokemon.getVitesse());
+        pokemonEnnemiCourant.setAttaque((pokemon.getAttaque()));
+        pokemonEnnemiCourant.setDefense(pokemon.getDefense());
+        pokemonEnnemiCourant.setType(pokemon.getType());
+
+
+
     }
 
     public Carte getCarteCourante() {

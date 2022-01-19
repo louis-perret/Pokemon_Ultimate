@@ -20,6 +20,7 @@ public class Pokemon implements Serializable {
     public StringProperty nomProperty() { return nom; }
 
     private String image; //son image de déplacement
+
     private StringProperty imageCombat = new SimpleStringProperty(); //son image de combat
     public String getImageCombat() { return imageCombat.get(); }
     public void setImageCombat(String image) { imageCombat.set(image); }
@@ -218,7 +219,7 @@ public class Pokemon implements Serializable {
         if(this.getClass()!=o.getClass()) return false;
 
         Pokemon p=(Pokemon)o;
-        if(nom.equals(p.getNom())) return true;
+        if(getNom().equals(p.getNom())) return true;
         return false;
     }
 

@@ -33,6 +33,7 @@ public class BoucleJeu16 extends BoucleJeu{
         }
         catch (Exception e){
             System.out.println("Erreur dans la boucle : " + e.getMessage());
+            //Thread.currentThread().interrupt();
         }
     }
 

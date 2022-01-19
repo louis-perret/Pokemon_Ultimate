@@ -55,15 +55,18 @@ public class Navigateur {
      */
     public void lancerFenetreJeu() {
         try {
+            manager.setCarteCourante("lobby");
             Parent parent = FXMLLoader.load((getClass().getResource("/FXML/Fenetre.fxml")));
             Scene scene = new Scene(parent);
             primaryStage.setScene(scene);
-            manager.setCarteCourante("lobby");
             primaryStage.getScene().addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
                 manager.deplacerPokemon(keyEvent.getCode().getChar());
 
             });
-
+            primaryStage.setMinHeight(512);
+            primaryStage.setMinWidth(320);
+            primaryStage.setMaxHeight(512);
+            primaryStage.setMaxWidth(320);
             manager.lancerBoucleJeu();
         } catch (IOException e) {
             e.printStackTrace();
@@ -75,10 +78,15 @@ public class Navigateur {
      */
     public void lancerFenetreCombat() {
         try {
+            manager.terminerBoucleJeu();
             Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreCombat.fxml")));
             Scene scene = new Scene(parent);
             scene.getStylesheets().add(getClass().getResource("/FXML/Combat.css").toExternalForm());;
             primaryStage.setScene(scene);
+            primaryStage.setMinHeight(450);
+            primaryStage.setMinWidth(800);
+            primaryStage.setMaxHeight(450);
+            primaryStage.setMaxWidth(800);
 
         } catch (IOException e) {
             e.printStackTrace();

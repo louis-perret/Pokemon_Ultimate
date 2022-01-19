@@ -17,8 +17,8 @@ public class DeplaceurPokemonSimple extends DeplaceurPokemon {
      * Constructeur
      */
     public DeplaceurPokemonSimple() {
-        super.setCollisionneur(new CollisionneurV1(640,640));
-        super.setChangeurCarte(new ChangeurCarteV1(640,640));
+        super.setCollisionneur(new CollisionneurV1(512,320));
+        super.setChangeurCarte(new ChangeurCarteV1(512,320));
     }
 
     /**
@@ -57,7 +57,7 @@ public class DeplaceurPokemonSimple extends DeplaceurPokemon {
 
         }
         if(getChangeurCarte().isChangement(p.getPosition(), carte) == 3) {
-            manager.terminerBoucleJeu();
+            //manager.terminerBoucleJeu();
             manager.setChangeur(3);
 
             //scene combat

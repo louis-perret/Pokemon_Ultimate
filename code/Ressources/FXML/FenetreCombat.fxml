@@ -16,10 +16,10 @@
 
     <bottom>
         <HBox>
-            <Button fx:id="attaque1" textFill="green" />
-            <Button fx:id="attaque2" textFill="green" />
-            <Button fx:id="attaque3" textFill="green" />
-            <Button fx:id="attaque4" textFill="green" />
+            <Button fx:id="attaque1" textFill="green" onAction="#effectuerAttaque1" />
+            <Button fx:id="attaque2" textFill="green" onAction="#effectuerAttaque2"/>
+            <Button fx:id="attaque3" textFill="green" onAction="#effectuerAttaque3"/>
+            <Button fx:id="attaque4" textFill="green" onAction="#effectuerAttaque4"/>
             <Text fx:id="nomJoueur"/>
             <Text fx:id="pvJoueur"/>
             <Text fx:id="nomEnnemi"/>

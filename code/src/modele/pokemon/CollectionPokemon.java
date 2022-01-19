@@ -69,7 +69,7 @@ public class CollectionPokemon implements Serializable {
         Pokemon p;
         while(listePokemon.size()<nbPokemonByVague){
             p=pokedex.get(numeroVague).get(random.nextInt(pokedex.get(numeroVague).size()));
-            if(!listePokemon.contains(p) && !courant.equals(p)) { //Si le pokemon n'a pas déjà été pris ou si ce n'est pas le pokemon choisi par le joueur
+            if(!listePokemon.contains(p) && !p.getStarter()) { //Si le pokemon n'a pas déjà été pris et si ce n'est pas un starter
                 listePokemon.add(p.cloner()); //On l'ajoute à la liste
             }
         }
