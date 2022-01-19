@@ -25,6 +25,10 @@ public class FenetreLancement {
         navigateur.lancerFenetreSelection();
     }
 
+    public void quitterJeu() {
+        navigateur.quitterJeu();
+    }
+
     public void initialize(){
         vbox.setPadding(new Insets(10));
     }

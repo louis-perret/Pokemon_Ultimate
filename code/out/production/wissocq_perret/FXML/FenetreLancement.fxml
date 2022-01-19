@@ -7,6 +7,7 @@
 <?import javafx.scene.text.Text?>
 
 <?import java.net.URL?>
+<?import javafx.scene.layout.HBox?>
 <BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vues.controller.FenetreLancement">
 
         <top>
@@ -19,10 +20,14 @@
             </VBox>
 
         </top>
-
-        <center>
+    <center>
+        <VBox alignment="CENTER">
             <Button fx:id="boutonStart" minHeight="50" minWidth="150" textFill="indigo" onAction="#lancementJeu">Jouer</Button>
-        </center>
+            <Button fx:id="boutonQuitter" minHeight="50" minWidth="150" textFill="indigo" onAction="#quitterJeu">Quitter</Button>
+        </VBox>
+    </center>
+
+
     <stylesheets>
         <URL value="@Lancement.css" />
     </stylesheets>

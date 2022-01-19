@@ -281,10 +281,10 @@ public class Stub extends Chargeur{
 
 
         tabMouvements=new Mouvement[]{tempeteVerte,detricanon,giga_impact,seisme};
-        p = new Pokemon("Florizarre","/sprite/Sprite_flo/flo_1.png","/sprite/Sprite_flo/flo_combat_dos.png",230,80,100,80,position, plante,null,3,0,null, true);
+        p = new Pokemon("Florizarre","/sprite/Sprite_flo/flo_1.png","/sprite/Sprite_flo/flo_combat_dos.png",230,80,100,80,position, plante,tabMouvements,3,0,null, true);
         niveau3.add(p);
         tabMouvements=new Mouvement[]{deflagration,rapace,draco_meteore,tonnerre};
-        p = new Pokemon("Dracaufeu","/sprite/Sprite_drac/drac_1.png","/sprite/Sprite_drac/drac_combat_dos.png",200,100,30,95,position, feu,null,3,0,null, true);
+        p = new Pokemon("Dracaufeu","/sprite/Sprite_drac/drac_1.png","/sprite/Sprite_drac/drac_combat_dos.png",200,100,30,95,position, feu,tabMouvements,3,0,null, true);
         niveau3.add(p);
         tabMouvements=new Mouvement[]{hydrocanon,close_combat,blizzard,lame_de_roc};
         p = new Pokemon("Tortank","/sprite/Sprite_tort/blas_1.png","/sprite/Sprite_tort/blas_combat_dos.png",200,80,130,80,position, eau,tabMouvements,3,0,null, true);

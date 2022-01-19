@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="Déplacement fonctionnel avec le navigateur + début gestion des combats">
+    <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/FenetreCombat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/FenetreCombat.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/FXML/FenetreSelection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/FenetreSelection.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/FXML/Selection.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/Selection.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chargement/Stub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chargement/Stub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/boucle/BoucleJeu16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/boucle/BoucleJeu16.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/combat/ControleurNiveau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/ControleurNiveau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/Fenetre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreCombat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreLancement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreLancement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

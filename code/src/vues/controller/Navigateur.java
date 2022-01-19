@@ -99,4 +99,8 @@ public class Navigateur {
             e.printStackTrace();
         }
     }
+
+    public void quitterJeu() {
+        primaryStage.close();
+    }
 }
