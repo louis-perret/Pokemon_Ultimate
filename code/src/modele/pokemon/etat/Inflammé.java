@@ -6,9 +6,9 @@ import java.io.Serializable;
 
 import static java.lang.Math.ceil;
 
-public class Inflammé extends Etat implements Serializable {
+public class Inflammé extends Etat {
 
-    private transient static float coefficient=1/8F; //Dégâts de l'inflammation
+    private static float coefficient=1/8F; //Dégâts de l'inflammation
 
     /**
      * Constructeur

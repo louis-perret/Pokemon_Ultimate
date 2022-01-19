@@ -9,9 +9,9 @@ import static java.lang.Math.ceil;
 /**
  * Classe qui définit le statut empoisonné d'un pokemon
  */
-public class Empoisonné extends Etat implements Serializable {
+public class Empoisonné extends Etat {
 
-    private transient static float coefficient=1/4F; //Dégâts de l'empoisenement
+    private static float coefficient=1/4F; //Dégâts de l'empoisenement
 
     /**
      * Constructeur

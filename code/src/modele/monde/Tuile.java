@@ -1,25 +1,19 @@
 package modele.monde;
 
+import java.io.Serializable;
+
 /**
  * Classe qui défiinit une tuile
  */
-public class Tuile {
+public class Tuile implements Serializable {
 
-    public static final int tuileHauteur = 32;
-    public static final int tuileLargeur = 32;
+    public transient static final int tuileHauteur = 32;
+    public transient static final int tuileLargeur = 32;
 
     private int id;
     private String image;
     private Boolean isTraversable;
     private int evenement;
-
-    public int getEvenement() {
-        return evenement;
-    }
-
-    public void setEvenement(int evenement) {
-        this.evenement = evenement;
-    }
 
     public Tuile(int id, String image, Boolean isTraversable, int evenement){
 
@@ -54,6 +48,13 @@ public class Tuile {
         this.image = image;
     }
 
+    public int getEvenement() {
+        return evenement;
+    }
+
+    public void setEvenement(int evenement) {
+        this.evenement = evenement;
+    }
 
     /**
      * Renvoie l'objet sous forle de chaîne de caractères

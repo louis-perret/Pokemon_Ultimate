@@ -24,14 +24,5 @@ public class TestPersistance {
         if(p != null){
             System.out.println("Chargement correcte.");
         }
-        /*System.out.println("Chargement effectué. Nom : " + type.getNom());
-            System.out.print("faiblesses : ");
-            for(NomType n : type.getFaiblesses()){
-                System.out.print(n + ", ");
-            }
-            System.out.print("forces : ");
-            for(NomType n : type.getForces()){
-                System.out.print(n + ", ");
-            }*/
     }
 }
