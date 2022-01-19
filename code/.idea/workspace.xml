@@ -2,59 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="Déplacement fonctionnel avec le navigateur + début gestion des combats">
-      <change afterPath="$PROJECT_DIR$/Ressources/source/source.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chargement/Chargeur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chargement/ChargeurBinaire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chargement/Sauveur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chargement/SauveurBinaire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modele/pokemon/etat/Empoisonné.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modele/pokemon/etat/Etat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modele/pokemon/etat/Inflammé.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modele/pokemon/etat/Paralysé.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/TestPersistance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/launch/launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/boucle/BoucleJeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/boucle/BoucleJeu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/boucle/BoucleJeu16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/boucle/BoucleJeu16.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/chargement/Chargeur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/chargement/Sauveur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/chargement/Stub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chargement/Stub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/combat/Attaqueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/Attaqueur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/combat/AttaqueurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/AttaqueurPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/combat/CalculCoefficient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/CalculCoefficient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/combat/CalculCoefficientV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/CalculCoefficientV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/combat/ControleurCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/ControleurCombat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/combat/ControleurCombatV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/ControleurCombatV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/combat/ControleurNiveau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/ControleurNiveau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/combat/IAPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/IAPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/combat/IAPokemonSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/IAPokemonSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/Collisionneur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/Collisionneur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/CollisionneurV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/CollisionneurV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/cartes/Arène.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/cartes/Arène.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chargement/Stub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chargement/Stub.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemonSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemonSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/monde/Carte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/monde/Carte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/monde/LectureMonde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/monde/LectureMonde.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/monde/Monde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/monde/Monde.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/monde/Tuile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/monde/Tuile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/observateurs/Observateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/observateurs/Observateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/observateurs/ObservateurBoucle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/observateurs/ObservateurBoucle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/observateurs/Sujet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/observateurs/Sujet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/CollectionPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/CollectionPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/Mouvement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/Mouvement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/NomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/NomType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/Pokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/TestBoucle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/TestBoucle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/TestMonde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/TestMonde.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/afficheur/Afficheur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/afficheur/Afficheur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/afficheur/AfficheurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/afficheur/AfficheurPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/afficheur/AfficheurTuile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/afficheur/AfficheurTuile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../documentation/diag-classe.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/../documentation/diag-classe.mdj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

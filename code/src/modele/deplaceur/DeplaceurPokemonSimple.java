@@ -46,14 +46,14 @@ public class DeplaceurPokemonSimple extends DeplaceurPokemon {
         //Mettre isChangement ici
         if(getChangeurCarte().isChangement(p.getPosition(), carte) == 1) {
             manager.setCarteCourante("lobby");
-            System.out.println(manager.getCarteCourante().toString());
             manager.setChangeur(1);
+            manager.getPokemonCourant().setPosition(new Position(128,192));     //Le x et le y doivent être des multiples de 32
 
         }
         if(getChangeurCarte().isChangement(p.getPosition(), carte) == 2) {
             manager.setCarteCourante("arene");
-            System.out.println(manager.getCarteCourante().toString());
             manager.setChangeur(2);
+            manager.getPokemonCourant().setPosition(new Position(128,192));     //Le x et le y doivent être des multiples de 32
 
         }
         if(getChangeurCarte().isChangement(p.getPosition(), carte) == 3) {

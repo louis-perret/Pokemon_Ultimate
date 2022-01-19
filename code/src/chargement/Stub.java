@@ -100,8 +100,11 @@ public class Stub extends Chargeur{
         Tuile tuilePbd = new Tuile(2,"tuiles/portail_bas_droite.png",true,2);
         Tuile tuilePhg = new Tuile(3,"tuiles/portail_haut_gauche.png",false, 0);
         Tuile tuilePhd = new Tuile(4,"tuiles/portail_haut_droite.png",false, 0);
-        Tuile tuileBrique = new Tuile(5,"tuiles/brique.png",true,3);
+        Tuile tuileBrique = new Tuile(5,"tuiles/brique.png",false,0);
         Tuile tuileSortie = new Tuile(6,"tuiles/sortie.png",true,1);
+        Tuile tuileSolA = new Tuile(7,"tuiles/sol_arene.png",true,3);
+        Tuile tuilePanneau = new Tuile(8,"tuiles/panneau.png",false,0);
+
 
 
         Map<Integer,Tuile> dicoTuiles=new HashMap<>();
@@ -112,6 +115,8 @@ public class Stub extends Chargeur{
         dicoTuiles.put(tuilePhd.getId(),tuilePhd);
         dicoTuiles.put(tuileBrique.getId(),tuileBrique);
         dicoTuiles.put(tuileSortie.getId(),tuileSortie);
+        dicoTuiles.put(tuileSolA.getId(),tuileSolA);
+        dicoTuiles.put(tuilePanneau.getId(),tuilePanneau);
         return new Manager(collectionPokemon,dicoTuiles);
     }
 }
