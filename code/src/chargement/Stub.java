@@ -5,6 +5,8 @@ import modele.pokemon.*;
 import modele.Manager;
 import modele.monde.Tuile;
 import modele.pokemon.Mouvement;
+import modele.pokemon.etat.Empoisonné;
+import modele.pokemon.etat.Inflammé;
 import modele.pokemon.etat.Paralysé;
 
 import java.util.*;
@@ -62,17 +64,132 @@ public class Stub extends Chargeur{
         faiblesses.add(NomType.sol);
         forces = new ArrayList<>();
         forces.add(NomType.plante);
-        Type poison = new Type(NomType.eau,forces,faiblesses);
+        Type poison = new Type(NomType.poison,forces,faiblesses);
+
+        faiblesses = new ArrayList<>();
+        faiblesses.add(NomType.psy);
+        faiblesses.add(NomType.vol);
+        forces = new ArrayList<>();
+        forces.add(NomType.normal);
+        forces.add(NomType.roche);
+        forces.add(NomType.glace);
+        Type combat = new Type(NomType.combat,forces,faiblesses);
+
+        faiblesses = new ArrayList<>();
+        faiblesses.add(NomType.feu);
+        faiblesses.add(NomType.vol);
+        forces = new ArrayList<>();
+        forces.add(NomType.psy);
+        forces.add(NomType.plante);
+        Type insecte = new Type(NomType.insecte,forces,faiblesses);
+
+        faiblesses = new ArrayList<>();
+        faiblesses.add(NomType.insecte);
+        faiblesses.add(NomType.ténèbre);
+        forces = new ArrayList<>();
+        forces.add(NomType.combat);
+        forces.add(NomType.poison);
+        Type psy = new Type(NomType.insecte,forces,faiblesses);
+
+        faiblesses = new ArrayList<>();
+        faiblesses.add(NomType.combat);
+        faiblesses.add(NomType.feu);
+        faiblesses.add(NomType.roche);
+        faiblesses.add(NomType.sol);
+        forces = new ArrayList<>();
+        forces.add(NomType.insecte);
+        forces.add(NomType.dragon);
+        forces.add(NomType.plante);
+        forces.add(NomType.vol);
+        forces.add(NomType.sol);
+        Type glace = new Type(NomType.glace,forces,faiblesses);
+
+        faiblesses = new ArrayList<>();
+        faiblesses.add(NomType.electrique);
+        faiblesses.add(NomType.glace);
+        faiblesses.add(NomType.roche);
+        forces = new ArrayList<>();
+        forces.add(NomType.insecte);
+        forces.add(NomType.plante);
+        Type vol = new Type(NomType.vol,forces,faiblesses);
+
+        faiblesses = new ArrayList<>();
+        faiblesses.add(NomType.ténèbre);
+        forces = new ArrayList<>();
+        forces.add(NomType.psy);
+        Type spectre = new Type(NomType.spectre,forces,faiblesses);
+
+        faiblesses = new ArrayList<>();
+        faiblesses.add(NomType.dragon);
+        faiblesses.add(NomType.glace);
+        forces = new ArrayList<>();
+        forces.add(NomType.dragon);
+        Type dragon = new Type(NomType.dragon,forces,faiblesses);
+
+        faiblesses = new ArrayList<>();
+        forces = new ArrayList<>();
+        Type normal = new Type(NomType.normal,forces,faiblesses);
+
+        faiblesses = new ArrayList<>();
+        faiblesses.add(NomType.sol);
+        forces = new ArrayList<>();
+        forces.add(NomType.eau);
+        forces.add(NomType.vol);
+        Type electrique = new Type(NomType.electrique,forces,faiblesses);
+
+        faiblesses = new ArrayList<>();
+        faiblesses.add(NomType.eau);
+        faiblesses.add(NomType.plante);
+        faiblesses.add(NomType.glace);
+        forces = new ArrayList<>();
+        forces.add(NomType.electrique);
+        forces.add(NomType.roche);
+        Type sol = new Type(NomType.sol,forces,faiblesses);
+
+        faiblesses = new ArrayList<>();
+        faiblesses.add(NomType.combat);
+        forces = new ArrayList<>();
+        forces.add(NomType.spectre);
+        Type tenebre = new Type(NomType.ténèbre,forces,faiblesses);
+
+        faiblesses = new ArrayList<>();
+        faiblesses.add(NomType.eau);
+        faiblesses.add(NomType.plante);
+        forces = new ArrayList<>();
+        forces.add(NomType.vol);
+        forces.add(NomType.glace);
+        Type roche = new Type(NomType.roche,forces,faiblesses);
 
         Position position = new Position(128,128);
+        Empoisonné empoisonne = new Empoisonné("Empoisonné","/Status/poison.png");
+        Paralysé paralyse = new Paralysé("Paralysé","/Status/paralysie.png");
+        Inflammé inflamme = new Inflammé("Inflammé","/Status/brulure.png");
 
         /* Création des attaques */
         Mouvement flammèche = new Mouvement(10,"Flammèche",feu,null);
         Mouvement foutLiane = new Mouvement(10,"Fouet-liane",plante,null);
         Mouvement pistolet_a_eau = new Mouvement(10,"Pistolet à eau",eau,null);
-        Mouvement toxic = new Mouvement(0,"Toxic",eau,new Paralysé("paralysé",null));
-        Mouvement[] tabMouvements=new Mouvement[]{foutLiane,toxic};
+        Mouvement toxic = new Mouvement(0,"Toxic",poison,empoisonne);
+        Mouvement dracosouffle = new Mouvement(15,"Dracosouffle",dragon,null);
+        Mouvement eclair = new Mouvement(10,"Eclair",electrique,null);
+        Mouvement ouragan = new Mouvement(10,"Ouragan",vol,null);
+        Mouvement tomberoche = new Mouvement(12,"Tomberoche",roche,null);
+        Mouvement pietisol = new Mouvement(10,"Piétisol",sol,null);
+        Mouvement piqure = new Mouvement(9,"Piqûre",insecte,null);
+        Mouvement charge = new Mouvement(9,"Charge",normal,null);
+        Mouvement sabotage = new Mouvement(11,"Sabotage",tenebre,null);
+        Mouvement ombre_portee = new Mouvement(11,"Ombre-portée",spectre,null);
+        Mouvement avalanche = new Mouvement(10,"Avalanche",glace,null);
+        Mouvement machpunch = new Mouvement(11,"Mach Punch",combat,null);
+        Mouvement vague_psy = new Mouvement(10,"Vague Psy",psy,null);
+        Mouvement trempette = new Mouvement(0,"Trempette",normal,null);
 
+
+
+
+
+
+        Mouvement[] tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
         Pokemon p = new Pokemon("Bulbizarre","/sprite/Sprite_bulbi/bulb_1.png","/sprite/Sprite_bulbi/bulb_combat_dos.png",50,10,30,10,position, plante,tabMouvements,1,0,"Herbizarre", true);
         niveau1.add(p);
 
@@ -82,22 +199,44 @@ public class Stub extends Chargeur{
         tabMouvements=new Mouvement[]{pistolet_a_eau};
         p = new Pokemon("Carapuce","/sprite/Sprite_carap/squi_1.png","/sprite/Sprite_carap/squi_combat_dos.png",50,10,10,15,position, eau,tabMouvements,1,0,"Carabaffe", true);
         niveau1.add(p);
-        p= new Pokemon("Chenipan",null,"/sprite/chenipan.png",10,10,10,10,null,null,null,1,0,"Chrysacier",false);
+        tabMouvements=new Mouvement[]{piqure};
+        p= new Pokemon("Chenipan","/sprite/chenipan.png","/sprite/chenipan.png",10,10,10,10,position,insecte,tabMouvements,1,0,"Chrysacier",false);
         niveau1.add(p);
-        p= new Pokemon("Ratatta",null,"/sprite/ratata.png",10,10,10,10,null,null,null,1,0,"Ratattac",false);
+        tabMouvements=new Mouvement[]{charge};
+        p= new Pokemon("Ratatta",null,"/sprite/ratata.png",10,10,10,10,position,normal,tabMouvements,1,0,"Ratattac",false);
         niveau1.add(p);
-        p = new Pokemon("Herbizarre","/sprite/Sprite_herbi/herb_1.png",null,100,20,20,20,position, plante,null,2,0,"Florizarre", true);
+        tabMouvements=new Mouvement[]{machpunch};
+        p= new Pokemon("Machoc",null,"/sprite/machoc.png",9,11,10,10,position,combat,tabMouvements,1,0,"Machopeur",false);
+        niveau1.add(p);
+        tabMouvements=new Mouvement[]{vague_psy};
+        p= new Pokemon("Abra",null,"/sprite/abra.png",8,14,9,13,position,psy,tabMouvements,1,0,"Ratattac",false);
+        niveau1.add(p);
+        tabMouvements=new Mouvement[]{ombre_portee};
+        p= new Pokemon("Fantominus",null,"/sprite/fantominus.png",9,13,9,12,position,spectre,tabMouvements,1,0,"Ratattac",false);
+        niveau1.add(p);
+        tabMouvements=new Mouvement[]{trempette};
+        p= new Pokemon("Magicarp",null,"/sprite/magicarp.png",8,7,7,4,position,eau,tabMouvements,1,0,"Leviathor",false);
+        niveau1.add(p);
+
+
+        tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
+        p = new Pokemon("Herbizarre","/sprite/Sprite_herbi/herb_1.png","/sprite/Sprite_herbi/herb_combat_dos.png",100,20,20,20,position, plante,null,2,0,"Florizarre", true);
         niveau2.add(p);
-        p = new Pokemon("Reptincel","/sprite/Sprite_rept/rept_1.png",null,100,20,20,20,position, feu,null,2,0,"Dracaufeu", true);
+        p = new Pokemon("Reptincel","/sprite/Sprite_rept/rept_1.png","/sprite/Sprite_rept/rept_combat_dos.png",100,20,20,20,position, feu,null,2,0,"Dracaufeu", true);
         niveau2.add(p);
-        p = new Pokemon("Carabaffe","/sprite/Sprite_carab/war_1.png",null,100,20,20,20,position, eau,null,2,0,"Tortank", true);
+        p = new Pokemon("Carabaffe","/sprite/Sprite_carab/war_1.png","/sprite/Sprite_carab/war_combat_dos.png",100,20,20,20,position, eau,null,2,0,"Tortank", true);
+        niveau2.add(p);
+        p = new Pokemon("Kadabra",null,"/sprite/kadabra.png",100,20,20,20,position, eau,null,2,0,"Tortank", true);
         niveau2.add(p);
 
-        p = new Pokemon("Florizarre","/sprite/Sprite_flo/flo_1.png",null,200,30,30,30,position, plante,null,3,0,null, true);
+
+
+
+        p = new Pokemon("Florizarre","/sprite/Sprite_flo/flo_1.png","/sprite/Sprite_flo/flo_combat_dos.png",200,30,30,30,position, plante,null,3,0,null, true);
         niveau3.add(p);
-        p = new Pokemon("Dracaufeu","/sprite/Sprite_drac/drac_1.png",null,200,30,30,30,position, feu,null,3,0,null, true);
+        p = new Pokemon("Dracaufeu","/sprite/Sprite_drac/drac_1.png","/sprite/Sprite_drac/drac_combat_dos.png",200,30,30,30,position, feu,null,3,0,null, true);
         niveau3.add(p);
-        p = new Pokemon("Tortank","/sprite/Sprite_tort/blas_1.png",null,200,30,30,30,position, eau,tabMouvements,3,0,null, true);
+        p = new Pokemon("Tortank","/sprite/Sprite_tort/blas_1.png","/sprite/Sprite_tort/blas_combat_dos.png",200,30,30,30,position, eau,tabMouvements,3,0,null, true);
         niveau3.add(p);
 
         CollectionPokemon collectionPokemon = new CollectionPokemon(niveau1,niveau2,niveau3);
