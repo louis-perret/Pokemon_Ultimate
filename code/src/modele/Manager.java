@@ -118,6 +118,7 @@ public class Manager implements Serializable {
      * Lance la boucle de jeu utile au déplacement du pokemon du joueur
      */
     public void lancerBoucleJeu(){
+        pokemonCourant.setPosition(new Position(32,32));
         setCompteur(0);
         Observateur observateur = new ObservateurBoucle(this); //On créé l'observateur de la boucle
         BoucleJeu boucleJeu = new BoucleJeu16();

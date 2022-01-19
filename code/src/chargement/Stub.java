@@ -179,39 +179,71 @@ public class Stub extends Chargeur{
         Mouvement charge = new Mouvement(9,"Charge",normal,null);
         Mouvement sabotage = new Mouvement(11,"Sabotage",tenebre,null);
         Mouvement ombre_portee = new Mouvement(11,"Ombre-portée",spectre,null);
-        Mouvement avalanche = new Mouvement(10,"Avalanche",glace,null);
+        Mouvement eclat_glace = new Mouvement(10,"Eclat-glace",glace,null);
         Mouvement machpunch = new Mouvement(11,"Mach Punch",combat,null);
         Mouvement vague_psy = new Mouvement(10,"Vague Psy",psy,null);
         Mouvement trempette = new Mouvement(0,"Trempette",normal,null);
 
 
+        Mouvement lanceFlamme = new Mouvement(20,"Lance-flamme",feu,null);
+        Mouvement feuilleMagik = new Mouvement(20,"FeuilleMagik",plante,null);
+        Mouvement surf = new Mouvement(20,"Surf",eau,null);
+        Mouvement acide = new Mouvement(10,"Acide",poison,empoisonne);
+        Mouvement dracogriffe = new Mouvement(25,"Dracogriffe",dragon,null);
+        Mouvement rayonChargé = new Mouvement(20,"Rayon chargé",electrique,null);
+        Mouvement cru_aile = new Mouvement(20,"Cru_aile",vol,null);
+        Mouvement tomberoche2 = new Mouvement(22,"Tomberoche2",roche,null);
+        Mouvement magnitude = new Mouvement(20,"Magnitude",sol,null);
+        Mouvement survInsecte = new Mouvement(19,"SurvInsecte",insecte,null);
+        Mouvement belier = new Mouvement(20,"Bélier",normal,null);
+        Mouvement tranche_nuit = new Mouvement(21,"Tranche-Nuit",tenebre,null);
+        Mouvement griffOmbre = new Mouvement(21,"Griffe Ombre",spectre,null);
+        Mouvement avalanche = new Mouvement(20,"Avalanche",glace,null);
+        Mouvement pied_saute = new Mouvement(21,"Pied sauté",combat,null);
+        Mouvement choque_psy = new Mouvement(20,"Choque Psy",psy,null);
 
 
+        Mouvement deflagration = new Mouvement(30,"Déflagration",feu,null);
+        Mouvement tempeteVerte = new Mouvement(30,"TempêteVerte",plante,null);
+        Mouvement hydrocanon = new Mouvement(30,"Hydrocanon",eau,null);
+        Mouvement detricanon = new Mouvement(25,"Acide",poison,empoisonne);
+        Mouvement draco_meteore = new Mouvement(25,"Draco-Météore",dragon,null);
+        Mouvement tonnerre = new Mouvement(30,"Tonerre",electrique,null);
+        Mouvement rapace = new Mouvement(30,"Rapace",vol,null);
+        Mouvement lame_de_roc = new Mouvement(30,"Lame de Roc",roche,null);
+        Mouvement seisme = new Mouvement(30,"Séisme",sol,null);
+        Mouvement bourdon = new Mouvement(30,"Bourdon",insecte,null);
+        Mouvement giga_impact = new Mouvement(30,"Giga-Impact",normal,null);
+        Mouvement coup_bas = new Mouvement(30,"Coup Bas",tenebre,null);
+        Mouvement ball_ombre = new Mouvement(30,"Ball'Ombre",spectre,null);
+        Mouvement blizzard = new Mouvement(30,"Blizzard",glace,null);
+        Mouvement close_combat = new Mouvement(30,"Close combat",combat,null);
+        Mouvement psyko = new Mouvement(30,"Psyko",psy,null);
 
 
         Mouvement[] tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
-        Pokemon p = new Pokemon("Bulbizarre","/sprite/Sprite_bulbi/bulb_1.png","/sprite/Sprite_bulbi/bulb_combat_dos.png",50,10,20,10,position, plante,tabMouvements,1,0,"Herbizarre", true);
+        Pokemon p = new Pokemon("Bulbizarre","/sprite/Sprite_bulbi/bulb_1.png","/sprite/Sprite_bulbi/bulb_combat_dos.png",85,20,35,11,position, plante,tabMouvements,1,0,"Herbizarre", true);
         niveau1.add(p);
 
-        tabMouvements=new Mouvement[]{flammèche};
-        p = new Pokemon("Salamèche","/sprite/Sprite_salam/salam_1.png","/sprite/Sprite_salam/salam_combat_dos.png",50,15,10,10,position, feu,tabMouvements,1,0,"Reptincel", true);
+        tabMouvements=new Mouvement[]{flammèche,charge,ombre_portee,trempette};
+        p = new Pokemon("Salamèche","/sprite/Sprite_salam/salam_1.png","/sprite/Sprite_salam/salam_combat_dos.png",60,35,20,15,position, feu,tabMouvements,1,0,"Reptincel", true);
         niveau1.add(p);
-        tabMouvements=new Mouvement[]{pistolet_a_eau};
-        p = new Pokemon("Carapuce","/sprite/Sprite_carap/squi_1.png","/sprite/Sprite_carap/squi_combat_dos.png",50,10,10,15,position, eau,tabMouvements,1,0,"Carabaffe", true);
+        tabMouvements=new Mouvement[]{pistolet_a_eau,charge,sabotage,machpunch};
+        p = new Pokemon("Carapuce","/sprite/Sprite_carap/squi_1.png","/sprite/Sprite_carap/squi_combat_dos.png",70,20,40,10,position, eau,tabMouvements,1,0,"Carabaffe", true);
         niveau1.add(p);
-        tabMouvements=new Mouvement[]{piqure};
+        tabMouvements=new Mouvement[]{piqure,charge,toxic,dracosouffle};
         p= new Pokemon("Chenipan","/sprite/chenipan.png","/sprite/chenipan.png",35,9,9,9,position,insecte,tabMouvements,1,0,"Chrysacier",false);
         niveau1.add(p);
         tabMouvements=new Mouvement[]{charge};
         p= new Pokemon("Ratatta",null,"/sprite/ratata.png",35,10,10,10,position,normal,tabMouvements,1,0,"Ratattac",false);
         niveau1.add(p);
-        tabMouvements=new Mouvement[]{machpunch};
-        p= new Pokemon("Machoc",null,"/sprite/machoc.png",40,11,10,10,position,combat,tabMouvements,1,0,"Machopeur",false);
+        tabMouvements=new Mouvement[]{machpunch,sabotage};
+        p= new Pokemon("Machoc",null,"/sprite/machoc.png",35,11,10,10,position,combat,tabMouvements,1,0,"Machopeur",false);
         niveau1.add(p);
-        tabMouvements=new Mouvement[]{vague_psy};
+        tabMouvements=new Mouvement[]{vague_psy,ombre_portee};
         p= new Pokemon("Abra",null,"/sprite/abra.png",38,15,9,13,position,psy,tabMouvements,1,0,"Ratattac",false);
         niveau1.add(p);
-        tabMouvements=new Mouvement[]{ombre_portee};
+        tabMouvements=new Mouvement[]{ombre_portee,vague_psy,toxic};
         p= new Pokemon("Fantominus",null,"/sprite/fantominus.png",40,13,9,12,position,spectre,tabMouvements,1,0,"Ratattac",false);
         niveau1.add(p);
         tabMouvements=new Mouvement[]{trempette};
@@ -219,47 +251,56 @@ public class Stub extends Chargeur{
         niveau1.add(p);
 
 
-        tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
-        p = new Pokemon("Herbizarre","/sprite/Sprite_herbi/herb_1.png","/sprite/Sprite_herbi/herb_combat_dos.png",100,20,20,20,position, plante,tabMouvements,2,0,"Florizarre", true);
+        tabMouvements=new Mouvement[]{feuilleMagik,acide,belier,tranche_nuit};
+        p = new Pokemon("Herbizarre","/sprite/Sprite_herbi/herb_1.png","/sprite/Sprite_herbi/herb_combat_dos.png",120,30,30,20,position, plante,tabMouvements,2,0,"Florizarre", true);
         niveau2.add(p);
-        tabMouvements=new Mouvement[]{flammèche,ouragan,charge,sabotage};
-        p = new Pokemon("Reptincel","/sprite/Sprite_rept/rept_1.png","/sprite/Sprite_rept/rept_combat_dos.png",100,20,20,20,position, feu,tabMouvements,2,0,"Dracaufeu", true);
+        tabMouvements=new Mouvement[]{lanceFlamme,cru_aile,belier,pietisol};
+        p = new Pokemon("Reptincel","/sprite/Sprite_rept/rept_1.png","/sprite/Sprite_rept/rept_combat_dos.png",100,45,20,25,position, feu,tabMouvements,2,0,"Dracaufeu", true);
         niveau2.add(p);
-        tabMouvements=new Mouvement[]{pistolet_a_eau,machpunch,charge,sabotage};
-        p = new Pokemon("Carabaffe","/sprite/Sprite_carab/war_1.png","/sprite/Sprite_carab/war_combat_dos.png",100,20,20,20,position, eau,tabMouvements,2,0,"Tortank", true);
+        tabMouvements=new Mouvement[]{surf,pied_saute,belier,tomberoche2};
+        p = new Pokemon("Carabaffe","/sprite/Sprite_carab/war_1.png","/sprite/Sprite_carab/war_combat_dos.png",110,30,40,20,position, eau,tabMouvements,2,0,"Tortank", true);
         niveau2.add(p);
-        tabMouvements=new Mouvement[]{vague_psy,ombre_portee,charge,sabotage};
+        tabMouvements=new Mouvement[]{choque_psy};
         p = new Pokemon("Kadabra",null,"/sprite/kadabra.png",68,45,39,43,position, psy,tabMouvements,2,0,"Alakazam", false);
         niveau2.add(p);
-        tabMouvements=new Mouvement[]{vague_psy,ombre_portee,charge,sabotage};
+        tabMouvements=new Mouvement[]{acide,griffOmbre,sabotage};
         p = new Pokemon("Spectrum",null,"/sprite/spectrum.png",70,43,39,42,position, spectre,tabMouvements,2,0,"Ectoplasma", false);
         niveau2.add(p);
-        tabMouvements=new Mouvement[]{vague_psy,ombre_portee,charge,sabotage};
+        tabMouvements=new Mouvement[]{survInsecte};
         p = new Pokemon("Chrysacier",null,"/sprite/chrysacier.png",70,15,80,10,position, insecte,tabMouvements,2,0,"Papillusion", false);
         niveau2.add(p);
-        tabMouvements=new Mouvement[]{vague_psy,ombre_portee,charge,sabotage};
+        tabMouvements=new Mouvement[]{belier,charge};
         p = new Pokemon("Ratatak",null,"/sprite/ratatak.png",65,40,40,40,position, normal,tabMouvements,2,0,null, false);
         niveau2.add(p);
-        tabMouvements=new Mouvement[]{vague_psy,ombre_portee,charge,sabotage};
+        tabMouvements=new Mouvement[]{pied_saute};
         p = new Pokemon("Machopeur",null,"/sprite/machopeur.png",70,41,40,40,position, combat,tabMouvements,2,0,"Mackogneur", false);
         niveau2.add(p);
 
 
 
-        tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
-        p = new Pokemon("Florizarre","/sprite/Sprite_flo/flo_1.png","/sprite/Sprite_flo/flo_combat_dos.png",200,30,30,30,position, plante,null,3,0,null, true);
+        tabMouvements=new Mouvement[]{tempeteVerte,detricanon,giga_impact,seisme};
+        p = new Pokemon("Florizarre","/sprite/Sprite_flo/flo_1.png","/sprite/Sprite_flo/flo_combat_dos.png",230,80,100,80,position, plante,null,3,0,null, true);
         niveau3.add(p);
-        tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
-        p = new Pokemon("Dracaufeu","/sprite/Sprite_drac/drac_1.png","/sprite/Sprite_drac/drac_combat_dos.png",200,30,30,30,position, feu,null,3,0,null, true);
+        tabMouvements=new Mouvement[]{deflagration,rapace,draco_meteore,tonnerre};
+        p = new Pokemon("Dracaufeu","/sprite/Sprite_drac/drac_1.png","/sprite/Sprite_drac/drac_combat_dos.png",200,100,30,95,position, feu,null,3,0,null, true);
         niveau3.add(p);
-        tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
-        p = new Pokemon("Tortank","/sprite/Sprite_tort/blas_1.png","/sprite/Sprite_tort/blas_combat_dos.png",200,30,30,30,position, eau,tabMouvements,3,0,null, true);
+        tabMouvements=new Mouvement[]{hydrocanon,close_combat,blizzard,lame_de_roc};
+        p = new Pokemon("Tortank","/sprite/Sprite_tort/blas_1.png","/sprite/Sprite_tort/blas_combat_dos.png",200,80,130,80,position, eau,tabMouvements,3,0,null, true);
         niveau3.add(p);
-        tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
+        tabMouvements=new Mouvement[]{psyko,ball_ombre};
         p = new Pokemon("Alakazam",null,"/sprite/alakazam.png",100,80,65,80,position, psy,tabMouvements,3,0,null, false);
         niveau3.add(p);
-        tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
+        tabMouvements=new Mouvement[]{ball_ombre,detricanon,psyko,coup_bas};
         p = new Pokemon("Ectoplasma",null,"/sprite/ectoplasama.png",110,80,70,79,position, spectre,tabMouvements,3,0,null, false);
+        niveau3.add(p);
+        tabMouvements=new Mouvement[]{hydrocanon,giga_impact};
+        p = new Pokemon("Leviathor",null,"/sprite/leviathor.png",110,70,80,70,position, eau,tabMouvements,3,0,null, false);
+        niveau3.add(p);
+        tabMouvements=new Mouvement[]{close_combat};
+        p = new Pokemon("Mackogneur",null,"/sprite/mackogneur.png",120,70,80,60,position, combat,tabMouvements,3,0,null, false);
+        niveau3.add(p);
+        tabMouvements=new Mouvement[]{bourdon,rapace};
+        p = new Pokemon("Papillusion",null,"/sprite/papillusion.png",80,70,60,180,position, insecte,tabMouvements,3,0,null, false);
         niveau3.add(p);
 
         CollectionPokemon collectionPokemon = new CollectionPokemon(niveau1,niveau2,niveau3);
