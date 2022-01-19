@@ -3,18 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="Persistance finalisée">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/source/source.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/source/source.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chargement/Chargeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chargement/Chargeur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chargement/ChargeurBinaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chargement/ChargeurBinaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chargement/Sauveur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chargement/Sauveur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chargement/SauveurBinaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chargement/SauveurBinaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/FXML/FenetreCombat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/FenetreCombat.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chargement/Stub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chargement/Stub.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/monde/Tuile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/monde/Tuile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/etat/Empoisonné.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/etat/Empoisonné.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/etat/Inflammé.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/etat/Inflammé.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/etat/Paralysé.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/etat/Paralysé.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/TestPersistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/TestPersistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarteV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarteV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/Collisionneur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/Collisionneur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/CollisionneurV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/CollisionneurV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemonSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemonSimple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/Mouvement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/Mouvement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/Pokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreCombat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

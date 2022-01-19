@@ -10,8 +10,8 @@ import static java.lang.Math.abs;
  */
 public abstract class Collisionneur {
 
-    private int hauteurFenetre; //hauteur de surface de jeu
-    private int largeurFenetre; //largeur de la surface de jeu
+    private int hauteurSurface; //hauteur de surface de jeu
+    private int largeurSurface; //largeur de la surface de jeu
     private int hauteurTuile; //Taille du pas
 
     /**
@@ -23,20 +23,20 @@ public abstract class Collisionneur {
     public abstract boolean isCollision(Position nextPosition, Carte carte);
 
     //getter et setter
-    public int getHauteurFenetre() {
-        return hauteurFenetre;
+    public int getHauteurSurface() {
+        return hauteurSurface;
     }
 
-    public void setHauteurFenetre(int hauteurFenetre) {
-        this.hauteurFenetre = hauteurFenetre;
+    public void setHauteurSurface(int hauteurSurface) {
+        this.hauteurSurface = hauteurSurface;
     }
 
-    public int getLargeurFenetre() {
-        return largeurFenetre;
+    public int getLargeurSurface() {
+        return largeurSurface;
     }
 
-    public void setLargeurFenetre(int largeurFenetre) {
-        this.largeurFenetre = largeurFenetre;
+    public void setLargeurSurface(int largeurSurface) {
+        this.largeurSurface = largeurSurface;
     }
 
     public int getHauteurTuile() {

@@ -1,16 +1,40 @@
 package modele.pokemon;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import modele.pokemon.etat.*;
 
 import java.io.Serializable;
+import java.util.Map;
 
 /**
  * Classe qui identifie un pokemon
  */
 public class Pokemon implements Serializable {
-    private String nom; //son nom
-    private String image; //son image
-    private int pv; //ses points de vies
+
+    private StringProperty nom = new SimpleStringProperty();
+    public String getNom() { return nom.get(); }
+    public void setNom(String nom) { this.nom.set(nom); }
+    public StringProperty nomProperty() { return nom; }
+
+    private String image; //son image de déplacement
+    private StringProperty imageCombat = new SimpleStringProperty(); //son image de combat
+    public String getImageCombat() { return imageCombat.get(); }
+    public void setImageCombat(String image) { imageCombat.set(image); }
+    public StringProperty imageCombatProperty() { return imageCombat; }
+
+    private IntegerProperty pv = new SimpleIntegerProperty();
+    public int getPv(){ return pv.get(); }
+    public void setPv(int pv){
+        if(pv <= 0){
+            this.pv.set(0);
+        }
+        this.pv.set(pv);
+    }
+    public IntegerProperty pvProperty() { return pv; }
+
     private int attaque; //ses points d'attaque
     private int defense; //ses points de défense
     private int vitesse; //ses points de vitesse
@@ -40,10 +64,11 @@ public class Pokemon implements Serializable {
      * @param experience : son expérience
      * @param evolution : le nom de son évolution
      */
-    public Pokemon(String nom, String image, int pv, int attaque, int defense, int vitesse, Position position, Type type, Mouvement[] tabMouvements, int niveau, int experience, String evolution,Boolean isStarter) {
-        this.nom = nom;
+    public Pokemon(String nom, String image,String imageCombat, int pv, int attaque, int defense, int vitesse, Position position, Type type, Mouvement[] tabMouvements, int niveau, int experience, String evolution,Boolean isStarter) {
+        setNom(nom);
         this.image = image;
-        this.pv = pv;
+        setImageCombat(imageCombat);
+        setPv(pv);
         this.attaque = attaque;
         this.defense = defense;
         this.vitesse = vitesse;
@@ -62,7 +87,7 @@ public class Pokemon implements Serializable {
      * @return un Pokemon
      */
     public Pokemon cloner(){
-        return new Pokemon(getNom(),getImage(),getPv(),getAttaque(),getDefense(),getVitesse(),getPosition(),getType(),getMouvements(),getNiveau(),getExperience(),getEvolution(),getStarter());
+        return new Pokemon(getNom(),getImage(),getImageCombat(),getPv(),getAttaque(),getDefense(),getVitesse(),getPosition(),getType(),getMouvements(),getNiveau(),getExperience(),getEvolution(),getStarter());
     }
 
     /**
@@ -75,26 +100,6 @@ public class Pokemon implements Serializable {
     }
 
     /* Getter et Setter */
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public int getPv() {
-        return pv;
-    }
-
-    public void setPv(int pv) {
-        if(pv<=0){ //S'il n'a plus de points de vie
-            this.pv=0;
-        }
-        else{
-            this.pv=pv;
-        }
-    }
 
     public String getImage() {
         return image;

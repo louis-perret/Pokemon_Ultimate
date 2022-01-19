@@ -17,8 +17,8 @@ public class DeplaceurPokemonSimple extends DeplaceurPokemon {
      * Constructeur
      */
     public DeplaceurPokemonSimple() {
-        super.setCollisionneur(new CollisionneurV1());
-        super.setChangeurCarte(new ChangeurCarteV1());
+        super.setCollisionneur(new CollisionneurV1(640,640));
+        super.setChangeurCarte(new ChangeurCarteV1(640,640));
     }
 
     /**

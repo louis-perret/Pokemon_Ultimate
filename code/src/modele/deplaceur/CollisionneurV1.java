@@ -13,9 +13,9 @@ public class CollisionneurV1 extends Collisionneur{
     /**
      * Constructeur
      */
-    public CollisionneurV1(){
-        setHauteurFenetre(640);
-        setLargeurFenetre(640);
+    public CollisionneurV1(int hauteurFenetre, int largeurFenetre){
+        setHauteurSurface(hauteurFenetre/2);
+        setLargeurSurface(largeurFenetre);
         setHauteurTuile(32);
     }
 
@@ -29,14 +29,14 @@ public class CollisionneurV1 extends Collisionneur{
         int nextX = (int)nextPosition.getPositionX();
         int nextY = (int)nextPosition.getPositionY();
         if(nextX < 0 ) { return true; } //Pour pas passer outre la bordure de gauche
-        if(abs(nextY) >= getHauteurFenetre() || nextX>=getLargeurFenetre()) { //Pour pas dépasser les autres bordures
+        if(abs(nextY) >= getHauteurSurface() || nextX>=getLargeurSurface()) { //Pour pas dépasser les autres bordures
             return true;
         }
 
         //Le y sur la fenêtre commence à 0 au milieu de la fenêtre, il fallait gérer cette partie
         int posTuilX = nextX/getHauteurTuile(),posTuilY = nextY;
         if(posTuilY<0){ //Si c'est négatif
-            posTuilY = (abs(getHauteurFenetre() - getHauteurTuile()) + posTuilY)/getHauteurTuile(); //On fait partir le y du début du tableau
+            posTuilY = (abs(getHauteurSurface() - getHauteurTuile()) + posTuilY)/getHauteurTuile(); //On fait partir le y du début du tableau
         }
         else{ //Si c'est positif
             posTuilY=(carte.getHauteur()/2)+(posTuilY/getHauteurTuile()); //on fait partir le y du milieu du tableau

@@ -66,11 +66,11 @@ public class Test {
      * Test le système de vagues
      */
     public static void testVague(){
-        manager.setPokemonCourant(manager.getPokedex().getPokemon("Bulbizarre",1));
+        /*manager.setPokemonCourant(manager.getPokedex().getPokemon("Bulbizarre",1));
         List<Pokemon> listePokemon = manager.lancerVague();
         for(Pokemon p : listePokemon){
             System.out.print(p.getNom() + ", ");
-        }
+        }*/
     }
 
     /**
