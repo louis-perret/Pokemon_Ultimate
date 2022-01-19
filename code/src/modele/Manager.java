@@ -76,6 +76,10 @@ public class Manager implements Serializable {
         deplaceur = new DeplaceurPokemonSimple();
         controleurCombat = new ControleurCombatV1(pokedex);
         monde=new Monde(dicoTuiles);
+        changeur=new SimpleIntegerProperty();
+        compteur=new SimpleIntegerProperty();
+        numeroVague=1;
+        pokedex.initialisationProprietesOnDeserialized();
     }
 
     /**

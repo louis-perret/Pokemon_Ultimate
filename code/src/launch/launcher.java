@@ -1,5 +1,7 @@
 package launch;
 
+import chargement.Chargeur;
+import chargement.ChargeurBinaire;
 import chargement.Stub;
 import modele.*;
 import javafx.application.Application;
@@ -12,7 +14,7 @@ import vues.controller.Navigateur;
 
 public class launcher extends Application {
 
-    private static Manager manager = new Stub().charger();
+    private static Manager manager;
     private static Stage primaryStage;
     private Navigateur navigateur;
 
@@ -46,9 +48,11 @@ public class launcher extends Application {
         setPrimaryStage(stage);
         stage.setTitle("Pokemon Colosseum");
 
+        Chargeur chargeur = new ChargeurBinaire("Ressources/source/source.bin");
+        manager=chargeur.charger();
+
         navigateur = new Navigateur();
         navigateur.lancerFenetreLancement();
-        //navigateur.lancerFenetreCombat();
         primaryStage.show();
 
 
