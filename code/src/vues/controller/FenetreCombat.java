@@ -42,9 +42,13 @@ public class FenetreCombat {
     @FXML
     private Text pvJoueur;
     @FXML
+    private ImageView etatJoueur;
+    @FXML
     private Text nomEnnemi;
     @FXML
     private Text pvEnnemi;
+    @FXML
+    private ImageView etatEnnemi;
 
     @FXML
     private Button attaque1;
@@ -117,23 +121,52 @@ public class FenetreCombat {
     }
 
     public void effectuerAttaque1(ActionEvent actionEvent) {
-       int resultat = manager.tourDeCombat(manager.getPokemonCourant(),manager.getPokemonEnnemiCourant(),manager.getPokemonCourant().getMouvement(attaque1.getText()));
-       if(resultat == 2){
-           navigateur.lancerFenetreLancement();
-       }
-       else{
-           if(resultat == 3){
-               navigateur.lancerFenetreJeu();
-           }
-       }
+        if(attaque1.getText() != null) { //si le pokemon a une première attaque
+            combat(manager.tourDeCombat(manager.getPokemonCourant(), manager.getPokemonEnnemiCourant(), manager.getPokemonCourant().getMouvement(attaque1.getText())));
+        }
     }
 
     public void effectuerAttaque2(ActionEvent actionEvent) {
+        if(attaque2.getText() != null) { //si le pokemon a une deuxième attaque
+            combat(manager.tourDeCombat(manager.getPokemonCourant(), manager.getPokemonEnnemiCourant(), manager.getPokemonCourant().getMouvement(attaque2.getText())));
+        }
     }
 
     public void effectuerAttaque3(ActionEvent actionEvent) {
+        if(attaque3.getText()!=null) { //si le pokemon a une troisième attaque
+            combat(manager.tourDeCombat(manager.getPokemonCourant(), manager.getPokemonEnnemiCourant(), manager.getPokemonCourant().getMouvement(attaque3.getText())));
+        }
     }
 
     public void effectuerAttaque4(ActionEvent actionEvent) {
+        if(attaque4.getText()!=null) { //si le pokemon a une quatrième attaque
+            combat(manager.tourDeCombat(manager.getPokemonCourant(), manager.getPokemonEnnemiCourant(), manager.getPokemonCourant().getMouvement(attaque4.getText())));
+        }
+    }
+
+    public void combat(int resultat){
+        if(resultat == 2){
+            System.out.println("Vous avez perdu !");
+            navigateur.lancerFenetreLancement();
+        }
+        else{
+            if(resultat == 3){
+                System.out.println("Vous avez gagné");
+                navigateur.lancerFenetreJeu();
+            }
+            else{
+                if(resultat == 1){ //si le pokemon ennemi est battu
+                    etatEnnemi.setImage(null); //on actualise l'image de son état (car il en a pas au début)
+                }
+                if(manager.getPokemonCourant().getEtat()!=null){
+                    etatJoueur.setImage(new Image(manager.getPokemonCourant().getEtat().getImage()));
+                }
+                if(manager.getPokemonEnnemiCourant().getEtat()!=null){
+                    etatEnnemi.setImage(new Image(manager.getPokemonEnnemiCourant().getEtat().getImage()));
+                }
+            }
+
+        }
+
     }
 }

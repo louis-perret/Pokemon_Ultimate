@@ -222,7 +222,8 @@ public class Stub extends Chargeur{
 
 
         Mouvement[] tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
-        Pokemon p = new Pokemon("Bulbizarre","/sprite/Sprite_bulbi/bulb_1.png","/sprite/Sprite_bulbi/bulb_combat_dos.png",85,20,35,11,position, plante,tabMouvements,1,0,"Herbizarre", true);
+
+        Pokemon p = new Pokemon("Bulbizarre","/sprite/Sprite_bulbi/bulb_1.png","/sprite/Sprite_bulbi/bulb_combat_dos.png",200,30,20,20,position, plante,tabMouvements,1,0,"Herbizarre", true);
         niveau1.add(p);
 
         tabMouvements=new Mouvement[]{flammèche,charge,ombre_portee,trempette};
@@ -233,6 +234,7 @@ public class Stub extends Chargeur{
         niveau1.add(p);
         tabMouvements=new Mouvement[]{piqure,charge,toxic,dracosouffle};
         p= new Pokemon("Chenipan","/sprite/chenipan.png","/sprite/chenipan.png",35,9,9,9,position,insecte,tabMouvements,1,0,"Chrysacier",false);
+
         niveau1.add(p);
         tabMouvements=new Mouvement[]{charge};
         p= new Pokemon("Ratatta",null,"/sprite/ratata.png",35,10,10,10,position,normal,tabMouvements,1,0,"Ratattac",false);

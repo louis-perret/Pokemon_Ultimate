@@ -20,10 +20,18 @@
             <Button fx:id="attaque2" textFill="green" onAction="#effectuerAttaque2"/>
             <Button fx:id="attaque3" textFill="green" onAction="#effectuerAttaque3"/>
             <Button fx:id="attaque4" textFill="green" onAction="#effectuerAttaque4"/>
-            <Text fx:id="nomJoueur"/>
-            <Text fx:id="pvJoueur"/>
-            <Text fx:id="nomEnnemi"/>
-            <Text fx:id="pvEnnemi"/>
+            <VBox>
+                <HBox>
+                    <Text fx:id="nomJoueur"/>
+                    <Text fx:id="pvJoueur"/>
+                    <ImageView fx:id="etatJoueur"/>
+                </HBox>
+                <HBox>
+                    <Text fx:id="nomEnnemi"/>
+                    <Text fx:id="pvEnnemi"/>
+                    <ImageView fx:id="etatEnnemi"/>
+                </HBox>
+            </VBox>
         </HBox>
     </bottom>
 
