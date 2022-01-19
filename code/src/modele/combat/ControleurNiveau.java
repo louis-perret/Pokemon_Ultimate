@@ -28,14 +28,14 @@ public class ControleurNiveau {
         int niveauEnnemi=ennemi.getNiveau();
 
         if(niveauEnnemi==1){
-            xpGagne=15;
+            xpGagne=30;
         }
         else{
             if(niveauEnnemi==2){
-                xpGagne=20;
+                xpGagne=40;
             }
             else{
-                xpGagne=25;
+                xpGagne=50;
             }
         }
 
@@ -57,17 +57,18 @@ public class ControleurNiveau {
      * @param experienceRestante : son expérience restante à rajouter après
      */
     public void evoluer(Pokemon p,int experienceRestante){
-        Pokemon pEVolue=collectionPokemon.getPokemon(p.getEvolution(),p.getNiveau()+1); //Récupère l'évolution du pokemon
+        Pokemon pEvolue=collectionPokemon.getPokemon(p.getEvolution(),p.getNiveau()+1); //Récupère l'évolution du pokemon
         //Modifie chacun de ses attributs par ceux de son évolution
-        p.setNom(pEVolue.getNom());
-        p.setNiveau(pEVolue.getNiveau());
-        p.setPv(pEVolue.getPv());
-        p.setEvolution(pEVolue.getEvolution());
-        p.setAttaque(pEVolue.getAttaque());
-        p.setDefense(pEVolue.getDefense());
-        p.setVitesse(pEVolue.getVitesse());
-        p.setImage(pEVolue.getImage());
-        p.setMouvements(pEVolue.getMouvements());
+        p.setNom(pEvolue.getNom());
+        p.setNiveau(pEvolue.getNiveau());
+        p.setPv(pEvolue.getPv());
+        p.setEvolution(pEvolue.getEvolution());
+        p.setAttaque(pEvolue.getAttaque());
+        p.setDefense(pEvolue.getDefense());
+        p.setVitesse(pEvolue.getVitesse());
+        p.setImage(pEvolue.getImage());
+        p.setImageCombat(pEvolue.getImageCombat());
+        p.setMouvements(pEvolue.getMouvements());
         p.setExperience(experienceRestante);
     }
 }

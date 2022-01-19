@@ -20,6 +20,9 @@ public class Navigateur {
 
     private Manager manager = launch.launcher.getManager(); //manager du jeu
     private Stage primaryStage = launch.launcher.getPrimaryStage(); //la fenêtre
+    private Scene sceneJeu;
+    private Scene sceneCombat;
+
 
     /**
      * Lance la première fenêtre du jeu
@@ -56,13 +59,15 @@ public class Navigateur {
     public void lancerFenetreJeu() {
         try {
             manager.setCarteCourante("lobby");
-            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/Fenetre.fxml")));
-            Scene scene = new Scene(parent);
-            primaryStage.setScene(scene);
-            primaryStage.getScene().addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
-                manager.deplacerPokemon(keyEvent.getCode().getChar());
+            if(sceneJeu == null) {
+                Parent parent = FXMLLoader.load((getClass().getResource("/FXML/Fenetre.fxml")));
+                sceneJeu = new Scene(parent);
+                sceneJeu.addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
+                    manager.deplacerPokemon(keyEvent.getCode().getChar());
 
-            });
+                });
+            }
+            primaryStage.setScene(sceneJeu);
             primaryStage.setMinHeight(512);
             primaryStage.setMinWidth(320);
             primaryStage.setMaxHeight(512);
@@ -79,10 +84,12 @@ public class Navigateur {
     public void lancerFenetreCombat() {
         try {
             manager.terminerBoucleJeu();
-            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreCombat.fxml")));
-            Scene scene = new Scene(parent);
-            scene.getStylesheets().add(getClass().getResource("/FXML/Combat.css").toExternalForm());;
-            primaryStage.setScene(scene);
+            if(sceneCombat == null) {
+                Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreCombat.fxml")));
+                sceneCombat = new Scene(parent);
+                sceneCombat.getStylesheets().add(getClass().getResource("/FXML/Combat.css").toExternalForm());
+            }
+            primaryStage.setScene(sceneCombat);
             primaryStage.setMinHeight(450);
             primaryStage.setMinWidth(800);
             primaryStage.setMaxHeight(450);

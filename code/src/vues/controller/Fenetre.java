@@ -50,7 +50,6 @@ public class Fenetre {
         //On parcours chaque tuile pour l'ajouter à racine
         for(int j=0;carte.getHauteur()>j;j++){
             for(int i=0;i<carte.getLargeur();i++) {
-                System.out.println(carte.getTuile(i,j));
                 racine.getChildren().addAll(afficheurTuile.affiche(carte.getTuile(i,j),new Position(i* Tuile.tuileLargeur,
                         j*Tuile.tuileHauteur)));
             }

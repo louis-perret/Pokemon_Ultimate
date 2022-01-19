@@ -30,7 +30,7 @@ public class Manager implements Serializable {
 
     private transient Pokemon pokemonCourant; //le pokemon choisie par l'utilisateur
     private transient Pokemon pokemonEnnemiCourant; //pokemon qu'affronte le joueur
-    private transient int numeroVague = 0; //numéro de la vague
+    private transient int numeroVague = 1; //numéro de la vague
     private transient List<Pokemon> listePokemonByVague; //liste des pokemon ennemi de la vague
 
     private transient Carte carteCourante; //la carte actuellement affichée
@@ -94,12 +94,13 @@ public class Manager implements Serializable {
             }
             else{ //sinon la vague est finie
                 pokemonCourant.setPv(pokedex.getPokemon(pokemonCourant.getNom(),pokemonCourant.getNiveau()).getPv()); //on le soigne
-                //setCarteCourante("lobby"); //puis on ramène le pokemon au lobby
+                numeroVague++;
                 return 3;
             }
         }
         else{
             if(resultat == 2){
+                numeroVague=1;
                 return 2; //le pokemon du joueur est ko
             }
         }
@@ -118,7 +119,8 @@ public class Manager implements Serializable {
      * Lance la boucle de jeu utile au déplacement du pokemon du joueur
      */
     public void lancerBoucleJeu(){
-        setCompteur(0);
+        pokemonCourant.setPosition(new Position(carteCourante.getSpawnX(),carteCourante.getSpawnY())); //on set la position du pokemon au point de spawn de la map
+        setCompteur(0); //on remet le compteur à 0
         Observateur observateur = new ObservateurBoucle(this); //On créé l'observateur de la boucle
         BoucleJeu boucleJeu = new BoucleJeu16();
         boucleJeu.addObservateur(observateur);
@@ -131,6 +133,11 @@ public class Manager implements Serializable {
      */
     public void terminerBoucleJeu(){
         thread.interrupt();
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            System.out.println("Problème dans l'arrêt de la boucle de jeu");
+        }
     }
 
     /**
@@ -141,7 +148,7 @@ public class Manager implements Serializable {
         if(numeroVague>=3){ //Le joueur a gagné toutes les vagues
             return true;//Pour prévenir qu'il n'y a plus de pokemon à combattre
         }
-        numeroVague++;
+        System.out.println("numéro de vague : " + numeroVague);
         listePokemonByVague=pokedex.getListePokemon(numeroVague,3, pokemonCourant);  //Sinon on renvoie les pokemon de la vague d'après
         pokemonEnnemiCourant=listePokemonByVague.get(0);
         return false;
@@ -176,9 +183,6 @@ public class Manager implements Serializable {
         pokemonEnnemiCourant.setAttaque((pokemon.getAttaque()));
         pokemonEnnemiCourant.setDefense(pokemon.getDefense());
         pokemonEnnemiCourant.setType(pokemon.getType());
-
-
-
     }
 
     public Carte getCarteCourante() {

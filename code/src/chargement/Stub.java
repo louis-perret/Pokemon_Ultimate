@@ -190,7 +190,7 @@ public class Stub extends Chargeur{
 
 
         Mouvement[] tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
-        Pokemon p = new Pokemon("Bulbizarre","/sprite/Sprite_bulbi/bulb_1.png","/sprite/Sprite_bulbi/bulb_combat_dos.png",50,10,20,10,position, plante,tabMouvements,1,0,"Herbizarre", true);
+        Pokemon p = new Pokemon("Bulbizarre","/sprite/Sprite_bulbi/bulb_1.png","/sprite/Sprite_bulbi/bulb_combat_dos.png",200,30,20,20,position, plante,tabMouvements,1,0,"Herbizarre", true);
         niveau1.add(p);
 
         tabMouvements=new Mouvement[]{flammèche};
@@ -200,13 +200,13 @@ public class Stub extends Chargeur{
         p = new Pokemon("Carapuce","/sprite/Sprite_carap/squi_1.png","/sprite/Sprite_carap/squi_combat_dos.png",50,10,10,15,position, eau,tabMouvements,1,0,"Carabaffe", true);
         niveau1.add(p);
         tabMouvements=new Mouvement[]{piqure};
-        p= new Pokemon("Chenipan","/sprite/chenipan.png","/sprite/chenipan.png",35,9,9,9,position,insecte,tabMouvements,1,0,"Chrysacier",false);
+        p= new Pokemon("Chenipan","/sprite/chenipan.png","/sprite/chenipan.png",35,5,9,9,position,insecte,tabMouvements,1,0,"Chrysacier",false);
         niveau1.add(p);
         tabMouvements=new Mouvement[]{charge};
         p= new Pokemon("Ratatta",null,"/sprite/ratata.png",35,10,10,10,position,normal,tabMouvements,1,0,"Ratattac",false);
         niveau1.add(p);
         tabMouvements=new Mouvement[]{machpunch};
-        p= new Pokemon("Machoc",null,"/sprite/machoc.png",40,11,10,10,position,combat,tabMouvements,1,0,"Machopeur",false);
+        p= new Pokemon("Machoc",null,"/sprite/machoc.png",40,8,10,10,position,combat,tabMouvements,1,0,"Machopeur",false);
         niveau1.add(p);
         tabMouvements=new Mouvement[]{vague_psy};
         p= new Pokemon("Abra",null,"/sprite/abra.png",38,15,9,13,position,psy,tabMouvements,1,0,"Ratattac",false);
