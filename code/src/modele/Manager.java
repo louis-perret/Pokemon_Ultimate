@@ -21,19 +21,38 @@ import java.util.Map;
 public class Manager {
 
     private Attaqueur attaqueur;
-    private DeplaceurPokemon deplaceur;
+    private DeplaceurPokemon deplaceur = new DeplaceurPokemonSimple();
     private ControleurCombat controleurCombat;
     private Pokemon pokemonCourant;
     private Carte carteCourante;
     private int numeroVague = 0;
     private Monde monde;
     private CollectionPokemon pokedex;
+    private Thread thread;
 
     //Propriété compteur
     private IntegerProperty compteur = new SimpleIntegerProperty(); //On déclare la propriété
     public int getCompteur() { return compteur.get();} //getter
     public void setCompteur(int nombre) { compteur.set(nombre);} //setter
     public IntegerProperty compteurProperty() { return compteur;} //Renvoie la propriété
+
+    private IntegerProperty pv = new SimpleIntegerProperty();
+
+    public IntegerProperty pvProperty() {
+        //pv = pokemonCourant.getPv();
+        return pv;
+    }
+
+
+    private IntegerProperty changeur = new SimpleIntegerProperty(); //On déclare la propriété
+
+    public int getChangeur() {return changeur.get();}
+    public void setChangeur(int nombre) {this.changeur.set(nombre);}
+    public IntegerProperty changeurProperty() { return changeur;}
+
+
+
+
 
 
     /**
@@ -47,7 +66,6 @@ public class Manager {
         this.controleurCombat = new ControleurCombatV1(collectionPokemon);
         this.monde=new Monde(dicoTuiles);
     }
-
 
     /**
      * Gère l'attaque d'un pokemon vers un autre
@@ -64,7 +82,7 @@ public class Manager {
      * @param keyChar : Touche appuyée par l'utilisateur
      */
     public void deplacerPokemon(String keyChar){
-        deplaceur.deplacer(pokemonCourant,keyChar,carteCourante);
+        deplaceur.deplacer(pokemonCourant,keyChar,carteCourante, this);
     }
 
     /**
@@ -75,8 +93,12 @@ public class Manager {
         Observateur observateur = new ObservateurBoucle(this); //On créé l'observateur de la boucle
         BoucleJeu boucleJeu = new BoucleJeu16();
         boucleJeu.addObservateur(observateur);
-        Thread thread = new Thread(boucleJeu);
+        thread = new Thread(boucleJeu);
         thread.start(); //On lance le thread qui contient la boucle
+    }
+
+    public void terminerBoucleJeu(){
+        thread.interrupt();
     }
 
     /**

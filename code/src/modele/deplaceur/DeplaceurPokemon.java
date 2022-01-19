@@ -1,5 +1,8 @@
 package modele.deplaceur;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import modele.Manager;
 import modele.pokemon.Pokemon;
 import modele.monde.Carte;
 
@@ -7,6 +10,16 @@ import modele.monde.Carte;
 public abstract class DeplaceurPokemon {
 
     private Collisionneur collisionneur;
+
+    private ChangeurCarte changeurCarte;
+
+    public ChangeurCarte getChangeurCarte() {return changeurCarte;}
+
+    public void setChangeurCarte(ChangeurCarte changeurCarte) {this.changeurCarte = changeurCarte;}
+
+    private IntegerProperty changeur;
+
+
 
     //Getter et Setter
     public Collisionneur getCollisionneur() {
@@ -23,7 +36,7 @@ public abstract class DeplaceurPokemon {
      * @param keyChar : touche appuyée
      * @param carte : Carte pour vérifier la collision
      */
-    public void deplacer(Pokemon p, String keyChar, Carte carte){
+    public void deplacer(Pokemon p, String keyChar, Carte carte, Manager manager){
 
     }
 

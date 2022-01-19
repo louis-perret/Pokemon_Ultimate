@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/FXML/Combat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/FXML/FenetreCombat.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vues/controller/FenetreCombat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="Déplacement fonctionnel avec le navigateur + début gestion des combats">
+      <change afterPath="$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarte.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarteV1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/cartes/Arène.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/cartes/Arène.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/launch/launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/afficheur/AfficheurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/afficheur/AfficheurPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreLancement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreLancement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/chargement/Stub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/chargement/Stub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemonSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemonSimple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/monde/Tuile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/monde/Tuile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vues/controller/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/Fenetre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreCombat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wissocq_perret.iml" beforeDir="false" afterPath="$PROJECT_DIR$/wissocq_perret.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>

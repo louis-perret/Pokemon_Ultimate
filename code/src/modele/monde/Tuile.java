@@ -12,11 +12,21 @@ public class Tuile {
     private int id;
     private String image;
     private Boolean isTraversable;
+    private int evenement;
 
-    public Tuile(int id, String image, Boolean isTraversable){
+    public int getEvenement() {
+        return evenement;
+    }
+
+    public void setEvenement(int evenement) {
+        this.evenement = evenement;
+    }
+
+    public Tuile(int id, String image, Boolean isTraversable, int evenement){
         this.id = id;
         this.image = image;
         this.isTraversable = isTraversable;
+        this.evenement = evenement;
     }
 
     //Getter et setter

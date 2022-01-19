@@ -1,5 +1,7 @@
 package vues.controller;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
@@ -45,23 +47,19 @@ public class FenetreCombat {
     private Image joueurimg = new Image(getClass().getResource("/sprite/Sprite_bulbi/bulb_combat_dos.png").toExternalForm());
     private Image ennemiimg = new Image(getClass().getResource("/sprite/abra.png").toExternalForm());
     private Manager manager = launcher.getManager();
-
-
-
+    private IntegerProperty pvProperty = new SimpleIntegerProperty();
 
     Navigateur navigateur = new Navigateur();
 
-
-
     public void lancementCombat(ActionEvent actionEvent) {
         navigateur.lancerFenetreCombat();
-
     }
 
     public void initialize(){
+
         Pokemon pokemonCourant = manager.getPokemonCourant();
 
-
+        //pvProperty.bind(manager.pvProperty());
         panecombat.setBackground(new Background(new BackgroundImage(fondimg, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT)));
         joueur.setX(100);
         joueur.setY(220);
@@ -69,12 +67,7 @@ public class FenetreCombat {
         ennemi.setX(500);
         ennemi.setY(100);
         ennemi.setImage(ennemiimg);
-
-
-
-
-
-
+        //panecombat.setAccessibleText(pvProperty);
 
     }
 }

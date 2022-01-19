@@ -1,5 +1,6 @@
 package vues.controller;
 
+import com.sun.javafx.property.adapter.PropertyDescriptor;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.fxml.FXML;
@@ -15,6 +16,10 @@ import vues.afficheur.AfficheurPokemon;
 import vues.afficheur.AfficheurTuile;
 import modele.monde.Carte;
 
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import java.net.http.WebSocket;
+
 public class Fenetre {
 
     @FXML
@@ -29,6 +34,11 @@ public class Fenetre {
     private Afficheur afficheurPokemon = new AfficheurPokemon();
     private Afficheur afficheurTuile = new AfficheurTuile();
     private IntegerProperty compteur = new SimpleIntegerProperty();
+    private IntegerProperty changeur = new SimpleIntegerProperty();
+    Navigateur navigateur = new Navigateur();
+
+
+
 
     /**
      * Affiche la carte
@@ -40,6 +50,7 @@ public class Fenetre {
         //On parcours chaque tuile pour l'ajouter à racine
         for(int j=0;carte.getHauteur()>j;j++){
             for(int i=0;i<carte.getLargeur();i++) {
+                System.out.println(carte.getTuile(i,j));
                 racine.getChildren().addAll(afficheurTuile.affiche(carte.getTuile(i,j),new Position(i* Tuile.tuileLargeur,
                         j*Tuile.tuileHauteur)));
             }
@@ -55,14 +66,26 @@ public class Fenetre {
      */
     public void initialize(){
         affichageCarte();
+        changeur.bind(manager.changeurProperty());
         compteur.bind(manager.compteurProperty()); //binding unidirectionnel
         //On lui affecte un ChangeListener pour effectuer une action quand la propriété change
-        compteur.addListener((observableValue, number, t1) -> {
+        compteur.addListener((observableValue, number, newValue) -> {
             a = afficheurPokemon.affiche(manager.getPokemonCourant(),manager.getPokemonCourant().getPosition());
             imageView.setImage(a.getImage());
             imageView.setTranslateX(a.getX());
             imageView.setTranslateY(a.getY());
+
         }
         );
+        changeur.addListener((observableValue2, number2, newValue2) -> {
+            if(newValue2.intValue() == 3){
+                navigateur.lancerFenetreCombat();
+            }
+            else{
+                affichageCarte();
+            }
+
+
+        });
     }
 }

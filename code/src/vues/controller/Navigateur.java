@@ -24,6 +24,7 @@ public class Navigateur {
             Scene scene = new Scene(parent);
             scene.getStylesheets().add(getClass().getResource("/FXML/Lancement.css").toExternalForm());
             primaryStage.setScene(scene);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -45,11 +46,12 @@ public class Navigateur {
             Parent parent = FXMLLoader.load((getClass().getResource("/FXML/Fenetre.fxml")));
             Scene scene = new Scene(parent);
             primaryStage.setScene(scene);
+            manager.setCarteCourante("lobby");
             primaryStage.getScene().addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
                 manager.deplacerPokemon(keyEvent.getCode().getChar());
 
             });
-            manager.setCarteCourante("lobby");
+
             manager.lancerBoucleJeu();
         } catch (IOException e) {
             e.printStackTrace();
@@ -61,7 +63,10 @@ public class Navigateur {
             Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreCombat.fxml")));
             Scene scene = new Scene(parent);
             scene.getStylesheets().add(getClass().getResource("/FXML/Combat.css").toExternalForm());
+            System.out.println(primaryStage.getScene());
             primaryStage.setScene(scene);
+            System.out.println(primaryStage.getScene());
+
         } catch (IOException e) {
             e.printStackTrace();
         }

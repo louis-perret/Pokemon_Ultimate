@@ -84,12 +84,14 @@ public class Stub implements Chargeur{
 
         CollectionPokemon collectionPokemon = new CollectionPokemon(niveau1,niveau2,niveau3);
 
-        Tuile tuileHerbe = new Tuile(0, "tuiles/herbe.png",true);
-        Tuile tuilePbg = new Tuile(1,"tuiles/portail_bas_gauche.png",false);
-        Tuile tuilePbd = new Tuile(2,"tuiles/portail_bas_droite.png",false);
-        Tuile tuilePhg = new Tuile(3,"tuiles/portail_haut_gauche.png",false);
-        Tuile tuilePhd = new Tuile(4,"tuiles/portail_haut_droite.png",false);
-        Tuile tuileBrique = new Tuile(5,"tuiles/brique.png",true);
+        Tuile tuileHerbe = new Tuile(0, "tuiles/herbe.png",true,0);
+        Tuile tuilePbg = new Tuile(1,"tuiles/portail_bas_gauche.png",true,2);
+        Tuile tuilePbd = new Tuile(2,"tuiles/portail_bas_droite.png",true,2);
+        Tuile tuilePhg = new Tuile(3,"tuiles/portail_haut_gauche.png",false, 0);
+        Tuile tuilePhd = new Tuile(4,"tuiles/portail_haut_droite.png",false, 0);
+        Tuile tuileBrique = new Tuile(5,"tuiles/brique.png",true,3);
+        Tuile tuileSortie = new Tuile(6,"tuiles/sortie.png",true,1);
+
 
         Map<Integer,Tuile> dicoTuiles=new HashMap<>();
         dicoTuiles.put(tuileHerbe.getId(),tuileHerbe);
@@ -98,6 +100,7 @@ public class Stub implements Chargeur{
         dicoTuiles.put(tuilePhg.getId(),tuilePhg);
         dicoTuiles.put(tuilePhd.getId(),tuilePhd);
         dicoTuiles.put(tuileBrique.getId(),tuileBrique);
+        dicoTuiles.put(tuileSortie.getId(),tuileSortie);
         return new Manager(collectionPokemon,dicoTuiles);
     }
 }

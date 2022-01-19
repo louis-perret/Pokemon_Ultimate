@@ -1,5 +1,8 @@
 package modele.deplaceur;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import modele.Manager;
 import modele.pokemon.Pokemon;
 import modele.pokemon.Position;
 import modele.monde.Carte;
@@ -7,9 +10,12 @@ import modele.monde.Carte;
 //Permet de déplacer un pokemon
 public class DeplaceurPokemonSimple extends DeplaceurPokemon {
 
+
+
     //Constructeur
     public DeplaceurPokemonSimple() {
         super.setCollisionneur(new CollisionneurV1());
+        super.setChangeurCarte(new ChangeurCarteV1());
     }
 
     /**
@@ -19,7 +25,7 @@ public class DeplaceurPokemonSimple extends DeplaceurPokemon {
      * @param carte : Carte pour vérifier la collision
      */
     @Override
-    public void deplacer(Pokemon p, String keyChar, Carte carte){
+    public void deplacer(Pokemon p, String keyChar, Carte carte, Manager manager){
         switch (keyChar){
             case "Z" :
                 deplacerEnHaut(p,carte);
@@ -35,6 +41,24 @@ public class DeplaceurPokemonSimple extends DeplaceurPokemon {
                 break;
         }
         //Mettre isChangement ici
+        if(getChangeurCarte().isChangement(p.getPosition(), carte) == 1) {
+            manager.setCarteCourante("lobby");
+            System.out.println(manager.getCarteCourante().toString());
+            manager.setChangeur(1);
+
+        }
+        if(getChangeurCarte().isChangement(p.getPosition(), carte) == 2) {
+            manager.setCarteCourante("arene");
+            System.out.println(manager.getCarteCourante().toString());
+            manager.setChangeur(2);
+
+        }
+        if(getChangeurCarte().isChangement(p.getPosition(), carte) == 3) {
+            manager.terminerBoucleJeu();
+            manager.setChangeur(3);
+
+            //scene combat
+        }
     }
 
     /* Déplacer dans les 4 directions */
@@ -52,6 +76,7 @@ public class DeplaceurPokemonSimple extends DeplaceurPokemon {
             //On update les coordonnées du pokemon
             p.getPosition().setPositionX(position.getPositionX());
             p.getPosition().setPositionY(position.getPositionY());
+
         }
     }
 
