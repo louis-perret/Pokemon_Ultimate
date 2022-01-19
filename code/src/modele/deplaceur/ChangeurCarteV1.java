@@ -13,8 +13,8 @@ public class ChangeurCarteV1 implements ChangeurCarte {
     private int hauteurTuile; //Taille du pas
 
     public ChangeurCarteV1() {
-        setHauteurFenetre(640);
-        setLargeurFenetre(640);
+        setHauteurFenetre(256);
+        setLargeurFenetre(320);
         setHauteurTuile(32);
     }
 

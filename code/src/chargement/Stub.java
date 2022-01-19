@@ -64,7 +64,7 @@ public class Stub extends Chargeur{
         forces.add(NomType.plante);
         Type poison = new Type(NomType.eau,forces,faiblesses);
 
-        Position position = new Position(0,0);
+        Position position = new Position(128,128);
 
         /* Création des attaques */
         Mouvement flammèche = new Mouvement(10,"Flammèche",feu,null);

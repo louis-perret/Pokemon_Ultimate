@@ -14,8 +14,8 @@ public class CollisionneurV1 extends Collisionneur{
      * Constructeur
      */
     public CollisionneurV1(){
-        setHauteurFenetre(640);
-        setLargeurFenetre(640);
+        setHauteurFenetre(256);
+        setLargeurFenetre(320);
         setHauteurTuile(32);
     }
 

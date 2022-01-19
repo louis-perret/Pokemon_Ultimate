@@ -11,7 +11,7 @@
 
         <top>
             <VBox fx:id="vbox" alignment="CENTER" minHeight="100">
-                <Text fx:id="t1" fill="RED" smooth="false" stroke="#ffffff00" strokeWidth="0.0" text="Pokemon Ultimate">
+                <Text fx:id="t1" smooth="false" stroke="#ffffff00" strokeWidth="0.0" styleClass="text-titre" text="Pokemon Ultimate">
                     <font>
                        <Font name="DejaVu Serif Bold" size="40.0" />
                     </font>

@@ -16,7 +16,7 @@
    <top>
       <GridPane hgap="20.0" prefHeight="56.0" prefWidth="572.0">
               <VBox fx:id="vbox" alignment="CENTER" minHeight="100">
-                  <Text fx:id="t1" fill="BLACK" smooth="false" stroke="#ffffff00" strokeWidth="0.0" text="Choix du starter!" textAlignment="CENTER">
+                  <Text fx:id="t1" smooth="false" stroke="#ffffff00" strokeWidth="0.0" styleClass="text-titre" text="Choix du starter!" textAlignment="CENTER">
                       <font>
                           <Font name="DejaVu Serif Bold" size="23.0" />
                       </font>
@@ -39,37 +39,22 @@
        <HBox fx:id="hbox" alignment="CENTER" spacing="20">
            <VBox alignment="CENTER">
                 <ImageView fx:id="Image" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER"/>
-               <Text text="Bulbizarre" fill="green">
-                   <font>
-                       <Font name="DejaVu Serif Bold" size="15.0"></Font>
-                   </font>
-               </Text>
-                <Button fx:id="boutonbulb" text="Choisir" textFill="green" onAction="#choixPokemon"></Button>
+                <Button fx:id="boutonbulb" text="Bulbizarre" styleClass="bouton-bulbi" onAction="#choixPokemon"></Button>
            </VBox>
            <VBox alignment="CENTER">
                <ImageView fx:id="Image2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER"/>
 
-               <Text text="Salamèche" fill="red">
-                   <font>
-                       <Font name="DejaVu Serif Bold" size="15.0"></Font>
-                   </font>
-               </Text>
-               <Button fx:id="boutonsalam" text="Choisir" textFill="red" onAction="#choixPokemon"></Button>
+               <Button fx:id="boutonsalam" text="Salamèche" styleClass="bouton-salam" onAction="#choixPokemon"></Button>
            </VBox>
            <VBox alignment="CENTER">
                <ImageView fx:id="Image3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER"/>
-               <Text text="Carapuce" fill="blue">
-                   <font>
-                       <Font name="DejaVu Serif Bold" size="15.0"></Font>
-                   </font>
-               </Text>
-               <Button fx:id="boutoncarap" text="Choisir" textFill="blue" onAction="#choixPokemon"></Button>
+               <Button fx:id="boutoncarap" text="Carapuce" styleClass="bouton-carap" onAction="#choixPokemon"></Button>
            </VBox>
        </HBox>
    </center>
     <VBox>
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Victoires : "/>
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="20"/>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="victoire" text="Victoires : "/>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="victoire" text="20"/>
     </VBox>
 
 </BorderPane>
