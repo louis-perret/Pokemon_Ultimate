@@ -81,22 +81,18 @@ public class FenetreCombat {
         for(Mouvement m : manager.getPokemonCourant().getMouvements()) {
             if(i==1) {
                 attaque1.textProperty().bind(m.nomProperty());
-                System.out.println("oui1");
 
             }
             if(i==2) {
                 attaque2.textProperty().bind(m.nomProperty());
-                System.out.println("oui2");
 
             }
             if(i==3) {
                 attaque3.textProperty().bind(m.nomProperty());
-                System.out.println("oui3");
 
             }
             if(i==4) {
                 attaque4.textProperty().bind(m.nomProperty());
-                System.out.println("oui4");
 
             }
             i++;
@@ -135,12 +131,11 @@ public class FenetreCombat {
         });
 
 
-            //Dans le cas où l'image d'un des deux pokemon changent, il faut la recharger dans le ImageView
+        //Dans le cas où l'image d'un des deux pokemon changent, il faut la recharger dans le ImageView
         joueurimg.addListener((observableValue, s, t1) -> {
             setBoutonsAttaques();
-            System.out.println(manager.getPokemonCourant());
             joueur.setImage(new Image(joueurimg.get()));
-                }
+        }
         );
         ennemiimg.addListener((observableValue, s, t1) -> {
             ennemi.setImage(new Image(ennemiimg.get()));
@@ -154,7 +149,6 @@ public class FenetreCombat {
      */
 
     public void effectuerAttaque1(ActionEvent actionEvent) {
-        System.out.println(attaque1.getText());
         if(attaque1.getText() != null) { //si le pokemon a une première attaque
             combat(manager.tourDeCombat(manager.getPokemonCourant(), manager.getPokemonEnnemiCourant(), manager.getPokemonCourant().getMouvement(attaque1.getText())));
         }
@@ -201,27 +195,28 @@ public class FenetreCombat {
 
     public void combat(int resultat){
         if(resultat == 2){
-            System.out.println("Vous avez perdu !");
-            navigateur.lancerFenetreLancement();
+            navigateur.lancerFenetreDefaite();
         }
         else{
             if(resultat == 3){
-                System.out.println("Vous avez gagné");
                 navigateur.lancerFenetreJeu();
             }
             else{
-                if(resultat == 1){ //si le pokemon ennemi est battu
-                    etatEnnemi.setImage(null); //on actualise l'image de son état (car il en a pas au début)
+                if (resultat == 4){
+                    navigateur.lancerFenetreVictoire();
                 }
-                if(manager.getPokemonCourant().getEtat()!=null){
-                    etatJoueur.setImage(new Image(manager.getPokemonCourant().getEtat().getImage()));
-                }
-                if(manager.getPokemonEnnemiCourant().getEtat()!=null){
-                    etatEnnemi.setImage(new Image(manager.getPokemonEnnemiCourant().getEtat().getImage()));
+                else{
+                    if(resultat == 1){ //si le pokemon ennemi est battu
+                        etatEnnemi.setImage(null); //on actualise l'image de son état (car il en a pas au début)
+                    }
+                    if(manager.getPokemonCourant().getEtat()!=null){
+                        etatJoueur.setImage(new Image(manager.getPokemonCourant().getEtat().getImage()));
+                    }
+                    if(manager.getPokemonEnnemiCourant().getEtat()!=null){
+                        etatEnnemi.setImage(new Image(manager.getPokemonEnnemiCourant().getEtat().getImage()));
+                    }
                 }
             }
-
         }
-
     }
 }

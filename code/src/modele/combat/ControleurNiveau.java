@@ -67,8 +67,8 @@ public class ControleurNiveau {
         p.setDefense(pEvolue.getDefense());
         p.setVitesse(pEvolue.getVitesse());
         p.setImage(pEvolue.getImage());
-        p.setImageCombat(pEvolue.getImageCombat());
         p.setMouvements(pEvolue.getMouvements());
+        p.setImageCombat(pEvolue.getImageCombat());
         p.setExperience(experienceRestante);
     }
 }

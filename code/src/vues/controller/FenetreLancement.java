@@ -27,11 +27,11 @@ public class FenetreLancement {
         navigateur.lancerFenetreSelection();
     }
 
+
     /**
      * Ferme la fenêtre de jeu
      */
-
-    public void quitterJeu() {
+    public void quitterJeu() throws Exception {
         navigateur.quitterJeu();
     }
 

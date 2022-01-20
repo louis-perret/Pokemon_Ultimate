@@ -22,9 +22,9 @@
             <Button fx:id="attaque4" textFill="green" onAction="#effectuerAttaque4"/>
             <HBox>
                 <HBox styleClass="combat">
-                    <Text styleClass="combat" fx:id="nomJoueur" text=" " />
+                    <Text styleClass="combat" fx:id="nomJoueur" text=" "/>
                     <Text styleClass="combat" fx:id="pvJoueur"/>
-                    <ImageView fx:id="etatJoueur"/>
+                    <ImageView fx:id="etatJoueur" fitHeight="15" fitWidth="25"/>
                 </HBox>
                 <HBox styleClass="combat">
                     <Text styleClass="combat" fx:id="nomEnnemi" text=" "/>

@@ -179,7 +179,12 @@ public class Pokemon implements Serializable {
     }
 
     public void setMouvements(Mouvement[] mouvements) {
-        this.mouvements = mouvements;
+        /*int i=0;
+        for(Mouvement m : mouvements) {
+            this.mouvements[i] = m;
+            i=i+1;
+        }*/
+        this.mouvements=mouvements;
     }
 
     /**

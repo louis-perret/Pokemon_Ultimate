@@ -206,7 +206,7 @@ public class Stub extends Chargeur{
         Mouvement deflagration = new Mouvement(30,"Déflagration",feu,null);
         Mouvement tempeteVerte = new Mouvement(30,"TempêteVerte",plante,null);
         Mouvement hydrocanon = new Mouvement(30,"Hydrocanon",eau,null);
-        Mouvement detricanon = new Mouvement(25,"Acide",poison,empoisonne);
+        Mouvement detricanon = new Mouvement(25,"Détricanon",poison,empoisonne);
         Mouvement draco_meteore = new Mouvement(25,"Draco-Météore",dragon,null);
         Mouvement tonnerre = new Mouvement(30,"Tonerre",electrique,null);
         Mouvement rapace = new Mouvement(30,"Rapace",vol,null);
@@ -254,7 +254,7 @@ public class Stub extends Chargeur{
 
 
         tabMouvements=new Mouvement[]{feuilleMagik,acide,belier,tranche_nuit};
-        p = new Pokemon("Herbizarre","/sprite/Sprite_herbi/herb_1.png","/sprite/Sprite_herbi/herb_combat_dos.png",120,30,30,20,position, plante,tabMouvements,2,0,"Florizarre", true);
+        p = new Pokemon("Herbizarre","/sprite/Sprite_herbi/herb_1.png","/sprite/Sprite_herbi/herb_combat_dos.png",400,60,50,20,position, plante,tabMouvements,2,0,"Florizarre", true);
         niveau2.add(p);
         tabMouvements=new Mouvement[]{lanceFlamme,cru_aile,belier,pietisol};
         p = new Pokemon("Reptincel","/sprite/Sprite_rept/rept_1.png","/sprite/Sprite_rept/rept_combat_dos.png",400,450,20,250,position, feu,tabMouvements,2,0,"Dracaufeu", true);
@@ -269,7 +269,7 @@ public class Stub extends Chargeur{
         p = new Pokemon("Spectrum",null,"/sprite/spectrum.png",70,43,39,42,position, spectre,tabMouvements,2,0,"Ectoplasma", false);
         niveau2.add(p);
         tabMouvements=new Mouvement[]{survInsecte};
-        p = new Pokemon("Chrysacier",null,"/sprite/chrysacier.png",70,15,80,10,position, insecte,tabMouvements,2,0,"Papillusion", false);
+        p = new Pokemon("Chrysacier",null,"/sprite/chrysacier.png",70,10,60,10,position, insecte,tabMouvements,2,0,"Papillusion", false);
         niveau2.add(p);
         tabMouvements=new Mouvement[]{belier,charge};
         p = new Pokemon("Ratatak",null,"/sprite/ratatak.png",65,40,40,40,position, normal,tabMouvements,2,0,null, false);
@@ -281,7 +281,7 @@ public class Stub extends Chargeur{
 
 
         tabMouvements=new Mouvement[]{tempeteVerte,detricanon,giga_impact,seisme};
-        p = new Pokemon("Florizarre","/sprite/Sprite_flo/flo_1.png","/sprite/Sprite_flo/flo_combat_dos.png",230,80,100,80,position, plante,tabMouvements,3,0,null, true);
+        p = new Pokemon("Florizarre","/sprite/Sprite_flo/flo_1.png","/sprite/Sprite_flo/flo_combat_dos.png",280,100,80,80,position, plante,tabMouvements,3,0,null, true);
         niveau3.add(p);
         tabMouvements=new Mouvement[]{deflagration,rapace,draco_meteore,tonnerre};
         p = new Pokemon("Dracaufeu","/sprite/Sprite_drac/drac_1.png","/sprite/Sprite_drac/drac_combat_dos.png",2000,1000,30,950,position, feu,tabMouvements,3,0,null, true);
