@@ -101,6 +101,35 @@ public class Navigateur {
     }
 
     /**
+     * Lance la fenêtre quand on gagne
+     */
+    public void lancerFenetreVictoire() {
+        try {
+            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreVictoire.fxml")));
+            Scene scene = new Scene(parent);
+            scene.getStylesheets().add(getClass().getResource("/FXML/Victoire.css").toExternalForm());
+            primaryStage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Lance la fenêtre quand on perd
+     */
+    public void lancerFenetreDefaite() {
+        try {
+            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreDefaite.fxml")));
+            Scene scene = new Scene(parent);
+            scene.getStylesheets().add(getClass().getResource("/FXML/Defaite.css").toExternalForm());
+            primaryStage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    /**
      * Ferme la fenêtre de jeu.
      */
 

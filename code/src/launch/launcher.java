@@ -52,7 +52,8 @@ public class launcher extends Application {
         //manager=chargeur.charger();
         manager = new Stub().charger();
         navigateur = new Navigateur();
-        navigateur.lancerFenetreLancement();
+        //navigateur.lancerFenetreLancement();
+        navigateur.lancerFenetreDefaite();
         primaryStage.show();
 
 

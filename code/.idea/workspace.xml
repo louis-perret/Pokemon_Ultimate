@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="Changement d'état d'un pokemon fonctionnel + commentaire du code">
+      <change afterPath="$PROJECT_DIR$/Ressources/FXML/Defaite.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/FXML/FenetreDefaite.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/FXML/FenetreVictoire.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/FXML/Victoire.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vues/controller/FenetreDefaite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vues/controller/FenetreVictoire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarteV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarteV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/monde/Tuile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/monde/Tuile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/Mouvement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/Mouvement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreCombat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreLancement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreLancement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreSelection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/launch/launcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
