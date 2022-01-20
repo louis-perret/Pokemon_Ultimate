@@ -38,7 +38,6 @@ public class FenetreLancement {
     /**
      * Initialisation
      */
-
     public void initialize(){
         vbox.setPadding(new Insets(10));
     }

@@ -28,7 +28,7 @@ public class ControleurNiveau {
         int niveauEnnemi=ennemi.getNiveau();
 
         if(niveauEnnemi==1){
-            xpGagne=30;
+            xpGagne=35;
         }
         else{
             if(niveauEnnemi==2){

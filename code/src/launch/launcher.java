@@ -60,6 +60,7 @@ public class launcher extends Application {
             cheminFichier = "Ressources/source/source.bin";
             Chargeur chargeur = new ChargeurBinaire(cheminFichier);
             manager = chargeur.charger();
+            //manager = new Stub().charger();
             navigateur = new Navigateur();
             navigateur.lancerFenetreLancement();
             primaryStage.show();
