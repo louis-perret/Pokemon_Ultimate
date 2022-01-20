@@ -2,56 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="Changement d'état d'un pokemon fonctionnel + commentaire du code">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/Combat.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/css/Combat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/Defaite.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/css/Defaite.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/vue/Fenetre.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/FenetreCombat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/vue/FenetreCombat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/FenetreDefaite.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/vue/FenetreDefaite.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/vue/FenetreLancement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/FenetreSelection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/vue/FenetreSelection.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/FenetreVictoire.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/vue/FenetreVictoire.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/Lancement.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/css/Lancement.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/Selection.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/css/Selection.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/Victoire.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/css/Victoire.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/source/source.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/source/source.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wissocq_perret/FXML/Fenetre.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wissocq_perret/FXML/FenetreLancement.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wissocq_perret/FXML/FenetreSelection.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chargement/Chargeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/persistance/Chargeur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chargement/ChargeurBinaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/persistance/ChargeurBinaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chargement/Sauveur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/persistance/Sauveur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chargement/SauveurBinaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/persistance/SauveurBinaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chargement/Stub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/persistance/Stub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/launch/launcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/boucle/BoucleJeu16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/boucle/BoucleJeu16.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/combat/AttaqueurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/AttaqueurPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/combat/ControleurCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/ControleurCombat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/combat/ControleurCombatV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/ControleurCombatV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/combat/ControleurNiveau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/ControleurNiveau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarteV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarteV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/CollisionneurV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/CollisionneurV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemonSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemonSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/monde/Carte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/monde/Carte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/monde/Tuile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/monde/Tuile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/observateurs/ObservateurBoucle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/observateurs/ObservateurBoucle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/observateurs/Sujet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/observateurs/Sujet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/CollectionPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/CollectionPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/Mouvement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/Mouvement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/Pokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/etat/Empoisonné.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/etat/Empoisonné.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/etat/Etat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/etat/Etat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/etat/Inflammé.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/etat/Inflammé.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/pokemon/etat/Paralysé.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/pokemon/etat/Paralysé.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/TestBoucle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/TestBoucle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/TestMonde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/TestMonde.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/TestPersistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/TestPersistance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/Fenetre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreCombat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../documentation/diag-classe.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/../documentation/diag-classe.mdj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,13 +36,20 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/modele/combat/ControleurNiveau.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/combat/AttaqueurPokemon.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/tests/Test.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/launch/launcher.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/modele/pokemon/Pokemon.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/modele/pokemon/CollectionPokemon.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/modele/combat/Attaqueur.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/deplaceur/Collisionneur.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarteV1.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/deplaceur/ChangeurCarte.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/deplaceur/DeplaceurPokemon.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/modele/Manager.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/pokemon/Mouvement.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/combat/AttaqueurPokemon.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/pokemon/Pokemon.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/monde/Tuile.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/modele/deplaceur/CollisionneurV1.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21lkHFp6FJ8j70Nq9eqiPbYdFSn" />
   <component name="ProjectViewState">

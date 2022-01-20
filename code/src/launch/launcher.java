@@ -56,7 +56,7 @@ public class launcher extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         setPrimaryStage(stage);
-        stage.setTitle("Pokemon Colosseum");
+        stage.setTitle("Pokemon Ultimate");
         try {
             cheminFichier = "Ressources/source/source.bin";
             Chargeur chargeur = new ChargeurBinaire(cheminFichier);

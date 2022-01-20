@@ -36,7 +36,7 @@ public class Manager implements Serializable {
     private transient Carte carteCourante; //la carte actuellement affichée
     private transient Monde monde; //notre monde
     private CollectionPokemon pokedex; //collection des pokemons
-    private int nbVictoiresPrivate = 0; //nombre de victoires du joueur
+    private int nbVictoiresPrivate; //nombre de victoires du joueur
     private Map<Integer, Tuile> dicoTuiles; //dictionnaire contenant toutes les types de tuiles de nos cartes (pour le sauvegarder)
     private transient Thread thread; //thread de la boucle de jeu
     private static final long serialVersionUID = 1815847098800356785L; //pour la sérialisation
