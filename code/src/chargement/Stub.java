@@ -316,6 +316,12 @@ public class Stub extends Chargeur{
         Tuile tuileSortie = new Tuile(6,"tuiles/sortie.png",true,1);
         Tuile tuileSolA = new Tuile(7,"tuiles/sol_arene.png",true,3);
         Tuile tuilePanneau = new Tuile(8,"tuiles/panneau.png",false,0);
+        Tuile tuileArbre = new Tuile(9,"tuiles/arbre.png",false,0);
+        Tuile tuilePilier = new Tuile(10,"tuiles/pilier.png",false,0);
+        Tuile tuileRocher = new Tuile(11,"tuiles/rocher.png",false,0);
+        Tuile tuileSol = new Tuile(12,"tuiles/sol.png",true,0);
+        Tuile tuileTronc = new Tuile(13,"tuiles/tronc.png",false,0);
+
 
 
 
@@ -329,6 +335,11 @@ public class Stub extends Chargeur{
         dicoTuiles.put(tuileSortie.getId(),tuileSortie);
         dicoTuiles.put(tuileSolA.getId(),tuileSolA);
         dicoTuiles.put(tuilePanneau.getId(),tuilePanneau);
+        dicoTuiles.put(tuileArbre.getId(),tuileArbre);
+        dicoTuiles.put(tuilePilier.getId(),tuilePilier);
+        dicoTuiles.put(tuileRocher.getId(),tuileRocher);
+        dicoTuiles.put(tuileSol.getId(),tuileSol);
+        dicoTuiles.put(tuileTronc.getId(),tuileTronc);
         return new Manager(collectionPokemon,dicoTuiles);
     }
 }

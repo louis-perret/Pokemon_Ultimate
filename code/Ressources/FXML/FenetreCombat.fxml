@@ -15,23 +15,23 @@
 
 
     <bottom>
-        <HBox>
+        <HBox styleClass="interface">
             <Button fx:id="attaque1" textFill="green" onAction="#effectuerAttaque1" />
             <Button fx:id="attaque2" textFill="green" onAction="#effectuerAttaque2"/>
             <Button fx:id="attaque3" textFill="green" onAction="#effectuerAttaque3"/>
             <Button fx:id="attaque4" textFill="green" onAction="#effectuerAttaque4"/>
-            <VBox>
-                <HBox>
-                    <Text fx:id="nomJoueur"/>
-                    <Text fx:id="pvJoueur"/>
+            <HBox>
+                <HBox styleClass="combat">
+                    <Text styleClass="combat" fx:id="nomJoueur" text=" " />
+                    <Text styleClass="combat" fx:id="pvJoueur"/>
                     <ImageView fx:id="etatJoueur"/>
                 </HBox>
-                <HBox>
-                    <Text fx:id="nomEnnemi"/>
-                    <Text fx:id="pvEnnemi"/>
-                    <ImageView fx:id="etatEnnemi"/>
+                <HBox styleClass="combat">
+                    <Text styleClass="combat" fx:id="nomEnnemi" text=" "/>
+                    <Text styleClass="combat" fx:id="pvEnnemi"/>
+                    <ImageView fx:id="etatEnnemi" fitHeight="15" fitWidth="25"/>
                 </HBox>
-            </VBox>
+            </HBox>
         </HBox>
     </bottom>
 
