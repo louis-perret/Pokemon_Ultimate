@@ -106,6 +106,10 @@ public class Pokemon implements Serializable {
         }
     }
 
+    /**
+     *  Initialisation de la propriété après la deserialisation
+     */
+
     public void initialisationProprietesOnDeserialized(){
         nom=new SimpleStringProperty();
         setNom(nomPrive);

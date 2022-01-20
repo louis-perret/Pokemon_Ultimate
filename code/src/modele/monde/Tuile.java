@@ -15,6 +15,14 @@ public class Tuile implements Serializable {
     private Boolean isTraversable;
     private int evenement;
 
+    /**
+     * Constructeur
+     * @param id: identifiant unique de la tuile
+     * @param image: Image de la tuile
+     * @param isTraversable: La tuile est-elle travesable
+     * @param evenement: Evenement attaché à une tuile
+     */
+
     public Tuile(int id, String image, Boolean isTraversable, int evenement){
 
         this.id = id;

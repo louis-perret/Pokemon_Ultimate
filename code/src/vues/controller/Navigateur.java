@@ -100,6 +100,10 @@ public class Navigateur {
         }
     }
 
+    /**
+     * Ferme la fenêtre de jeu.
+     */
+
     public void quitterJeu() {
         primaryStage.close();
     }

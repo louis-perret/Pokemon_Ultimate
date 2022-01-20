@@ -5,9 +5,15 @@ import modele.pokemon.Position;
 
 import static java.lang.Math.abs;
 
+/**
+ * Classe qui gère les évènements
+ */
 public class ChangeurCarteV1 extends ChangeurCarte {
 
 
+    /**
+     * Constructeur
+     */
 
     public ChangeurCarteV1(int hauteurSurface, int largeurSurface) {
         setHauteurSurface(hauteurSurface/2);
@@ -15,6 +21,12 @@ public class ChangeurCarteV1 extends ChangeurCarte {
         setHauteurTuile(32);
     }
 
+    /**
+     * Détecte des évènements en se déposant.
+     * @param positionActuel : Position actuelle du joueur
+     * @param carte : Carte sur laquelle on se déplace
+     * @return un entier, il y a un entier par évènement
+     */
     @Override
     public int isChangement(Position positionActuel, Carte carte) {
         int X = (int) positionActuel.getPositionX();

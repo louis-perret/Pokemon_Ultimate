@@ -76,6 +76,9 @@ public class CollectionPokemon implements Serializable {
         return listePokemon;
     }
 
+    /**
+     *  Initialisation de la propriété après la deserialisation
+     */
     public void initialisationProprietesOnDeserialized(){
         for(int i=1;i<=pokedex.size();i++){
             for(Pokemon p : pokedex.get(i)){

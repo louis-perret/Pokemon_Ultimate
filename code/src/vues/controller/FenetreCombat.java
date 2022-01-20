@@ -72,6 +72,10 @@ public class FenetreCombat {
         navigateur.lancerFenetreCombat();
     }
 
+    /**
+     * Bind les attaques du joueur
+     */
+
     public void setBoutonsAttaques() {
         int i=1; //Pour mettre une attaque dans un bouton
         for(Mouvement m : manager.getPokemonCourant().getMouvements()) {
@@ -99,6 +103,10 @@ public class FenetreCombat {
         }
     }
 
+    /**
+     * Dispose les images sur la fenêtre.
+     */
+
     private void setDecor(){
         panecombat.setBackground(new Background(new BackgroundImage(fondimg, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT)));
         joueur.setX(100);
@@ -108,6 +116,10 @@ public class FenetreCombat {
         ennemi.setY(80);
         ennemi.setImage(new Image(ennemiimg.get()));
     }
+
+    /**
+     * Initialisation.
+     */
 
     public void initialize(){
         manager.lancerVague(); //update le pokemon que devra affronter le joueur
@@ -136,6 +148,11 @@ public class FenetreCombat {
         );
     }
 
+    /**
+     * Fonction permettant d'effectuer la première attaque
+     * @param actionEvent: clique de la souris
+     */
+
     public void effectuerAttaque1(ActionEvent actionEvent) {
         System.out.println(attaque1.getText());
         if(attaque1.getText() != null) { //si le pokemon a une première attaque
@@ -143,11 +160,22 @@ public class FenetreCombat {
         }
     }
 
+    /**
+     * Fonction permettant d'effectuer la deuxième attaque
+     * @param actionEvent: clique de la souris
+     */
+
+
     public void effectuerAttaque2(ActionEvent actionEvent) {
         if(attaque2.getText() != null) { //si le pokemon a une deuxième attaque
             combat(manager.tourDeCombat(manager.getPokemonCourant(), manager.getPokemonEnnemiCourant(), manager.getPokemonCourant().getMouvement(attaque2.getText())));
         }
     }
+
+    /**
+     * Fonction permettant d'effectuer la troisième attaque
+     * @param actionEvent: clique de la souris
+     */
 
     public void effectuerAttaque3(ActionEvent actionEvent) {
         if(attaque3.getText()!=null) { //si le pokemon a une troisième attaque
@@ -155,11 +183,21 @@ public class FenetreCombat {
         }
     }
 
+    /**
+     * Fonction permettant d'effectuer la quatrième attaque
+     * @param actionEvent: clique de la souris
+     */
+
     public void effectuerAttaque4(ActionEvent actionEvent) {
         if(attaque4.getText()!=null) { //si le pokemon a une quatrième attaque
             combat(manager.tourDeCombat(manager.getPokemonCourant(), manager.getPokemonEnnemiCourant(), manager.getPokemonCourant().getMouvement(attaque4.getText())));
         }
     }
+
+    /**
+     * Permet de réaliser le combat
+     * @param resultat: Résultat du combat
+     */
 
     public void combat(int resultat){
         if(resultat == 2){
