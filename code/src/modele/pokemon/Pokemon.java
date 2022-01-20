@@ -14,19 +14,19 @@ import java.util.Map;
  */
 public class Pokemon implements Serializable {
 
-    private StringProperty nom = new SimpleStringProperty();
+    private transient StringProperty nom = new SimpleStringProperty();
     public String getNom() { return nom.get(); }
     public void setNom(String nom) { this.nom.set(nom); }
     public StringProperty nomProperty() { return nom; }
 
     private String image; //son image de déplacement
 
-    private StringProperty imageCombat = new SimpleStringProperty(); //son image de combat
+    private transient StringProperty imageCombat = new SimpleStringProperty(); //son image de combat
     public String getImageCombat() { return imageCombat.get(); }
     public void setImageCombat(String image) { imageCombat.set(image); }
     public StringProperty imageCombatProperty() { return imageCombat; }
 
-    private IntegerProperty pv = new SimpleIntegerProperty();
+    private transient IntegerProperty pv = new SimpleIntegerProperty();
     public int getPv(){ return pv.get(); }
     public void setPv(int pv){
         if(pv <= 0){
@@ -36,6 +36,9 @@ public class Pokemon implements Serializable {
     }
     public IntegerProperty pvProperty() { return pv; }
 
+    private String nomPrive;
+    private String imageCombatPrive;
+    private int pvPrive;
     private int attaque; //ses points d'attaque
     private int defense; //ses points de défense
     private int vitesse; //ses points de vitesse
@@ -66,9 +69,12 @@ public class Pokemon implements Serializable {
      * @param evolution : le nom de son évolution
      */
     public Pokemon(String nom, String image,String imageCombat, int pv, int attaque, int defense, int vitesse, Position position, Type type, Mouvement[] tabMouvements, int niveau, int experience, String evolution,Boolean isStarter) {
+        this.nomPrive=nom;
         setNom(nom);
         this.image = image;
+        this.imageCombatPrive=imageCombat;
         setImageCombat(imageCombat);
+        this.pvPrive=pv;
         setPv(pv);
         this.attaque = attaque;
         this.defense = defense;
@@ -97,6 +103,20 @@ public class Pokemon implements Serializable {
     public void appliquerEtat(){
         if(etat != null){ //s'il a un état
             etat.comportement(this); //on applique son comportement
+        }
+    }
+
+    public void initialisationProprietesOnDeserialized(){
+        nom=new SimpleStringProperty();
+        setNom(nomPrive);
+        imageCombat= new SimpleStringProperty();
+        setImageCombat(imageCombatPrive);
+        pv= new SimpleIntegerProperty();
+        setPv(pvPrive);
+        if(mouvements != null) {
+            for (Mouvement m : mouvements) {
+                m.initialisationProprietesOnDeserialized();
+            }
         }
     }
 

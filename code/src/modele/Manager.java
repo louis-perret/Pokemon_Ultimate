@@ -36,9 +36,11 @@ public class Manager implements Serializable {
     private transient Carte carteCourante; //la carte actuellement affichée
     private transient Monde monde; //notre monde
     private CollectionPokemon pokedex; //collection des pokemons
-    private int nbVictoires = 0; //nombre de victoires du joueur
+    private int nbVictoiresPrivate = 0; //nombre de victoires du joueur
     private Map<Integer, Tuile> dicoTuiles; //dictionnaire contenant toutes les types de tuiles de nos cartes (pour le sauvegarder)
     private transient Thread thread; //thread de la boucle de jeu
+    private static final long serialVersionUID = 1815847098800356785L;
+
 
 
     //Propriété compteur (utile pour les déplacements du personnages car notifie la fenêtre d'un beep de la part de notre boucle jeu)
@@ -52,6 +54,13 @@ public class Manager implements Serializable {
     public void setChangeur(int nombre) {this.changeur.set(nombre);}
     public IntegerProperty changeurProperty() { return changeur;}
 
+    private transient IntegerProperty nbVictoires = new SimpleIntegerProperty();
+    public int getNbVictoires() {return nbVictoires.get();}
+    public void setNbVictoires(int nombre) {
+        this.nbVictoires.set(nombre);
+        nbVictoiresPrivate = nombre;
+    }
+    public IntegerProperty nbVictoiresProperty() { return nbVictoires;}
 
 
 
@@ -76,6 +85,12 @@ public class Manager implements Serializable {
         deplaceur = new DeplaceurPokemonSimple();
         controleurCombat = new ControleurCombatV1(pokedex);
         monde=new Monde(dicoTuiles);
+        changeur=new SimpleIntegerProperty();
+        compteur=new SimpleIntegerProperty();
+        nbVictoires = new SimpleIntegerProperty();
+        setNbVictoires(nbVictoiresPrivate);
+        numeroVague=1;
+        pokedex.initialisationProprietesOnDeserialized();
     }
 
     /**
@@ -119,7 +134,6 @@ public class Manager implements Serializable {
      * Lance la boucle de jeu utile au déplacement du pokemon du joueur
      */
     public void lancerBoucleJeu(){
-
         pokemonCourant.setPosition(new Position(carteCourante.getSpawnX(),carteCourante.getSpawnY())); //on set la position du pokemon au point de spawn de la map
         setCompteur(0); //on remet le compteur à 0
         Observateur observateur = new ObservateurBoucle(this); //On créé l'observateur de la boucle
@@ -147,6 +161,7 @@ public class Manager implements Serializable {
      */
     public boolean lancerVague(){
         if(numeroVague>=3){ //Le joueur a gagné toutes les vagues
+            setNbVictoires(getNbVictoires()+1);
             return true;//Pour prévenir qu'il n'y a plus de pokemon à combattre
         }
         System.out.println("numéro de vague : " + numeroVague);

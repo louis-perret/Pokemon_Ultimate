@@ -223,11 +223,11 @@ public class Stub extends Chargeur{
 
         Mouvement[] tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
 
-        Pokemon p = new Pokemon("Bulbizarre","/sprite/Sprite_bulbi/bulb_1.png","/sprite/Sprite_bulbi/bulb_combat_dos.png",200,30,20,20,position, plante,tabMouvements,1,0,"Herbizarre", true);
+        Pokemon p = new Pokemon("Bulbizarre","/sprite/Sprite_bulbi/bulb_1.png","/sprite/Sprite_bulbi/bulb_combat_dos.png",2000,30,20,20,position, plante,tabMouvements,1,0,"Herbizarre", true);
         niveau1.add(p);
 
         tabMouvements=new Mouvement[]{flammèche,charge,ombre_portee,trempette};
-        p = new Pokemon("Salamèche","/sprite/Sprite_salam/salam_1.png","/sprite/Sprite_salam/salam_combat_dos.png",60,35,20,15,position, feu,tabMouvements,1,0,"Reptincel", true);
+        p = new Pokemon("Salamèche","/sprite/Sprite_salam/salam_1.png","/sprite/Sprite_salam/salam_combat_dos.png",2000,350,20,150,position, feu,tabMouvements,1,0,"Reptincel", true);
         niveau1.add(p);
         tabMouvements=new Mouvement[]{pistolet_a_eau,charge,sabotage,machpunch};
         p = new Pokemon("Carapuce","/sprite/Sprite_carap/squi_1.png","/sprite/Sprite_carap/squi_combat_dos.png",70,20,40,10,position, eau,tabMouvements,1,0,"Carabaffe", true);
@@ -257,7 +257,7 @@ public class Stub extends Chargeur{
         p = new Pokemon("Herbizarre","/sprite/Sprite_herbi/herb_1.png","/sprite/Sprite_herbi/herb_combat_dos.png",120,30,30,20,position, plante,tabMouvements,2,0,"Florizarre", true);
         niveau2.add(p);
         tabMouvements=new Mouvement[]{lanceFlamme,cru_aile,belier,pietisol};
-        p = new Pokemon("Reptincel","/sprite/Sprite_rept/rept_1.png","/sprite/Sprite_rept/rept_combat_dos.png",100,45,20,25,position, feu,tabMouvements,2,0,"Dracaufeu", true);
+        p = new Pokemon("Reptincel","/sprite/Sprite_rept/rept_1.png","/sprite/Sprite_rept/rept_combat_dos.png",400,450,20,250,position, feu,tabMouvements,2,0,"Dracaufeu", true);
         niveau2.add(p);
         tabMouvements=new Mouvement[]{surf,pied_saute,belier,tomberoche2};
         p = new Pokemon("Carabaffe","/sprite/Sprite_carab/war_1.png","/sprite/Sprite_carab/war_combat_dos.png",110,30,40,20,position, eau,tabMouvements,2,0,"Tortank", true);
@@ -284,7 +284,7 @@ public class Stub extends Chargeur{
         p = new Pokemon("Florizarre","/sprite/Sprite_flo/flo_1.png","/sprite/Sprite_flo/flo_combat_dos.png",230,80,100,80,position, plante,tabMouvements,3,0,null, true);
         niveau3.add(p);
         tabMouvements=new Mouvement[]{deflagration,rapace,draco_meteore,tonnerre};
-        p = new Pokemon("Dracaufeu","/sprite/Sprite_drac/drac_1.png","/sprite/Sprite_drac/drac_combat_dos.png",200,100,30,95,position, feu,tabMouvements,3,0,null, true);
+        p = new Pokemon("Dracaufeu","/sprite/Sprite_drac/drac_1.png","/sprite/Sprite_drac/drac_combat_dos.png",2000,1000,30,950,position, feu,tabMouvements,3,0,null, true);
         niveau3.add(p);
         tabMouvements=new Mouvement[]{hydrocanon,close_combat,blizzard,lame_de_roc};
         p = new Pokemon("Tortank","/sprite/Sprite_tort/blas_1.png","/sprite/Sprite_tort/blas_combat_dos.png",200,80,130,80,position, eau,tabMouvements,3,0,null, true);

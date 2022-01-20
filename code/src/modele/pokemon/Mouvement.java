@@ -13,8 +13,9 @@ import java.util.Random;
  */
 public class Mouvement implements Serializable {
     private int degats; //ses points de dégâts
+    private String nomPrive;
 
-    private StringProperty nom = new SimpleStringProperty(); //son nom
+    private transient StringProperty nom = new SimpleStringProperty(); //son nom
     public String getNom(){ return nom.get(); }
     public void setNom(String nom) { this.nom.set(nom); }
     public StringProperty nomProperty() { return nom;}
@@ -31,6 +32,7 @@ public class Mouvement implements Serializable {
      */
     public Mouvement(int degats, String nom, Type type, Etat etat){
         this.degats=degats;
+        nomPrive=nom;
         setNom(nom);
         this.type=type;
         this.etat=etat;
@@ -49,6 +51,11 @@ public class Mouvement implements Serializable {
                 }
             }
         }
+    }
+
+    public void initialisationProprietesOnDeserialized(){
+        nom=new SimpleStringProperty();
+        setNom(nomPrive);
     }
 
     /* Getter et setter */

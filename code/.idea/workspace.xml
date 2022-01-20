@@ -3,12 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/FenetreLancement.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/FXML/FenetreSelection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/FenetreSelection.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/FXML/Selection.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/Selection.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/source/source.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/source/source.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chargement/Stub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chargement/Stub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreLancement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreLancement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/Navigateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/launch/launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/monde/Tuile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/monde/Tuile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreCombat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vues/controller/FenetreSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vues/controller/FenetreSelection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

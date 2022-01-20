@@ -55,7 +55,7 @@
     <bottom>
         <HBox alignment="CENTER">
             <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="victoire" text="Victoires : "/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="victoire" text="20"/>
+            <Text fx:id="nbVictoire" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="victoire" text="20"/>
         </HBox>
     </bottom>
 

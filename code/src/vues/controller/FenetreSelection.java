@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.text.Text;
 import launch.launcher;
 import modele.Manager;
 import modele.pokemon.Pokemon;
@@ -34,6 +35,8 @@ public class FenetreSelection {
 
     @FXML
     private Button boutoncarap;
+    @FXML
+    private Text nbVictoire;
 
     AfficheurPokemon afficheurPokemon = new AfficheurPokemon();
     Navigateur navigateur = new Navigateur();
@@ -63,6 +66,7 @@ public class FenetreSelection {
     public void initialize(){
         hbox.setPadding(new Insets(20));
         listeStarter = manager.getStarterslvl1();
+        nbVictoire.textProperty().bind(manager.nbVictoiresProperty().asString());
 
         Image.setImage(b);
         Image2.setImage(c);

@@ -76,6 +76,13 @@ public class CollectionPokemon implements Serializable {
         return listePokemon;
     }
 
+    public void initialisationProprietesOnDeserialized(){
+        for(int i=1;i<=pokedex.size();i++){
+            for(Pokemon p : pokedex.get(i)){
+                p.initialisationProprietesOnDeserialized();
+            }
+        }
+    }
     /**
      * Affiche l'instance sous forme de chaîne de caractères
      * @return un string
