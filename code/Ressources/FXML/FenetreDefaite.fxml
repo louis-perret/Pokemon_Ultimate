@@ -15,7 +15,7 @@
             prefHeight="400.0" prefWidth="600.0">
 
 
-    <center>
+    <top>
         <VBox alignment="CENTER" minHeight="100">
             <Text smooth="false" stroke="#ffffff00" strokeWidth="0.0" styleClass="text-defaite" text="Défaite..." textAlignment="CENTER">
                 <font>
@@ -23,12 +23,12 @@
                 </font>
             </Text>
         </VBox>
-    </center>
-    <bottom>
+    </top>
+    <center>
         <VBox alignment="CENTER">
-            <ImageView fx:id="masterball" fitHeight="300" fitWidth="300" pickOnBounds="true" preserveRatio="true"/>
+            <Button fx:id="quitter" text="Retour écran titre" onAction="#fermer"></Button>
         </VBox>
-    </bottom>
+    </center>
 
 
 </BorderPane>
