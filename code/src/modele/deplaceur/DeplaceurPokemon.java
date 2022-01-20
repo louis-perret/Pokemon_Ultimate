@@ -19,8 +19,6 @@ public abstract class DeplaceurPokemon {
 
     public void setChangeurCarte(ChangeurCarte changeurCarte) {this.changeurCarte = changeurCarte;}
 
-    private IntegerProperty changeur;
-
 
 
     //Getter et Setter
