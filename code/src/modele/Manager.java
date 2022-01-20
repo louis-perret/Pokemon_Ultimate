@@ -108,6 +108,11 @@ public class Manager implements Serializable {
                 return 1;
             }
             else{ //sinon la vague est finie
+                if(numeroVague == 3){
+                    numeroVague=0;
+                    setNbVictoires(getNbVictoires()+1); //on incrémente son nombre de victoires
+                    return 4; //la partie est finie et le joueur a gagné
+                }
                 pokemonCourant.setPv(pokedex.getPokemon(pokemonCourant.getNom(),pokemonCourant.getNiveau()).getPv()); //on le soigne
                 numeroVague++;
                 return 3;
@@ -160,11 +165,10 @@ public class Manager implements Serializable {
      * @return une liste de 3 pokemon que devra combattre le joueur
      */
     public boolean lancerVague(){
-        if(numeroVague>=3){ //Le joueur a gagné toutes les vagues
+        if(numeroVague>3){ //Le joueur a gagné toutes les vagues
             setNbVictoires(getNbVictoires()+1);
             return true;//Pour prévenir qu'il n'y a plus de pokemon à combattre
         }
-        System.out.println("numéro de vague : " + numeroVague);
         listePokemonByVague=pokedex.getListePokemon(numeroVague,3, pokemonCourant);  //Sinon on renvoie les pokemon de la vague d'après
         pokemonEnnemiCourant=listePokemonByVague.get(0);
         return false;
@@ -220,5 +224,6 @@ public class Manager implements Serializable {
         return pokedex;
     }
 
+    public void setNumeroVague(int numeroVague) { this.numeroVague=numeroVague; }
 
 }

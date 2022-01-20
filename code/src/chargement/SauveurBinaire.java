@@ -25,7 +25,7 @@ public class SauveurBinaire extends Sauveur{
      * @param manager : objet à sérialiser
      */
     @Override
-    public void sauver(Manager manager) {
+    public boolean sauver(Manager manager) {
         if(manager==null){
             throw new IllegalArgumentException("Objet vide, impossible de l'enregistrer");
         }
@@ -33,8 +33,11 @@ public class SauveurBinaire extends Sauveur{
             writer.writeObject(manager); //on écrit l'objet
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            return false;
         } catch (IOException e) {
             e.printStackTrace();
-        } ;
+            return false;
+        }
+        return true;
     }
 }

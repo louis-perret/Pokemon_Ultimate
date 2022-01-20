@@ -13,5 +13,5 @@ public abstract class Sauveur {
      * Sauvegarde un objet Manager dans le fichier cheminFichier
      * @param manager : objet à sérialiser
      */
-    public abstract void sauver(Manager manager);
+    public abstract boolean sauver(Manager manager);
 }

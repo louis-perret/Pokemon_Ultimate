@@ -25,7 +25,7 @@ public class FenetreLancement {
         navigateur.lancerFenetreSelection();
     }
 
-    public void quitterJeu() {
+    public void quitterJeu() throws Exception {
         navigateur.quitterJeu();
     }
 

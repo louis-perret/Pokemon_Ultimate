@@ -25,41 +25,57 @@ public class Test {
         System.out.println("Test combat");
 
         int i, ko=0;
-        Pokemon allie = manager.getPokedex().getPokemon("Bulbizarre",1).cloner();
-        Pokemon ennemi = manager.getPokedex().getPokemon("Carapuce",1).cloner();
+        manager.setPokemonCourant(manager.getPokedex().getPokemon("Bulbizarre",1));
         Mouvement mouvement;
-
-        System.out.println(allie.getNom() + " affrontera " + ennemi.getNom() + ".");
-        while(ko==0){
-            System.out.println("Techniques de bulbizarre : ");
-            i=1;
-            for (Mouvement m : allie.getMouvements()) {
-                System.out.print(i + "." + m.getNom() + ", ");
-                i++;
+        System.out.println("Nombre de victoires : " + manager.getNbVictoires());
+        while(!manager.lancerVague()){
+            System.out.println("Nouvelle vague");
+            while(true) {
+                System.out.println(manager.getPokemonCourant().getNom() + " affrontera " + manager.getPokemonEnnemiCourant().getNom() + ".");
+                System.out.println("Techniques de " + manager.getPokemonCourant().getNom() + " : ");
+                i = 1;
+                for (Mouvement m : manager.getPokemonCourant().getMouvements()) {
+                    System.out.print(i + "." + m.getNom() + ", ");
+                    i++;
+                }
+                System.out.println();
+                System.out.print("Attaque sélectionnée : ");
+                Scanner scanner = new Scanner(System.in);
+                i = scanner.nextInt();
+                mouvement = manager.getPokemonCourant().getMouvements()[i - 1];
+                System.out.println(manager.getPokemonCourant().getNom() + " effectue : " + mouvement.getNom());
+                ko = manager.tourDeCombat(manager.getPokemonCourant(), manager.getPokemonEnnemiCourant(), mouvement);
+                System.out.println("Nombre de pv restant pour " + manager.getPokemonCourant().getNom() + " : " + manager.getPokemonCourant().getPv());
+                if(ko==0) {
+                    System.out.println("Nombre de pv restant pour " + manager.getPokemonEnnemiCourant().getNom() + " : " + manager.getPokemonEnnemiCourant().getPv());
+                    if (manager.getPokemonEnnemiCourant().getEtat() != null) {
+                        System.out.println("Etat : " + manager.getPokemonEnnemiCourant().getEtat().getNom());
+                    }
+                }
+                else{
+                    if(ko==1){
+                        System.out.println("Vous l'avez battu");
+                    }
+                    else{
+                        break;
+                    }
+                }
             }
-            System.out.println();
-            System.out.print("Attaque sélectionnée : ");
-            Scanner scanner = new Scanner(System.in);
-            i=scanner.nextInt();
-            mouvement = allie.getMouvements()[i-1];
-            System.out.println("Bulbizarre effectue : " + mouvement.getNom());
-            ko=manager.tourDeCombat(allie,ennemi,mouvement);
-            System.out.println("Nombre de pv restant pour " + allie.getNom() + " : " + allie.getPv());
-            System.out.println("Nombre de pv restant pour " + ennemi.getNom() + " : " + ennemi.getPv());
-            if(ennemi.getEtat() != null){
-                System.out.println("Etat : " + ennemi.getEtat().getNom());
+            if(ko==2){
+                System.out.println("Vous avez perdu le combat. Ressayer");
+                break;
+            }
+            else{
+                System.out.println("Vous avez remporté cette vague, bonne chance pour la prochaine !");
             }
         }
 
-        if(ko==2){
-            System.out.println("Vous avez perdu le combat. Ressayer");
-        }
-        else{
-            System.out.println("Vous avez gagné le combat. Bien joué");
-        }
+        System.out.println("Nombre de victoires : " + manager.getNbVictoires());
 
-        System.out.println(allie.getNom() + " est de niveau : " + allie.getNiveau() + " avec " + allie.getExperience() + " d'expériences");
-        System.out.println(ennemi.getNom() + " est de niveau : " + ennemi.getNiveau() + " avec " + ennemi.getExperience() + " d'expériences");
+
+
+        //System.out.println(allie.getNom() + " est de niveau : " + allie.getNiveau() + " avec " + allie.getExperience() + " d'expériences");
+        //System.out.println(manager.getPokemonEnnemiCourant().getNom() + " est de niveau : " + manager.getPokemonEnnemiCourant().getNiveau() + " avec " + manager.getPokemonEnnemiCourant().getExperience() + " d'expériences");
     }
 
     /**

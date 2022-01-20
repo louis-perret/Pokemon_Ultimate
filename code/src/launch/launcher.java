@@ -17,7 +17,7 @@ public class launcher extends Application {
     private static Manager manager;
     private static Stage primaryStage;
     private Navigateur navigateur;
-
+    private static String cheminFichier;
 
     public static Manager getManager() {
         return manager;
@@ -43,17 +43,30 @@ public class launcher extends Application {
         this.navigateur = navigateur;
     }
 
+    public static String getCheminFichier() {
+        return cheminFichier;
+    }
+
+    public static void setCheminFichier(String cheminFichier) {
+        launcher.cheminFichier = cheminFichier;
+    }
+
     @Override
     public void start(Stage stage) throws Exception {
         setPrimaryStage(stage);
         stage.setTitle("Pokemon Colosseum");
 
-        Chargeur chargeur = new ChargeurBinaire("Ressources/source/source.bin");
-        //manager=chargeur.charger();
-        manager = new Stub().charger();
-        navigateur = new Navigateur();
-        navigateur.lancerFenetreLancement();
-        primaryStage.show();
+        try {
+            cheminFichier = "Ressources/source/source.bin";
+            Chargeur chargeur = new ChargeurBinaire(cheminFichier);
+            manager = chargeur.charger();
+            navigateur = new Navigateur();
+            navigateur.lancerFenetreLancement();
+            primaryStage.show();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
 
 
         /* Appel des tests */

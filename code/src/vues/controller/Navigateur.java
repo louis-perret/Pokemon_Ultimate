@@ -1,5 +1,7 @@
 package vues.controller;
 
+import chargement.Sauveur;
+import chargement.SauveurBinaire;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,8 +22,7 @@ public class Navigateur {
 
     private Manager manager = launch.launcher.getManager(); //manager du jeu
     private Stage primaryStage = launch.launcher.getPrimaryStage(); //la fenêtre
-    private Scene sceneJeu;
-    private Scene sceneCombat;
+    private String cheminFichier = launch.launcher.getCheminFichier();
 
 
     /**
@@ -59,15 +60,13 @@ public class Navigateur {
     public void lancerFenetreJeu() {
         try {
             manager.setCarteCourante("lobby");
-            if(sceneJeu == null) {
-                Parent parent = FXMLLoader.load((getClass().getResource("/FXML/Fenetre.fxml")));
-                sceneJeu = new Scene(parent);
-                sceneJeu.addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
-                    manager.deplacerPokemon(keyEvent.getCode().getChar());
-
-                });
-            }
-            primaryStage.setScene(sceneJeu);
+            //if(sceneJeu == null) {
+            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/Fenetre.fxml")));
+            Scene scene = new Scene(parent);
+            scene.addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
+                manager.deplacerPokemon(keyEvent.getCode().getChar());
+            });
+            primaryStage.setScene(scene);
             primaryStage.setMinHeight(512);
             primaryStage.setMinWidth(320);
             primaryStage.setMaxHeight(512);
@@ -84,12 +83,10 @@ public class Navigateur {
     public void lancerFenetreCombat() {
         try {
             manager.terminerBoucleJeu();
-            if(sceneCombat == null) {
-                Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreCombat.fxml")));
-                sceneCombat = new Scene(parent);
-                sceneCombat.getStylesheets().add(getClass().getResource("/FXML/Combat.css").toExternalForm());
-            }
-            primaryStage.setScene(sceneCombat);
+            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreCombat.fxml")));
+            Scene scene = new Scene(parent);
+            scene.getStylesheets().add(getClass().getResource("/FXML/Combat.css").toExternalForm());
+            primaryStage.setScene(scene);
             primaryStage.setMinHeight(450);
             primaryStage.setMinWidth(800);
             primaryStage.setMaxHeight(450);
@@ -100,7 +97,11 @@ public class Navigateur {
         }
     }
 
-    public void quitterJeu() {
+    public void quitterJeu() throws Exception {
+        Sauveur sauveur = new SauveurBinaire(cheminFichier);
+        if(!sauveur.sauver(manager)){
+            throw new Exception("Problème dans la sauvegarde des données");
+        }
         primaryStage.close();
     }
 }
