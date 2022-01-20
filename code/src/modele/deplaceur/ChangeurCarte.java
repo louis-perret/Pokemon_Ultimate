@@ -9,19 +9,19 @@ import modele.pokemon.Position;
 
 public abstract class ChangeurCarte {
 
-    private int hauteurSurface;
-    private int largeurSurface;
+    private int hauteurSurface; //hauteur de surface de jeu
+    private int largeurSurface; //largeur de surface de jeu
     private int hauteurTuile; //Taille du pas
 
     /**
-     * Détecte des évènements en se déposant.
+     * Détecte des évènements dû au déplacement.
      * @param positionActuel : Position actuelle du joueur
      * @param carte : Carte sur laquelle on se déplace
      * @return un entier, il y a un entier par évènement
      */
-
     public abstract int isChangement(Position positionActuel, Carte carte);
 
+    //Getter et setter
     public int getHauteurSurface() {
         return hauteurSurface;
     }

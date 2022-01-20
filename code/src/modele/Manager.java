@@ -39,8 +39,9 @@ public class Manager implements Serializable {
     private int nbVictoiresPrivate = 0; //nombre de victoires du joueur
     private Map<Integer, Tuile> dicoTuiles; //dictionnaire contenant toutes les types de tuiles de nos cartes (pour le sauvegarder)
     private transient Thread thread; //thread de la boucle de jeu
-    private static final long serialVersionUID = 1815847098800356785L;
-
+    private static final long serialVersionUID = 1815847098800356785L; //pour la sérialisation
+    private transient int hauteurSurfaceJeu;
+    private transient int largeurSurfaceJeu;
 
 
     //Propriété compteur (utile pour les déplacements du personnages car notifie la fenêtre d'un beep de la part de notre boucle jeu)
@@ -49,6 +50,7 @@ public class Manager implements Serializable {
     public void setCompteur(int nombre) { compteur.set(nombre);} //setter
     public IntegerProperty compteurProperty() { return compteur;} //Renvoie la propriété
 
+    //Propriété changeur (utile pour le changement de carte dans la fenêtre car notifie la fenêtre lors d'un changement du au déplacement)
     private transient IntegerProperty changeur = new SimpleIntegerProperty(); //On déclare la propriété
     public int getChangeur() {return changeur.get();}
     public void setChangeur(int nombre) {this.changeur.set(nombre);}
@@ -62,16 +64,13 @@ public class Manager implements Serializable {
     }
     public IntegerProperty nbVictoiresProperty() { return nbVictoires;}
 
-
-
-
     /**
      * Constructeur
      * @param collectionPokemon : collection des pokemons
      * @param dicoTuiles : type de tuiles
      */
     public Manager(CollectionPokemon collectionPokemon, Map<Integer, Tuile>dicoTuiles){
-        this.deplaceur = new DeplaceurPokemonSimple();
+        this.deplaceur = new DeplaceurPokemonSimple(hauteurSurfaceJeu,largeurSurfaceJeu,Tuile.getTuileHauteur());
         this.pokedex=collectionPokemon;
         this.controleurCombat = new ControleurCombatV1(collectionPokemon);
         this.dicoTuiles=dicoTuiles;
@@ -82,7 +81,9 @@ public class Manager implements Serializable {
      * Initialise le deplaceur, le controleur combat et le monde de Manager après sa désérialisation
      */
     public void initialisationOnDeserialized(){
-        deplaceur = new DeplaceurPokemonSimple();
+        hauteurSurfaceJeu=512;
+        largeurSurfaceJeu=320;
+        deplaceur = new DeplaceurPokemonSimple(hauteurSurfaceJeu,largeurSurfaceJeu,Tuile.getTuileHauteur());
         controleurCombat = new ControleurCombatV1(pokedex);
         monde=new Monde(dicoTuiles);
         changeur=new SimpleIntegerProperty();
@@ -109,7 +110,7 @@ public class Manager implements Serializable {
             }
             else{ //sinon la vague est finie
                 if(numeroVague == 3){
-                    numeroVague=0;
+                    numeroVague=1;
                     setNbVictoires(getNbVictoires()+1); //on incrémente son nombre de victoires
                     return 4; //la partie est finie et le joueur a gagné
                 }

@@ -1,4 +1,4 @@
-package chargement;
+package persistance;
 
 import modele.Manager;
 

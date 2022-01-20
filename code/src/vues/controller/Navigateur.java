@@ -1,19 +1,15 @@
 package vues.controller;
 
-import chargement.Sauveur;
-import chargement.SauveurBinaire;
-import javafx.event.ActionEvent;
+import persistance.Sauveur;
+import persistance.SauveurBinaire;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import modele.Manager;
-import modele.pokemon.Pokemon;
 
 import java.io.IOException;
-import java.util.List;
 
 /**
  * Classe qui permet le déplacement entre nos différentes fenêtres
@@ -30,9 +26,9 @@ public class Navigateur {
      */
     public void lancerFenetreLancement() {
         try {
-            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreLancement.fxml")));
+            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/vue/FenetreLancement.fxml")));
             Scene scene = new Scene(parent);
-            scene.getStylesheets().add(getClass().getResource("/FXML/Lancement.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("/FXML/css/Lancement.css").toExternalForm());
             primaryStage.setScene(scene);
 
         } catch (IOException e) {
@@ -45,9 +41,9 @@ public class Navigateur {
      */
     public void lancerFenetreSelection() {
         try {
-            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreSelection.fxml")));
+            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/vue/FenetreSelection.fxml")));
             Scene scene = new Scene(parent);
-            scene.getStylesheets().add(getClass().getResource("/FXML/Selection.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("/FXML/css/Selection.css").toExternalForm());
             primaryStage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
@@ -61,7 +57,7 @@ public class Navigateur {
         try {
             manager.setCarteCourante("lobby");
             //if(sceneJeu == null) {
-            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/Fenetre.fxml")));
+            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/vue/Fenetre.fxml")));
             Scene scene = new Scene(parent);
             scene.addEventFilter(KeyEvent.KEY_PRESSED, keyEvent -> {
                 manager.deplacerPokemon(keyEvent.getCode().getChar());
@@ -83,9 +79,9 @@ public class Navigateur {
     public void lancerFenetreCombat() {
         try {
             manager.terminerBoucleJeu();
-            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreCombat.fxml")));
+            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/vue/FenetreCombat.fxml")));
             Scene scene = new Scene(parent);
-            scene.getStylesheets().add(getClass().getResource("/FXML/Combat.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("/FXML/css/Combat.css").toExternalForm());
             primaryStage.setScene(scene);
             primaryStage.setMinHeight(450);
             primaryStage.setMinWidth(800);
@@ -115,9 +111,9 @@ public class Navigateur {
      */
     public void lancerFenetreVictoire() {
         try {
-            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreVictoire.fxml")));
+            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/vue/FenetreVictoire.fxml")));
             Scene scene = new Scene(parent);
-            scene.getStylesheets().add(getClass().getResource("/FXML/Victoire.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("/FXML/css/Victoire.css").toExternalForm());
             primaryStage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
@@ -129,9 +125,9 @@ public class Navigateur {
      */
     public void lancerFenetreDefaite() {
         try {
-            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/FenetreDefaite.fxml")));
+            Parent parent = FXMLLoader.load((getClass().getResource("/FXML/vue/FenetreDefaite.fxml")));
             Scene scene = new Scene(parent);
-            scene.getStylesheets().add(getClass().getResource("/FXML/Defaite.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("/FXML/css/Defaite.css").toExternalForm());
             primaryStage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();

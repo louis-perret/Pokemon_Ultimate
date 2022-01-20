@@ -29,6 +29,6 @@
 
 
     <stylesheets>
-        <URL value="@Lancement.css" />
+        <URL value="@../css/Lancement.css" />
     </stylesheets>
 </BorderPane>

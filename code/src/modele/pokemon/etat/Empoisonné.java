@@ -7,7 +7,7 @@ import java.io.Serializable;
 import static java.lang.Math.ceil;
 
 /**
- * Classe qui définit le statut empoisonné d'un pokemon
+ * Classe qui définie le statut empoisonné d'un pokemon
  */
 public class Empoisonné extends Etat {
 
@@ -24,7 +24,7 @@ public class Empoisonné extends Etat {
     }
 
     /**
-     * Comportement associé à l'état, ici réduit les pv de 1/4 à chaque de combat
+     * Comportement associé à l'état, ici réduit les pv de 1/4 à chaque tour de combat
      * @param p : Pokemon sur lequel sera appliqué ce comportement
      */
     @Override

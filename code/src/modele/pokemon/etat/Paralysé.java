@@ -4,6 +4,9 @@ import modele.pokemon.Pokemon;
 
 import java.io.Serializable;
 
+/**
+ * Classe qui définie le statut paralysé d'un pokemon
+ */
 public class Paralysé extends Etat {
 
     private boolean vitesseReduit=false; //permet de savoir si l'effet a déjà été appliqué
@@ -19,7 +22,7 @@ public class Paralysé extends Etat {
     }
 
     /**
-     * Comportement associé à l'état
+     * Comportement associé à l'état, ici réduit une seule fois la vitesse de moitié
      * @param p : Pokemon sur lequel sera appliqué ce comportement
      */
     @Override

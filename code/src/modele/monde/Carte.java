@@ -28,7 +28,6 @@ public class Carte {
      * @param chemin : chemin du fichier à charger
      */
     public void chargerCarte(String chemin) {
-
         String fichier = LectureMonde.chargerFichier(chemin);
         String[] partie = fichier.split("\\s+");
         largeur = LectureMonde.parseInt(partie[0]);

@@ -12,25 +12,7 @@ import modele.monde.Carte;
 public abstract class DeplaceurPokemon {
 
     private Collisionneur collisionneur; //pour savoir les collisions
-
-    private ChangeurCarte changeurCarte;
-
-    public ChangeurCarte getChangeurCarte() {return changeurCarte;}
-
-    public void setChangeurCarte(ChangeurCarte changeurCarte) {this.changeurCarte = changeurCarte;}
-
-    private IntegerProperty changeur;
-
-
-
-    //Getter et Setter
-    public Collisionneur getCollisionneur() {
-        return collisionneur;
-    }
-
-    public void setCollisionneur(Collisionneur collisionneur) {
-        this.collisionneur = collisionneur;
-    }
+    private ChangeurCarte changeurCarte; //pour savoir les évènements
 
     /**
      * Effectue le déplacement d'un pokemon
@@ -41,8 +23,6 @@ public abstract class DeplaceurPokemon {
     public void deplacer(Pokemon p, String keyChar, Carte carte, Manager manager){
 
     }
-
-
 
     /* Déplacer dans les 4 directions */
 
@@ -73,4 +53,18 @@ public abstract class DeplaceurPokemon {
      * @param carte : Carte pour la collision
      */
     public abstract void deplacerEnBas(Pokemon p,Carte carte);
+
+
+    //Getter et Setter
+    public ChangeurCarte getChangeurCarte() {return changeurCarte;}
+
+    public void setChangeurCarte(ChangeurCarte changeurCarte) {this.changeurCarte = changeurCarte;}
+
+    public Collisionneur getCollisionneur() {
+        return collisionneur;
+    }
+
+    public void setCollisionneur(Collisionneur collisionneur) {
+        this.collisionneur = collisionneur;
+    }
 }

@@ -24,7 +24,7 @@ public class CollectionPokemon implements Serializable {
     }
 
     /**
-     * Récupérer un pokemon en fonction de son nom de son niveau
+     * Récupérer un pokemon en fonction de son nom et de son niveau
      * @param nom : nom du pokemon à récupérer
      * @param niveau : niveau du pokemon à récupérer
      * @return un pokemon
@@ -77,7 +77,7 @@ public class CollectionPokemon implements Serializable {
     }
 
     /**
-     *  Initialisation de la propriété après la deserialisation
+     *  Initialisation des propriétés après la deserialisation
      */
     public void initialisationProprietesOnDeserialized(){
         for(int i=1;i<=pokedex.size();i++){
@@ -86,6 +86,7 @@ public class CollectionPokemon implements Serializable {
             }
         }
     }
+
     /**
      * Affiche l'instance sous forme de chaîne de caractères
      * @return un string

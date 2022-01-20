@@ -1,13 +1,11 @@
 package tests;
 
 import modele.Manager;
-import modele.boucle.BoucleJeu16;
-import modele.boucle.*;
-import chargement.Stub;
-import modele.observateurs.Observateur;
-import modele.observateurs.ObservateurBoucle;
+import persistance.Stub;
 
-//Pour effectuer nos tests
+/**
+ * Effectue le test sur la boucle de jeu
+ */
 public class TestBoucle {
 
     /**
@@ -15,13 +13,11 @@ public class TestBoucle {
      */
     public static void testBoucleJeu(){
         Manager m = new Stub().charger();
-        Observateur o = new ObservateurBoucle(m);
-        BoucleJeu b = new BoucleJeu16();
-        b.addObservateur(o);
-        Thread t = new Thread(b);
-        t.start();
+        m.setPokemonCourant(m.getPokedex().getPokemon("Bulbizarre",1));
+        m.lancerBoucleJeu();
         while(m.getCompteur()<10) {
             System.out.println("Compteur : " + m.getCompteur()); //on voit bien que le compteur est incrémenté indépendamment du while
         }
+        m.terminerBoucleJeu();
     }
 }

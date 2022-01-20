@@ -1,6 +1,5 @@
-package chargement;
+package persistance;
 
-import chargement.Chargeur;
 import modele.pokemon.*;
 import modele.Manager;
 import modele.monde.Tuile;
@@ -221,6 +220,7 @@ public class Stub extends Chargeur{
         Mouvement psyko = new Mouvement(25,"Psyko",psy,null);
 
 
+        //Création des pokemon
         Mouvement[] tabMouvements=new Mouvement[]{foutLiane,toxic,charge,sabotage};
         Pokemon p = new Pokemon("Bulbizarre","/sprite/Sprite_bulbi/bulb_1.png","/sprite/Sprite_bulbi/bulb_combat_dos.png",70,25,30,10,position, plante,tabMouvements,1,0,"Herbizarre", true);
         niveau1.add(p);
@@ -324,7 +324,7 @@ public class Stub extends Chargeur{
 
 
 
-
+        //Création des tuiles
         Map<Integer,Tuile> dicoTuiles=new HashMap<>();
         dicoTuiles.put(tuileHerbe.getId(),tuileHerbe);
         dicoTuiles.put(tuilePbg.getId(),tuilePbg);

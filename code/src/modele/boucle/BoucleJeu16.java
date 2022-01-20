@@ -21,7 +21,7 @@ public class BoucleJeu16 extends BoucleJeu{
     }
 
     /**
-     * Méthode exécuté par le thread. S'endort 16 milli-secondes avant de notifier son observateur
+     * Méthode exécutée par le thread. S'endort 16 milli-secondes avant de notifier son observateur
      */
     @Override
     public void run() {
@@ -43,11 +43,11 @@ public class BoucleJeu16 extends BoucleJeu{
     @Override
     public void notifier() {
         //Instruction envoyée au thread principal
-        Platform.runLater(() -> {
-            for(Observateur o : super.observateurs){
-                o.update();
-            }
-        });
-
+        //Platform.runLater(() -> {
+        //Platform.runLater n'est plus utilisée car bloquait nos déplacement de façon aléatoire
+        for(Observateur o : super.observateurs){
+            o.update();
+        }
+       // });
     }
 }

@@ -11,6 +11,7 @@ import static java.lang.Math.ceil;
 public class AttaqueurPokemon implements Attaqueur {
 
     private CalculCoefficient calculCoefficient= new CalculCoefficientV1();
+
     /**
      * Gère l'attaque d'un pokemon vers un autre
      * @param attaquant : pokemon attaquant
@@ -20,7 +21,7 @@ public class AttaqueurPokemon implements Attaqueur {
      */
     @Override
     public boolean attaquer(Pokemon attaquant, Pokemon attaque, Mouvement m) {
-        //calculé en prenant en compte l'attaque de l'attaquant, les dégats de l'attaque, puis le type de l'attaque utilisée ainsi que la défence de l'attaqué
+        //calculé en prenant en compte l'attaque de l'attaquant, les dégats du mouvement, puis le type de l'attaque utilisée ainsi que la défense de l'attaqué
         int degat = (int)ceil((attaquant.getAttaque()/100.0+1)*m.getDegats()*calculCoefficient.getCoefficient(m.getType(),attaque
                 .getType())*(1-attaque.getDefense()/100.0));
         attaque.setPv(attaque.getPv()-degat); //Actualise ses pv

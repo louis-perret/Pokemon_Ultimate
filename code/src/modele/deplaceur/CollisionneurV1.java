@@ -13,11 +13,10 @@ public class CollisionneurV1 extends Collisionneur{
     /**
      * Constructeur
      */
-
-    public CollisionneurV1(int hauteurFenetre, int largeurFenetre){
-        setHauteurSurface(hauteurFenetre/2);
-        setLargeurSurface(largeurFenetre);
-        setHauteurTuile(32);
+    public CollisionneurV1(int hauteurSurface, int largeurSurface,int hauteurTuile){
+        setHauteurSurface(hauteurSurface/2);
+        setLargeurSurface(largeurSurface);
+        setHauteurTuile(hauteurTuile);
     }
 
     /**

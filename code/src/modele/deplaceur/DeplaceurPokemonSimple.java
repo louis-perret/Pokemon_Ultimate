@@ -16,9 +16,9 @@ public class DeplaceurPokemonSimple extends DeplaceurPokemon {
     /**
      * Constructeur
      */
-    public DeplaceurPokemonSimple() {
-        super.setCollisionneur(new CollisionneurV1(512,320));
-        super.setChangeurCarte(new ChangeurCarteV1(512,320));
+    public DeplaceurPokemonSimple(int hauteurSurface, int largeurSurface,int hauteurTuile) {
+        super.setCollisionneur(new CollisionneurV1(hauteurSurface,largeurSurface,hauteurTuile));
+        super.setChangeurCarte(new ChangeurCarteV1(hauteurSurface,largeurSurface,hauteurTuile));
     }
 
     /**
@@ -43,24 +43,21 @@ public class DeplaceurPokemonSimple extends DeplaceurPokemon {
                 deplacerAGauche(p,carte);
                 break;
         }
-        //Mettre isChangement ici
-        if(getChangeurCarte().isChangement(p.getPosition(), carte) == 1) {
+        //On regarde l'évènement lié à la tuile où l'on s'est déplacé
+        if(getChangeurCarte().isChangement(p.getPosition(), carte) == 1) { //on va sur la carte lobby
             manager.setCarteCourante("lobby");
             manager.setChangeur(1);
-            manager.getPokemonCourant().setPosition(new Position(160,64));     //Le x et le y doivent être des multiples de 32
+            manager.getPokemonCourant().setPosition(new Position(160,64)); //Le x et le y doivent être des multiples de 32
 
         }
-        if(getChangeurCarte().isChangement(p.getPosition(), carte) == 2) {
+        if(getChangeurCarte().isChangement(p.getPosition(), carte) == 2) { //on va sur la carte arène
             manager.setCarteCourante("arene");
             manager.setChangeur(2);
-            manager.getPokemonCourant().setPosition(new Position(128,192));     //Le x et le y doivent être des multiples de 32
+            manager.getPokemonCourant().setPosition(new Position(128,192)); //Le x et le y doivent être des multiples de 32
 
         }
-        if(getChangeurCarte().isChangement(p.getPosition(), carte) == 3) {
-            //manager.terminerBoucleJeu();
+        if(getChangeurCarte().isChangement(p.getPosition(), carte) == 3) { //on lance le combat
             manager.setChangeur(3);
-
-            //scene combat
         }
     }
 

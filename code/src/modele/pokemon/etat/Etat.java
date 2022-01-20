@@ -4,6 +4,9 @@ import modele.pokemon.Pokemon;
 
 import java.io.Serializable;
 
+/**
+ * Classe qui définie le statut d'un pokemon
+ */
 public abstract class Etat implements Serializable{
 
     protected String nom; //nom de l'état
@@ -15,6 +18,7 @@ public abstract class Etat implements Serializable{
      */
     public abstract void comportement(Pokemon p);
 
+    //Getter et setter
     public String getNom() {
         return nom;
     }

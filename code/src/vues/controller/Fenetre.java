@@ -65,7 +65,7 @@ public class Fenetre {
      */
     public void initialize(){
         affichageCarte();
-        changeur.bind(manager.changeurProperty());
+        changeur.bind(manager.changeurProperty()); //binding unidirectionnel
         compteur.bind(manager.compteurProperty()); //binding unidirectionnel
         //On lui affecte un ChangeListener pour effectuer une action quand la propriété change
         compteur.addListener((observableValue, number, newValue) -> {
@@ -80,11 +80,9 @@ public class Fenetre {
             if(newValue2.intValue() == 3){
                 navigateur.lancerFenetreCombat();
             }
-            else{
+            else {
                 affichageCarte();
             }
-
-
         });
     }
 }

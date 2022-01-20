@@ -18,7 +18,7 @@ public class ObservateurBoucle implements Observateur {
     }
 
     /**
-     * Effectuera un traitement lorsqu'il sera notifié par la boucle de jeu qu'il observe
+     * Incrémente le compteur du manager lorsqu'il sera notifié par la boucle de jeu qu'il observe
      */
     @Override
     public void update() {

@@ -13,15 +13,18 @@ import java.util.Random;
  */
 public class Mouvement implements Serializable {
     private int degats; //ses points de dégâts
-    private String nomPrive;
+    private String nomPrive; //son nom
 
     private transient StringProperty nom = new SimpleStringProperty(); //son nom
     public String getNom(){ return nom.get(); }
-    public void setNom(String nom) { this.nom.set(nom); }
+    public void setNom(String nom) {
+        this.nom.set(nom);
+        nomPrive=nom;
+    }
     public StringProperty nomProperty() { return nom;}
 
     private Type type; //son type
-    private Etat etat; //l'états qu'il peut infligé au pokemon ennemi
+    private Etat etat; //l'état qu'il peut infliger au pokemon ennemi
 
     /**
      * Constructeur
@@ -32,7 +35,6 @@ public class Mouvement implements Serializable {
      */
     public Mouvement(int degats, String nom, Type type, Etat etat){
         this.degats=degats;
-        nomPrive=nom;
         setNom(nom);
         this.type=type;
         this.etat=etat;

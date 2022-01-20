@@ -1,12 +1,14 @@
 package tests;
 
 import modele.Manager;
-import chargement.Stub;
+import persistance.Stub;
 import modele.monde.*;
 
 import java.util.Collection;
 
-//Pour effectuer nos tests
+/**
+ * Effectue les fonctionnalités sur le chargement de la map
+ */
 public class TestMonde {
 
     private static Manager manager = new Stub().charger(); //On effectuera nos tests en passant par le manager

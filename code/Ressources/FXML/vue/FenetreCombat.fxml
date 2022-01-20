@@ -38,7 +38,7 @@
 
 
     <stylesheets>
-        <URL value="@Combat.css" />
+        <URL value="@../css/Combat.css" />
     </stylesheets>
 
 

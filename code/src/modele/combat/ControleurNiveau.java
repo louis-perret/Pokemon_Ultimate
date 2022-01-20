@@ -52,12 +52,15 @@ public class ControleurNiveau {
     }
 
     /**
-     * Faire évoluer un pokemon
-     * @param p : Pokemon a faire évoluer
+     * Fait évoluer un pokemon
+     * @param p : Pokemon à faire évoluer
      * @param experienceRestante : son expérience restante à rajouter après
      */
     public void evoluer(Pokemon p,int experienceRestante){
         Pokemon pEvolue=collectionPokemon.getPokemon(p.getEvolution(),p.getNiveau()+1); //Récupère l'évolution du pokemon
+        if(pEvolue == null){
+            return; //le pokemon ne peut pas évoluer
+        }
         //Modifie chacun de ses attributs par ceux de son évolution
         p.setNom(pEvolue.getNom());
         p.setNiveau(pEvolue.getNiveau());

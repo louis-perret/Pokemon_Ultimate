@@ -10,7 +10,7 @@ public abstract class ControleurCombat {
 
     protected IAPokemon iaPokemon; //ia du pokemon ennemi
     protected ControleurNiveau controleurNiveau; //pour contrôler le gain d'expérience et la montée d'un niveau
-    protected Attaqueur attaqueur; //pour contrôler l'attaquer
+    protected Attaqueur attaqueur; //pour contrôler l'attaque
 
     /**
      * Effectue un tour de combat
@@ -19,7 +19,5 @@ public abstract class ControleurCombat {
      * @param mAllie : attaque utilisée par le joueur
      * @return un int signifiant s'il y a eu un pokemon ko
      */
-    public int effectuerCombat(Pokemon allie, Pokemon ennemi, Mouvement mAllie){
-        return 0;
-    }
+    public abstract int effectuerCombat(Pokemon allie, Pokemon ennemi, Mouvement mAllie);
 }

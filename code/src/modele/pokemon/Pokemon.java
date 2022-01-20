@@ -14,16 +14,22 @@ import java.util.Map;
  */
 public class Pokemon implements Serializable {
 
-    private transient StringProperty nom = new SimpleStringProperty();
+    private transient StringProperty nom = new SimpleStringProperty(); //son nom
     public String getNom() { return nom.get(); }
-    public void setNom(String nom) { this.nom.set(nom); }
+    public void setNom(String nom) {
+        this.nom.set(nom);
+        nomPrive=nom;
+    }
     public StringProperty nomProperty() { return nom; }
 
     private String image; //son image de déplacement
 
     private transient StringProperty imageCombat = new SimpleStringProperty(); //son image de combat
     public String getImageCombat() { return imageCombat.get(); }
-    public void setImageCombat(String image) { imageCombat.set(image); }
+    public void setImageCombat(String image) {
+        imageCombat.set(image);
+        imageCombatPrive=image;
+    }
     public StringProperty imageCombatProperty() { return imageCombat; }
 
     private transient IntegerProperty pv = new SimpleIntegerProperty();
@@ -31,14 +37,18 @@ public class Pokemon implements Serializable {
     public void setPv(int pv){
         if(pv <= 0){
             this.pv.set(0);
+            pvPrive=pv;
         }
-        this.pv.set(pv);
+        else{
+            this.pv.set(pv);
+            pvPrive=pv;
+        }
     }
     public IntegerProperty pvProperty() { return pv; }
 
-    private String nomPrive;
-    private String imageCombatPrive;
-    private int pvPrive;
+    private String nomPrive; //son nom
+    private String imageCombatPrive; //son image
+    private int pvPrive; //ses pv
     private int attaque; //ses points d'attaque
     private int defense; //ses points de défense
     private int vitesse; //ses points de vitesse
@@ -107,9 +117,8 @@ public class Pokemon implements Serializable {
     }
 
     /**
-     *  Initialisation de la propriété après la deserialisation
+     *  Initialisation des propriétés après la deserialisation
      */
-
     public void initialisationProprietesOnDeserialized(){
         nom=new SimpleStringProperty();
         setNom(nomPrive);

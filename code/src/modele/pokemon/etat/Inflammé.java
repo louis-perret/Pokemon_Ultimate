@@ -6,6 +6,9 @@ import java.io.Serializable;
 
 import static java.lang.Math.ceil;
 
+/**
+ * Classe qui définie le statut inflammé d'un pokemon
+ */
 public class Inflammé extends Etat {
 
     private static float coefficient=1/8F; //Dégâts de l'inflammation

@@ -113,35 +113,7 @@ public class FenetreCombat {
         ennemi.setImage(new Image(ennemiimg.get()));
     }
 
-    /**
-     * Initialisation.
-     */
 
-    public void initialize(){
-        manager.lancerVague(); //update le pokemon que devra affronter le joueur
-        nomJoueur.textProperty().bind(manager.getPokemonCourant().nomProperty());
-        pvJoueur.textProperty().bind(manager.getPokemonCourant().pvProperty().asString());
-        nomEnnemi.textProperty().bind(manager.getPokemonEnnemiCourant().nomProperty());
-        pvEnnemi.textProperty().bind(manager.getPokemonEnnemiCourant().pvProperty().asString());
-        joueurimg.bind(manager.getPokemonCourant().imageCombatProperty());
-        ennemiimg.bind(manager.getPokemonEnnemiCourant().imageCombatProperty());
-        setDecor();
-        setBoutonsAttaques();
-        nomJoueur.textProperty().addListener((observableValue, s, t1) -> {
-        });
-
-
-        //Dans le cas où l'image d'un des deux pokemon changent, il faut la recharger dans le ImageView
-        joueurimg.addListener((observableValue, s, t1) -> {
-            setBoutonsAttaques();
-            joueur.setImage(new Image(joueurimg.get()));
-        }
-        );
-        ennemiimg.addListener((observableValue, s, t1) -> {
-            ennemi.setImage(new Image(ennemiimg.get()));
-        }
-        );
-    }
 
     /**
      * Fonction permettant d'effectuer la première attaque
@@ -218,5 +190,34 @@ public class FenetreCombat {
                 }
             }
         }
+    }
+
+    /**
+     * Initialisation.
+     */
+    public void initialize(){
+        manager.lancerVague(); //update le pokemon que devra affronter le joueur
+        nomJoueur.textProperty().bind(manager.getPokemonCourant().nomProperty());
+        pvJoueur.textProperty().bind(manager.getPokemonCourant().pvProperty().asString());
+        nomEnnemi.textProperty().bind(manager.getPokemonEnnemiCourant().nomProperty());
+        pvEnnemi.textProperty().bind(manager.getPokemonEnnemiCourant().pvProperty().asString());
+        joueurimg.bind(manager.getPokemonCourant().imageCombatProperty());
+        ennemiimg.bind(manager.getPokemonEnnemiCourant().imageCombatProperty());
+        setDecor();
+        setBoutonsAttaques();
+        nomJoueur.textProperty().addListener((observableValue, s, t1) -> {
+        });
+
+
+        //Dans le cas où l'image d'un des deux pokemon changent, il faut la recharger dans le ImageView
+        joueurimg.addListener((observableValue, s, t1) -> {
+                    setBoutonsAttaques();
+                    joueur.setImage(new Image(joueurimg.get()));
+                }
+        );
+        ennemiimg.addListener((observableValue, s, t1) -> {
+                    ennemi.setImage(new Image(ennemiimg.get()));
+                }
+        );
     }
 }

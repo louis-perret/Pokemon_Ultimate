@@ -14,15 +14,14 @@ public class ChangeurCarteV1 extends ChangeurCarte {
     /**
      * Constructeur
      */
-
-    public ChangeurCarteV1(int hauteurSurface, int largeurSurface) {
+    public ChangeurCarteV1(int hauteurSurface, int largeurSurface,int hauteurTuile) {
         setHauteurSurface(hauteurSurface/2);
         setLargeurSurface(largeurSurface);
-        setHauteurTuile(32);
+        setHauteurTuile(hauteurTuile);
     }
 
     /**
-     * Détecte des évènements en se déposant.
+     * Détecte des évènements dû au déplacement.
      * @param positionActuel : Position actuelle du joueur
      * @param carte : Carte sur laquelle on se déplace
      * @return un entier, il y a un entier par évènement
@@ -39,7 +38,7 @@ public class ChangeurCarteV1 extends ChangeurCarte {
         } else { //Si c'est positif
             posTuilY = (carte.getHauteur() / 2) + (posTuilY / getHauteurTuile()); //on fait partir le y du milieu du tableau
         }
-        return carte.getTuile(posTuilX, posTuilY).getEvenement(); //Renvoie true s'il y a collision  z
+        return carte.getTuile(posTuilX, posTuilY).getEvenement(); //Renvoie l'évènement associé à la tuile où l'on s'est déplacé
     }
 
 }

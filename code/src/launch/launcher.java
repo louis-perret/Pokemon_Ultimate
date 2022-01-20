@@ -1,17 +1,19 @@
 package launch;
 
-import chargement.Chargeur;
-import chargement.ChargeurBinaire;
-import chargement.Stub;
+import persistance.Chargeur;
+import persistance.ChargeurBinaire;
 import modele.*;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import tests.Test;
+import persistance.Stub;
 import tests.TestPersistance;
 import vues.controller.Navigateur;
 
 //import static Modele.Type.plante;
 
+/**
+ * Lance l'application
+ */
 public class launcher extends Application {
 
     private static Manager manager;
@@ -55,8 +57,6 @@ public class launcher extends Application {
     public void start(Stage stage) throws Exception {
         setPrimaryStage(stage);
         stage.setTitle("Pokemon Colosseum");
-
-
         try {
             cheminFichier = "Ressources/source/source.bin";
             Chargeur chargeur = new ChargeurBinaire(cheminFichier);
@@ -70,13 +70,8 @@ public class launcher extends Application {
             System.out.println(e.getMessage());
         }
 
-
         /* Appel des tests */
-
         //Test.testAttaque();
-        //Test.testVague();
-
-        //Test.testDeplacer();
         //TestBoucle.testBoucleJeu();
         //TestMonde.testerChargementCarte();
         //TestMonde.testerGetTuile();
