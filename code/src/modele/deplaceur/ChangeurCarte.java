@@ -3,11 +3,22 @@ package modele.deplaceur;
 import modele.monde.Carte;
 import modele.pokemon.Position;
 
+/**
+ * Classe qui gère les évènements
+ */
+
 public abstract class ChangeurCarte {
 
     private int hauteurSurface;
     private int largeurSurface;
     private int hauteurTuile; //Taille du pas
+
+    /**
+     * Détecte des évènements en se déposant.
+     * @param positionActuel : Position actuelle du joueur
+     * @param carte : Carte sur laquelle on se déplace
+     * @return un entier, il y a un entier par évènement
+     */
 
     public abstract int isChangement(Position positionActuel, Carte carte);
 

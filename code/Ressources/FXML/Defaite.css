@@ -1,0 +1,13 @@
+.text-defaite {
+ -fx-font-smoothing-type: lcd;
+ -fx-fill:
+    linear-gradient(#ff1100, #930a00, #ff1100,#380400);
+ -fx-font-size: 50px;
+ fx-font-weight: bold;
+}
+
+.root{
+    -fx-background-color: #bcbcbc;
+
+}
+

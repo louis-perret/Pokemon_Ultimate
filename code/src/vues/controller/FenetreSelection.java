@@ -43,6 +43,11 @@ public class FenetreSelection {
     private Manager manager = launcher.getManager();
     private List<Pokemon> listeStarter;
 
+    /**
+     * Permet de définir le pokemon courant en fonction de l'action de l'utilisateur
+     * @param actionEvent: clique de l'utilisateur
+     */
+
 
     public void choixPokemon(ActionEvent actionEvent) {
         if (actionEvent.getSource() == boutonbulb){
@@ -63,6 +68,10 @@ public class FenetreSelection {
     private Image c = new Image(getClass().getResource("/sprite/Sprite_salam/charmender-sprite.png").toExternalForm());
     private Image s = new Image(getClass().getResource("/sprite/Sprite_carap/squirtle-sprite.png").toExternalForm());
 
+
+    /**
+     * Initialisation
+     */
     public void initialize(){
         hbox.setPadding(new Insets(20));
         listeStarter = manager.getStarterslvl1();

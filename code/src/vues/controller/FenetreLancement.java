@@ -20,14 +20,24 @@ public class FenetreLancement {
 
     Navigateur navigateur = new Navigateur();
 
-
+    /**
+     * Lance la fenêtre de jeu
+     */
     public void lancementJeu() {
         navigateur.lancerFenetreSelection();
     }
 
+
+    /**
+     * Ferme la fenêtre de jeu
+     */
     public void quitterJeu() throws Exception {
         navigateur.quitterJeu();
     }
+
+    /**
+     * Initialisation
+     */
 
     public void initialize(){
         vbox.setPadding(new Insets(10));

@@ -1,0 +1,12 @@
+.text-titre {
+ -fx-font-smoothing-type: lcd;
+ -fx-fill:
+    linear-gradient(to left, #b30c00, #ff1100,#005c9d,#0096ff);
+ -fx-font-size: 40px;
+}
+
+.root{
+    -fx-background-color: lightsteelblue;
+
+}
+

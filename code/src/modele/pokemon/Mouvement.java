@@ -53,6 +53,10 @@ public class Mouvement implements Serializable {
         }
     }
 
+    /**
+     *  Initialisation de la propriété après la serialisation
+     */
+
     public void initialisationProprietesOnDeserialized(){
         nom=new SimpleStringProperty();
         setNom(nomPrive);
