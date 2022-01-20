@@ -22,11 +22,19 @@
             </Text>
         </VBox>
     </top>
+    <center>
+        <VBox alignment="CENTER">
+            <Button fx:id="quitter" text="Retour écran titre" onAction="#retour"></Button>
+        </VBox>
+    </center>
     <bottom>
         <VBox alignment="CENTER">
-            <ImageView fx:id="masterball" fitHeight="300" fitWidth="300" pickOnBounds="true" preserveRatio="true"/>
+            <ImageView fx:id="masterball" fitHeight="150" fitWidth="150" pickOnBounds="true" preserveRatio="true"/>
         </VBox>
     </bottom>
+
+
+
 
 
 </BorderPane>

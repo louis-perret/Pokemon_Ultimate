@@ -56,6 +56,7 @@ public class launcher extends Application {
         setPrimaryStage(stage);
         stage.setTitle("Pokemon Colosseum");
 
+
         try {
             cheminFichier = "Ressources/source/source.bin";
             Chargeur chargeur = new ChargeurBinaire(cheminFichier);
