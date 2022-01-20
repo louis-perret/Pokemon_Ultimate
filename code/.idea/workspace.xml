@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a64db2b-4350-4932-a766-c08c7c1c75ed" name="Changes" comment="Changement d'état d'un pokemon fonctionnel + commentaire du code">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/FXML/Combat.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/css/Combat.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/FXML/Defaite.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/css/Defaite.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/FXML/Fenetre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/FXML/vue/Fenetre.fxml" afterDir="false" />
@@ -22,7 +23,6 @@
       <change beforePath="$PROJECT_DIR$/src/chargement/Sauveur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/persistance/Sauveur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chargement/SauveurBinaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/persistance/SauveurBinaire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chargement/Stub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/persistance/Stub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/launch/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/launch/launcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/boucle/BoucleJeu16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/boucle/BoucleJeu16.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/combat/AttaqueurPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/combat/AttaqueurPokemon.java" afterDir="false" />

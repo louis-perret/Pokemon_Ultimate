@@ -14,6 +14,7 @@ public abstract class DeplaceurPokemon {
     private Collisionneur collisionneur; //pour savoir les collisions
     private ChangeurCarte changeurCarte; //pour savoir les évènements
 
+
     /**
      * Effectue le déplacement d'un pokemon
      * @param p : pokemon à déplacer

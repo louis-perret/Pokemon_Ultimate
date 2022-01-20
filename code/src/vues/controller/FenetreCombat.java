@@ -60,7 +60,6 @@ public class FenetreCombat {
     private Button attaque4;
 
     private ImageView a = new ImageView();
-    private Afficheur afficheurPokemon = new AfficheurPokemon();
     private Image fondimg = new Image(getClass().getResource("/FondCombat/Fond.png").toExternalForm());
     private StringProperty joueurimg = new SimpleStringProperty();
     private StringProperty ennemiimg = new SimpleStringProperty();
